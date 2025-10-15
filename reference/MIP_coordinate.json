@@ -3222,16 +3222,5 @@
             "z_bounds_factors": "",
             "z_factors": ""
         }
-    },
-    "version_metadata": {
-        "version_tag": "v6.5.0.0",
-        "checksum": "md5: feb75313474f3aa81a4032636ad2a4ee",
-        "Auxillary_files/MIP_coordinate_modified": "Tue Nov 28 21:14:07 2023 +0000",
-        "Auxillary_files/MIP_coordinate_note": "Updating versioning and model_components scripts to process files individually.",
-        "commit": "50ee06a3b58fb2b064485d454203766327f4d770",
-        "previous_commit": "",
-        "author": "Daniel Ellis",
-        "CV_collection_version": "v6.5.1.1",
-        "specs_doc": "v6.5.0"
     }
 }

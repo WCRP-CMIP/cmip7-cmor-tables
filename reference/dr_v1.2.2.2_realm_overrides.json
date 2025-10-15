@@ -1,0 +1,9 @@
+{
+  "aerosol.sfpm25.tavg-h2m-hxy-u.1hr.GLB": "aerosol atmosChem",
+  "landIce.snc.tavg-u-hxy-is.mon.ATA": "landIce land",
+  "landIce.snc.tavg-u-hxy-is.mon.GLB": "landIce land",
+  "landIce.snc.tavg-u-hxy-is.yr.ATA": "landIce land",
+  "landIce.snm.tavg-u-hxy-is.mon.GLB": "landIce land",
+  "landIce.tsn.tavg-u-hxy-is.mon.GLB": "landIce land",
+  "ocean.sfdsi.tavg-u-hxy-sea.3hr.GLB": "ocean seaIce"
+}
