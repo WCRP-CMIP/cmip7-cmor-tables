@@ -1,0 +1,15 @@
+name: CMOR-3.12
+channels:
+  - conda-forge
+dependencies:
+  - cmor=3.12.0
+  - ipykernel
+  - ipython
+  - iris=3.13.1
+  - jupyter_client
+  - jupyter_core
+  - pip=25.2
+  - python=3.13.7
+  - pip:
+    - cmip7-data-request-api==1.2.3.dev21+ga55244b18
+
