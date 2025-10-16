@@ -6,7 +6,9 @@
             "directory-path-template": "",
             "filename-example": "",
             "filename-sub-experiment-example": "",
-            "filename-template": ""
+            "directory_path_template":"<drs_specs>/<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<variant_label>/<region>/<frequency>/<variable_id>/<branding_suffix>/<grid_label>/<version>",
+            "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>"
+            
         },
         "archive_id": {
             "WCRP": "a collection of datasets from the AMIP and CMIP project phases, along with project supporting datasets from the input4MIPs (forcing datasets used to drive CMIP simulations) and obs4MIPs (observational datasets used to evaluate CMIP simulations, and numerous other supporting activities"
@@ -18,6 +20,9 @@
         },
         "branding_suffix": "<temporal_label><vertical_label><horizontal_label><area_label>",
         "data_specs_version": "CMIP-7.0.0.0-alpha",
+        "drs_specs":[
+            "MIP-DRS7"
+        ],
         "experiment_id": {
             "historical": {
                 "activity_id": [

@@ -1,6 +1,7 @@
 import argparse
 from collections import defaultdict
 from copy import deepcopy as copy
+from dataclasses import dataclass, asdict
 import datetime
 import hashlib
 import json
@@ -64,6 +65,80 @@ TABLE_TEMPLATE = {
     }
 }
 
+@dataclass
+class DataRequestVariable:
+    """
+    Container Class for a data request variable
+    """
+    branded_variable_name: str
+    branding_label: str
+    cell_measures: str
+    cell_methods: str
+    cmip6_compound_name: str
+    cmip6_table: str
+    cmip7_compound_name: str
+    comment: str
+    dimensions: str
+    frequency: str
+    long_name: str
+    modeling_realm: str
+    out_name: str
+    physical_parameter_name: str
+    positive: str
+    processing_note: str
+    region: str
+    spatial_shape: str
+    standard_name: str
+    temporal_shape: str
+    type: str
+    uid: str
+    units: str
+    variableRootDD: str
+
+    def to_cmorvar(self):
+        """
+        Construct a CMOR variable from the data request info
+        """
+        # pick up cmor keys from data request information of the same name
+        cmor_keys = CMORvar.__dataclass_fields__.keys()
+        cmor_args = {k:v for k,v in vars(self).items() if k in cmor_keys}
+        #override dimensions type
+        cmor_args['dimensions'] = self.dimensions.split()
+        return CMORvar(**cmor_args)
+
+
+@dataclass
+class CMORvar:
+    """
+    Container class for CMOR variable
+    """
+    cell_measures: str
+    cell_methods: str
+    comment: str
+    out_name: str
+    positive : str
+    units: str
+    long_name: str
+    standard_name: str
+    branded_variable_name: str
+    dimensions: list
+    modeling_realm: str
+    long_name: str
+
+    def table_name(self):
+        """
+        return the table name to be used for this variable
+        """
+        return self.modeling_realm.split(" ")[0]
+    
+    def json_for_table(self):
+        """
+        Return dictionary needed for MIP table entry
+        """
+        cmordict = asdict(self)
+        del cmordict['branded_variable_name']
+        return cmordict
+
 
 def set_checksum(dictionary, overwrite=True):
     """
@@ -122,26 +197,12 @@ def _checksum(obj):
     return 'md5: {}'.format(checksum_hex)
 
 
-def entry_to_cmorvar(entry):
-    """
-    Convert a data request entry to a cmor variable dictionary
-    """
-    simple_entries = ["cell_measures", "cell_methods", "comment", "out_name", "positive", "units", 
-                      "long_name", "standard_name", "branded_variable_name"]
-    cmorvar = {i:entry[i] for i in simple_entries}
-#    cmorvar['brand_description'] = '?'
-    cmorvar['dimensions'] = entry['dimensions'].split()
-    cmorvar['modeling_realm'] = entry['modeling_realm']
-    cmorvar['long_name'] = entry['long_name']
-
-    return cmorvar
-
-
 def write_table(tables, destination):
     """
     Construct tables as dictionary objects and write them as 
     """
     for realm in tables:
+        # copy template and update relevant fields
         template = copy(TABLE_TEMPLATE)
         template['Header'].update(
             {
@@ -150,28 +211,27 @@ def write_table(tables, destination):
                 "table_id": realm,
             }
         )
+
+        # construct variable_entry section
         template["variable_entry"] = {}
+        for bvname, cmorvar in tables[realm].items():
+            template['variable_entry'][bvname] = cmorvar.json_for_table()
         
-        for v, cmorvar in tables[realm].items():
-            
-            for i in ['branded_variable_name', 'realm']:
-                if i in cmorvar:
-                    del cmorvar[i]
-            template['variable_entry'][v] = cmorvar
-        
+        # checksum
         set_checksum(template)
 
+        # write out
         with open(os.path.join(destination, 'CMIP7_{}.json'.format(realm)), 'w') as fh:
             json.dump(template, fh, indent=4, sort_keys=True)
     
 
-def coord_to_entry(coord):
+def dr_coord_to_cmor_dict(coord):
     """
-    Construct a coordinate entry for the coordinates.json file from a 
+    Construct a coordinate entry for the CMOR coordinates.json file from a 
     data request coordinate object
     """
     name = coord.name
-    entry = {}    
+    cmor_coord = {}    
     
     for cmor_key, dr_key in DR_TO_CMOR_COORDINATE_KEY_MAPPING.items():
         if dr_key is None:
@@ -180,28 +240,28 @@ def coord_to_entry(coord):
             value = getattr(coord, dr_key, '')
         if isinstance(value, str):
             value = value.replace(',', '')
-        entry[cmor_key] = value
+        cmor_coord[cmor_key] = value
     
     # deal with yes/no fields
-    if entry['must_have_bounds']:
-        entry['must_have_bounds'] = "yes"
+    if cmor_coord['must_have_bounds']:
+        cmor_coord['must_have_bounds'] = "yes"
     else:
-        entry['must_have_bounds'] = "no"
+        cmor_coord['must_have_bounds'] = "no"
     # deal with lists
-    if entry['requested']:
+    if cmor_coord['requested']:
         try:
-            entry['requested'] = ['{:.1f}'.format(float(i)) for i in entry['requested'].split()]
+            cmor_coord['requested'] = ['{:.1f}'.format(float(i)) for i in cmor_coord['requested'].split()]
         except ValueError:
-            entry['requested'] = ''
-    if entry['requested_bounds']:
-        entry['requested_bounds'] = ['{:.1f}'.format(float(i)) for i in entry['requested_bounds'].split()]
+            cmor_coord['requested'] = ''
+    if cmor_coord['requested_bounds']:
+        cmor_coord['requested_bounds'] = ['{:.1f}'.format(float(i)) for i in cmor_coord['requested_bounds'].split()]
 
     # convert numbers to strings (even if they are zero)
     for i in ['tolerance', 'valid_max', 'valid_min']:
-        if entry[i] != "":
-            entry[i] = str(entry[i])
+        if cmor_coord[i] != "":
+            cmor_coord[i] = str(cmor_coord[i])
 
-    return name, entry    
+    return name, cmor_coord    
 
 
 def construct_coordinates(dr_coords, reference_coordinate_file):
@@ -211,31 +271,24 @@ def construct_coordinates(dr_coords, reference_coordinate_file):
     """
     coordinates = {'axis_entry': {}}
 
-    for coord in dr_coords.records.values():
-        name, entry = coord_to_entry(coord)
-        coordinates['axis_entry'][name] = entry
+    for dr_coord in dr_coords.records.values():
+        name, cmor_coord = dr_coord_to_cmor_dict(dr_coord)
+        coordinates['axis_entry'][name] = cmor_coord
 
     with open(reference_coordinate_file) as fh:
         reference = json.load(fh)
 
-    keys_to_drop_from_dr = [
-        'alevel',
-        'alevhalf',
-        'olevel',
-        'olevhalf',
-    ]
+    # coordinates that are built based on formula terms
+    keys_to_drop_from_dr = ['alevel', 'alevhalf', 'olevel', 'olevhalf']
+    # keys that should be removed (remove from data request)?
+    keys_that_cause_cmor_failure = ['xant','yant','xgre','ygre']
 
-    keys_that_cause_cmor_failure = [
-        'xant',
-        'yant',
-        'xgre',
-        'ygre'
-    ]
-
+    # remove unwanted keys
     for k in keys_to_drop_from_dr + keys_that_cause_cmor_failure:
         if k in coordinates['axis_entry']:
             del coordinates['axis_entry'][k]
 
+    # import entries from old CMOR tables
     keys_to_import = [
         'alternate_hybrid_sigma',
         'alternate_hybrid_sigma_half',
@@ -258,19 +311,6 @@ def construct_coordinates(dr_coords, reference_coordinate_file):
     return coordinates
 
 
-def parse_args():
-    """
-    Parse command line arguments
-    """
-    parser = argparse.ArgumentParser(description="Generate CMIP7 tables for CMOR from the data request")
-    parser.add_argument('data_request_version', type=str, help='Data Request version, e.g. v1.2.2.1')
-    parser.add_argument('output_dir', type=str, help='Directory to output to')
-    default_reference_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'reference'))
-    parser.add_argument('--reference_file_path', default=default_reference_dir, help=f'Location of reference files')
-
-    return parser.parse_args()
-
-
 def check_field(field_name, field_dict):
     """
     Check a field for conflicts between values with the same table, branded variable name combination
@@ -285,7 +325,7 @@ def check_field(field_name, field_dict):
     if sum([len(i) for i in field_dict.values()]) > 0:
         print(f"Issues found with {field_name} conflicts. writing details to {field_name}.json")
         with open(f'{field_name}.json', 'w') as fh:
-            json.dump(field_dict, fh, indent=2)
+            json.dump(field_dict, fh, indent=4)
 
 
 def load_overrides(reference_dir, dr_version, suffix):
@@ -308,10 +348,9 @@ def collect_cell_measures(output_dir, all_var_info):
     """
     cell_measures_info = {}
     for variable in all_var_info.values():
-        if variable["cell_measures"]:
-            cell_measures_info[variable["cmip7_compound_name"]] = variable["cell_measures"]
+        cell_measures_info[variable.cmip7_compound_name] = variable.cell_measures
     with open(os.path.join(output_dir, "CMIP7_cell_measures.json"), "w") as fh:
-        json.dump(cell_measures_info, fh, indent=2, sort_keys=True)
+        json.dump(cell_measures_info, fh, indent=4, sort_keys=True)
 
 
 def construct_all_ancil_files(output_dir, reference_dir, coords):
@@ -352,6 +391,18 @@ def write_ancil(data, output_file, table_id):
         json.dump(data, fh, indent=4, sort_keys=True)
 
 
+def parse_args():
+    """
+    Parse command line arguments
+    """
+    parser = argparse.ArgumentParser(description="Generate CMIP7 tables for CMOR from the data request")
+    parser.add_argument('data_request_version', type=str, help='Data Request version, e.g. v1.2.2.1')
+    parser.add_argument('output_dir', type=str, help='Directory to output to')
+    default_reference_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), '..', 'reference'))
+    parser.add_argument('--reference_file_path', default=default_reference_dir, help=f'Location of reference files')
+
+    return parser.parse_args()
+
 
 def main():
     """
@@ -371,6 +422,10 @@ def main():
     # load data request and construct cmor variable list
     content = dc.load(dr_version)#, offline=True)
     all_var_info = dq.get_variables_metadata(content, dr_version)
+    # convert to dataclass
+    for k, v in all_var_info.items():
+        drv = DataRequestVariable(**v)
+        all_var_info[k] = drv
 
     #collect cell measures information and write to CMIP7_cell_measures.json keyed by CMIP7 compound_name
     collect_cell_measures(output_dir, all_var_info)
@@ -378,9 +433,9 @@ def main():
     # apply agreed overrides to the data request informatoin
     print('WARNING: all comments have been set to blank strings while we homogenise the contents')
     print('WARNING: all cell_measures have been set to blank strings. Users will need to explicitly set cell_measures')
-    for variable in all_var_info:
-        all_var_info[variable]["comment"] = ""
-        all_var_info[variable]["cell_measures"] = ""  #CELL MEASURES OVERRIDE
+    for variable in all_var_info.values():
+        variable.comment = ""
+        variable.cell_measures = ""  #CELL MEASURES OVERRIDE
 
     # dictionary to hold tables
     tables = defaultdict(dict)
@@ -394,21 +449,21 @@ def main():
     
     for variable in all_var_info.values():
         # apply overrides to data request info
-        if variable["cmip7_compound_name"] in long_name_overrides:
-            variable["long_name"] = long_name_overrides[variable["cmip7_compound_name"]]
-        if variable["cmip7_compound_name"] in realm_overrides:
-            variable["modeling_realm"] = realm_overrides[variable["cmip7_compound_name"]]
+        if variable.cmip7_compound_name in long_name_overrides:
+            variable.long_name = long_name_overrides[variable.cmip7_compound_name]
+        if variable.cmip7_compound_name in realm_overrides:
+            variable.modeling_realm = realm_overrides[variable.cmip7_compound_name]
 
         # convert to info in CMOR variable
-        cmorvar = entry_to_cmorvar(variable)
-        table_name = cmorvar["modeling_realm"].split(" ")[0]
-        bv_name = cmorvar["branded_variable_name"]
+        cmorvar = variable.to_cmorvar()
+        table_name = cmorvar.table_name()
+        bv_name = cmorvar.branded_variable_name
         tables[table_name][bv_name] = cmorvar
         # build dictionaries for checking consistency
-        longname[table_name][bv_name][variable['cmip7_compound_name']] = cmorvar["long_name"]
-        realm[table_name][bv_name][variable['cmip7_compound_name']] = cmorvar["modeling_realm"]
+        longname[table_name][bv_name][variable.cmip7_compound_name] = cmorvar.long_name
+        realm[table_name][bv_name][variable.cmip7_compound_name] = cmorvar.modeling_realm
         # for the following to be useful comment the line #CELL MEASURES OVERRIDE above
-        measures[table_name][bv_name][variable['cmip7_compound_name']] = cmorvar["cell_measures"]
+        measures[table_name][bv_name][variable.cmip7_compound_name] = cmorvar.cell_measures
 
     # check consistency
     check_field('long_name', longname)
