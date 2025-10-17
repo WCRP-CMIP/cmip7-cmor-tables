@@ -11,5 +11,5 @@ dependencies:
   - pip=25.2
   - python=3.13.7
   - pip:
-    - cmip7-data-request-api==1.2.3.dev21+ga55244b18
+    - cmip7-data-request-api==1.3
 
