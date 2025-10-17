@@ -37,7 +37,7 @@ The tables and examples presented here are derived directly from [Data Request v
 
 Each of these use the tables and the testing CVs JSON file
 
-* [Simple CMOR demo notebook](cmor_demo.ipynb) ([python script equivalent](scripts/cmor_demo.py))
+* [Simple CMOR demo notebook](cmor_demo.ipynb) ([python script equivalent](scripts/cmor_test.py))
 * [Example of "re-cmorising" CMIP6 data](Simple_recmorise_cmip6-cmip7.ipynb)
 
 Note in particular the lines used to add `cell_measures` metadata to variables.
