@@ -1,4 +1,22 @@
 {
+    "Header": {
+        "Conventions": "CF-1.12 CMIP-7.0",
+        "checksum": "md5: 4144d4792f7634737ae37b1008e6333d",
+        "cmor_version": "3.12",
+        "generic_levels": "",
+        "int_missing_value": "-999",
+        "missing_value": "1e20",
+        "ok_max_mean_abs": "",
+        "ok_min_mean_abs": "",
+        "positive": "",
+        "product": "model-output",
+        "realm": "",
+        "table_date": "2025-10-16 13:54:46",
+        "table_id": "forumula_terms",
+        "type": "real",
+        "valid_max": "",
+        "valid_min": ""
+    },
     "formula_entry": {
         "a": {
             "dimensions": "alevel",
@@ -200,16 +218,5 @@
             "type": "double",
             "units": "m"
         }
-    },
-    "version_metadata": {
-        "version_tag": "v6.5.0.0",
-        "checksum": "md5: c4c59dea7b58b910a6dc5345e31638f6",
-        "Auxillary_files/MIP_formula_terms_modified": "Tue Nov 28 21:14:07 2023 +0000",
-        "Auxillary_files/MIP_formula_terms_note": "Updating versioning and model_components scripts to process files individually.",
-        "commit": "50ee06a3b58fb2b064485d454203766327f4d770",
-        "previous_commit": "",
-        "author": "Daniel Ellis",
-        "CV_collection_version": "v6.5.1.1",
-        "specs_doc": "v6.5.0"
     }
 }
