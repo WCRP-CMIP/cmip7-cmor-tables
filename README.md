@@ -19,7 +19,7 @@ Notable changes to the input JSON file used by CMOR
 * `*_index` fields are now strings and must have the appropriate prefix, e.g. `realization_index` should be `"r1"` rather than `1`
 * `tracking_prefix` has been updated with the value required for CMIP7
 
-The CV json files in this repository are for **TESTING** only. In the near future we are planning for the `CMIP7_CV.json` file to be constructed and supplied via the [CMIP7-CVs][https://github.com/WCRP-CMIP/CMIP7-CVs] repository. Updates will be posted here when progress has been made
+The CV json files in this repository are for **TESTING** only. In the near future we are planning for the `CMIP7_CV.json` file to be constructed and supplied via the [CMIP7-CVs](https://github.com/WCRP-CMIP/CMIP7-CVs) repository. Updates will be posted here when progress has been made
 
 ## Changes relative to the Data Request
 
@@ -33,3 +33,20 @@ The tables and examples presented here are derived directly from [Data Request v
 
 * There are some branded variable names that appear in both atmos and landIce MIP tables. We are expecting to change this in the next version of the Data Request to avoid duplication.
 * Cell measures of `::OPT` and `::MODEL` are present in the cell measures file (see #7)
+
+## Examples
+
+Each of these use the tables and the testing CVs JSON file
+
+* [Simple CMOR demo notebook](cmor_demo.ipynb) ([python script equivalent](scripts/cmor_demo.py))
+* [Example of "re-cmorising" CMIP6 data](Simple_recmorise_cmip6-cmip7.ipynb)
+
+Note in particular the lines used to add `cell_measures` metadata to variables.
+
+## Testing
+
+Testing of these tables has been limited, so please report problems / suggestions via the issues. 
+
+## Construction notes
+
+The [construction](scripts/construction.py) script uses the Data Request API and a set of reference files (adapted from CMIP6Plus) to construct the MIP tables and associated files.
