@@ -32,7 +32,6 @@ The tables and examples presented here are derived directly from [Data Request v
 ## Known issues
 
 * There are some branded variable names that appear in both atmos and landIce MIP tables. We are expecting to change this in the next version of the Data Request to avoid duplication.
-* Cell measures of `::OPT` and `::MODEL` are present in the cell measures file (see #7)
 
 ## Examples
 
