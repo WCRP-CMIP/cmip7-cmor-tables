@@ -344,11 +344,12 @@ def load_overrides(reference_dir, dr_version, suffix):
 
 def collect_cell_measures(output_dir, all_var_info):
     """
-    Write out cell measures info to a separate file
+    Write out cell measures info to a separate file and replace "::OPT" and "::MODEL" with 
+    "--OPT" and "--MODEL"
     """
     cell_measures_info = {}
     for variable in all_var_info.values():
-        cell_measures_info[variable.cmip7_compound_name] = variable.cell_measures
+        cell_measures_info[variable.cmip7_compound_name] = variable.cell_measures.replace("::", "--")
     with open(os.path.join(output_dir, "CMIP7_cell_measures.json"), "w") as fh:
         json.dump(cell_measures_info, fh, indent=4, sort_keys=True)
 
