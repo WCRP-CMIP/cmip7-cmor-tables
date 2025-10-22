@@ -23,7 +23,7 @@ The CV json files in this repository are for **TESTING** only. In the near futur
 
 ## Changes relative to the Data Request
 
-The tables and examples presented here are derived directly from [Data Request version v1.2.2.2](https://wcrp-cmip.org/cmip7-data-request-v1-2-2/) with the following changes;
+The tables and examples presented here are derived directly from [Data Request version v1.2.2.2](https://wcrp-cmip.org/cmip7-data-request-v1-2-2-2/) with the following changes;
 
 * `long_name` and `modeling_realm` fields have been "homogenised"; there are a number Data Request variables with the same branded variable name, e.g. `tas_tavg-h2m-hxy-u`, at different frequencies , but with different long name or modeling realm.  This will be corrected in the Data Request in version v1.2.2.3.
 * `comment` fields have been left blank as we have not yet "homogenised" this data.
