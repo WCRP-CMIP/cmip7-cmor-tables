@@ -10,6 +10,9 @@
             "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>"
             
         },
+        "activity_id":{
+            "CMIP": "Coupled Model Intercomparison Project DECK"
+        },
         "archive_id": {
             "WCRP": "a collection of datasets from the AMIP and CMIP project phases, along with project supporting datasets from the input4MIPs (forcing datasets used to drive CMIP simulations) and obs4MIPs (observational datasets used to evaluate CMIP simulations, and numerous other supporting activities"
         },
