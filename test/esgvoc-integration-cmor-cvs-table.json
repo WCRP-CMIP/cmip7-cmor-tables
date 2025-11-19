@@ -916,8 +916,8 @@
             "hxy": "Sampled in both the latitude and longitude directions. This if often referred to as 'gridded' data."
         },
         "initialization_index": [
-            "^i[[:digit:]]\\{1,\\}$",
-            "^i[[:digit:]]\\{4\\}[[:digit:]]\\{2\\}[abcde]\\{0,\\}$"
+            "^i[[:digit:]]\\{4\\}[[:digit:]]\\{2\\}[abcde]\\{0,\\}$",
+            "^i[[:digit:]]\\{1,\\}$"
         ],
         "institution_id": {
             "CCCma": "Environment and Climate Change Canada",
