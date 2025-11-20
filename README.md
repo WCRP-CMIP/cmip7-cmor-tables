@@ -38,6 +38,7 @@ The tables and examples presented here are derived directly from [Data Request v
 Each of these use the tables and the testing CVs JSON file
 
 * [Simple CMOR demo notebook](cmor_demo.ipynb) ([python script equivalent](scripts/cmor_test.py))
+    * Get the right environment either using conda with `cmor_environment.yml` or pixi using the `pixi.lock` file
 * [Example of "re-cmorising" CMIP6 data](Simple_recmorise_cmip6-cmip7.ipynb)
 
 Note in particular the lines used to add `cell_measures` metadata to variables.
