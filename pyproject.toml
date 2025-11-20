@@ -1,6 +1,6 @@
 [project]
 authors = [
-    { name = "Matthew Mizielinski", email = "matthew.mizielinski@metoffice.gov.uk"},
+    { name = "Matthew Mizielinski"},
 ]
 requires-python = ">=3.13,<3.14"
 dependencies = [
