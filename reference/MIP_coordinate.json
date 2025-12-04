@@ -2236,7 +2236,7 @@
         "time2": {
             "axis": "T",
             "bounds_values": "",
-            "climatology": "yes",
+            "climatology": "",
             "formula": "",
             "generic_level_name": "",
             "long_name": "time",
@@ -2259,7 +2259,7 @@
         "time3": {
             "axis": "T",
             "bounds_values": "",
-            "climatology": "yes",
+            "climatology": "",
             "formula": "",
             "generic_level_name": "",
             "long_name": "time",
