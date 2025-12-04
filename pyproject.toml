@@ -7,7 +7,7 @@ dependencies = [
     "pre-commit>=3.3.1", "cmip7-data-request-api==1.3",
 ]
 name = "prototype"
-version = "DR-1.2.2.2-v1.0.2"
+version = "DR-1.2.2.2-v1.0.3"
 description = "CMOR tables for CMIP7"
 readme = "README.md"
 
