@@ -2406,7 +2406,7 @@
         "time2": {
             "axis": "T",
             "bounds_values": "",
-            "climatology": true,
+            "climatology": "",
             "formula": "",
             "generic_level_name": "",
             "long_name": "Monthly Climatology",
@@ -2429,7 +2429,7 @@
         "time3": {
             "axis": "T",
             "bounds_values": "",
-            "climatology": true,
+            "climatology": "",
             "formula": "",
             "generic_level_name": "",
             "long_name": "Diurnal Mean",
