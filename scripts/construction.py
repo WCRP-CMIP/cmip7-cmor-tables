@@ -448,8 +448,6 @@ def main():
     all_var_info = dq.get_variables_metadata(content, dr_version)
     # convert to dataclass
     for k, v in all_var_info.items():
-        # if "flag" in repr(v):
-        #    breakpoint()
         drv = DataRequestVariable(**v)
         all_var_info[k] = drv
 
