@@ -37,13 +37,23 @@ DATASET_INFO = {
     "realization_index": "r9",
     "source_id": "PCMDI-test-1-0",
     "source_type": "AOGCM CHEM BGC",
-    "tracking_prefix": "hdl:21.14100",
+    "tracking_prefix": "hdl:21.14107",
     "host_collection": "CMIP7",
     "frequency": "day",
-    "region": "GLB",
+    "region": "glb",
     "archive_id": "WCRP",
     "mip_era": "CMIP7",
 }
+# Adjustments for CVs table from esgvoc.
+# This should end up being same as the above, but isn't at the moment.
+DATASET_INFO["_controlled_vocabulary_file"] = "test/esgvoc-integration-cmor-cvs-table.json"
+DATASET_INFO["grid_label"] = "g99"
+DATASET_INFO["institution_id"] = "CCCma"
+DATASET_INFO["license_id"] = "CC-BY-4-0"
+DATASET_INFO["nominal_resolution"] = "100-km"
+DATASET_INFO["parent_source_id"] = "CanESM6-MR"
+DATASET_INFO["source_id"] = "CanESM6-MR"
+DATASET_INFO["frequency"] = "mon"
 
 
 def main():
@@ -77,8 +87,8 @@ def main():
                             225,
                             315
                             ])
-    time = numpy.array([15.5, 16.5])
-    time_bnds = numpy.array([15, 16, 17])
+    time = numpy.array([15.0, 45.0])
+    time_bnds = numpy.array([0.0, 30.0, 60.0])
     
     
     realm = "ocean"
@@ -107,7 +117,7 @@ def main():
         cell_measures = json.load(fh)
 
     # Check that cell_measures are valid ( option flags need to be manually replaced )
-    variable_cell_measures = cell_measures[cell_measures_key]
+    variable_cell_measures = cell_measures['cell_measures'][cell_measures_key]
     if variable_cell_measures in ["::OPT", "::MODEL"]:
         raise RuntimeError(f"found cell_measures '{variable_cell_measures}' which CMOR will not allow")
 
