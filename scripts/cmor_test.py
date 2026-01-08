@@ -37,13 +37,23 @@ DATASET_INFO = {
     "realization_index": "r9",
     "source_id": "PCMDI-test-1-0",
     "source_type": "AOGCM CHEM BGC",
-    "tracking_prefix": "hdl:21.14100",
+    "tracking_prefix": "hdl:21.14107",
     "host_collection": "CMIP7",
     "frequency": "day",
-    "region": "GLB",
+    "region": "glb",
     "archive_id": "WCRP",
     "mip_era": "CMIP7",
 }
+# Adjustments for CVs table from esgvoc.
+# This should end up being same as the above, but isn't at the moment.
+DATASET_INFO["_controlled_vocabulary_file"] = "test/esgvoc-integration-cmor-cvs-table.json"
+DATASET_INFO["grid_label"] = "g99"
+DATASET_INFO["institution_id"] = "CCCma"
+DATASET_INFO["license_id"] = "CC-BY-4-0"
+DATASET_INFO["nominal_resolution"] = "100-km"
+DATASET_INFO["parent_source_id"] = "CanESM6-MR"
+DATASET_INFO["source_id"] = "CanESM6-MR"
+DATASET_INFO["frequency"] = "mon"
 
 
 def main():
@@ -61,24 +71,18 @@ def main():
 
     cmor.dataset_json(input_json)
 
-    tos = numpy.array([27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27
-                        ])
+    tos = numpy.array([27.] * 24)
     tos.shape = (2, 3, 4)
-    lat = numpy.array([10, 20, 30])
-    lat_bnds = numpy.array([5, 15, 25, 35])
-    lon = numpy.array([0, 90, 180, 270])
-    lon_bnds = numpy.array([-45, 45,
-                            135,
-                            225,
-                            315
+    lat = numpy.array([10., 20., 30.])
+    lat_bnds = numpy.array([5., 15., 25., 35.])
+    lon = numpy.array([0., 90., 180., 270.])
+    lon_bnds = numpy.array([-45., 45.,
+                            135.,
+                            225.,
+                            315.
                             ])
-    time = numpy.array([15.5, 16.5])
-    time_bnds = numpy.array([15, 16, 17])
+    time = numpy.array([15.0, 45.0])
+    time_bnds = numpy.array([0.0, 30.0, 60.0])
     
     
     realm = "ocean"
@@ -107,22 +111,25 @@ def main():
         cell_measures = json.load(fh)
 
     # Check that cell_measures are valid ( option flags need to be manually replaced )
-    variable_cell_measures = cell_measures[cell_measures_key]
-    if variable_cell_measures in ["::OPT", "::MODEL"]:
-        raise RuntimeError(f"found cell_measures '{variable_cell_measures}' which CMOR will not allow")
+    variable_cell_measures = cell_measures['cell_measures'][cell_measures_key]
 
     cmor.set_variable_attribute(cmortos, "cell_measures", "c", variable_cell_measures)
 
     cmor.write(cmortos, tos)
     filename = cmor.close(cmortos, file_name=True)
     print(filename)
-    for root, files, directories in os.walk(tempdir):
+    for root, directories, files in os.walk(tempdir):
         for f in files:
-            print(os.path.join(root, f))
+            if f.endswith('.nc'):
+                print(os.path.join(root, f))
+                os.system(f'ncdump -h {root}/{f}')
 
     input('Hit enter to delete all data created')
     
-    shutil.rmtree(tempdir)
+    try:
+        shutil.rmtree(tempdir)
+    except OSError:
+        pass
 
 
 if __name__ == '__main__':

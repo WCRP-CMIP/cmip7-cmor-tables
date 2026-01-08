@@ -2,6 +2,7 @@ import argparse
 from collections import defaultdict
 from copy import deepcopy as copy
 from dataclasses import dataclass, asdict
+from typing import Optional
 import datetime
 import hashlib
 import json
@@ -48,7 +49,7 @@ TABLE_TEMPLATE = {
     "Header": {
         "Conventions": "CF-1.12 CMIP-7.0",
         "checksum": "to be calculated",
-        "cmor_version": "3.12",
+        "cmor_version": "3.13",
         "generic_levels": "",
         "int_missing_value": "-999",
         "missing_value": "1e20",
@@ -94,6 +95,8 @@ class DataRequestVariable:
     uid: str
     units: str
     variableRootDD: str
+    flag_values: Optional[str] = None
+    flag_meanings: Optional[str] = None
 
     def to_cmorvar(self):
         """
@@ -124,6 +127,8 @@ class CMORvar:
     dimensions: list
     modeling_realm: str
     long_name: str
+    flag_values: str
+    flag_meanings: str
 
     def table_name(self):
         """
@@ -137,6 +142,11 @@ class CMORvar:
         """
         cmordict = asdict(self)
         del cmordict['branded_variable_name']
+        # flags only used for one variable
+        for field in ['flag_values', 'flag_meanings']:
+            if not cmordict[field]:
+                del cmordict[field]
+
         return cmordict
 
 
@@ -347,11 +357,14 @@ def collect_cell_measures(output_dir, all_var_info):
     Write out cell measures info to a separate file and replace "::OPT" and "::MODEL" with 
     "--OPT" and "--MODEL"
     """
-    cell_measures_info = {}
+    cell_measures_info = {'cell_measures':{}}
     for variable in all_var_info.values():
-        cell_measures_info[variable.cmip7_compound_name] = variable.cell_measures.replace("::", "--")
-    with open(os.path.join(output_dir, "CMIP7_cell_measures.json"), "w") as fh:
-        json.dump(cell_measures_info, fh, indent=4, sort_keys=True)
+        cell_measures_info['cell_measures'][variable.cmip7_compound_name] = variable.cell_measures
+    
+    write_ancil(
+        cell_measures_info, 
+        os.path.join(output_dir, "CMIP7_cell_measures.json"),
+        'cell_measures')
 
 
 def construct_all_ancil_files(output_dir, reference_dir, coords):
@@ -377,8 +390,18 @@ def construct_all_ancil_files(output_dir, reference_dir, coords):
         grids = json.load(fh)
     
     write_ancil(grids,
-                    os.path.join(output_dir, 'CMIP7_grids.json'),
-                    'grids')
+                os.path.join(output_dir, 'CMIP7_grids.json'),
+                'grids')
+    
+    # cell measures
+
+    # long_name overrides    
+    with open(os.path.join(reference_dir, 'MIP_long_name_overrides.json')) as fh:
+        grids = json.load(fh)
+    
+    write_ancil(grids,
+                os.path.join(output_dir, 'CMIP7_long_name_overrides.json'),
+                'long_name_overrides')
     
 
 def write_ancil(data, output_file, table_id):
