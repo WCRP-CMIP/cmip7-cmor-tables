@@ -1,15 +1,15 @@
 # cmip7-cmor-tables
 
-CMOR MIP tables for use with CMOR v3.13 in preparation for CMIP7.
+CMOR MIP tables for use with CMOR v3.13.1 in preparation for CMIP7.
 
-Note that versions of CMOR after v3.10 will be able to use these MIP tables, but version 3.13 is required to correctly output the realization, initialization, physics and forcing indices.
+Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.13 is required to correctly output the realization, initialization, physics and forcing indices.
 
 ## Changes relative to CMIP6
 
-With the introduction of [branded variable names](https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/) (work in progress) and an updated set of [global attributes](https://zenodo.org/records/17250297) the tables here look a little different to those for CMIP6. 
+With the introduction of [branded variable names](https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/) and an updated set of [global attributes](https://zenodo.org/records/17250297) the tables here look a little different to those for CMIP6. 
 
 * Variables are arranged in MIP tables by realm and indexed by branded variable name.
-* Frequency is no longer defined for a specific variable and any valid frequency can be set via the input JSON file.
+* Frequency is no longer defined for a specific variable and any valid frequency can be set via the input JSON file (the same is true for region).
 
 Notable changes to the input JSON file used by CMOR
 * `drs_specs` should be set to `"MIP-DRS7"`
@@ -23,9 +23,9 @@ The CV json files in this repository are for **TESTING** only. In the near futur
 
 ## Changes relative to the Data Request
 
-The tables and examples presented here are derived directly from [Data Request version v1.2.2.2](https://wcrp-cmip.org/cmip7-data-request-v1-2-2-2/) with the following changes;
+The tables and examples presented here are derived directly from [Data Request version v1.2.2.3](https://wcrp-cmip.org/cmip7-data-request-v1-2-2-3/) with the following changes;
 
-* `long_name` and `modeling_realm` fields have been "homogenised"; there are a number Data Request variables with the same branded variable name, e.g. `tas_tavg-h2m-hxy-u`, at different frequencies , but with different long name or modeling realm.  This will be corrected in the Data Request in version v1.2.2.3.
+* `long_name` and `modeling_realm` fields have been mostly "homogenised". Data Request variables sharing the same branded name also share the same `long_name` (16 Data Request variables in v1.2.2.3 are exceptions, all sea ice variables). 
 * `comment` fields have been left blank as we have not yet "homogenised" this data.
 * `cell_measures` are currently blank, with a separate JSON file containing them indexed by the CMIP7 Compound name from the Data Request -- the examples show how to re-introduce this metadata, and updated guidance will be added here.
 
