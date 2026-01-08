@@ -71,21 +71,15 @@ def main():
 
     cmor.dataset_json(input_json)
 
-    tos = numpy.array([27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27,
-                        27, 27, 27, 27
-                        ])
+    tos = numpy.array([27.] * 24)
     tos.shape = (2, 3, 4)
-    lat = numpy.array([10, 20, 30])
-    lat_bnds = numpy.array([5, 15, 25, 35])
-    lon = numpy.array([0, 90, 180, 270])
-    lon_bnds = numpy.array([-45, 45,
-                            135,
-                            225,
-                            315
+    lat = numpy.array([10., 20., 30.])
+    lat_bnds = numpy.array([5., 15., 25., 35.])
+    lon = numpy.array([0., 90., 180., 270.])
+    lon_bnds = numpy.array([-45., 45.,
+                            135.,
+                            225.,
+                            315.
                             ])
     time = numpy.array([15.0, 45.0])
     time_bnds = numpy.array([0.0, 30.0, 60.0])
@@ -124,13 +118,18 @@ def main():
     cmor.write(cmortos, tos)
     filename = cmor.close(cmortos, file_name=True)
     print(filename)
-    for root, files, directories in os.walk(tempdir):
+    for root, directories, files in os.walk(tempdir):
         for f in files:
-            print(os.path.join(root, f))
+            if f.endswith('.nc'):
+                print(os.path.join(root, f))
+                os.system(f'ncdump -h {root}/{f}')
 
     input('Hit enter to delete all data created')
     
-    shutil.rmtree(tempdir)
+    try:
+        shutil.rmtree(tempdir)
+    except OSError:
+        pass
 
 
 if __name__ == '__main__':
