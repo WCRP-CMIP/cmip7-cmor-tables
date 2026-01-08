@@ -118,8 +118,6 @@ def main():
 
     # Check that cell_measures are valid ( option flags need to be manually replaced )
     variable_cell_measures = cell_measures['cell_measures'][cell_measures_key]
-    if variable_cell_measures in ["::OPT", "::MODEL"]:
-        raise RuntimeError(f"found cell_measures '{variable_cell_measures}' which CMOR will not allow")
 
     cmor.set_variable_attribute(cmortos, "cell_measures", "c", variable_cell_measures)
 
