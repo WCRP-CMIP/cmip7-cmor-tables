@@ -105,15 +105,22 @@ def main():
 
     region = DATASET_INFO['region']
     frequency = DATASET_INFO['frequency']
-    cell_measures_key = ".".join([realm] + variable.split("_") + [frequency, region])
-
+    cmip7_compound_name = ".".join([realm] + variable.split("_") + [frequency, region])
+    print('cmip7 compound name:', cmip7_compound_name)
     with open('tables/CMIP7_cell_measures.json') as fh:
         cell_measures = json.load(fh)
 
     # Check that cell_measures are valid ( option flags need to be manually replaced )
-    variable_cell_measures = cell_measures['cell_measures'][cell_measures_key]
+    variable_cell_measures = cell_measures['cell_measures'][cmip7_compound_name]
 
     cmor.set_variable_attribute(cmortos, "cell_measures", "c", variable_cell_measures)
+
+    with open('tables/CMIP7_long_name_overrides.json') as fh:
+        long_name_overrides = json.load(fh)
+
+    if cmip7_compound_name in long_name_overrides['long_name_overrides']:
+        new_long_name = long_name_overrides['long_name_overrides'][cmip7_compound_name]
+        cmor.set_variable_attribute(cmortos, "long_name", "c", new_long_name)
 
     cmor.write(cmortos, tos)
     filename = cmor.close(cmortos, file_name=True)

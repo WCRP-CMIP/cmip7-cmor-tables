@@ -1,8 +1,8 @@
-name: CMOR-3.13.1
+name: CMOR-3.13.2
 channels:
   - conda-forge
 dependencies:
-  - cmor=3.13.1
+  - cmor=3.13.2
   - ipykernel
   - ipython
   - iris=3.13.1
@@ -11,5 +11,5 @@ dependencies:
   - pip=25.2
   - python=3.13.7
   - pip:
-    - cmip7-data-request-api==1.3
+    - cmip7-data-request-api==1.4
 

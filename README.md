@@ -4,6 +4,8 @@ CMOR MIP tables for use with CMOR v3.13.1 in preparation for CMIP7.
 
 Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.13 is required to correctly output the realization, initialization, physics and forcing indices.
 
+To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed and the examples here have been updated to use it.
+
 ## Changes relative to CMIP6
 
 With the introduction of [branded variable names](https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/) and an updated set of [global attributes](https://zenodo.org/records/17250297) the tables here look a little different to those for CMIP6. 
