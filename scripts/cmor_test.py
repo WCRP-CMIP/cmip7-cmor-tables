@@ -57,6 +57,10 @@ DATASET_INFO["frequency"] = "mon"
 
 
 def main():
+    if len(sys.argv) < 2:
+        print('Please specify a temporary location to write to as the argument to this script. Exiting.')
+        sys.exit(1)
+        
     tempdir = sys.argv[1]
     if not os.path.exists(tempdir):
         os.mkdir(tempdir)
