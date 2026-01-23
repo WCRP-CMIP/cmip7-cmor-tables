@@ -10,7 +10,7 @@ DATASET_INFO = {
     "_AXIS_ENTRY_FILE": "tables/CMIP7_coordinate.json",
     "_FORMULA_VAR_FILE": "tables/CMIP7_formula_terms.json",
     "_cmip7_option": 1,
-    "_controlled_vocabulary_file": "test/esgvoc-integration-cmor-cvs-table.json",  # SEPARATE TO MIP TABLES FOR TESTING ONLY
+    "_controlled_vocabulary_file": "test/cmor-cvs.json",  # SEPARATE TO MIP TABLES FOR TESTING ONLY
     "activity_id": "CMIP",
     "branch_method": "standard",
     "branch_time_in_child": 30.0,
@@ -26,7 +26,7 @@ DATASET_INFO = {
     "initialization_index": "i1",
     "institution_id": "CCCma",
     "license_id": "CC-BY-4-0",
-    "nominal_resolution": "100-km",
+    "nominal_resolution": "100 km",
     "outpath": ".",
     "parent_mip_era": "CMIP7",
     "parent_time_units": "days since 1850-01-01",
