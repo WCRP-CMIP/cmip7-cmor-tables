@@ -10,7 +10,7 @@ DATASET_INFO = {
     "_AXIS_ENTRY_FILE": "tables/CMIP7_coordinate.json",
     "_FORMULA_VAR_FILE": "tables/CMIP7_formula_terms.json",
     "_cmip7_option": 1,
-    "_controlled_vocabulary_file": "test/CMIP7-CV_for-cmor.json",  # SEPARATE TO MIP TABLES FOR TESTING ONLY
+    "_controlled_vocabulary_file": "test/esgvoc-integration-cmor-cvs-table.json",  # SEPARATE TO MIP TABLES FOR TESTING ONLY
     "activity_id": "CMIP",
     "branch_method": "standard",
     "branch_time_in_child": 30.0,
@@ -18,43 +18,32 @@ DATASET_INFO = {
     "calendar": "360_day",
     "cv_version": "7.0.0.0",
     "drs_specs": "MIP-DRS7",
-    "experiment_id": "historical",
+    "data_specs_version": "MIP-DS7.0.0.0",
+    "experiment_id": "1pctCO2",
     "forcing_index": "f3",
     "grid": "N96",
-    "grid_label": "gn",
+    "grid_label": "g99",
     "initialization_index": "i1",
-    "institution_id": "PCMDI",
-    "license_id": "CC BY 4.0",
-    "nominal_resolution": "250 km",
+    "institution_id": "CCCma",
+    "license_id": "CC-BY-4-0",
+    "nominal_resolution": "100-km",
     "outpath": ".",
     "parent_mip_era": "CMIP7",
     "parent_time_units": "days since 1850-01-01",
     "parent_activity_id": "CMIP",
-    "parent_source_id": "PCMDI-test-1-0",
+    "parent_source_id": "CanESM6-MR",
     "parent_experiment_id": "piControl",
     "parent_variant_label": "r1i1p1f3",
     "physics_index": "p1",
     "realization_index": "r9",
-    "source_id": "PCMDI-test-1-0",
-    "source_type": "AOGCM CHEM BGC",
+    "source_id": "CanESM6-MR",
     "tracking_prefix": "hdl:21.14107",
     "host_collection": "CMIP7",
-    "frequency": "day",
+    "frequency": "mon",
     "region": "glb",
     "archive_id": "WCRP",
     "mip_era": "CMIP7",
 }
-# Adjustments for CVs table from esgvoc.
-# This should end up being same as the above, but isn't at the moment.
-DATASET_INFO["_controlled_vocabulary_file"] = "test/esgvoc-integration-cmor-cvs-table.json"
-DATASET_INFO["grid_label"] = "g99"
-DATASET_INFO["institution_id"] = "CCCma"
-DATASET_INFO["license_id"] = "CC-BY-4-0"
-DATASET_INFO["nominal_resolution"] = "100-km"
-DATASET_INFO["parent_source_id"] = "CanESM6-MR"
-DATASET_INFO["source_id"] = "CanESM6-MR"
-DATASET_INFO["frequency"] = "mon"
-
 
 def main():
     if len(sys.argv) < 2:
