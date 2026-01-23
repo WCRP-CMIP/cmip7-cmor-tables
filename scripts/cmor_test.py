@@ -16,7 +16,6 @@ DATASET_INFO = {
     "branch_time_in_child": 30.0,
     "branch_time_in_parent": 10800.0,
     "calendar": "360_day",
-    "cv_version": "7.0.0.0",
     "drs_specs": "MIP-DRS7",
     "data_specs_version": "MIP-DS7.0.0.0",
     "experiment_id": "1pctCO2",
