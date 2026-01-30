@@ -62,5 +62,4 @@ jobs:
 
           git checkout -b "${BRANCH_NAME}"
           git push --set-upstream origin "${BRANCH_NAME}"
-          gh pr create --title "${TIMESTAMP} update CMOR CVs JSON" --body "Created from recreate-cmor-cvs-json-file action" --label "update-cmor-cvs-json-file" --reviewer znichollscr
-          # --reviewer matthew-mizielinski
+          gh pr create --title "${TIMESTAMP} update CMOR CVs JSON" --body "Created from recreate-cmor-cvs-json-file action" --label "update-cmor-cvs-json-file" --reviewer znichollscr --reviewer matthew-mizielinski
