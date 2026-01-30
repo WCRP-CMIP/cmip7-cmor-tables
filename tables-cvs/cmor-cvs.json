@@ -1130,7 +1130,9 @@
                 "description": "Yearly (i.e. annual) samples. Note that this means that the time interval between each sample is not constant for some calendars."
             }
         },
-        "grid_label": {},
+        "grid_label": {
+            "g99": "TODO: add grid labels in https://github.com/WCRP-CMIP/CMIP7-CVs"
+        },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
             "hs": "Data reported at specific sites.",
