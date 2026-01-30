@@ -1131,7 +1131,7 @@
             }
         },
         "grid_label": {
-            "g99": "TODO: add grid labels in https://github.com/WCRP-CMIP/CMIP7-CVs"
+            "g99": "Demo entry - do not use"
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
