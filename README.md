@@ -8,12 +8,17 @@ Note that versions of CMOR after v3.10 will be able to use these MIP tables, but
 
 To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed and the examples here have been updated to use it.
 
-## CV JSON file
+## CVs JSON file
 
-The CV JSON file is now hosted in the [tables-cvs directory](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs). 
+The CVs JSON file is now hosted in the [tables-cvs directory](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs). 
 This file will be updated around 00Z each day via a github action using the esgvoc tools. 
 Initially only two source_id entries exist for demonstration purposes, but these will be extended as the Essential Model Documentation is collected and processed. 
 An update to modelling groups will be sent in the second half of February.
+
+⚠️ **Note that there is no intention to generate a tag/release for every update to the CVs JSON file**.⚠️
+
+A large number of changes  will be made to the CVs as new models, grids and eventually experiments are registered making this unwieldly.
+To reference a particular version of the CVs JSON file we recommend using the commit hash (e.g. 58efe39) from [here](https://github.com/WCRP-CMIP/cmip7-cmor-tables/blob/main/tables-cvs/cmor-cvs.json) and the date.
 
 ## Changes relative to CMIP6
 
