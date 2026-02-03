@@ -1,10 +1,19 @@
 # cmip7-cmor-tables
 
-CMOR MIP tables for use with CMOR v3.13.1 in preparation for CMIP7.
+[![Recreate CMOR CVs JSON file](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml/badge.svg)](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml)
+
+CMOR MIP tables for use with CMOR v3.13.1 and newer versions in preparation for CMIP7.
 
 Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.13 is required to correctly output the realization, initialization, physics and forcing indices.
 
 To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed and the examples here have been updated to use it.
+
+## CV JSON file
+
+The CV JSON file is now hosted in the [tables-cvs directory](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs). 
+This file will be updated around 00Z each day via a github action using the esgvoc tools. 
+Initially only two source_id entries exist for demonstration purposes, but these will be extended as the Essential Model Documentation is collected and processed. 
+An update to modelling groups will be sent in the second half of February.
 
 ## Changes relative to CMIP6
 
@@ -14,14 +23,13 @@ With the introduction of [branded variable names](https://wcrp-cmip.github.io/cm
 * Frequency is no longer defined for a specific variable and any valid frequency can be set via the input JSON file (the same is true for region).
 
 Notable changes to the input JSON file used by CMOR
-* `drs_specs` should be set to `"MIP-DRS7"`
-* `region` is required (usually `"GLB"` for global variables)
+* `drs_specs` should be set to the drs_specs version this will be `MIP-DRS7.0.0.0` initially, but will be updated as changes to the data definitions are produced, e.g. new version of the Data Request.
+* `region` is required (usually `"glb"` for global variables, note the change in case as of Data Request v1.2.2.3) 
 * `archive_id` is `"WCRP"`
-* `frequency` must be specified
+* `frequency` must be specified and does not contain any suffixes as in CMIP6 (e.g. `6hrPt` and similar have been removed as has `1hrCM` used for the diurnal cycle diagnostics. The time sampling is now described in the [Branded Variable Name](https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/).
 * `*_index` fields are now strings and must have the appropriate prefix, e.g. `realization_index` should be `"r1"` rather than `1`
 * `tracking_prefix` has been updated with the value required for CMIP7
-
-The CV json files in this repository are for **TESTING** only. In the near future we are planning for the `CMIP7_CV.json` file to be constructed and supplied via the [CMIP7-CVs](https://github.com/WCRP-CMIP/CMIP7-CVs) repository. Updates will be posted here when progress has been made
+* `long_name` and `cell_measures` both have separate files keyed by the CMIP7 compound names. Modelling groups are asked to use these files as shown in the example notebooks
 
 ## Changes relative to the Data Request
 
