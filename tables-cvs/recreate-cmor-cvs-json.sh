@@ -19,12 +19,12 @@
 # If they're not set, the default values are used.
 # Note: the defaults below are working values.
 # In future, we should switch to the commented out lines further below.
-ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=0d8d2bc41fc9245f8ed83f77105c9c39db6ec24f}"
-UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
-UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=add-ukmo-entries}"
-CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=znichollscr}"
-CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=add-ukmo-entries}"
+ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=69fbc48}"
+UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
+UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=esgvoc_dev}"
+CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
+CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=esgvoc_dev}"
 # ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 # ESGVOC_REVISION="${ESGVOC_REVISION:=}" # vTBD
 # UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
