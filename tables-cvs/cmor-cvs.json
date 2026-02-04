@@ -1,9 +1,9 @@
 {
     "CV": {
         "DRS": {
-            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/MOHC/UKESM1-0-LL/1pctCO2/r1i1p1f1/glb/mon/tas/tavg-h2m-hxy-u/g100/20251104",
+            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/MOHC/UKESM1-0-LL/1pctCO2/r1i1p1f1/glb/mon/tas/tavg-h2m-hxy-u/g104/20251104",
             "directory_path_template": "<drs_specs>/<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<variant_label>/<region>/<frequency>/<variable_id>/<branding_suffix>/<grid_label>/<version>",
-            "filename_example": "tas_tavg-h2m-hxy-u_mon_glb_g100_UKESM1-0-LL_1pctCO2_r1i1p1f1_185001-202112.nc",
+            "filename_example": "tas_tavg-h2m-hxy-u_mon_glb_g104_UKESM1-0-LL_1pctCO2_r1i1p1f1_185001-202112.nc",
             "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>"
         },
         "activity_id": {
@@ -1131,7 +1131,11 @@
             }
         },
         "grid_label": {
-            "g100": "TL127"
+            "g100": "TL127",
+            "g101": "TL127",
+            "g102": "eORCA1L75",
+            "g103": "",
+            "g104": ""
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
