@@ -260,11 +260,11 @@ def dr_coord_to_cmor_dict(coord):
     # deal with lists
     if cmor_coord['requested']:
         try:
-            cmor_coord['requested'] = ['{:.1f}'.format(float(i)) for i in cmor_coord['requested'].split()]
+            cmor_coord['requested'] = [str(float(i)) for i in cmor_coord['requested'].split()]
         except ValueError:
             cmor_coord['requested'] = ''
     if cmor_coord['requested_bounds']:
-        cmor_coord['requested_bounds'] = ['{:.1f}'.format(float(i)) for i in cmor_coord['requested_bounds'].split()]
+        cmor_coord['requested_bounds'] = [str(float(i)) for i in cmor_coord['requested_bounds'].split()]
 
     # convert numbers to strings (even if they are zero)
     for i in ['tolerance', 'valid_max', 'valid_min']:
