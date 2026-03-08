@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12 CMIP-7.0",
-        "checksum": "md5: 22d61d9c1e163147468b433c01756a8e",
+        "checksum": "md5: a6a2bcaf9970d6eb06a900c21e50c51a",
         "cmor_version": "3.13",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-01-07 10:30:23",
+        "table_date": "2026-03-08 01:20:26",
         "table_id": "coordinates",
         "type": "real",
         "valid_max": "",
@@ -1947,8 +1947,8 @@
             "out_name": "scatratio",
             "positive": "",
             "requested": [
-                "0.0",
-                "0.6",
+                "0.005",
+                "0.605",
                 "2.1",
                 "4.0",
                 "6.0",
@@ -1965,8 +1965,8 @@
             ],
             "requested_bounds": [
                 "0.0",
-                "0.0",
-                "0.0",
+                "0.01",
+                "0.01",
                 "1.2",
                 "1.2",
                 "3.0",
@@ -2345,9 +2345,9 @@
             "out_name": "tau",
             "positive": "",
             "requested": [
-                "0.1",
+                "0.15",
                 "0.8",
-                "2.5",
+                "2.45",
                 "6.5",
                 "16.2",
                 "41.5",

@@ -12,6 +12,7 @@ DATASET_INFO = {
     "_cmip7_option": 1,
     "_controlled_vocabulary_file": "test/cmor-cvs.json",  # SEPARATE TO MIP TABLES FOR TESTING ONLY
     "activity_id": "CMIP",
+    "branch_method": "standard",
     "branch_time_in_child": 30.0,
     "branch_time_in_parent": 10800.0,
     "calendar": "360_day",
