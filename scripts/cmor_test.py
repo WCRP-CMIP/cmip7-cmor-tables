@@ -20,7 +20,6 @@ DATASET_INFO = {
     "data_specs_version": "MIP-DS7.0.0.0",
     "experiment_id": "1pctCO2",
     "forcing_index": "f3",
-    "grid": "N96",
     "grid_label": "g99",
     "initialization_index": "i1",
     "institution_id": "CCCma",
@@ -37,10 +36,8 @@ DATASET_INFO = {
     "realization_index": "r9",
     "source_id": "CanESM6-MR",
     "tracking_prefix": "hdl:21.14107",
-    "host_collection": "CMIP7",
     "frequency": "mon",
     "region": "glb",
-    "archive_id": "WCRP",
     "mip_era": "CMIP7",
 }
 
