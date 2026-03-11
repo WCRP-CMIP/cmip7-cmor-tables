@@ -1,7 +1,7 @@
 {
     "Header": {
-        "Conventions": "CF-1.12 CMIP-7.0",
-        "checksum": "md5: 72d80b31431cd1b81d92fc2c8635e015",
+        "Conventions": "CF-1.12",
+        "checksum": "md5: bf7dbd71a2b9f9b9d0efad53f314181e",
         "cmor_version": "3.13",
         "generic_levels": "olevel olevhalf",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "ocean",
-        "table_date": "2026-03-08 01:20:26",
+        "table_date": "2026-03-11 08:29:00",
         "table_id": "ocean",
         "type": "real",
         "valid_max": "",

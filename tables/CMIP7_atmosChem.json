@@ -1,7 +1,7 @@
 {
     "Header": {
-        "Conventions": "CF-1.12 CMIP-7.0",
-        "checksum": "md5: 1709e2aacaffab26f5531cbca074be09",
+        "Conventions": "CF-1.12",
+        "checksum": "md5: d7e5981de26f982e226e66a7ce3dd4a9",
         "cmor_version": "3.13",
         "generic_levels": "alevel alevhalf",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "atmosChem",
-        "table_date": "2026-03-08 01:20:26",
+        "table_date": "2026-03-11 08:29:00",
         "table_id": "atmosChem",
         "type": "real",
         "valid_max": "",

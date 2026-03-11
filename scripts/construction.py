@@ -47,7 +47,7 @@ GENERIC_LEVELS = {
 TIMESTAMP = datetime.datetime.today().strftime("%Y-%m-%d %T")
 TABLE_TEMPLATE = {
     "Header": {
-        "Conventions": "CF-1.12 CMIP-7.0",
+        "Conventions": "CF-1.12",
         "checksum": "to be calculated",
         "cmor_version": "3.13",
         "generic_levels": "",

@@ -1,7 +1,7 @@
 {
     "Header": {
-        "Conventions": "CF-1.12 CMIP-7.0",
-        "checksum": "md5: aece695e7b1a0593a67175de9ee9e507",
+        "Conventions": "CF-1.12",
+        "checksum": "md5: 4b2da2c33207aadda4ccb43b654baa7b",
         "cmor_version": "3.13",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-03-08 01:20:26",
+        "table_date": "2026-03-11 08:29:00",
         "table_id": "long_name_overrides",
         "type": "real",
         "valid_max": "",
