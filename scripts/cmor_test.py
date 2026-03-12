@@ -102,7 +102,7 @@ def main():
     # Check that cell_measures are valid ( option flags need to be manually replaced )
     variable_cell_measures = cell_measures['cell_measures'][cmip7_compound_name]
 
-    # cmor.set_variable_attribute(cmortos, "cell_measures", "c", variable_cell_measures)
+    cmor.set_variable_attribute(cmortos, "cell_measures", "c", variable_cell_measures)
 
     with open('tables/CMIP7_long_name_overrides.json') as fh:
         long_name_overrides = json.load(fh)
