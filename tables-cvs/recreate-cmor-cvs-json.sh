@@ -86,10 +86,19 @@ if [[ $install_env -eq 1 ]]; then
     esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
     esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
 
+    # Hopefully there is a way to raise an error on issues here soon
+    # https://github.com/ESGF/esgf-vocab/issues/202
     esgvoc install
 
 fi
 
-esgvoc cmor-export-cvs-table --out-path "${out_file}"
+esgvoc cmor-export-cvs-table --out-path "${out_file}" && log "Wrote output to ${out_file}"
 
-log "Wrote output to ${out_file}"
+export_table_status=$?
+if [ $export_table_status -ne 0 ]; then
+    echo "Exporting table failed"
+    exit $export_table_status
+fi
+
+# If we get to here, exit with 'success' status
+exit 0
