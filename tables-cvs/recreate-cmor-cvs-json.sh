@@ -19,8 +19,6 @@
 # If they're not set, the default values are used.
 # Note: the defaults below are working values.
 # In future, we should switch to the commented out lines further below.
-ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=69fbc48}"
 ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
 ESGVOC_REVISION="${ESGVOC_REVISION:=fdb8add8916ca71c7ae6622bc08bfda85b92c177}"
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
