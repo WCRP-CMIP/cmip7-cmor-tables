@@ -20,7 +20,7 @@
 # Note: the defaults below are working values.
 # In future, we should switch to the commented out lines further below.
 ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=fdb8add8916ca71c7ae6622bc08bfda85b92c177}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=8966f2ce1b27974cf278f9358d38d3232438040c}"
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
 UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=esgvoc_dev}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
