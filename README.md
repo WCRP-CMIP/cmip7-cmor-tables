@@ -30,7 +30,7 @@ With the introduction of [branded variable names](https://wcrp-cmip.github.io/cm
 Notable changes to the input JSON file used by CMOR
 * `drs_specs` should be set to the drs_specs version this will be `MIP-DRS7.0.0.0` initially, but will be updated as changes to the data definitions are produced, e.g. new version of the Data Request.
 * `region` is required (usually `"glb"` for global variables, note the change in case as of Data Request v1.2.2.3) 
-* `archive_id` is `"WCRP"`
+* ~`archive_id` is `"WCRP"`~ change abandoned
 * `frequency` must be specified and does not contain any suffixes as in CMIP6 (e.g. `6hrPt` and similar have been removed as has `1hrCM` used for the diurnal cycle diagnostics. The time sampling is now described in the [Branded Variable Name](https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/).
 * `*_index` fields are now strings and must have the appropriate prefix, e.g. `realization_index` should be `"r1"` rather than `1`
 * `tracking_prefix` has been updated with the value required for CMIP7
