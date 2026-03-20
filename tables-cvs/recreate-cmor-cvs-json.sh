@@ -19,8 +19,8 @@
 # If they're not set, the default values are used.
 # Note: the defaults below are working values.
 # In future, we should switch to the commented out lines further below.
-ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=69fbc48}"
+ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=c1f9aceae9833a9b96fd7a8455f2464737015887}"
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
 UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=esgvoc_dev}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
@@ -86,10 +86,19 @@ if [[ $install_env -eq 1 ]]; then
     esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
     esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
 
+    # Hopefully there is a way to raise an error on issues here soon
+    # https://github.com/ESGF/esgf-vocab/issues/202
     esgvoc install
 
 fi
 
-esgvoc cmor-export-cvs-table --out-path "${out_file}"
+esgvoc cmor-export-cvs-table --out-path "${out_file}" && log "Wrote output to ${out_file}"
 
-log "Wrote output to ${out_file}"
+export_table_status=$?
+if [ $export_table_status -ne 0 ]; then
+    echo "Exporting table failed"
+    exit $export_table_status
+fi
+
+# If we get to here, exit with 'success' status
+exit 0
