@@ -20,9 +20,9 @@
 # Note: the defaults below are working values.
 # In future, we should switch to the commented out lines further below.
 ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=01dc644849e6be7189dab36eeff15b58e92a7f3b}"
-UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
-UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=esgvoc_dev}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=c1f9aceae9833a9b96fd7a8455f2464737015887}"
+UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
+UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=remove-trailing-bracket}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
 CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=esgvoc_dev}"
 # ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
