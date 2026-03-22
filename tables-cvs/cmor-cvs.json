@@ -212,14 +212,14 @@
                 "start_year": 1979,
                 "tier": 1
             },
-            "amip-p4k": {
+            "amip-p4K": {
                 "activity_id": [
                     "CFMIP"
                 ],
                 "description": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
                 "end_year": 2021,
                 "experiment": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
-                "experiment_id": "amip-p4k",
+                "experiment_id": "amip-p4K",
                 "min_number_yrs_per_sim": 43,
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
