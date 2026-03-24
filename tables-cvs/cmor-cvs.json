@@ -1322,12 +1322,12 @@
             }
         },
         "grid_label": {
-            "g100": "TL127",
-            "g101": "TL127",
-            "g102": "eORCA1L75",
+            "g100": "",
+            "g101": "",
+            "g102": "",
             "g103": "",
             "g104": "",
-            "g999": "Demo entry - do not use"
+            "g999": ""
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
