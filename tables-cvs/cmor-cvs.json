@@ -3,7 +3,7 @@
         "DRS": {
             "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CNRM-CERFACS/CNRM-ESM2-1e/1pctCO2/r1i1p1f1/glb/mon/rsus/tavg-h2m-hxy-u/g101/20251104",
             "directory_path_template": "<drs_specs><mip_era><activity_id><institution_id><source_id><experiment_id><variant_label><region><frequency><variable_id><branding_suffix><grid_label><version>",
-            "filename_example": "rsus_rsus_mon_glb_g101_CNRM-ESM2-1e_1pctCO2_r1i1p1f1_r1i1p1f1.nc",
+            "filename_example": "rsus_tavg-h2m-hxy-u_mon_glb_g101_CNRM-ESM2-1e_1pctCO2_r1i1p1f1_185001-202112.nc",
             "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>"
         },
         "activity_id": {
