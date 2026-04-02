@@ -1,12 +1,13 @@
-# cmip7-cmor-tables
+ cmip7-cmor-tables
 
 [![Recreate CMOR CVs JSON file](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml/badge.svg)](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml)
 
 CMOR MIP tables for use with CMOR v3.13.1 and newer versions in preparation for CMIP7.
 
-Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.13 is required to correctly output the realization, initialization, physics and forcing indices.
+Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.13 is required to correctly output the realization, initialization, physics and forcing indices. 
+CMOR v3.14.1 removed some legacy global attributes from output files (see [release notes](https://github.com/PCMDI/cmor/releases/tag/3.14.1) for details.
 
-To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed and the examples here have been updated to use it.
+To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed, and CMOR v3.14.1 is used in the examples here.
 
 ## CVs JSON file
 
@@ -35,6 +36,7 @@ Notable changes to the input JSON file used by CMOR
 * `*_index` fields are now strings and must have the appropriate prefix, e.g. `realization_index` should be `"r1"` rather than `1`
 * `tracking_prefix` has been updated with the value required for CMIP7
 * `long_name` and `cell_measures` both have separate files keyed by the CMIP7 compound names. Modelling groups are asked to use these files as shown in the example notebooks
+* `branch_method` is no longer required (requires CMOR v3.14.1)
 
 ## Changes relative to the Data Request
 
