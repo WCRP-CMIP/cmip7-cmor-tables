@@ -1,0 +1,19 @@
+[workspace]
+name = "cmip7-cmor-tables"
+description = "CMOR tables for CMIP7"
+channels = ["conda-forge"]
+platforms = [
+    "osx-64",
+    "osx-arm64",
+    "linux-64",
+    # "linux-aarch64",
+    # "win-64",
+]
+
+[dependencies]
+python = ">=3.13,<3.14"
+cmor = "3.14.0.*"
+jupyterlab = ">=4.5.0,<5"
+
+[pypi-dependencies]
+CMIP7-data-request-api = "==1.4"
