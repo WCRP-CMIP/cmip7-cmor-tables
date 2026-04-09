@@ -18,7 +18,7 @@
 # Environment variables that this file uses.
 # If they're not set, the default values are used.
 ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=61ef5b9977f8935442940010f6adb688c132a861}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=afccdcfbcb96417074e73b9e18aa3c71bc887ded}"
 # ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 # ESGVOC_REVISION="${ESGVOC_REVISION:=7305a58}" # v3.0.0
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
