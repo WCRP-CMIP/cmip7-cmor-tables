@@ -1,5 +1,10 @@
 {
     "CV": {
+        "Conventions": {
+            "CF-1.11": "https://cfconventions.org/Data/cf-conventions/cf-conventions-1.11/cf-conventions.html",
+            "CF-1.12": "https://cfconventions.org/Data/cf-conventions/cf-conventions-1.12/cf-conventions.html",
+            "CF-1.13": "https://cfconventions.org/Data/cf-conventions/cf-conventions-1.13/cf-conventions.html"
+        },
         "DRS": {
             "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CNRM-CERFACS/CNRM-ESM2-1e/1pctCO2/r1i1p1f1/glb/mon/rsus/tavg-h2m-hxy-u/g101/20251104",
             "directory_path_template": "<drs_specs><mip_era><activity_id><institution_id><source_id><experiment_id><variant_label><region><frequency><variable_id><branding_suffix><grid_label><version>",
@@ -50,9 +55,7 @@
             "^[[:digit:]]\\{4\\}-[[:digit:]]\\{2\\}-[[:digit:]]\\{2\\}T[[:digit:]]\\{2\\}:[[:digit:]]\\{2\\}:[[:digit:]]\\{2\\}Z$"
         ],
         "data_specs_version": "MIP-DS7.1.0.0",
-        "drs_specs": {
-            "MIP-DRS7": "Data reference syntax (DRS) initially designed for use with CMIP7"
-        },
+        "drs_specs": "MIP-DRS7",
         "experiment_id": {
             "1pctCO2": {
                 "activity_id": [
@@ -1458,7 +1461,7 @@
             "tsum": "Data is the sum over each time period (i.e. each reported interval defined by its time bounds)."
         },
         "tracking_id": [
-            "^hdl:21.14107/[0-9A-Fa-f]\\{8\\}-[0-9A-Fa-f]\\{4\\}-4[0-9A-Fa-f]\\{3\\}-[89ABab][0-9A-Fa-f]\\{3\\}-[0-9A-Fa-f]\\{12\\}$"
+            "^hdl:21.14107/[0-9A-Fa-f]\\{8\\}-[0-9A-Fa-f]\\{4\\}-[0-9A-Fa-f]\\{4\\}-[0-9A-Fa-f]\\{4\\}-[0-9A-Fa-f]\\{12\\}$"
         ],
         "variant_label": [
             "^r[[:digit:]]\\{1,\\}i[[:digit:]]\\{4\\}[[:digit:]]\\{2\\}[abcde]\\{0,\\}p[[:digit:]]\\{1,\\}f[[:digit:]]\\{1,\\}$",
