@@ -11,7 +11,6 @@ from typing import Annotated, Any, TypeAlias
 
 import esgvoc.api as ev_api
 import typer
-from esgvoc.apps.cmor_tables import generate_cvs_table
 from pydantic import BaseModel, ConfigDict, HttpUrl
 
 AllowedDict: TypeAlias = dict[str, Any]
