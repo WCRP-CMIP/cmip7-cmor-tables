@@ -17,26 +17,24 @@
 
 # Environment variables that this file uses.
 # If they're not set, the default values are used.
-ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=908dfeb3516aab1e3e3af8236ab66b43328e81cb}"
-# ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-# ESGVOC_REVISION="${ESGVOC_REVISION:=7305a58}" # v3.0.0
+ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=9fcf732}" # v3.0.0
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
 UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=esgvoc_dev}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=remove-unused-convention}"
-# CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-# CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=esgvoc}"
+CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=esgvoc_dev}"
 
 verbose=0
 install_env=0
 out_file='cmor-cvs.json'
 requirements_file='requirements-cmor-cvs-table.txt'
+generation_script='generate-cmor-cvs-table.py'
 
-while getopts "o:r:ve" OPTION; do
+while getopts "o:r:s:ve" OPTION; do
     case $OPTION in
     o) out_file="${OPTARG}" ;;
     r) requirements_file="${OPTARG}" ;;
+    s) generation_script="${OPTARG}" ;;
     v) verbose=1 ;;
     e) install_env=1 ;;
     *)
@@ -63,6 +61,7 @@ if [[ $install_env -eq 1 ]]; then
 
     log "out_file=$out_file"
     log "requirements_file=$requirements_file"
+    log "generation_script=$generation_script"
 
     sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
     sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
@@ -88,7 +87,7 @@ if [[ $install_env -eq 1 ]]; then
 
 fi
 
-esgvoc cmor-export-cvs-table --out-path "${out_file}" && log "Wrote output to ${out_file}"
+python "${generation_script}" --out-path "${out_file}" && log "Wrote output to ${out_file}"
 
 export_table_status=$?
 if [ $export_table_status -ne 0 ]; then
