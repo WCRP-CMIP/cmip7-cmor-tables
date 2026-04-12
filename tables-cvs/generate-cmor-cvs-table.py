@@ -11,7 +11,7 @@ from typing import Annotated, Any, TypeAlias
 
 import esgvoc.api as ev_api
 import typer
-from pydantic import BaseModel, ConfigDict, HttpUrl
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl
 
 AllowedDict: TypeAlias = dict[str, Any]
 """
@@ -131,7 +131,7 @@ class CMORFrequencyDefinition(BaseModel):
     Approximate interval in days
     """
 
-    approx_interval_warning: float
+    approx_interval_warning: float = Field(ge=0, le=1)
     """
     Threshold for raising warnings about the consistency between data and `approx_interval`
 
@@ -143,7 +143,7 @@ class CMORFrequencyDefinition(BaseModel):
     an interval less than 12.5 days or greater than 37.5 days will raise a warning.
     """
 
-    approx_interval_error: float
+    approx_interval_error: float = Field(ge=0, le=1)
     """
     Threshold for raising errors about the consistency between data and `approx_interval`
 
