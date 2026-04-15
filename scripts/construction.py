@@ -257,6 +257,10 @@ def dr_coord_to_cmor_dict(coord):
         cmor_coord['must_have_bounds'] = "yes"
     else:
         cmor_coord['must_have_bounds'] = "no"
+    if cmor_coord['climatology']:
+        cmor_coord['climatology'] = "yes"
+    else:
+        cmor_coord['climatology'] = ""
     # deal with lists
     if cmor_coord['requested']:
         try:
