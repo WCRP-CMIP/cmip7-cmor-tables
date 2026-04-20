@@ -23,7 +23,7 @@ jobs:
 
       - name: Update cmor-cvs.json
         run: |
-          bash tables-cvs/recreate-cmor-cvs-json.sh -o tables-cvs/cmor-cvs.json -r tables-cvs/requirements-cmor-cvs-table.txt -e -v
+          bash tables-cvs/recreate-cmor-cvs-json.sh -o tables-cvs/cmor-cvs.json -r tables-cvs/requirements-cmor-cvs-table.txt -s tables-cvs/generate-cmor-cvs-table.py -e -v
 
           # Show the diff
           git diff || true
