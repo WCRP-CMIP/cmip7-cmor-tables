@@ -2,12 +2,14 @@
 
 [![Recreate CMOR CVs JSON file](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml/badge.svg)](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml)
 
-CMOR MIP tables for use with CMOR v3.13.1 and newer versions in preparation for CMIP7.
+CMOR MIP tables for use with CMOR v3.14.2 and newer versions in preparation for CMIP7.
 
-Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.13 is required to correctly output the realization, initialization, physics and forcing indices. 
+Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.14.2 is required to correctly output all global attributes. 
 CMOR v3.14.1 removed some legacy global attributes from output files (see [release notes](https://github.com/PCMDI/cmor/releases/tag/3.14.1) for details.
+CMOR v3.14.2 prevents parent attributes from being required for experiments with no parents (see [release notes](https://github.com/PCMDI/cmor/releases/tag/3.14.2) for details.
 
-To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed, and CMOR v3.14.1 is used in the examples here.
+
+To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed, and CMOR v3.14.2 is used in the examples here.
 
 ## CVs JSON file
 
@@ -29,7 +31,7 @@ With the introduction of [branded variable names](https://wcrp-cmip.github.io/cm
 * Frequency is no longer defined for a specific variable and any valid frequency can be set via the input JSON file (the same is true for region).
 
 Notable changes to the input JSON file used by CMOR
-* `drs_specs` should be set to the drs_specs version this will be `MIP-DRS7.0.0.0` initially, but will be updated as changes to the data definitions are produced, e.g. new version of the Data Request.
+* `drs_specs` should be set to the drs_specs version this will be `MIP-DRS7.1.0.0` initially, but will be updated as changes to the data definitions are produced, e.g. new version of the Data Request.
 * `region` is required (usually `"glb"` for global variables, note the change in case as of Data Request v1.2.2.3) 
 * ~`archive_id` is `"WCRP"`~ change abandoned
 * `frequency` must be specified and does not contain any suffixes as in CMIP6 (e.g. `6hrPt` and similar have been removed as has `1hrCM` used for the diurnal cycle diagnostics. The time sampling is now described in the [Branded Variable Name](https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/).
