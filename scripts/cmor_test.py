@@ -10,7 +10,7 @@ DATASET_INFO = {
     "_AXIS_ENTRY_FILE": "tables/CMIP7_coordinate.json",
     "_FORMULA_VAR_FILE": "tables/CMIP7_formula_terms.json",
     "_cmip7_option": 1,
-    "_controlled_vocabulary_file": "tables-cvs/cmor-cvs.json",  # SEPARATE TO MIP TABLES FOR TESTING ONLY
+    "_controlled_vocabulary_file": "tables-cvs/cmor-cvs.json",
     "activity_id": "CMIP",
     "branch_time_in_child": 30.0,
     "branch_time_in_parent": 10800.0,
@@ -38,7 +38,6 @@ DATASET_INFO = {
     "frequency": "mon",
     "region": "glb",
     "mip_era": "CMIP7",
-    "Conventions": "CF-1.11",
 }
 
 def main():
