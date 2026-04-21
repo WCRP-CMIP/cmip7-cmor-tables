@@ -268,7 +268,7 @@ def dr_coord_to_cmor_dict(coord):
         try:
             cmor_coord['requested'] = [str(float(i)) for i in cmor_coord['requested'].split()]
         except ValueError:
-            cmor_coord['requested'] = ''
+            cmor_coord['requested'] = [str(i) for i in cmor_coord['requested'].split()]
     if cmor_coord['requested_bounds']:
         cmor_coord['requested_bounds'] = [str(float(i)) for i in cmor_coord['requested_bounds'].split()]
 
