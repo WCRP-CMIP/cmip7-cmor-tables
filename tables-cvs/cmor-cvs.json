@@ -1296,31 +1296,51 @@
         "frequency": {
             "1hr": {
                 "approx_interval": 0.041666666666666664,
+                "approx_interval_error": 0.2,
+                "approx_interval_warning": 0.1,
                 "description": "Hourly samples."
             },
             "3hr": {
                 "approx_interval": 0.125,
+                "approx_interval_error": 0.2,
+                "approx_interval_warning": 0.1,
                 "description": "Three hourly samples."
             },
             "6hr": {
                 "approx_interval": 0.25,
+                "approx_interval_error": 0.2,
+                "approx_interval_warning": 0.1,
                 "description": "Six hourly samples."
             },
             "day": {
                 "approx_interval": 1.0,
+                "approx_interval_error": 0.2,
+                "approx_interval_warning": 0.1,
                 "description": "Daily samples."
             },
             "dec": {
                 "approx_interval": 3652.5,
+                "approx_interval_error": 0.2,
+                "approx_interval_warning": 0.1,
                 "description": "Decadal samples. Note that this means that the time interval between each sample is not constant for some calendars."
             },
             "fx": "fixed (time invariant) field",
             "mon": {
                 "approx_interval": 30.0,
+                "approx_interval_error": 0.2,
+                "approx_interval_warning": 0.1,
                 "description": "Monthly samples. Note that this means that the time interval between each sample is not constant for some calendars."
+            },
+            "subhr": {
+                "approx_interval": 0.01736111111111111,
+                "approx_interval_error": 0.9,
+                "approx_interval_warning": 0.5,
+                "description": "Sub-hourly (i.e. more frequently than once per hour) samples."
             },
             "yr": {
                 "approx_interval": 365.25,
+                "approx_interval_error": 0.2,
+                "approx_interval_warning": 0.1,
                 "description": "Yearly (i.e. annual) samples. Note that this means that the time interval between each sample is not constant for some calendars."
             }
         },

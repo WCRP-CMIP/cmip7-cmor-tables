@@ -11,7 +11,7 @@ from typing import Annotated, Any, TypeAlias
 
 import esgvoc.api as ev_api
 import typer
-from pydantic import BaseModel, ConfigDict, HttpUrl
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl
 
 AllowedDict: TypeAlias = dict[str, Any]
 """
@@ -131,6 +131,30 @@ class CMORFrequencyDefinition(BaseModel):
     Approximate interval in days
     """
 
+    approx_interval_warning: float = Field(ge=0, le=1)
+    """
+    Threshold for raising warnings about the consistency between data and `approx_interval`
+
+    If the absolute difference between the actual reporting interval
+    and the data's time interval (i.e. frequency)
+    is greater than `approx_interval_warning * approx_interval`,
+    then a warning will be raised by CMOR.
+    For example, for an approximate interval of 25 days and `approx_interval_warning=0.5`,
+    an interval less than 12.5 days or greater than 37.5 days will raise a warning.
+    """
+
+    approx_interval_error: float = Field(ge=0, le=1)
+    """
+    Threshold for raising errors about the consistency between data and `approx_interval`
+
+    If the absolute difference between the actual reporting interval
+    and the data's time interval (i.e. frequency)
+    is greater than `approx_interval_error * approx_interval`,
+    then an error will be raised by CMOR.
+    For example, for an approximate interval of 24 days and `approx_interval_error=0.75`,
+    an interval less than 6.0 days or greater than 42.0 days will raise an error.
+    """
+
     description: str
     """
     Description
@@ -225,6 +249,16 @@ def remove_none_values_from_dict(inv: dict[str, Any]) -> dict[str, Any]:
 class CMORCVsTable(BaseModel):
     """
     Representation of the JSON table required by CMOR for CVs
+
+    Note a potential source of confusion:
+    this table actually defines the CVs for CMOR,
+    as well as CMOR's behaviour.
+    For example, the behaviour of CMOR varies
+    depending on whether each value is a single value,
+    a dict or a list.
+    So this schema/data model will not be general,
+    it instead varies based on the specific requirements of the project.
+
     CMOR also takes in variable tables,
     as well as a user input table.
     This model doesn't consider those tables
@@ -701,6 +735,9 @@ def get_cmor_frequency_definitions(
         v.drs_name: CMORFrequencyDefinition(
             description=v.description,
             approx_interval=get_approx_interval(v.interval, units=v.units),
+            # Sensible defaults
+            approx_interval_warning=0.1,
+            approx_interval_error=0.2,
         )
         if v.interval
         # I'm still not convinced that it wouldn't be simpler to use the same schema for all types
@@ -917,7 +954,10 @@ def get_cmor_drs_definition(
     return res
 
 
-def generate_cvs_table(project: str) -> CMORCVsTable:
+def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
+    """
+    Generate CVs table from information available via esgvoc
+    """
     ev_project = ev_api.projects.get_project(project)
 
     init_kwargs = {"required_global_attributes": []}
@@ -1070,6 +1110,38 @@ def generate_cvs_table(project: str) -> CMORCVsTable:
     return cmor_cvs_table
 
 
+def add_non_esgvoc_info(cvs_table: CMORCVsTable) -> CMORCVsTable:
+    res = cvs_table.model_copy(deep=True)
+
+    updated_frequencies = {}
+    for k, v in cvs_table.frequency.items():
+        if not isinstance(v, CMORFrequencyDefinition):
+            updated_frequencies[k] = v
+            continue
+
+        if k == "subhr":
+            uf = CMORFrequencyDefinition(
+                description=v.description,
+                approx_interval=v.approx_interval,
+                approx_interval_warning=0.5,
+                approx_interval_error=0.9,
+            )
+
+        else:
+            uf = CMORFrequencyDefinition(
+                description=v.description,
+                approx_interval=v.approx_interval,
+                approx_interval_warning=v.approx_interval_warning,
+                approx_interval_error=v.approx_interval_error,
+            )
+
+        updated_frequencies[k] = uf
+
+    res.frequency = updated_frequencies
+
+    return res
+
+
 app = typer.Typer()
 
 
@@ -1092,7 +1164,8 @@ def cmor_export_cvs_table(
     # Hard-code as that is all we support
     project = "cmip7"
 
-    cvs_table = generate_cvs_table(project=project.lower())
+    cvs_table_esgvoc = generate_cvs_table_esgvoc(project=project)
+    cvs_table = add_non_esgvoc_info(cvs_table_esgvoc)
     cvs_table_json = cvs_table.to_cvs_json()
 
     if out_path:
