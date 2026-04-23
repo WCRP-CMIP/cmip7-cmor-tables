@@ -279,7 +279,7 @@ class CMORCVsTable(BaseModel):
     # """
 
     # Conventions added in following https://github.com/PCMDI/cmor/issues/937
-    Conventions: AllowedDict
+    Conventions: RegularExpressionValidators
     """
     Allowed values of `Conventions`
     """
@@ -309,7 +309,7 @@ class CMORCVsTable(BaseModel):
     Allowed value of `data_specs_version`
     """
 
-    drs_specs: str
+    drs_specs: RegularExpressionValidators
     """
     Allowed value of `drs_specs`
     """
@@ -982,10 +982,14 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             "drs_specs",
             "mip_era",
         ]:
-            # Special single value entries
             value = get_single_allowed_value_for_attribute(
                 attr_property.field_name, ev_project
             )
+            if attr_property.field_name == "drs_specs":
+                # Extra special field that has to be an array,
+                # see https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/78
+                value = [value]
+
             kwarg = attr_property.field_name
 
         elif attr_property.field_name == "license_id":
@@ -1011,6 +1015,7 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             value = get_cmor_nominal_resolution_defintions(
                 attr_property.field_name, ev_project
             )
+
         elif attr_property.field_name == "source_id":
             value = get_cmor_source_id_definitions(
                 attr_property.source_collection, ev_project
@@ -1022,6 +1027,15 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             # TODO: figure out how to unpack typing.Annotated
             kwarg = attr_property.field_name
             value = get_allowed_dict_for_attribute(attr_property.field_name, ev_project)
+
+        elif attr_property.field_name == "Conventions":
+            # As requested in: https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/78
+            kwarg = attr_property.field_name
+            value = list(
+                get_allowed_dict_for_attribute(
+                    attr_property.field_name, ev_project
+                ).keys()
+            )
 
         elif attr_property.field_name == "grid_label":
             # Not sure why this is a necessary exception
