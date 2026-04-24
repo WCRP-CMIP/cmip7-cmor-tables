@@ -1186,12 +1186,11 @@ def cmor_export_cvs_table(
         """
         Walk a dictionary sorting any lists that are encountered
         """
-        if isinstance(obj, dict):
-            for k, v in obj.items():
-                if isinstance(v, dict):
-                    _list_sort(v)
-                elif isinstance(v, list):
-                    obj[k] = sorted(v)
+        for k, v in obj.items():
+            if isinstance(v, dict):
+                _list_sort(v)
+            elif isinstance(v, list):
+                obj[k] = sorted(v)
 
     _list_sort(cvs_table_json)
 
