@@ -1,0 +1,8 @@
+{
+    "hm": "Data reported as a mean over some horizontal area.",
+    "hs": "Data reported at specific sites.",
+    "ht": "Data along a transect. This is some aggregate (sum, mean etc.) along the transect(s).",
+    "hxy": "Data on x-y (often lat-lon) grid, also referred to as gridded data.",
+    "hy": "Data that is a function of the y horizontal dimension, but not x (i.e., often just a function of latitude). This is usually a zonal-mean or zonal-sum or some other zonal-aggregate data.",
+    "hyb": "Data that is a function of the y horizontal dimension (i.e., often just a function of latitude), representing a zonal-mean or zonal-sum or some other aggregate across the x dimension for individual ocean basins (e.g., a zonal mean across each of the ocean basins)."
+}

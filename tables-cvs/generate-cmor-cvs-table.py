@@ -1,5 +1,7 @@
 """
 Generate CMOR CVs table
+
+Also generates the files in the split view.
 """
 
 import itertools
@@ -1156,6 +1158,17 @@ def add_non_esgvoc_info(cvs_table: CMORCVsTable) -> CMORCVsTable:
     return res
 
 
+def _list_sort(obj: Any):
+    """
+    Walk a dictionary sorting any lists that are encountered
+    """
+    for k, v in obj.items():
+        if isinstance(v, dict):
+            _list_sort(v)
+        elif isinstance(v, list):
+            obj[k] = sorted(v)
+
+
 app = typer.Typer()
 
 
@@ -1167,6 +1180,14 @@ def cmor_export_cvs_table(
             help="Path in which to write the output. If not provided, the result is printed instead.",
             dir_okay=False,
             file_okay=True,
+        ),
+    ] = None,
+    out_path_split_view: Annotated[
+        Path | None,
+        typer.Option(
+            help="Path in which to write the CVs information, split into one file per CV. If not provided, the split view is not created.",
+            dir_okay=True,
+            file_okay=False,
         ),
     ] = None,
 ) -> None:
@@ -1181,19 +1202,9 @@ def cmor_export_cvs_table(
     cvs_table_esgvoc = generate_cvs_table_esgvoc(project=project)
     cvs_table = add_non_esgvoc_info(cvs_table_esgvoc)
     cvs_table_json = cvs_table.to_cvs_json()
-    
-    def _list_sort(obj):
-        """
-        Walk a dictionary sorting any lists that are encountered
-        """
-        for k, v in obj.items():
-            if isinstance(v, dict):
-                _list_sort(v)
-            elif isinstance(v, list):
-                obj[k] = sorted(v)
 
+    # Sort before writing to disk or displaying to ensure stability of ordering
     _list_sort(cvs_table_json)
-
     if out_path:
         with open(out_path, "w") as fh:
             json.dump(cvs_table_json, fh, **json_dump_settings)
@@ -1201,6 +1212,13 @@ def cmor_export_cvs_table(
 
     else:
         print(json.dumps(cvs_table_json, **json_dump_settings))
+
+    if out_path_split_view:
+        out_path_split_view.mkdir(exist_ok=True)
+        for key, value in cvs_table_json["CV"].items():
+            out_path = out_path_split_view / f"{key}.json"
+            with open(out_path, "w") as fh:
+                json.dump(value, fh, **json_dump_settings)
 
 
 if __name__ == "__main__":

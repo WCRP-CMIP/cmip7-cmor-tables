@@ -15,13 +15,19 @@ To support overriding of long names, in the very small number of cases where thi
 
 The CVs JSON file is now hosted in the [tables-cvs directory](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs). 
 This file will be updated around 00Z each day via a github action using the esgvoc tools. 
-Initially only two source_id entries exist for demonstration purposes, but these will be extended as the Essential Model Documentation is collected and processed. 
-An update to modelling groups will be sent in the second half of February.
 
 ⚠️ **Note that there is no intention to generate a tag/release for every update to the CVs JSON file**.⚠️
 
-A large number of changes  will be made to the CVs as new models, grids and eventually experiments are registered making this unwieldly.
+A large number of changes will be made to the CVs as new models, grids and eventually experiments are registered making this unwieldly.
 To reference a particular version of the CVs JSON file we recommend using the commit hash (e.g. 58efe39) from [here](https://github.com/WCRP-CMIP/cmip7-cmor-tables/blob/main/tables-cvs/cmor-cvs.json) and the date.
+
+### 'Split' view
+
+To assist users with seeing the available options for each CV,
+we also provide one file per CV in `tables-cvs/split-view`.
+The information here is the same as what is in the file that is used by CMOR
+(specifically `tables-cvs/cmor-cvs.json`),
+but it is just provided in a way that may be more convenient for some users.
 
 ## Changes relative to CMIP6
 
