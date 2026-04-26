@@ -2,8 +2,8 @@
     "CV": {
         "Conventions": [
             "CF-1.13",
-            "CF-1.12",
-            "CF-1.11"
+            "CF-1.11",
+            "CF-1.12"
         ],
         "DRS": {
             "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CNRM-CERFACS/CNRM-ESM2-1e/1pctCO2/r1i1p1f1/glb/mon/rsus/tavg-h2m-hxy-u/g101/20251104",
