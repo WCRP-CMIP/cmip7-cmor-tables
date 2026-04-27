@@ -1181,6 +1181,18 @@ def cmor_export_cvs_table(
     cvs_table_esgvoc = generate_cvs_table_esgvoc(project=project)
     cvs_table = add_non_esgvoc_info(cvs_table_esgvoc)
     cvs_table_json = cvs_table.to_cvs_json()
+    
+    def _list_sort(obj):
+        """
+        Walk a dictionary sorting any lists that are encountered
+        """
+        for k, v in obj.items():
+            if isinstance(v, dict):
+                _list_sort(v)
+            elif isinstance(v, list):
+                obj[k] = sorted(v)
+
+    _list_sort(cvs_table_json)
 
     if out_path:
         with open(out_path, "w") as fh:
