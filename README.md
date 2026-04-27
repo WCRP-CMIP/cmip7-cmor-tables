@@ -24,7 +24,8 @@ To reference a particular version of the CVs JSON file we recommend using the co
 ### 'Split' view
 
 To assist users with seeing the available options for each CV,
-we also provide one file per CV in `tables-cvs/split-view` [link (main branch)](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs/split-view).
+we also provide one file per CV in `tables-cvs/split-view`
+[link (main branch)](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs/split-view).
 The information here is updated automatically and is identical to that used by CMOR
 (specifically `tables-cvs/cmor-cvs.json`),
 but it is just provided in a way that may be more convenient for some users.
