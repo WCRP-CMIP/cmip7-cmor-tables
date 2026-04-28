@@ -22,6 +22,7 @@ ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 # esgvoc_versioned=0
 # ESGVOC_REVISION="${ESGVOC_REVISION:=cd1ad4d}" # v3.1.0
 esgvoc_versioned=1
+esgvoc_versioned=0
 ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
 ESGVOC_REVISION="${ESGVOC_REVISION:=7bfe0e2b915ed52427e494b5e0036674300e247f}" # versionning branch with fixes
 ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
@@ -67,9 +68,9 @@ if [[ $install_env -eq 1 ]]; then
 
     sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
     sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
-    # Mac equivalent of the above
-    sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
+    # # Mac equivalent of the above
+    # sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
+    # sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
 
     pip install -r "${requirements_file}"
 
@@ -86,16 +87,17 @@ if [[ $install_env -eq 1 ]]; then
         log "UNIVERSE_CVS_BRANCH=$UNIVERSE_CVS_BRANCH"
         log "CMIP7_CVS_FORK=$CMIP7_CVS_FORK"
         log "CMIP7_CVS_BRANCH=$CMIP7_CVS_BRANCH"
-        # esgvoc config create cmip7-cvs-ci
-        # esgvoc config switch cmip7-cvs-ci
-        #
-        # esgvoc config remove-project -f cmip6
-        # esgvoc config remove-project -f cmip6plus
-        # esgvoc config remove-project -f cmip7
 
-        # # TODO: if clauses to allow both paths
-        # esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
-        # esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
+        # TODO: get Laurent to explain how this flow is meant to work now
+        esgvoc config create cmip7-cvs-ci
+        esgvoc config switch cmip7-cvs-ci
+
+        esgvoc config remove-project -f cmip6
+        esgvoc config remove-project -f cmip6plus
+        esgvoc config remove-project -f cmip7
+
+        esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
+        esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
 
         # Hopefully there is a way to raise an error on issues here soon
         # https://github.com/ESGF/esgf-vocab/issues/202
