@@ -19,7 +19,12 @@
 # Environment variables that this file uses.
 # If they're not set, the default values are used.
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=cd1ad4d}" # v3.1.0
+# esgvoc_versioned=0
+# ESGVOC_REVISION="${ESGVOC_REVISION:=cd1ad4d}" # v3.1.0
+esgvoc_versioned=1
+ESGVOC_FORK="${ESGVOC_FORK:=znichollscr}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=7bfe0e2b915ed52427e494b5e0036674300e247f}" # versionning branch with fixes
+ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
 UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=esgvoc}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
@@ -57,10 +62,6 @@ if [[ $install_env -eq 1 ]]; then
 
     log "ESGVOC_FORK=$ESGVOC_FORK"
     log "ESGVOC_REVISION=$ESGVOC_REVISION"
-    log "UNIVERSE_CVS_FORK=$UNIVERSE_CVS_FORK"
-    log "UNIVERSE_CVS_BRANCH=$UNIVERSE_CVS_BRANCH"
-    log "CMIP7_CVS_FORK=$CMIP7_CVS_FORK"
-    log "CMIP7_CVS_BRANCH=$CMIP7_CVS_BRANCH"
 
     log "requirements_file=$requirements_file"
 
@@ -72,26 +73,42 @@ if [[ $install_env -eq 1 ]]; then
 
     pip install -r "${requirements_file}"
 
-    esgvoc config create cmip7-cvs-ci
-    esgvoc config switch cmip7-cvs-ci
+    if [[ $esgvoc_versioned -eq 1 ]]; then
 
-    esgvoc config remove-project -f cmip6
-    esgvoc config remove-project -f cmip6plus
-    esgvoc config remove-project -f cmip7
+        log "ESGVOC_CMIP7_DB_VERSION=$ESGVOC_CMIP7_DB_VERSION"
+        export ESGVOC_REGISTRY_BASE_URL=https://raw.githubusercontent.com/ltroussellier/test_esgvoc_dbs/main
+        # TODO: see what happens if we run this twice
+        esgvoc use "cmip7@${ESGVOC_CMIP7_DB_VERSION}"
 
-    esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
-    esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
+    else
 
-    # Hopefully there is a way to raise an error on issues here soon
-    # https://github.com/ESGF/esgf-vocab/issues/202
-    esgvoc install
+        log "UNIVERSE_CVS_FORK=$UNIVERSE_CVS_FORK"
+        log "UNIVERSE_CVS_BRANCH=$UNIVERSE_CVS_BRANCH"
+        log "CMIP7_CVS_FORK=$CMIP7_CVS_FORK"
+        log "CMIP7_CVS_BRANCH=$CMIP7_CVS_BRANCH"
+        # esgvoc config create cmip7-cvs-ci
+        # esgvoc config switch cmip7-cvs-ci
+        #
+        # esgvoc config remove-project -f cmip6
+        # esgvoc config remove-project -f cmip6plus
+        # esgvoc config remove-project -f cmip7
+
+        # # TODO: if clauses to allow both paths
+        # esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
+        # esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
+
+        # Hopefully there is a way to raise an error on issues here soon
+        # https://github.com/ESGF/esgf-vocab/issues/202
+        esgvoc install
+
+    fi
 
 fi
 
 log "generation_script=$generation_script"
 log "out_file=$out_file"
 log "out_path_split_view=$out_path_split_view"
-python "${generation_script}" --out-path "${out_file}" --out-path-split-view "${out_path_split_view}" && log "Wrote output to ${out_file} and split view to ${out_path_split_view}"
+python -m pdb "${generation_script}" --out-path "${out_file}" --out-path-split-view "${out_path_split_view}" && log "Wrote output to ${out_file} and split view to ${out_path_split_view}"
 
 export_table_status=$?
 if [ $export_table_status -ne 0 ]; then
