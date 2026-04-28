@@ -8,6 +8,7 @@
 # Options:
 #
 # -o: file in which to write the output (deafult: cmor-cvs.json)
+# -p: directory in which to write the split view of the output (default: split-view)
 # -r: file from which to read the requirements (default: requirements-cmor-cvs-table.txt)
 # -e: install dependencies before creating the file
 # -v: verbose mode
@@ -27,18 +28,20 @@ CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=esgvoc}"
 verbose=0
 install_env=0
 out_file='cmor-cvs.json'
+out_path_split_view="split-view"
 requirements_file='requirements-cmor-cvs-table.txt'
 generation_script='generate-cmor-cvs-table.py'
 
-while getopts "o:r:s:ve" OPTION; do
+while getopts "o:d:r:s:ve" OPTION; do
     case $OPTION in
     o) out_file="${OPTARG}" ;;
+    d) out_path_split_view="${OPTARG}" ;;
     r) requirements_file="${OPTARG}" ;;
     s) generation_script="${OPTARG}" ;;
     v) verbose=1 ;;
     e) install_env=1 ;;
     *)
-        echo "usage: $0 [-v] [-e] [-o output-file]" >&2
+        echo "usage: $0 [-v] [-e] [-o output-file] [-d out-path-split-view] [-r requirements-file] [-s generation-script]" >&2
         exit 1
         ;;
     esac
@@ -59,9 +62,7 @@ if [[ $install_env -eq 1 ]]; then
     log "CMIP7_CVS_FORK=$CMIP7_CVS_FORK"
     log "CMIP7_CVS_BRANCH=$CMIP7_CVS_BRANCH"
 
-    log "out_file=$out_file"
     log "requirements_file=$requirements_file"
-    log "generation_script=$generation_script"
 
     sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
     sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
@@ -87,7 +88,10 @@ if [[ $install_env -eq 1 ]]; then
 
 fi
 
-python "${generation_script}" --out-path "${out_file}" && log "Wrote output to ${out_file}"
+log "generation_script=$generation_script"
+log "out_file=$out_file"
+log "out_path_split_view=$out_path_split_view"
+python "${generation_script}" --out-path "${out_file}" --out-path-split-view "${out_path_split_view}" && log "Wrote output to ${out_file} and split view to ${out_path_split_view}"
 
 export_table_status=$?
 if [ $export_table_status -ne 0 ]; then

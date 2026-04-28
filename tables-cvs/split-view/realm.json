@@ -1,0 +1,10 @@
+{
+    "aerosol": "Dataset of primary interest in studying atmospheric aerosols.",
+    "atmos": "Dataset of primary interest in studying the dynamics and physic of the atmosphere.",
+    "atmosChem": "Dataset of primary interest in studying the chemical composition and processes in the atmosphere.",
+    "land": "Dataset of primary interest in studying the land surface and/or sub-surface part of the earth system.",
+    "landIce": "Dataset of primary interest in studying land ice.",
+    "ocean": "Dataset of primary interest in studying the dynamics and physic of the ocean.",
+    "ocnBgchem": "Dataset of primary interest in studying the biogeochemical composition and processes in the ocean.",
+    "seaIce": "Dataset of primary interest in studying sea ice."
+}
