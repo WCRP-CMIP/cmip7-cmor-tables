@@ -1145,7 +1145,11 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
                 va = get_project_attribute_property(
                     v.type, "source_collection", ev_project
                 )
-                parts_l.append(f"<{va.attr_field_name}>")
+                if va.attr_field_name is None:
+                    parts_l.append(f"<{va.source_collection}>")
+
+                else:
+                    parts_l.append(f"<{va.attr_field_name}>")
 
             if term.separator != "-":
                 msg = f"CMOR only supports '-' as a separator, received {term.separator=} for {term=}"
@@ -1232,7 +1236,7 @@ def add_non_esgvoc_info(cvs_table: CMORCVsTable) -> CMORCVsTable:
 
 def _list_sort(obj: Any):
     """
-    Walk a dictionary sorting any lists that are encountered
+    Walk a dictionary, sorting any lists that are encountered
     """
     for k, v in obj.items():
         if isinstance(v, dict):
@@ -1274,18 +1278,6 @@ def cmor_export_cvs_table(
     cvs_table_esgvoc = generate_cvs_table_esgvoc(project=project)
     cvs_table = add_non_esgvoc_info(cvs_table_esgvoc)
     cvs_table_json = cvs_table.to_cvs_json()
-
-    def _list_sort(obj):
-        """
-        Walk a dictionary sorting any lists that are encountered
-        """
-        for k, v in obj.items():
-            if isinstance(v, dict):
-                _list_sort(v)
-            elif isinstance(v, list):
-                obj[k] = sorted(v)
-
-    _list_sort(cvs_table_json)
 
     # Sort before writing to disk or displaying to ensure stability of ordering
     _list_sort(cvs_table_json)
