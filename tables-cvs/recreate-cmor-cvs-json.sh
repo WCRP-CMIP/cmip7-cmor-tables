@@ -19,7 +19,8 @@
 # Environment variables that this file uses.
 # If they're not set, the default values are used.
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=cd1ad4d}" # v3.1.0
+ESGVOC_REVISION="${ESGVOC_REVISION:=3261893}"
+# ESGVOC_REVISION="${ESGVOC_REVISION:=cd1ad4d}" # v3.1.0
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
 UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=update-experiment-definitions}"
 # UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
@@ -69,9 +70,9 @@ if [[ $install_env -eq 1 ]]; then
 
     sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
     sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
-    # Mac equivalent of the above
-    sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
+    # # Mac equivalent of the above
+    # sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
+    # sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
 
     pip install -r "${requirements_file}"
 
