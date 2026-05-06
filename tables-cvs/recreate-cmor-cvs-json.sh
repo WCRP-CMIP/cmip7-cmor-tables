@@ -1,4 +1,10 @@
 #!/bin/bash
+# Handy trick (full details here https://gist.github.com/mohanpedala/1e2ff5661761d3abd0385e8223e16425?permalink_comment_id=3799230):
+# -e: exit immediately if any command fails
+# -u: exit if you reference any unset variable
+# -o: pipefail means that a non-zero exit code is returned if any command in the script fails
+set -euo pipefail
+
 # Create the CMOR CVs JSON file
 #
 # Works in the currently activated environment,
@@ -68,20 +74,22 @@ if [[ $install_env -eq 1 ]]; then
 
     log "requirements_file=$requirements_file"
 
-    sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
+    # sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
+    # sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
     # # Mac equivalent of the above
     # sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
     # sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
 
     pip install -r "${requirements_file}"
 
-    esgvoc config create cmip7-cvs-ci
+    # Allow failure of this command if the config already exists
+    esgvoc config create cmip7-cvs-ci || true
     esgvoc config switch cmip7-cvs-ci
 
-    esgvoc config remove-project -f cmip6
-    esgvoc config remove-project -f cmip6plus
-    esgvoc config remove-project -f cmip7
+    # Ok if these projects don't exist
+    esgvoc config remove-project -f cmip6 || true
+    esgvoc config remove-project -f cmip6plus || true
+    esgvoc config remove-project -f cmip7 || true
 
     esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
     esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
@@ -96,12 +104,3 @@ log "generation_script=$generation_script"
 log "out_file=$out_file"
 log "out_path_split_view=$out_path_split_view"
 python "${generation_script}" --out-path "${out_file}" --out-path-split-view "${out_path_split_view}" && log "Wrote output to ${out_file} and split view to ${out_path_split_view}"
-
-export_table_status=$?
-if [ $export_table_status -ne 0 ]; then
-    echo "Exporting table failed"
-    exit $export_table_status
-fi
-
-# If we get to here, exit with 'success' status
-exit 0
