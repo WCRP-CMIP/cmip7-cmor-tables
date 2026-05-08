@@ -460,7 +460,6 @@ def get_project_attribute_property(
     ),
 ) -> ev_api.project_specs.AttributeProperty:
     for ev_attribute_property in ev_project.attr_specs:
-        ev_attribute_value = getattr(ev_attribute_property, attribute_to_match)
         ev_field_name = ev_attribute_property.attr_field_name
         if (
             exclude_parent_matches
