@@ -863,8 +863,8 @@ def get_cmor_drs_definition(
             directory_path_template_l.append("<branding_suffix>")
 
         elif part.source_collection == "variable":
-            # This shouldn't need to be hard-coded,
-            # but there is some issue in how I am understanding esgvoc's specs.
+            # We can undo this if an update comes in esgvoc which allows us to map
+            # DRS parts to attribute fields
             directory_path_template_l.append("<variable_id>")
 
         else:
@@ -1029,26 +1029,32 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
         # Logic: https://github.com/WCRP-CMIP/CMIP7-CVs/issues/271#issuecomment-3286291815
         # Conventions added back in following https://github.com/PCMDI/cmor/issues/937
         if attr_property.attr_field_name in [
-            "branch_time_in_child",
-            "branch_time_in_parent",
-            "branded_variable",
+            # Fields not needed in CMOR tables
             "cmip6_compound_name",
+            # Fields not needed in the CMOR CV table
+            # (appear in variable tables instead)
+            "branded_variable",
             "external_variables",
+            "variable_id",
+            # Fields not needed in the CMOR CV table
+            # (user provided and validated in other ways)
             "parent_activity_id",
             "parent_experiment_id",
             "parent_mip_era",
             "parent_source_id",
             "parent_time_units",
             "parent_variant_label",
-            "references",
-            "title",
-            "variable_id",
-            "variant_info",
-            # TODO: check with Laurent what is going on here
+            # Fields not controlled by CVs
+            "branch_time_in_child",
+            "branch_time_in_parent",
+            # Non-validated fields
             "experiment",
             "institution",
             "license",
             "source",
+            "references",
+            "title",
+            "variant_info",
         ]:
             # Not handled in CMOR tables
             continue
