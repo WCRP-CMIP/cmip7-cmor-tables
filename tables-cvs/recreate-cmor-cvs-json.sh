@@ -66,9 +66,9 @@ if [[ $install_env -eq 1 ]]; then
 
     sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
     sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
-    # Mac equivalent of the above
-    sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
+    # # Mac equivalent of the above
+    # sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
+    # sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
 
     pip install -r "${requirements_file}"
 

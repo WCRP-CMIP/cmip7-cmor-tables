@@ -411,6 +411,11 @@ class CMORCVsTable(BaseModel):
     Allowed patterns for `tracking_id`
     """
 
+    tracking_prefix: str
+    """
+    Tracking prefix to use when writing data
+    """
+
     variant_label: RegularExpressionValidators
     """
     Allowed patterns for `variant_label`
@@ -1120,6 +1125,25 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
         init_kwargs[kwarg] = value
 
     init_kwargs["DRS"] = get_cmor_drs_definition(ev_project)
+    # Hard-code rather than retrieving from esgvoc because this is a purely CMOR thing.
+    # (esgvoc is used for validating that the written values are correct,
+    # not generating them in the first place,
+    # so esgvoc only needs to know the regexp to use to validate `tracking_id`,
+    # it doesn't need the tracking prefix.)
+    tracking_prefix = "hdl:21.14107"
+
+    # Of course, we include a quick check to make sure that they're not obviously inconsistent.
+    if len(init_kwargs["tracking_id"]) != 1:
+        raise AssertionError
+
+    if not init_kwargs["tracking_id"][0].startswith(f"^{tracking_prefix}"):
+        msg = (
+            f"{tracking_prefix=} but esgvoc says that tracking_id should match "
+            f"{init_kwargs['tracking_id'][0]}"
+        )
+        raise AssertionError(msg)
+
+    init_kwargs["tracking_prefix"] = tracking_prefix
 
     cmor_cvs_table = CMORCVsTable(**init_kwargs)
 
@@ -1202,7 +1226,7 @@ def cmor_export_cvs_table(
     cvs_table_esgvoc = generate_cvs_table_esgvoc(project=project)
     cvs_table = add_non_esgvoc_info(cvs_table_esgvoc)
     cvs_table_json = cvs_table.to_cvs_json()
-    
+
     def _list_sort(obj):
         """
         Walk a dictionary sorting any lists that are encountered
