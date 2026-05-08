@@ -32,7 +32,7 @@ but it is just provided in a way that may be more convenient for some users.
 
 ## Changes relative to CMIP6
 
-With the introduction of [branded variable names]([https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/](https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Branded_Variables/)) and an updated set of [global attributes](https://zenodo.org/records/17250297) the tables here look a little different to those for CMIP6. 
+With the introduction of [branded variable names]([https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/](https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Branded_Variables/) and an updated set of [global attributes](https://zenodo.org/records/17250297) the tables here look a little different to those for CMIP6. 
 
 * Variables are arranged in MIP tables by realm and indexed by branded variable name.
 * Frequency is no longer defined for a specific variable and any valid frequency can be set via the input JSON file (the same is true for region).
@@ -41,7 +41,7 @@ Notable changes to the input JSON file used by CMOR
 * `drs_specs` should be set to the drs_specs version this will be `MIP-DRS7.1.0.0` initially, but will be updated as changes to the data definitions are produced, e.g. new version of the Data Request.
 * `region` is required (usually `"glb"` for global variables, note the change in case as of Data Request v1.2.2.3) 
 * ~`archive_id` is `"WCRP"`~ change abandoned
-* `frequency` must be specified and does not contain any suffixes as in CMIP6 (e.g. `6hrPt` and similar have been removed as has `1hrCM` used for the diurnal cycle diagnostics. The time sampling is now described in the [Branded Variable Name]([https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/](https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Branded_Variables/)).
+* `frequency` must be specified and does not contain any suffixes as in CMIP6 (e.g. `6hrPt` and similar have been removed as has `1hrCM` used for the diurnal cycle diagnostics. The time sampling is now described in the [Branded Variable Name]([https://wcrp-cmip.github.io/cmip7-guidance/CMIP7/branded_variables/](https://wcrp-cmip.github.io/cmip7-guidance/docs/CMIP7/Branded_Variables/).
 * `*_index` fields are now strings and must have the appropriate prefix, e.g. `realization_index` should be `"r1"` rather than `1`
 * `tracking_prefix` has been updated with the value required for CMIP7
 * `long_name` and `cell_measures` both have separate files keyed by the CMIP7 compound names. Modelling groups are asked to use these files as shown in the example notebooks
