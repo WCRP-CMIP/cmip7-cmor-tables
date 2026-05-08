@@ -4,6 +4,7 @@ Generate CMOR CVs table
 Also generates the files in the split view.
 """
 
+import datetime as dt
 import itertools
 import json
 import re
@@ -452,8 +453,24 @@ def get_project_attribute_property(
     attribute_value: str,
     attribute_to_match: str,
     ev_project: ev_api.project_specs.ProjectSpecs,
+    exclude_parent_matches: bool = True,
+    exclude: tuple[str, ...] = (
+        "external_variables",
+        "institution",
+    ),
 ) -> ev_api.project_specs.AttributeProperty:
     for ev_attribute_property in ev_project.attr_specs:
+        ev_field_name = ev_attribute_property.attr_field_name
+        if (
+            exclude_parent_matches
+            and ev_field_name is not None
+            and ("parent" in ev_field_name)
+        ):
+            continue
+
+        if exclude and ev_field_name is not None and ev_field_name in exclude:
+            continue
+
         if getattr(ev_attribute_property, attribute_to_match) == attribute_value:
             break
 
@@ -471,7 +488,7 @@ def get_allowed_dict_for_attribute(
 ) -> AllowedDict:
     ev_attribute_property = get_project_attribute_property(
         attribute_value=attribute_name,
-        attribute_to_match="field_name",
+        attribute_to_match="attr_field_name",
         ev_project=ev_project,
     )
     attribute_instances = ev_api.get_all_terms_in_collection(
@@ -553,7 +570,7 @@ def get_template_for_composite_attribute(
 ) -> str:
     ev_attribute_property = get_project_attribute_property(
         attribute_value=attribute_name,
-        attribute_to_match="field_name",
+        attribute_to_match="attr_field_name",
         ev_project=ev_project,
     )
     terms = ev_api.get_all_terms_in_collection(
@@ -567,7 +584,7 @@ def get_template_for_composite_attribute(
     parts_l = []
     for v in term.parts:
         va = get_project_attribute_property(v.type, "source_collection", ev_project)
-        parts_l.append(f"<{va.field_name}>")
+        parts_l.append(f"<{va.attr_field_name}>")
 
     if term.separator != "-":
         msg = f"CMOR only supports '-' as a separator, received {term.separator=} for {term=}"
@@ -583,7 +600,7 @@ def get_single_allowed_value_for_attribute(
 ) -> str:
     ev_attribute_property = get_project_attribute_property(
         attribute_value=attribute_name,
-        attribute_to_match="field_name",
+        attribute_to_match="attr_field_name",
         ev_project=ev_project,
     )
     terms = ev_api.get_all_terms_in_collection(
@@ -658,16 +675,38 @@ def get_cmor_experiment_id_definitions(
     get_term = partial(ev_api.get_term_in_project, ev_project.project_id)
     res = {}
     for v in terms:
+        if isinstance(v.start_timestamp, dt.datetime):
+            start_year = v.start_timestamp.year
+        elif not v.start_timestamp:
+            start_year = v.start_timestamp
+        else:
+            msg = (
+                f"`start_timestamp` not correctly serialised for `{v.drs_name}`. "
+                f"{type(v.start_timestamp)=}. "
+                "Issue in the underlying CVs?"
+            )
+            raise TypeError(msg)
+
+        if isinstance(v.end_timestamp, dt.datetime):
+            end_year = v.end_timestamp.year
+        elif not v.end_timestamp:
+            end_year = v.end_timestamp
+        else:
+            msg = (
+                f"`end_timestamp` not correctly serialised for `{v.drs_name}`. "
+                f"{type(v.end_timestamp)=}. "
+                "Issue in the underlying CVs?"
+            )
+            raise TypeError(msg)
+
         res[v.drs_name] = CMORExperimentDefinition(
             activity_id=[get_term(v.activity).drs_name],
             # required_model_components=[vv.drs_name for vv in v.required_model_components],
             # additional_allowed_model_components=[vv.drs_name for vv in v.additional_allowed_model_components],
             description=v.description,
             experiment=v.description,
-            start_year=v.start_timestamp.year
-            if v.start_timestamp
-            else v.start_timestamp,
-            end_year=v.end_timestamp.year if v.end_timestamp else v.end_timestamp,
+            start_year=start_year,
+            end_year=end_year,
             min_number_yrs_per_sim=v.min_number_yrs_per_sim,
             experiment_id=v.drs_name,
             parent_activity_id=[v.parent_activity.drs_name]
@@ -823,6 +862,11 @@ def get_cmor_drs_definition(
             # This is different, hence we can't use the project specs.
             directory_path_template_l.append("<branding_suffix>")
 
+        elif part.source_collection == "variable":
+            # We can undo this if an update comes in esgvoc which allows us to map
+            # DRS parts to attribute fields
+            directory_path_template_l.append("<variable_id>")
+
         else:
             project_attribute_property = get_project_attribute_property(
                 attribute_value=part.source_collection,
@@ -830,7 +874,7 @@ def get_cmor_drs_definition(
                 ev_project=ev_project,
             )
             directory_path_template_l.append(
-                f"<{project_attribute_property.field_name}>"
+                f"<{project_attribute_property.attr_field_name}>"
             )
 
         if part.source_collection == "drs_specs":
@@ -897,13 +941,18 @@ def get_cmor_drs_definition(
             # This is different, hence we can't use the project specs.
             cmor_placeholder = "branding_suffix"
 
+        elif part.source_collection == "variable":
+            # This shouldn't need to be hard-coded,
+            # but there is some issue in how I am understanding esgvoc's specs.
+            cmor_placeholder = "variable_id"
+
         else:
             project_attribute_property = get_project_attribute_property(
                 attribute_value=part.source_collection,
                 attribute_to_match="source_collection",
                 ev_project=ev_project,
             )
-            cmor_placeholder = project_attribute_property.field_name
+            cmor_placeholder = project_attribute_property.attr_field_name
 
         if part.source_collection == "variable":
             example_value = variable_example.drs_name
@@ -969,84 +1018,112 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
 
     init_kwargs = {"required_global_attributes": []}
     for attr_property in ev_project.attr_specs:
-        # Use source_collection as fallback when field_name is None
-        if attr_property.field_name is None:
-            attr_property.field_name = attr_property.source_collection
+        # Use source_collection as fallback when attr_field_name is None
+        if attr_property.attr_field_name is None:
+            attr_property.attr_field_name = attr_property.source_collection
         if attr_property.is_required:
-            init_kwargs["required_global_attributes"].append(attr_property.field_name)
+            init_kwargs["required_global_attributes"].append(
+                attr_property.attr_field_name
+            )
 
         # Logic: https://github.com/WCRP-CMIP/CMIP7-CVs/issues/271#issuecomment-3286291815
         # Conventions added back in following https://github.com/PCMDI/cmor/issues/937
-        if attr_property.field_name in [
+        if attr_property.attr_field_name in [
+            # Fields not needed in CMOR tables
+            "cmip6_compound_name",
+            # Fields not needed in the CMOR CV table
+            # (appear in variable tables instead)
             "branded_variable",
+            "external_variables",
             "variable_id",
+            # Fields not needed in the CMOR CV table
+            # (user provided and validated in other ways)
+            "parent_activity_id",
+            "parent_experiment_id",
+            "parent_mip_era",
+            "parent_source_id",
+            "parent_time_units",
+            "parent_variant_label",
+            # Fields not controlled by CVs
+            "branch_time_in_child",
+            "branch_time_in_parent",
+            # Non-validated fields
+            "experiment",
+            "institution",
+            "license",
+            "source",
+            "references",
+            "title",
+            "variant_info",
         ]:
             # Not handled in CMOR tables
             continue
 
-        elif attr_property.field_name in [
+        elif attr_property.attr_field_name in [
             "data_specs_version",
             "drs_specs",
             "mip_era",
         ]:
             value = get_single_allowed_value_for_attribute(
-                attr_property.field_name, ev_project
+                attr_property.attr_field_name, ev_project
             )
-            if attr_property.field_name == "drs_specs":
+            if attr_property.attr_field_name == "drs_specs":
                 # Extra special field that has to be an array,
                 # see https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/78
                 value = [value]
 
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
 
-        elif attr_property.field_name == "license_id":
+        elif attr_property.attr_field_name == "license_id":
             value = get_cmor_license_definition(
                 attr_property.source_collection, ev_project
             )
             kwarg = "license"
 
-        elif attr_property.field_name == "frequency":
+        elif attr_property.attr_field_name == "frequency":
             value = get_cmor_frequency_definitions(
                 attr_property.source_collection, ev_project
             )
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
 
-        elif attr_property.field_name == "experiment_id":
+        elif attr_property.attr_field_name == "experiment_id":
             value = get_cmor_experiment_id_definitions(
                 attr_property.source_collection, ev_project
             )
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
 
-        elif attr_property.field_name == "nominal_resolution":
-            kwarg = attr_property.field_name
+        elif attr_property.attr_field_name == "nominal_resolution":
+            kwarg = attr_property.attr_field_name
             value = get_cmor_nominal_resolution_defintions(
-                attr_property.field_name, ev_project
+                attr_property.attr_field_name, ev_project
             )
 
-        elif attr_property.field_name == "source_id":
+        elif attr_property.attr_field_name == "source_id":
             value = get_cmor_source_id_definitions(
                 attr_property.source_collection, ev_project
             )
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
 
-        elif attr_property.field_name in ("activity_id",):
+        elif attr_property.attr_field_name in ("activity_id",):
             # Hard-code for now
             # TODO: figure out how to unpack typing.Annotated
-            kwarg = attr_property.field_name
-            value = get_allowed_dict_for_attribute(attr_property.field_name, ev_project)
+            kwarg = attr_property.attr_field_name
+            value = get_allowed_dict_for_attribute(
+                attr_property.attr_field_name, ev_project
+            )
 
-        elif attr_property.field_name == "Conventions":
+        elif attr_property.attr_field_name == "Conventions":
             # As requested in: https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/78
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
             value = list(
                 get_allowed_dict_for_attribute(
-                    attr_property.field_name, ev_project
+                    attr_property.attr_field_name, ev_project
                 ).keys()
             )
 
-        elif attr_property.field_name == "grid_label":
+        elif attr_property.attr_field_name == "grid_label":
             # Not sure why this is a necessary exception
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
             attribute_instances = ev_api.get_all_terms_in_collection(
                 ev_project.project_id, "grid_label"
             )
@@ -1055,7 +1132,7 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             # https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/40#issuecomment-4114290634
             value = {v.drs_name: "" for v in attribute_instances}
 
-        elif attr_property.field_name == "branding_suffix":
+        elif attr_property.attr_field_name == "branding_suffix":
             # Branding suffix is a bit special so hard-code.
             # In short, the DRS specs tell you how to validate
             # (so, if you know the branded variable,
@@ -1063,7 +1140,7 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             # However, here I just want to know what the components
             # of branding suffix are so I can write the CMOR table.
             # This is different, hence we can't use the project specs.
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
 
             terms = ev_api.get_all_terms_in_collection(
                 ev_project.project_id, "branding_suffix"
@@ -1078,7 +1155,11 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
                 va = get_project_attribute_property(
                     v.type, "source_collection", ev_project
                 )
-                parts_l.append(f"<{va.field_name}>")
+                if va.attr_field_name is None:
+                    parts_l.append(f"<{va.source_collection}>")
+
+                else:
+                    parts_l.append(f"<{va.attr_field_name}>")
 
             if term.separator != "-":
                 msg = f"CMOR only supports '-' as a separator, received {term.separator=} for {term=}"
@@ -1087,7 +1168,7 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             value = "".join(parts_l)
 
         else:
-            kwarg = attr_property.field_name
+            kwarg = attr_property.attr_field_name
 
             DD_name = ev_api.get_data_descriptor_from_collection_in_project(
                 project, attr_property.source_collection
@@ -1100,7 +1181,7 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
                 ev_api.data_descriptors.data_descriptor.PlainTermDataDescriptor,
             ):
                 value = get_allowed_dict_for_attribute(
-                    attr_property.field_name, ev_project
+                    attr_property.attr_field_name, ev_project
                 )
 
             elif issubclass(
@@ -1116,7 +1197,7 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
                 ev_api.data_descriptors.data_descriptor.CompositeTermDataDescriptor,
             ):
                 value = get_template_for_composite_attribute(
-                    attr_property.field_name, ev_project
+                    attr_property.attr_field_name, ev_project
                 )
 
             else:
@@ -1135,11 +1216,14 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
     # Of course, we include a quick check to make sure that they're not obviously inconsistent.
     if len(init_kwargs["tracking_id"]) != 1:
         raise AssertionError
+    tracking_id_esgvoc = init_kwargs["tracking_id"][0]
 
-    if not init_kwargs["tracking_id"][0].startswith(f"^{tracking_prefix}"):
+    tracking_prefix_regex_escaped = re.escape(tracking_prefix)
+    if not tracking_id_esgvoc.startswith(f"^{tracking_prefix_regex_escaped}"):
         msg = (
-            f"{tracking_prefix=} but esgvoc says that tracking_id should match "
-            f"{init_kwargs['tracking_id'][0]}"
+            f"{tracking_prefix=} and {tracking_prefix_regex_escaped=} "
+            "but esgvoc says that tracking_id should match "
+            f"{tracking_id_esgvoc}"
         )
         raise AssertionError(msg)
 
@@ -1184,7 +1268,7 @@ def add_non_esgvoc_info(cvs_table: CMORCVsTable) -> CMORCVsTable:
 
 def _list_sort(obj: Any):
     """
-    Walk a dictionary sorting any lists that are encountered
+    Walk a dictionary, sorting any lists that are encountered
     """
     for k, v in obj.items():
         if isinstance(v, dict):
@@ -1226,18 +1310,6 @@ def cmor_export_cvs_table(
     cvs_table_esgvoc = generate_cvs_table_esgvoc(project=project)
     cvs_table = add_non_esgvoc_info(cvs_table_esgvoc)
     cvs_table_json = cvs_table.to_cvs_json()
-
-    def _list_sort(obj):
-        """
-        Walk a dictionary sorting any lists that are encountered
-        """
-        for k, v in obj.items():
-            if isinstance(v, dict):
-                _list_sort(v)
-            elif isinstance(v, list):
-                obj[k] = sorted(v)
-
-    _list_sort(cvs_table_json)
 
     # Sort before writing to disk or displaying to ensure stability of ordering
     _list_sort(cvs_table_json)
