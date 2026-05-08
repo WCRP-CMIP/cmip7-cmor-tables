@@ -26,22 +26,23 @@ set -euo pipefail
 # If they're not set, the default values are used.
 ### Non-versioned esgvoc config
 # Use when we are using a branches of CVs
-# ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-# ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
-# UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
-# UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=update-experiment-definitions}"
-# # UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
-# # UNIVERSE_CVS_BRANCH="${UNIVERSE_CVS_BRANCH:=esgvoc}"
-# CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-# CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=update-experiment-definitions}"
-# # CMIP7_CVS_BRANCH="${CMIP7_CVS_BRANCH:=esgvoc}"
-#
-### Versioned esgvoc config
-# Use when we are using a versioned esgvoc release
-esgvoc_versioned=1
+esgvoc_versioned=0
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
-ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
+UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
+UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=update-experiment-definitions}"
+# UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
+# UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
+CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
+CMIP7_CVS_REF="${CMIP7_CVS_REF:=update-experiment-definitions}"
+# CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
+
+### Versioned esgvoc config
+# Use when we are using a versioned esgvoc release
+# esgvoc_versioned=1
+# ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
+# ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
+# ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
 
 verbose=0
 install_env=0
@@ -90,33 +91,27 @@ if [[ $install_env -eq 1 ]]; then
 
         echo "Using versioned esgvoc"
         log "ESGVOC_CMIP7_DB_VERSION=$ESGVOC_CMIP7_DB_VERSION"
-        # export ESGVOC_REGISTRY_BASE_URL=https://raw.githubusercontent.com/ltroussellier/test_esgvoc_dbs/main
-        # TODO: see what happens if we run this twice
         esgvoc use "cmip7@${ESGVOC_CMIP7_DB_VERSION}"
 
     else
 
         echo "Using non-versioned esgvoc"
         log "UNIVERSE_CVS_FORK=$UNIVERSE_CVS_FORK"
-        log "UNIVERSE_CVS_BRANCH=$UNIVERSE_CVS_BRANCH"
+        log "UNIVERSE_CVS_REF=$UNIVERSE_CVS_REF"
         log "CMIP7_CVS_FORK=$CMIP7_CVS_FORK"
-        log "CMIP7_CVS_BRANCH=$CMIP7_CVS_BRANCH"
+        log "CMIP7_CVS_REF=$CMIP7_CVS_REF"
 
-        # Allow failure of this command if the config already exists
-        esgvoc config create cmip7-cvs-ci || true
-        esgvoc config switch cmip7-cvs-ci
+        esgvoc admin build \
+            --project-repo "https://github.com/${CMIP7_CVS_FORK}/CMIP7-CVs" \
+            --project-ref "${CMIP7_CVS_REF}" \
+            --universe-repo "https://github.com/${UNIVERSE_CVS_FORK}/WCRP-universe" \
+            --universe-ref "${UNIVERSE_CVS_REF}" \
+            --project-id cmip7 \
+            --cv-version dev \
+            --universe-version dev \
+            --output /tmp/cmip7.db
 
-        # Ok if these projects don't exist
-        esgvoc config remove-project -f cmip6 || true
-        esgvoc config remove-project -f cmip6plus || true
-        esgvoc config remove-project -f cmip7 || true
-
-        esgvoc config set "universe:github_repo=https://github.com/$UNIVERSE_CVS_FORK/WCRP-universe" "universe:branch=$UNIVERSE_CVS_BRANCH"
-        esgvoc config add-project cmip7 --custom --repo "https://github.com/$CMIP7_CVS_FORK/CMIP7-CVs" --branch "$CMIP7_CVS_BRANCH"
-
-        # Hopefully there is a way to raise an error on issues here soon
-        # https://github.com/ESGF/esgf-vocab/issues/202
-        esgvoc install
+        esgvoc admin install cmip7 /tmp/cmip7.db --name local --activate
 
     fi
 

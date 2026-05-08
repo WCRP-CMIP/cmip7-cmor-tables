@@ -1210,11 +1210,14 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
     # Of course, we include a quick check to make sure that they're not obviously inconsistent.
     if len(init_kwargs["tracking_id"]) != 1:
         raise AssertionError
+    tracking_id_esgvoc = init_kwargs["tracking_id"][0]
 
-    if not init_kwargs["tracking_id"][0].startswith(f"^{tracking_prefix}"):
+    tracking_prefix_regex_escaped = re.escape(tracking_prefix)
+    if not tracking_id_esgvoc.startswith(f"^{tracking_prefix_regex_escaped}"):
         msg = (
-            f"{tracking_prefix=} but esgvoc says that tracking_id should match "
-            f"{init_kwargs['tracking_id'][0]}"
+            f"{tracking_prefix=} and {tracking_prefix_regex_escaped=} "
+            "but esgvoc says that tracking_id should match "
+            f"{tracking_id_esgvoc}"
         )
         raise AssertionError(msg)
 
