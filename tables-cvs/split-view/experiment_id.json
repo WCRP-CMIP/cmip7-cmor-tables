@@ -311,9 +311,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
+        "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
+        "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
         "experiment_id": "esm-scen7-h-AQ",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -329,9 +329,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-Aq` instead.",
+        "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-AQ` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-Aq` instead.",
+        "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-AQ` instead.",
         "experiment_id": "esm-scen7-h-Aer",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -563,9 +563,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
+        "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
+        "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
         "experiment_id": "esm-scen7-vl-AQ",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -581,9 +581,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-Aq` instead.",
+        "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-AQ` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-Aq` instead.",
+        "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-AQ` instead.",
         "experiment_id": "esm-scen7-vl-Aer",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -617,9 +617,9 @@
         "activity_id": [
             "DAMIP"
         ],
-        "description": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+        "description": "Response to historical greenhouse gas forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
         "end_year": 2035,
-        "experiment": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+        "experiment": "Response to historical greenhouse gas forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
         "experiment_id": "hist-GHG",
         "min_number_yrs_per_sim": 186,
         "parent_activity_id": [
@@ -653,11 +653,47 @@
         "activity_id": [
             "DAMIP"
         ],
-        "description": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+        "description": "Response to historical natural forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
         "end_year": 2035,
-        "experiment": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+        "experiment": "Response to historical natural forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
         "experiment_id": "hist-nat",
         "min_number_yrs_per_sim": 186,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "piControl"
+        ],
+        "start_year": 1850,
+        "tier": 1
+    },
+    "hist-piAQ": {
+        "activity_id": [
+            "AerChemMIP"
+        ],
+        "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Requires interactive chemistry. Models without interactive chemistry should run `hist-piAer` instead. (Renamed from `hist-piNTCF` in AerChemMIP phase 1.)",
+        "end_year": 2021,
+        "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Requires interactive chemistry. Models without interactive chemistry should run `hist-piAer` instead. (Renamed from `hist-piNTCF` in AerChemMIP phase 1.)",
+        "experiment_id": "hist-piAQ",
+        "min_number_yrs_per_sim": 172,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "piControl"
+        ],
+        "start_year": 1850,
+        "tier": 1
+    },
+    "hist-piAer": {
+        "activity_id": [
+            "AerChemMIP"
+        ],
+        "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Intended for models without interactive chemistry. Models with interactive chemistry should run `hist-piAQ` instead. (Identical to `hist-piAer` in AerChemMIP phase 1.)",
+        "end_year": 2021,
+        "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Intended for models without interactive chemistry. Models with interactive chemistry should run `hist-piAQ` instead. (Identical to `hist-piAer` in AerChemMIP phase 1.)",
+        "experiment_id": "hist-piAer",
+        "min_number_yrs_per_sim": 172,
         "parent_activity_id": [
             "CMIP"
         ],
@@ -929,9 +965,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
+        "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
+        "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
         "experiment_id": "scen7-h-AQ",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -947,9 +983,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-Aq` instead.",
+        "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-AQ` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-Aq` instead.",
+        "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-AQ` instead.",
         "experiment_id": "scen7-h-Aer",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1181,9 +1217,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
+        "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models with interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
+        "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
         "experiment_id": "scen7-vl-AQ",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1199,9 +1235,9 @@
         "activity_id": [
             "AerChemMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-Aq` instead.",
+        "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-AQ` instead.",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Altered to use high aerosol and tropospheric non-methane ozone precursor emissions. This is for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-Aq` instead.",
+        "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-AQ` instead.",
         "experiment_id": "scen7-vl-Aer",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
