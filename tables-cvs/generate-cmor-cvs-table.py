@@ -1218,8 +1218,8 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
         raise AssertionError
     tracking_id_esgvoc = init_kwargs["tracking_id"][0]
 
-    tracking_prefix_regex_escaped = re.escape(tracking_prefix)
-    if not tracking_id_esgvoc.startswith(f"^{tracking_prefix_regex_escaped}"):
+    tracking_prefix_regex_escaped = f"^{re.escape(tracking_prefix)}"
+    if not tracking_id_esgvoc.startswith(tracking_prefix_regex_escaped):
         msg = (
             f"{tracking_prefix=} and {tracking_prefix_regex_escaped=} "
             "but esgvoc says that tracking_id should match "
