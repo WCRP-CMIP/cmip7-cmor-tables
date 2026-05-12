@@ -65,7 +65,7 @@
                 ],
                 "description": "1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
                 "end_year": "",
-                "experiment": "1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment": "1 percent per year increase in CO2",
                 "experiment_id": "1pctCO2",
                 "min_number_yrs_per_sim": 150,
                 "parent_activity_id": [
@@ -83,7 +83,7 @@
                 ],
                 "description": "Biogeochemically coupled simulation (i.e. the carbon cycle only 'sees' the increase in atmospheric carbon dioxide, not any change in temperature) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
                 "end_year": "",
-                "experiment": "Biogeochemically coupled simulation (i.e. the carbon cycle only 'sees' the increase in atmospheric carbon dioxide, not any change in temperature) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment": "biogeochemically-coupled version of 1 percent per year increasing CO2 experiment",
                 "experiment_id": "1pctCO2-bgc",
                 "min_number_yrs_per_sim": 150,
                 "parent_activity_id": [
@@ -101,7 +101,7 @@
                 ],
                 "description": "Radiatively coupled simulation (i.e. the carbon cycle only 'sees' the increase in temperature, not any change in atmospheric carbon dioxide) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
                 "end_year": "",
-                "experiment": "Radiatively coupled simulation (i.e. the carbon cycle only 'sees' the increase in temperature, not any change in atmospheric carbon dioxide) of a 1% per year increase in atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment": "radiatively-coupled version of 1 percent per year increasing CO2 experiment",
                 "experiment_id": "1pctCO2-rad",
                 "min_number_yrs_per_sim": 150,
                 "parent_activity_id": [
@@ -119,7 +119,7 @@
                 ],
                 "description": "Stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures after following the `scen7-ml` scenario until 2035.",
                 "end_year": "",
-                "experiment": "Stablisation of global-mean temperature at 1.5C by increasing stratospheric sulfur forcing to whatever level is required to achieve stable temperatures after following the `scen7-ml` scenario until 2035.",
+                "experiment": "stabilisation at 1.5C via stratospheric aerosol injection",
                 "experiment_id": "G7-1p5K-SAI",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -137,7 +137,7 @@
                 ],
                 "description": "Abrupt halving of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
                 "end_year": "",
-                "experiment": "Abrupt halving of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment": "abrupt halving of CO2",
                 "experiment_id": "abrupt-0p5xCO2",
                 "min_number_yrs_per_sim": 300,
                 "parent_activity_id": [
@@ -155,7 +155,7 @@
                 ],
                 "description": "Simulation to examine the response to orbital and greenhouse gas concentration changes associated with the last interglacial (127 000 years before present).",
                 "end_year": "",
-                "experiment": "Simulation to examine the response to orbital and greenhouse gas concentration changes associated with the last interglacial (127 000 years before present).",
+                "experiment": "abrupt imposition of year 127k conditions",
                 "experiment_id": "abrupt-127k",
                 "min_number_yrs_per_sim": 100,
                 "parent_activity_id": [
@@ -173,7 +173,7 @@
                 ],
                 "description": "Abrupt doubling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
                 "end_year": "",
-                "experiment": "Abrupt doubling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment": "abrupt doubling of CO2",
                 "experiment_id": "abrupt-2xCO2",
                 "min_number_yrs_per_sim": 300,
                 "parent_activity_id": [
@@ -191,7 +191,7 @@
                 ],
                 "description": "Abrupt quadrupling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
                 "end_year": "",
-                "experiment": "Abrupt quadrupling of atmospheric carbon dioxide levels. All other conditions are kept the same as piControl.",
+                "experiment": "abrupt quadrupling of CO2",
                 "experiment_id": "abrupt-4xCO2",
                 "min_number_yrs_per_sim": 300,
                 "parent_activity_id": [
@@ -209,7 +209,7 @@
                 ],
                 "description": "Simulation of the climate of the recent past with prescribed sea surface temperatures and sea ice concentrations.",
                 "end_year": 2021,
-                "experiment": "Simulation of the climate of the recent past with prescribed sea surface temperatures and sea ice concentrations.",
+                "experiment": "standard AMIP experiment",
                 "experiment_id": "amip",
                 "min_number_yrs_per_sim": 43,
                 "parent_activity_id": [],
@@ -223,7 +223,7 @@
                 ],
                 "description": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
                 "end_year": 2021,
-                "experiment": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
+                "experiment": "AMIP with uniform 4K SST increase",
                 "experiment_id": "amip-p4K",
                 "min_number_yrs_per_sim": 43,
                 "parent_activity_id": [],
@@ -237,7 +237,7 @@
                 ],
                 "description": "Same as `amip` simulation, except it starts in 1870 and all forcings are set to pre-industrial levels rather than time-varying forcings.",
                 "end_year": 2021,
-                "experiment": "Same as `amip` simulation, except it starts in 1870 and all forcings are set to pre-industrial levels rather than time-varying forcings.",
+                "experiment": "AMIP SSTs with pre-industrial anthropogenic and natural forcing",
                 "experiment_id": "amip-piForcing",
                 "min_number_yrs_per_sim": 152,
                 "parent_activity_id": [],
@@ -251,7 +251,7 @@
                 ],
                 "description": "10 PgC / yr constant carbon dioxide emissions.",
                 "end_year": "",
-                "experiment": "10 PgC / yr constant carbon dioxide emissions.",
+                "experiment": "10 PgC/yr constant carbon dioxide emissions",
                 "experiment_id": "esm-flat10",
                 "min_number_yrs_per_sim": 100,
                 "parent_activity_id": [
@@ -269,7 +269,7 @@
                 ],
                 "description": "Extension of `esm-flat10` where emissions decline linearly to -10 PgC / yr then stay constant until cumulative emissions (including the emissions in `esm-flat10`) reach zero. An extra 20 years is included at the end to allow for calculating averages over different time windows.",
                 "end_year": "",
-                "experiment": "Extension of `esm-flat10` where emissions decline linearly to -10 PgC / yr then stay constant until cumulative emissions (including the emissions in `esm-flat10`) reach zero. An extra 20 years is included at the end to allow for calculating averages over different time windows.",
+                "experiment": "extension of `esm-flat10` with emissions decreasing, reaching net zero cumulative emissions",
                 "experiment_id": "esm-flat10-cdr",
                 "min_number_yrs_per_sim": 220,
                 "parent_activity_id": [
@@ -287,7 +287,7 @@
                 ],
                 "description": "Extension of `esm-flat10` with zero emissions.",
                 "end_year": "",
-                "experiment": "Extension of `esm-flat10` with zero emissions.",
+                "experiment": "extension of esm-flat10 with zero emissions",
                 "experiment_id": "esm-flat10-zec",
                 "min_number_yrs_per_sim": 100,
                 "parent_activity_id": [
@@ -305,7 +305,7 @@
                 ],
                 "description": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `historical`).",
                 "end_year": 2021,
-                "experiment": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `historical`).",
+                "experiment": "all-forcing simulation of the recent past with atmospheric CO2 concentration calculated",
                 "experiment_id": "esm-hist",
                 "min_number_yrs_per_sim": 172,
                 "parent_activity_id": [
@@ -323,7 +323,7 @@
                 ],
                 "description": "Pre-industrial control simulation with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `piControl`). Used to characterise natural variability and unforced behaviour.",
                 "end_year": "",
-                "experiment": "Pre-industrial control simulation with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `piControl`). Used to characterise natural variability and unforced behaviour.",
+                "experiment": "pre-industrial control simulation with CO2 concentration calculated",
                 "experiment_id": "esm-piControl",
                 "min_number_yrs_per_sim": 400,
                 "parent_activity_id": [
@@ -341,7 +341,7 @@
                 ],
                 "description": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `esm-piControl` simulation.",
                 "end_year": "",
-                "experiment": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `esm-piControl` simulation.",
+                "experiment": "pre-industrial control simulation with CO2 concentration calculated (spin-up)",
                 "experiment_id": "esm-piControl-spinup",
                 "min_number_yrs_per_sim": "",
                 "parent_activity_id": [],
@@ -355,7 +355,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
+                "experiment": "CMIP7 high emissions scenario",
                 "experiment_id": "esm-scen7-h",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -373,7 +373,7 @@
                 ],
                 "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-h-Aer` instead.",
+                "experiment": "like esm-scen7-h but with present-day ozone and aerosol precursor emissions",
                 "experiment_id": "esm-scen7-h-AQ",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -391,7 +391,7 @@
                 ],
                 "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-AQ` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `esm-scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-h-AQ` instead.",
+                "experiment": "like esm-scen7-h but with present-day aerosol precursor emissions",
                 "experiment_id": "esm-scen7-h-Aer",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -409,7 +409,7 @@
                 ],
                 "description": "Extension of `esm-scen7-h` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `esm-scen7-h` beyond 2100.",
+                "experiment": "extension of esm-scen7-h beyond 2100",
                 "experiment_id": "esm-scen7-h-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -427,7 +427,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
+                "experiment": "CMIP7 scenario with initially high emissions followed by reduced emissions",
                 "experiment_id": "esm-scen7-hl",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -445,7 +445,7 @@
                 ],
                 "description": "Extension of `esm-scen7-hl` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `esm-scen7-hl` beyond 2100.",
+                "experiment": "extension of esm-scen7-hl beyond 2100",
                 "experiment_id": "esm-scen7-hl-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -463,7 +463,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
+                "experiment": "CMIP7 low emissions scenario",
                 "experiment_id": "esm-scen7-l",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -481,7 +481,7 @@
                 ],
                 "description": "Extension of `esm-scen7-l` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `esm-scen7-l` beyond 2100.",
+                "experiment": "extension of esm-scen7-l beyond 2100",
                 "experiment_id": "esm-scen7-l-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -499,7 +499,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
+                "experiment": "CMIP7 scenario with initially high emissions followed by a reduction reaching negative emissions",
                 "experiment_id": "esm-scen7-ln",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -517,7 +517,7 @@
                 ],
                 "description": "Extension of `esm-scen7-ln` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `esm-scen7-ln` beyond 2100.",
+                "experiment": "extension of esm-scen7-ln beyond 2100",
                 "experiment_id": "esm-scen7-ln-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -535,7 +535,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
+                "experiment": "CMIP7 scenario with emissions frozen consistent with current policy",
                 "experiment_id": "esm-scen7-m",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -553,7 +553,7 @@
                 ],
                 "description": "Extension of `esm-scen7-m` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `esm-scen7-m` beyond 2100.",
+                "experiment": "extension of esm-scen7-m beyond 2100",
                 "experiment_id": "esm-scen7-m-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -571,7 +571,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
+                "experiment": "CMIP7 scenario with medium emissions initially followed by reduced emissions",
                 "experiment_id": "esm-scen7-ml",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -589,7 +589,7 @@
                 ],
                 "description": "Extension of `esm-scen7-ml` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `esm-scen7-ml` beyond 2100.",
+                "experiment": "extension of esm-scen7-ml beyond 2100",
                 "experiment_id": "esm-scen7-ml-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -607,7 +607,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
+                "experiment": "CMIP7 very low emissions scenario",
                 "experiment_id": "esm-scen7-vl",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -625,7 +625,7 @@
                 ],
                 "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `esm-scen7-vl-Aer` instead.",
+                "experiment": "like esm-scen7-vl but with present-day ozone and aerosol precursor emissions",
                 "experiment_id": "esm-scen7-vl-AQ",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -643,7 +643,7 @@
                 ],
                 "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-AQ` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `esm-scen7-h`. All other forcings evolve as in `esm-scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `esm-scen7-vl-AQ` instead.",
+                "experiment": "like esm-scen7-vl but with present-day aerosol precursor emissions",
                 "experiment_id": "esm-scen7-vl-Aer",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -661,7 +661,7 @@
                 ],
                 "description": "Extension of `esm-scen7-vl` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `esm-scen7-vl` beyond 2100.",
+                "experiment": "extension of esm-scen7-vl beyond 2100",
                 "experiment_id": "esm-scen7-vl-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -679,7 +679,7 @@
                 ],
                 "description": "Response to historical greenhouse gas forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
                 "end_year": 2035,
-                "experiment": "Response to historical greenhouse gas forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "experiment": "historical well-mixed GHG-only run",
                 "experiment_id": "hist-GHG",
                 "min_number_yrs_per_sim": 186,
                 "parent_activity_id": [
@@ -697,7 +697,7 @@
                 ],
                 "description": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
                 "end_year": 2035,
-                "experiment": "Response to historical aerosol forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "experiment": "historical anthropogenic aerosols-only run",
                 "experiment_id": "hist-aer",
                 "min_number_yrs_per_sim": 186,
                 "parent_activity_id": [
@@ -715,7 +715,7 @@
                 ],
                 "description": "Response to historical natural forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
                 "end_year": 2035,
-                "experiment": "Response to historical natural forcing (with extension using forcings from the `m` scenario simulation). All other conditions are kept the same as piControl.",
+                "experiment": "historical natural-forcing-only run",
                 "experiment_id": "hist-nat",
                 "min_number_yrs_per_sim": 186,
                 "parent_activity_id": [
@@ -733,7 +733,7 @@
                 ],
                 "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Requires interactive chemistry. Models without interactive chemistry should run `hist-piAer` instead. (Renamed from `hist-piNTCF` in AerChemMIP phase 1.)",
                 "end_year": 2021,
-                "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Requires interactive chemistry. Models without interactive chemistry should run `hist-piAer` instead. (Renamed from `hist-piNTCF` in AerChemMIP phase 1.)",
+                "experiment": "like historical but with ozone and aerosol precursor emissions kept at pre-industrial values",
                 "experiment_id": "hist-piAQ",
                 "min_number_yrs_per_sim": 172,
                 "parent_activity_id": [
@@ -751,7 +751,7 @@
                 ],
                 "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Intended for models without interactive chemistry. Models with interactive chemistry should run `hist-piAQ` instead. (Identical to `hist-piAer` in AerChemMIP phase 1.)",
                 "end_year": 2021,
-                "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `piControl`. All other forcings evolve as in `historical`. Intended for models without interactive chemistry. Models with interactive chemistry should run `hist-piAQ` instead. (Identical to `hist-piAer` in AerChemMIP phase 1.)",
+                "experiment": "like historical but with aerosol precursor emissions kept at pre-industrial values",
                 "experiment_id": "hist-piAer",
                 "min_number_yrs_per_sim": 172,
                 "parent_activity_id": [
@@ -769,7 +769,7 @@
                 ],
                 "description": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-hist`).",
                 "end_year": 2021,
-                "experiment": "Simulation of the climate of the recent past (typically meaning 1850 to present-day) with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-hist`).",
+                "experiment": "all-forcing simulation of the recent past",
                 "experiment_id": "historical",
                 "min_number_yrs_per_sim": 172,
                 "parent_activity_id": [
@@ -787,7 +787,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies a quadrupling of atmospheric carbon dioxide's (4xCO2's) effective radiative forcing (ERF). Same as `piClim-control`, except atmospheric carbon dioxide concentrations are set to four times `piControl` levels.",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies a quadrupling of atmospheric carbon dioxide's (4xCO2's) effective radiative forcing (ERF). Same as `piClim-control`, except atmospheric carbon dioxide concentrations are set to four times `piControl` levels.",
+                "experiment": "like piClim-control but with 4xCO2",
                 "experiment_id": "piClim-4xCO2",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -805,7 +805,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "like piClim-control but with present-day methane concentrations",
                 "experiment_id": "piClim-CH4",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -823,7 +823,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "like piClim-control but with present-day N2O concentrations or emissions",
                 "experiment_id": "piClim-N2O",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -841,7 +841,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "like piClim-control but with present-day NOx emissions",
                 "experiment_id": "piClim-NOx",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -859,7 +859,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substances concentrations use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substances concentrations use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "like piClim-control but with present-day ODS concentrations",
                 "experiment_id": "piClim-ODS",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -877,7 +877,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "like piClim-control but with present-day sulfur emissions",
                 "experiment_id": "piClim-SO2",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -895,7 +895,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "like piClim-control but with present-day anthropogenic aerosol emissions",
                 "experiment_id": "piClim-aer",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -913,7 +913,7 @@
                 ],
                 "description": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "like piClim-control but with present-day total anthropogenic forcings",
                 "experiment_id": "piClim-anthro",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -931,7 +931,7 @@
                 ],
                 "description": "Baseline for effective radiative forcing (ERF) calculations. `piControl` with prescribed sea-surface temperatures and sea-ice concentrations from a climatology of the model's `piControl` simulation.",
                 "end_year": "",
-                "experiment": "Baseline for effective radiative forcing (ERF) calculations. `piControl` with prescribed sea-surface temperatures and sea-ice concentrations from a climatology of the model's `piControl` simulation.",
+                "experiment": "control simulation providing baseline for evaluating effective radiative forcing (ERF)",
                 "experiment_id": "piClim-control",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -949,7 +949,7 @@
                 ],
                 "description": "Simulation of the historical and future period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). Aerosol emissions follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
                 "end_year": 2100,
-                "experiment": "Simulation of the historical and future period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). Aerosol emissions follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
+                "experiment": "like piClim-control but with realistically evolving aerosol emissions",
                 "experiment_id": "piClim-histaer",
                 "min_number_yrs_per_sim": 251,
                 "parent_activity_id": [],
@@ -963,7 +963,7 @@
                 ],
                 "description": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). All forcings follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF) (can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
                 "end_year": 2100,
-                "experiment": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). All forcings follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF) (can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
+                "experiment": "like piClim-control but with realistically evolving forcers",
                 "experiment_id": "piClim-histall",
                 "min_number_yrs_per_sim": 251,
                 "parent_activity_id": [],
@@ -977,7 +977,7 @@
                 ],
                 "description": "Pre-industrial control simulation with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-piControl`). Used to characterise natural variability and unforced behaviour.",
                 "end_year": "",
-                "experiment": "Pre-industrial control simulation with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-piControl`). Used to characterise natural variability and unforced behaviour.",
+                "experiment": "pre-industrial control",
                 "experiment_id": "piControl",
                 "min_number_yrs_per_sim": 400,
                 "parent_activity_id": [
@@ -995,7 +995,7 @@
                 ],
                 "description": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `piControl` simulation.",
                 "end_year": "",
-                "experiment": "Spin-up simulation. Used to get the model into a state of approximate radiative equilibrium before starting the `piControl` simulation.",
+                "experiment": "pre-industrial control (spin-up)",
                 "experiment_id": "piControl-spinup",
                 "min_number_yrs_per_sim": "",
                 "parent_activity_id": [],
@@ -1009,7 +1009,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
+                "experiment": "concentration-driven CMIP7 high emissions scenario",
                 "experiment_id": "scen7-h",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1027,7 +1027,7 @@
                 ],
                 "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-h-Aer` instead.",
+                "experiment": "like scen7-h but with concentrations consistent with present-day ozone and aerosol precursor emissions",
                 "experiment_id": "scen7-h-AQ",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1045,7 +1045,7 @@
                 ],
                 "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-AQ` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) are held constant at present-day (2021) levels. All other forcings evolve as in `scen7-h`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-h-AQ` instead.",
+                "experiment": "like esm-scen7-h but with concentrations consistent with present-day aerosol precursor emissions",
                 "experiment_id": "scen7-h-Aer",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1063,7 +1063,7 @@
                 ],
                 "description": "Extension of `scen7-h` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `scen7-h` beyond 2100.",
+                "experiment": "extension of scen7-h beyond 2100",
                 "experiment_id": "scen7-h-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -1081,7 +1081,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
+                "experiment": "concentration-driven CMIP7 scenario with initially high emissions followed by reduced emissions",
                 "experiment_id": "scen7-hl",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1099,7 +1099,7 @@
                 ],
                 "description": "Extension of `scen7-hl` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `scen7-hl` beyond 2100.",
+                "experiment": "extension of scen7-hl beyond 2100",
                 "experiment_id": "scen7-hl-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -1117,7 +1117,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
+                "experiment": "concentration-driven CMIP7 low emissions scenario",
                 "experiment_id": "scen7-l",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1135,7 +1135,7 @@
                 ],
                 "description": "Extension of `scen7-l` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `scen7-l` beyond 2100.",
+                "experiment": "extension of scen7-l beyond 2100",
                 "experiment_id": "scen7-l-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -1153,7 +1153,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
+                "experiment": "concentration-driven CMIP7 scenario with initially high emissions followed by a reduction reaching negative emissions",
                 "experiment_id": "scen7-ln",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1171,7 +1171,7 @@
                 ],
                 "description": "Extension of `scen7-ln` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `scen7-ln` beyond 2100.",
+                "experiment": "extension of scen7-ln beyond 2100",
                 "experiment_id": "scen7-ln-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -1189,7 +1189,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
+                "experiment": "concentration-driven CMIP7 scenario with emissions frozen consistent with current policy",
                 "experiment_id": "scen7-m",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1207,7 +1207,7 @@
                 ],
                 "description": "Extension of `scen7-m` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `scen7-m` beyond 2100.",
+                "experiment": "extension of scen7-m beyond 2100",
                 "experiment_id": "scen7-m-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -1225,7 +1225,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
+                "experiment": "concentration-driven CMIP7 scenario with medium emissions initially followed by reduced emissions",
                 "experiment_id": "scen7-ml",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1243,7 +1243,7 @@
                 ],
                 "description": "Extension of `scen7-ml` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `scen7-ml` beyond 2100.",
+                "experiment": "extension of scen7-ml beyond 2100",
                 "experiment_id": "scen7-ml-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
@@ -1261,7 +1261,7 @@
                 ],
                 "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
                 "end_year": 2100,
-                "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
+                "experiment": "concentration-driven CMIP7 very low emissions scenario",
                 "experiment_id": "scen7-vl",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1279,7 +1279,7 @@
                 ],
                 "description": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate and air quality responses to the regionally heterogeneous evolution of anthropogenic non-CH4 SLCF emissions. Anthropogenic non-CH4 tropospheric O3 precursor emissions (NMVOCs, CO, NOx), aerosols, and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Requires interactive chemistry. Models without interactive chemistry should run `scen7-vl-Aer` instead.",
+                "experiment": "like scen7-vl but with concentrations consistent with present-day ozone and aerosol precursor emissions",
                 "experiment_id": "scen7-vl-AQ",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1297,7 +1297,7 @@
                 ],
                 "description": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-AQ` instead.",
                 "end_year": 2100,
-                "experiment": "Used to diagnose climate responses to the regionally heterogeneous evolution of anthropogenic aerosol emissions. Anthropogenic aerosols and aerosol precursor emissions (BC, OC, NH3, SO2) evolve as in `scen7-h`. All other forcings evolve as in `scen7-vl`. Intended for models without interactive chemistry. Models with interactive chemistry should run `scen7-vl-AQ` instead.",
+                "experiment": "like scen7-vl but with concentrations consistent with present-day aerosol precursor emissions",
                 "experiment_id": "scen7-vl-Aer",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1315,7 +1315,7 @@
                 ],
                 "description": "Extension of `scen7-vl` beyond 2100.",
                 "end_year": 2500,
-                "experiment": "Extension of `scen7-vl` beyond 2100.",
+                "experiment": "extension of scen7-vl beyond 2100",
                 "experiment_id": "scen7-vl-ext",
                 "min_number_yrs_per_sim": 50,
                 "parent_activity_id": [
