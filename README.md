@@ -65,6 +65,11 @@ Each of these use the tables and the testing CVs JSON file
 
 * [Simple CMOR demo notebook](cmor_demo.ipynb) ([python script equivalent](scripts/cmor_test.py))
     * Get the right environment either using conda with `cmor_environment.yml` or pixi using the `pixi.lock` file
+        * If you use pixi and need to update the CMOR version,
+          simply edit `pixi.toml`,
+          then run `pixi lock`,
+          then commit the updates to `pixi.toml` and `pixi.lock`
+          and finally make a pull request back into the `main` branch if appropriate.
 * [Example of "re-cmorising" CMIP6 data](Simple_recmorise_cmip6-cmip7.ipynb)
 
 Note in particular the lines used to add `cell_measures` metadata to variables.
