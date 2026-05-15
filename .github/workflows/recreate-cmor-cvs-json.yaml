@@ -39,7 +39,7 @@ jobs:
       - name: Commit
         if: steps.verify-changed-files.outputs.files_changed == 'true'
         run: |
-          git add tables-cvs/cmor-cvs.json tables-cvs/requirements-cmor-cvs-table.txt
+          git add tables-cvs/cmor-cvs.json tables-cvs/requirements-cmor-cvs-table.txt tables-cvs/split-view
           git config --local user.email "ci-runner@cmip7-cmor-tables.invalid"
           git config --local user.name "$GITHUB_ACTOR"
           git commit -m "Update CMOR CVs JSON via GitHub action"
