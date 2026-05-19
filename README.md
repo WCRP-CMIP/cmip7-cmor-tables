@@ -11,6 +11,10 @@ CMOR v3.14.2 prevents parent attributes from being required for experiments with
 
 To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed, and CMOR v3.14.2 is used in the examples here.
 
+UPDATE 19th May: Environment and examples updated to work with [CMOR v3.15.0](https://github.com/PCMDI/cmor/releases/tag/3.15.0). This version includes 
+fixes to correctly produce variables with more complex time coordinates such as monthly `tas_tmaxavg-h2m-hxy-u` (formerly known as "tasmax"). CMOR versions
+3.14.x will incorrectly include a `-clim` suffix to the filename.
+
 ## CVs JSON file
 
 The CVs JSON file is now hosted in the [tables-cvs directory](https://github.com/WCRP-CMIP/cmip7-cmor-tables/tree/main/tables-cvs). 
