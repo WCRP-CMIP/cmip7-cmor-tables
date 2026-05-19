@@ -312,7 +312,7 @@ class CMORCVsTable(BaseModel):
     Allowed value of `data_specs_version`
     """
 
-    drs_specs: RegularExpressionValidators
+    drs_specs: str
     """
     Allowed value of `drs_specs`
     """
@@ -1067,10 +1067,6 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             value = get_single_allowed_value_for_attribute(
                 attr_property.attr_field_name, ev_project
             )
-            if attr_property.attr_field_name == "drs_specs":
-                # Extra special field that has to be an array,
-                # see https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/78
-                value = [value]
 
             kwarg = attr_property.attr_field_name
 
