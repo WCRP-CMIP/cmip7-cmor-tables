@@ -34,8 +34,8 @@ ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
 UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
 UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-# CMIP7_CVS_REF="${CMIP7_CVS_REF:=update-experiment-definitions}"
-CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
+CMIP7_CVS_REF="${CMIP7_CVS_REF:=latest-fixes}"
+# CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
 
 ## Versioned esgvoc config
 # # Use when we are using a versioned esgvoc release

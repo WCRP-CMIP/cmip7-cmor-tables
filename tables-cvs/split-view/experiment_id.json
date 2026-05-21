@@ -293,9 +293,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
+        "description": "CMIP7 ScenarioMIP High emission scenario - A scenario with emissions as high as judged to be plausible, based on assuming developments that include a rollback of current mitigation policies. This scenario is expected to result in forcings below SSP5-8.5. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
+        "experiment": "CMIP7 ScenarioMIP High emission scenario - A scenario with emissions as high as judged to be plausible, based on assuming developments that include a rollback of current mitigation policies. This scenario is expected to result in forcings below SSP5-8.5. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-h`).",
         "experiment_id": "esm-scen7-h",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -365,9 +365,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
+        "description": "CMIP7 ScenarioMIP High-to-Low emission scenario - A scenario that follows approximately the same emissions pathway as the High, but changes course in the second half of the century, applying strong mitigation measures to reach net zero CO2 emissions by 2100. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
+        "experiment": "CMIP7 ScenarioMIP High-to-Low emission scenario - A scenario that follows approximately the same emissions pathway as the High, but changes course in the second half of the century, applying strong mitigation measures to reach net zero CO2 emissions by 2100. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-hl`).",
         "experiment_id": "esm-scen7-hl",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -401,9 +401,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
+        "description": "CMIP7 ScenarioMIP Low emission scenario - The Low emission scenario is designed to be consistent with the pursuit of holding warming to a level likely below 2C, without returning to 1.5C before the end of the century.  Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
+        "experiment": "CMIP7 ScenarioMIP Low emission scenario - The Low emission scenario is designed to be consistent with the pursuit of holding warming to a level likely below 2C, without returning to 1.5C before the end of the century.  Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-l`).",
         "experiment_id": "esm-scen7-l",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -437,9 +437,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
+        "description": "CMIP7 ScenarioMIP Low-to-Negative emission scenario - A scenario with a higher overshoot of the 1.5C goal, followed by stringent climate policies resulting in net-negative greenhouse gas emissions to return to lower warming levels, thus supporting research into the reversibility of climate outcomes and their impacts. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
+        "experiment": "CMIP7 ScenarioMIP Low-to-Negative emission scenario - A scenario with a higher overshoot of the 1.5C goal, followed by stringent climate policies resulting in net-negative greenhouse gas emissions to return to lower warming levels, thus supporting research into the reversibility of climate outcomes and their impacts. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ln`).",
         "experiment_id": "esm-scen7-ln",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -473,9 +473,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
+        "description": "CMIP7 ScenarioMIP Medium emission scenario - A middle scenario exploring consequences of extending current policies and trends into the future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
+        "experiment": "CMIP7 ScenarioMIP Medium emission scenario - A middle scenario exploring consequences of extending current policies and trends into the future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-m`).",
         "experiment_id": "esm-scen7-m",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -509,9 +509,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
+        "description": "CMIP7 ScenarioMIP Medium-to-Low emission scenario - A scenario exploring a delayed increase in mitigation efforts, short of the Paris temperature goal but achieving net-zero CO2 emissions by the end of the century. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
+        "experiment": "CMIP7 ScenarioMIP Medium-to-Low emission scenario - A scenario exploring a delayed increase in mitigation efforts, short of the Paris temperature goal but achieving net-zero CO2 emissions by the end of the century. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-ml`).",
         "experiment_id": "esm-scen7-ml",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -545,9 +545,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
+        "description": "CMIP7 ScenarioMIP Very Low emission scenario - The Very Low emission scenario is designed to keep the temperature level as low as plausible given feasibility constraints. This scenario is thus relevant for the low end of the Paris range (staying as close as plausible to 1.5C at the time of peak warming and limiting warming to 1.5C by the end of the century). Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
+        "experiment": "CMIP7 ScenarioMIP Very Low emission scenario - The Very Low emission scenario is designed to keep the temperature level as low as plausible given feasibility constraints. This scenario is thus relevant for the low end of the Paris range (staying as close as plausible to 1.5C at the time of peak warming and limiting warming to 1.5C by the end of the century). Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `scen7-vl`).",
         "experiment_id": "esm-scen7-vl",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -887,13 +887,17 @@
         "activity_id": [
             "RFMIP"
         ],
-        "description": "Simulation of the historical and future period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). Aerosol emissions follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
+        "description": "In combination with `piClim-control`, quantifies transient aerosol effective radiative forcing (ERF) over the historical period and the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup). This can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF.",
         "end_year": 2100,
-        "experiment": "Simulation of the historical and future period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). Aerosol emissions follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) while all other forcings follow `piControl` to allow for a (approximate) diagnosis of transient historical aerosol effective radiative forcing (ERF) (can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF).",
+        "experiment": "In combination with `piClim-control`, quantifies transient aerosol effective radiative forcing (ERF) over the historical period and the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup). This can be compared with `piClim-aer` which provides a more precise quantification of present-day aerosol ERF.",
         "experiment_id": "piClim-histaer",
         "min_number_yrs_per_sim": 251,
-        "parent_activity_id": [],
-        "parent_experiment_id": [],
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "piControl"
+        ],
         "start_year": 1850,
         "tier": 1
     },
@@ -901,13 +905,17 @@
         "activity_id": [
             "RFMIP"
         ],
-        "description": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). All forcings follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF) (can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
+        "description": "In combination with `piClim-control`, quantifies transient effective radiative forcing (ERF) over the historical period and the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup). This complements the `piClim-*` experiments which provide a more precise quantification of present-day ERF for various forcing components.",
         "end_year": 2100,
-        "experiment": "Simulation of the historical period with prescribed sea-surface temperatures and sea-ice concentrations (the slightly confusing name is a legacy thing). All forcings follow the `historical` experiment then the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup) to allow for a (approximate) diagnosis of transient historical effective radiative forcing (ERF) (can be compared with the `piClim-*` experiments which provide a more precise quantification of present-day ERF from various forcers).",
+        "experiment": "In combination with `piClim-control`, quantifies transient effective radiative forcing (ERF) over the historical period and the `scen7-m` or `esm-scen7-m` experiment (whichever is relevant to your model setup). This complements the `piClim-*` experiments which provide a more precise quantification of present-day ERF for various forcing components.",
         "experiment_id": "piClim-histall",
         "min_number_yrs_per_sim": 251,
-        "parent_activity_id": [],
-        "parent_experiment_id": [],
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "piControl"
+        ],
         "start_year": 1850,
         "tier": 1
     },
@@ -947,9 +955,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
+        "description": "CMIP7 ScenarioMIP High emission scenario - A scenario with emissions as high as judged to be plausible, based on assuming developments that include a rollback of current mitigation policies. This scenario is expected to result in forcings below SSP5-8.5. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP high emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
+        "experiment": "CMIP7 ScenarioMIP High emission scenario - A scenario with emissions as high as judged to be plausible, based on assuming developments that include a rollback of current mitigation policies. This scenario is expected to result in forcings below SSP5-8.5. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-h`).",
         "experiment_id": "scen7-h",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1019,9 +1027,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
+        "description": "CMIP7 ScenarioMIP High-to-Low emission scenario - A scenario that follows approximately the same emissions pathway as the High, but changes course in the second half of the century, applying strong mitigation measures to reach net zero CO2 emissions by 2100. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP High followed by low (from 2060) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
+        "experiment": "CMIP7 ScenarioMIP High-to-Low emission scenario - A scenario that follows approximately the same emissions pathway as the High, but changes course in the second half of the century, applying strong mitigation measures to reach net zero CO2 emissions by 2100. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-hl`).",
         "experiment_id": "scen7-hl",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1055,9 +1063,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
+        "description": "CMIP7 ScenarioMIP Low emission scenario - The Low emission scenario is designed to be consistent with the pursuit of holding warming to a level likely below 2C, without returning to 1.5C before the end of the century.  Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
+        "experiment": "CMIP7 ScenarioMIP Low emission scenario - The Low emission scenario is designed to be consistent with the pursuit of holding warming to a level likely below 2C, without returning to 1.5C before the end of the century.  Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-l`).",
         "experiment_id": "scen7-l",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1091,9 +1099,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
+        "description": "CMIP7 ScenarioMIP Low-to-Negative emission scenario - A scenario with a higher overshoot of the 1.5C goal, followed by stringent climate policies resulting in net-negative greenhouse gas emissions to return to lower warming levels, thus supporting research into the reversibility of climate outcomes and their impacts. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP low followed by negative (steep reductions begin in 2040, negative from TBD) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
+        "experiment": "CMIP7 ScenarioMIP Low-to-Negative emission scenario - A scenario with a higher overshoot of the 1.5C goal, followed by stringent climate policies resulting in net-negative greenhouse gas emissions to return to lower warming levels, thus supporting research into the reversibility of climate outcomes and their impacts. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ln`).",
         "experiment_id": "scen7-ln",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1127,9 +1135,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
+        "description": "CMIP7 ScenarioMIP Medium emission scenario - A middle scenario exploring consequences of extending current policies and trends into the future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
+        "experiment": "CMIP7 ScenarioMIP Medium emission scenario - A middle scenario exploring consequences of extending current policies and trends into the future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-m`).",
         "experiment_id": "scen7-m",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1163,9 +1171,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
+        "description": "CMIP7 ScenarioMIP Medium-to-Low emission scenario - A scenario exploring a delayed increase in mitigation efforts, short of the Paris temperature goal but achieving net-zero CO2 emissions by the end of the century. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP medium followed by low (from 2040) emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
+        "experiment": "CMIP7 ScenarioMIP Medium-to-Low emission scenario - A scenario exploring a delayed increase in mitigation efforts, short of the Paris temperature goal but achieving net-zero CO2 emissions by the end of the century. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-ml`).",
         "experiment_id": "scen7-ml",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [
@@ -1199,9 +1207,9 @@
         "activity_id": [
             "ScenarioMIP"
         ],
-        "description": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
+        "description": "CMIP7 ScenarioMIP Very Low emission scenario - The Very Low emission scenario is designed to keep the temperature level as low as plausible given feasibility constraints. This scenario is thus relevant for the low end of the Paris range (staying as close as plausible to 1.5C at the time of peak warming and limiting warming to 1.5C by the end of the century). Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
         "end_year": 2100,
-        "experiment": "PLACEHOLDER TBC. CMIP7 ScenarioMIP very low emissions future. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
+        "experiment": "CMIP7 ScenarioMIP Very Low emission scenario - The Very Low emission scenario is designed to keep the temperature level as low as plausible given feasibility constraints. This scenario is thus relevant for the low end of the Paris range (staying as close as plausible to 1.5C at the time of peak warming and limiting warming to 1.5C by the end of the century). Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-scen7-vl`).",
         "experiment_id": "scen7-vl",
         "min_number_yrs_per_sim": 79,
         "parent_activity_id": [

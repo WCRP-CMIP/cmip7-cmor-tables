@@ -862,10 +862,10 @@ def get_cmor_drs_definition(
             # This is different, hence we can't use the project specs.
             directory_path_template_l.append("<branding_suffix>")
 
-        elif part.source_collection == "variable":
+        elif part.source_collection in ("variable", "experiment"):
             # We can undo this if an update comes in esgvoc which allows us to map
             # DRS parts to attribute fields
-            directory_path_template_l.append("<variable_id>")
+            directory_path_template_l.append(f"<{part.source_collection}_id>")
 
         else:
             project_attribute_property = get_project_attribute_property(
@@ -941,10 +941,10 @@ def get_cmor_drs_definition(
             # This is different, hence we can't use the project specs.
             cmor_placeholder = "branding_suffix"
 
-        elif part.source_collection == "variable":
-            # This shouldn't need to be hard-coded,
-            # but there is some issue in how I am understanding esgvoc's specs.
-            cmor_placeholder = "variable_id"
+        elif part.source_collection in ("variable", "experiment"):
+            # We can undo this if an update comes in esgvoc which allows us to map
+            # DRS parts to attribute fields
+            cmor_placeholder = f"{part.source_collection}_id"
 
         else:
             project_attribute_property = get_project_attribute_property(
