@@ -25,20 +25,20 @@ set -euo pipefail
 # Environment variables that this file uses.
 # If they're not set, the default values are used.
 ### Non-versioned esgvoc config
-# Use when we are using a branches of CVs
+# # Use when we are using a branches of CVs
 esgvoc_versioned=0
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
-UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
-UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=update-experiment-definitions}"
-# UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
-# UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
+# UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
+# UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=update-experiment-definitions}"
+UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
+UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-CMIP7_CVS_REF="${CMIP7_CVS_REF:=update-experiment-definitions}"
+CMIP7_CVS_REF="${CMIP7_CVS_REF:=latest-fixes}"
 # CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
 
-### Versioned esgvoc config
-# Use when we are using a versioned esgvoc release
+## Versioned esgvoc config
+# # Use when we are using a versioned esgvoc release
 # esgvoc_versioned=1
 # ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 # ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
