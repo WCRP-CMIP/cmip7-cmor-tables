@@ -18,6 +18,7 @@
             "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
             "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
             "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
+            "LMIP": "Land (offline) Model Intercomparison Project: advancing understanding of the impacts of land-use and land-cover change (LULCC) on climate",
             "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
             "RFMIP": "Radiative Forcing Model Intercomparison Project: characterisation of radiative forcing within models.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions. In CMIP7, the priority tier for experiments is conditional on whether you are doing emissions- or concentration-driven simulations. There is no way to express this in the CVs (nor time to implement something to handle this conditionality). This means that, for your particular situation, some experiments may be at a lower tier than is listed in the CVs. For example, the `vl` scenario is tier 1 for concentration-driven models and tier 2 for emissions-driven models. However, in the CVs, we have used the highest priority tier (across all the possible conditionalities). Hence `vl` is listed as tier 1 in the CVs (even though it is actually tier 2 for emissions-driven models).For details, please see the full description in the ScenarioMIP description papers."
@@ -779,6 +780,20 @@
                 "start_year": 1850,
                 "tier": 1
             },
+            "land-hist": {
+                "activity_id": [
+                    "LMIP"
+                ],
+                "description": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models.",
+                "end_year": 2021,
+                "experiment": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models.",
+                "experiment_id": "land-hist",
+                "min_number_yrs_per_sim": 121,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1901,
+                "tier": 1
+            },
             "piClim-4xCO2": {
                 "activity_id": [
                     "CMIP"
@@ -1391,7 +1406,7 @@
         "grid_label": {
             "g100": "",
             "g101": "",
-            "g102": "",
+            "g102": "Wrap-around",
             "g103": "",
             "g104": "",
             "g105": "",
@@ -1405,11 +1420,11 @@
             "g113": "",
             "g114": "",
             "g115": "",
-            "g116": "",
+            "g116": "South of 65\u00b0N, the resolution of the model is 1\u00b0 along the zonal direction. In the meridional direction the grid spacing is nominally 1\u00b0 resolution, with the following three refinements: a) tripolar Arctic north of 65\u00b0N (poles at 65\u00b0N, 80\u00b0E and 65\u00b0N, 260\u00b0E); b) equatorial refinement to 1/3\u00b0 between 10\u00b0S and 10\u00b0N; and c) a Mercator (cosine-dependent) implementation for the southern hemisphere, ranging from 0.25\u00b0 at 78\u00b0S to 1\u00b0 at 30\u00b0S.",
             "g117": "",
-            "g118": "",
+            "g118": "South of 65\u00b0N, the resolution of the model is 1\u00b0 along the zonal direction. In the meridional direction the grid spacing is nominally 1\u00b0 resolution, with the following three refinements: a) tripolar Arctic north of 65\u00b0N (poles at 65\u00b0N, 80\u00b0E and 65\u00b0N, 260\u00b0E); b) equatorial refinement to 1/3\u00b0 between 10\u00b0S and 10\u00b0N; and c) a Mercator (cosine-dependent) implementation for the southern hemisphere, ranging from 0.25\u00b0 at 78\u00b0S to 1\u00b0 at 30\u00b0S.",
             "g119": "",
-            "g120": "",
+            "g120": "Triangular truncation at total wavenumber 63 (T63) corresponding to an approximate isotropic resolution of 2.8 degrees in both latitude and longitude",
             "g121": "",
             "g122": "",
             "g123": "",
@@ -1419,9 +1434,9 @@
             "g127": "",
             "g128": "",
             "g129": "",
-            "g130": "",
+            "g130": "The horizontal grid spacing varies locally between 5 and 25 km.",
             "g131": "",
-            "g132": "",
+            "g132": "The horizontal grid spacing varies locally between 5 and 25 km.",
             "g133": "",
             "g134": "",
             "g135": "",

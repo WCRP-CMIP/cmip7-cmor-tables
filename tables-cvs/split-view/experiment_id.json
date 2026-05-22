@@ -721,6 +721,20 @@
         "start_year": 1850,
         "tier": 1
     },
+    "land-hist": {
+        "activity_id": [
+            "LMIP"
+        ],
+        "description": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models.",
+        "end_year": 2021,
+        "experiment": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models.",
+        "experiment_id": "land-hist",
+        "min_number_yrs_per_sim": 121,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": 1901,
+        "tier": 1
+    },
     "piClim-4xCO2": {
         "activity_id": [
             "CMIP"
