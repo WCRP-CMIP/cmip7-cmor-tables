@@ -29,13 +29,13 @@ set -euo pipefail
 esgvoc_versioned=0
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
+UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
+UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=main}"
 # UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
 # UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=update-experiment-definitions}"
-UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
-UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
 CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-CMIP7_CVS_REF="${CMIP7_CVS_REF:=latest-fixes}"
-# CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
+CMIP7_CVS_REF="${CMIP7_CVS_REF:=main}"
+# CMIP7_CVS_REF="${CMIP7_CVS_REF:=latest-fixes}"
 
 ## Versioned esgvoc config
 # # Use when we are using a versioned esgvoc release
@@ -79,11 +79,11 @@ if [[ $install_env -eq 1 ]]; then
 
     log "requirements_file=$requirements_file"
 
-    sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
-    # # Mac equivalent of the above
-    # sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    # sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
+    # sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
+    # sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
+    # Mac equivalent of the above
+    sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
+    sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
 
     pip install -r "${requirements_file}"
 
