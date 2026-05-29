@@ -17,6 +17,7 @@
             "CFMIP": "Cloud feedback model intercomparison project. Focussed primarily on cloud feedbacks with a secondary focus on understanding of response to forcing, model biases, circulation, regional-scale precipitation, and non-linear changes.",
             "CMIP": "CMIP core common experiments i.e. the DECK (Diagnostic, Evaluation and Characterization of Klima).",
             "DAMIP": "Detection and attribution model intercomparison project: exploration of the role of individual forcings (both anthropogenic and natural) in past and future climate change.",
+            "DCPP": "Decadal climate prediction project: Coordinated multi-model investigation into decadal climate prediction, predictability, and variability",
             "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
             "LMIP": "Land (offline) Model Intercomparison Project: advancing understanding of the impacts of land-use and land-cover change (LULCC) on climate",
             "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
@@ -242,6 +243,20 @@
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
                 "start_year": 1870,
+                "tier": 1
+            },
+            "dcppB-forecast-cmip6": {
+                "activity_id": [
+                    "DCPP"
+                ],
+                "description": "Simulation to examine forced climate change and variability up to 10 years into the future. This forecast is initialised from observations with forcing from ssp245 applied over its extent.",
+                "end_year": 2034,
+                "experiment": "Simulation to examine forced climate change and variability up to 10 years into the future. This forecast is initialised from observations with forcing from ssp245 applied over its extent.",
+                "experiment_id": "dcppB-forecast-cmip6",
+                "min_number_yrs_per_sim": 10,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 2025,
                 "tier": 1
             },
             "esm-flat10": {
@@ -816,9 +831,9 @@
                 "activity_id": [
                     "AerChemMIP"
                 ],
-                "description": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "description": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane concentrations or emissions (as appropriate for the model) use present-day values (2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "In combination with `piClim-control`, quantifies present-day methane effective radiative forcing (ERF). Same as `piClim-control`, except methane concentrations or emissions (as appropriate for the model) use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-CH4",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -834,9 +849,9 @@
                 "activity_id": [
                     "AerChemMIP"
                 ],
-                "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide concentrations or emissions (as appropriate for the model) use present-day values (2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide concentrations or emissions (as appropriate for the model) use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide concentrations or emissions (as appropriate for the model) use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-N2O",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -852,9 +867,9 @@
                 "activity_id": [
                     "AerChemMIP"
                 ],
-                "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "description": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-NOx",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -870,9 +885,9 @@
                 "activity_id": [
                     "AerChemMIP"
                 ],
-                "description": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substances concentrations use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "description": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substances concentrations use present-day values (2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substances concentrations use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "In combination with `piClim-control`, quantifies present-day ozone-depleting substances' effective radiative forcing (ERF). Same as `piClim-control`, except ozone-depleting substances concentrations use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-ODS",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -888,9 +903,9 @@
                 "activity_id": [
                     "AerChemMIP"
                 ],
-                "description": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "description": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "In combination with `piClim-control`, quantifies present-day sulfur (dioxide) effective radiative forcing (ERF). Same as `piClim-control`, except sulfur emissions use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-SO2",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -906,9 +921,9 @@
                 "activity_id": [
                     "RFMIP"
                 ],
-                "description": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "description": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "In combination with `piClim-control`, quantifies present-day aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic aerosol emissions use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-aer",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
@@ -924,9 +939,9 @@
                 "activity_id": [
                     "CMIP"
                 ],
-                "description": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "description": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (2021 values for CMIP7).",
                 "end_year": "",
-                "experiment": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (typically the last year of the `historical` simulation within the same CMIP era e.g. 2014 values for CMIP6, 2021 values for CMIP7).",
+                "experiment": "In combination with `piClim-control`, quantifies present-day total anthropogenic effective radiative forcing (ERF). Same as `piClim-control`, except all anthropogenic forcings use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-anthro",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
