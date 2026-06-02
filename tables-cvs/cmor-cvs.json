@@ -1478,8 +1478,12 @@
         "institution_id": {
             "CCCma": "Environment and Climate Change Canada",
             "CNRM-CERFACS": "CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
+            "DWD": "German Meteorological Service (Deutscher Wetterdienst)",
             "IPSL": "Institut Pierre-Simon Laplace",
-            "MOHC": "Met Office Hadley Centre"
+            "METNo": "Norwegian Meteorological Institute",
+            "MOHC": "Met Office Hadley Centre",
+            "NOAA-GFDL": "US National Oceanic and Atmospheric Administration's Geophysical Fluid Dynamics Laboratory.",
+            "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China."
         },
         "license": {
             "license_id": {
