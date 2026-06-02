@@ -1,10 +1,23 @@
 {
+    "BAS": "British Antarctic Survey",
+    "BNU": "Beaconhouse National University",
+    "CAS": "Chinese Academy of Sciences",
     "CCCma": "Environment and Climate Change Canada",
+    "CNRM": "Centre National de Recherches Meteorologiques",
     "CNRM-CERFACS": "CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
+    "DMI": "DMI",
     "DWD": "German Meteorological Service (Deutscher Wetterdienst)",
+    "EC-Earth-Consortium": "EC-Earth-Consortium",
+    "FMI": "Finnish Meteorological Institute",
     "IPSL": "Institut Pierre-Simon Laplace",
+    "KNMI": "Royal Netherlands Meteorological Institute",
     "METNo": "Norwegian Meteorological Institute",
     "MOHC": "Met Office Hadley Centre",
+    "MPI-M": "Max Planck Institute for Meteorology",
+    "NCAS": "Uks",
+    "NERC": "Natural Environment Research Council",
     "NOAA-GFDL": "US National Oceanic and Atmospheric Administration's Geophysical Fluid Dynamics Laboratory.",
-    "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China."
+    "SMHI": "SMHI",
+    "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China.",
+    "UNSW": "UNSW"
 }
