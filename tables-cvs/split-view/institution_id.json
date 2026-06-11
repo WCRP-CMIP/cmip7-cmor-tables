@@ -1,4 +1,5 @@
 {
+    "AWI": "Alfred Wegener Institute for Polar and Marine Research",
     "BAS": "British Antarctic Survey",
     "BNU": "Beaconhouse National University",
     "CAS": "Chinese Academy of Sciences",
@@ -19,5 +20,6 @@
     "NOAA-GFDL": "US National Oceanic and Atmospheric Administration's Geophysical Fluid Dynamics Laboratory.",
     "SMHI": "SMHI",
     "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China.",
+    "UAF": "University of Alaska Fairbanks",
     "UNSW": "UNSW"
 }
