@@ -1476,6 +1476,7 @@
             "^i[[:digit:]]\\{4\\}[[:digit:]]\\{2\\}[abcde]\\{0,\\}$"
         ],
         "institution_id": {
+            "AWI": "Alfred Wegener Institute for Polar and Marine Research",
             "BAS": "British Antarctic Survey",
             "BNU": "Beaconhouse National University",
             "CAS": "Chinese Academy of Sciences",
