@@ -259,6 +259,20 @@
                 "start_year": "",
                 "tier": 1
             },
+            "eocene-5x": {
+                "activity_id": [
+                    "PMIP"
+                ],
+                "description": "A detailed experimental design and motivation is provided in Lunt et al (in review, GMD) : https://egusphere.copernicus.org/preprints/2026/egusphere-2025-6135\n\nThe experiment is designed to represent the Early Eocene Climatic Optimum (EECO), ~50 million years ago. The Eocene was a time period of high CO2, and plate tectonic movements meant that the continents were in different positions compared to today. Vegetation was also different to today. Because paleoclimate proxy data exist for this period, it provides a test of how well a model can represent a high CO2 world. Compared to piControl, the topography, CO2, and land-surface types (vegetation and ice sheets) are modified. The experiment can be initialised from previous Eocene simulations, or from idealised initial states which are provided. The experiment should be run for as long as possible, and equilibration criteria are stipulated. However, only the final 100 years are uploaded to the ESGF.  This is part of PMIP.\n\nSee also https://github.com/WCRP-CMIP/CMIP7-CVs/issues/380 - I was asked to resubmit here.",
+                "end_year": "",
+                "experiment": "A detailed experimental design and motivation is provided in Lunt et al (in review, GMD) : https://egusphere.copernicus.org/preprints/2026/egusphere-2025-6135\n\nThe experiment is designed to represent the Early Eocene Climatic Optimum (EECO), ~50 million years ago. The Eocene was a time period of high CO2, and plate tectonic movements meant that the continents were in different positions compared to today. Vegetation was also different to today. Because paleoclimate proxy data exist for this period, it provides a test of how well a model can represent a high CO2 world. Compared to piControl, the topography, CO2, and land-surface types (vegetation and ice sheets) are modified. The experiment can be initialised from previous Eocene simulations, or from idealised initial states which are provided. The experiment should be run for as long as possible, and equilibration criteria are stipulated. However, only the final 100 years are uploaded to the ESGF.  This is part of PMIP.\n\nSee also https://github.com/WCRP-CMIP/CMIP7-CVs/issues/380 - I was asked to resubmit here.",
+                "experiment_id": "eocene-5x",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 2
+            },
             "esm-flat10": {
                 "activity_id": [
                     "C4MIP"
@@ -1461,6 +1475,24 @@
             "g139": "Horizontal grid cell with a regular latitude longitude grid type and 0.28125 x 0.1875 degree resolution.",
             "g140": "Horizontal grid cell with a regular latitude longitude grid type and 0.28125 x 0.1875 degree resolution.",
             "g141": "Horizontal grid cell with a spectral reduced gaussian grid type and 80 x 80 km resolution.",
+            "g142": "Horizontal grid cell with a icosahedral geodesic grid type and 80 x 80 km resolution.",
+            "g143": "Horizontal grid cell with a tripolar grid type.",
+            "g144": "Horizontal grid cell with a yin yang grid type and 1 x 1 degree resolution.",
+            "g145": "Horizontal grid cell with a yin yang grid type and 1 x 1 degree resolution.",
+            "g146": "Horizontal grid cell with a yin yang grid type and 1 x 1 degree resolution.",
+            "g147": "Horizontal grid cell with a tripolar grid type.",
+            "g148": "Horizontal grid cell with a tripolar grid type.",
+            "g149": "Horizontal grid cell with a tripolar grid type.",
+            "g150": "Horizontal grid cell with a regular latitude longitude grid type and 1 x 1 degree resolution.",
+            "g151": "Horizontal grid cell with a regular latitude longitude grid type and 1.4 x 1.4 degree resolution.",
+            "g152": "Horizontal grid cell with a regular latitude longitude grid type and 1.4 x 1.4 degree resolution.",
+            "g153": "Horizontal grid cell with a tripolar grid type.",
+            "g154": "Horizontal grid cell with a tripolar grid type.",
+            "g155": "Horizontal grid cell with a tripolar grid type.",
+            "g156": "Horizontal grid cell with a tripolar grid type.",
+            "g157": "Horizontal grid cell with a tripolar grid type.",
+            "g158": "Horizontal grid cell with a regular latitude longitude grid type and 0.5 x 0.5 degree resolution.",
+            "g159": "Horizontal grid cell with a regular latitude longitude grid type and 0.5 x 0.5 degree resolution.",
             "g999": ""
         },
         "horizontal_label": {
@@ -1476,6 +1508,7 @@
             "^i[[:digit:]]\\{4\\}[[:digit:]]\\{2\\}[abcde]\\{0,\\}$"
         ],
         "institution_id": {
+            "AWI": "Alfred Wegener Institute for Polar and Marine Research",
             "BAS": "British Antarctic Survey",
             "BNU": "Beaconhouse National University",
             "CAS": "Chinese Academy of Sciences",
@@ -1496,6 +1529,7 @@
             "NOAA-GFDL": "US National Oceanic and Atmospheric Administration's Geophysical Fluid Dynamics Laboratory.",
             "SMHI": "SMHI",
             "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China.",
+            "UAF": "University of Alaska Fairbanks",
             "UNSW": "UNSW"
         },
         "license": {
