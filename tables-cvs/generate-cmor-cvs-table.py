@@ -16,6 +16,13 @@ import esgvoc.api as ev_api
 import typer
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl
 
+CMOR_MAX_STRING_LENGTH = 1023
+"""
+Maximum string length supported by CMOR
+
+See https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/112
+"""
+
 AllowedDict: TypeAlias = dict[str, Any]
 """
 Dictionary (key-value pairs). The keys define the allowed values for the given attribute
@@ -79,12 +86,14 @@ class CMORExperimentDefinition(BaseModel):
     # Additional model components that can be included when running this experiment
     # """
 
-    description: str
+    # TOOD: check whether this check needs to be applied over all strings used by CMOR
+    # (e.g. dict keys too)
+    description: str = Field(max_length=CMOR_MAX_STRING_LENGTH)
     """
     Experiment description
     """
 
-    experiment: str
+    experiment: str = Field(max_length=CMOR_MAX_STRING_LENGTH)
     """
     Experiment description (same as description)
     """
@@ -1306,6 +1315,7 @@ def cmor_export_cvs_table(
 
     # Sort before writing to disk or displaying to ensure stability of ordering
     _list_sort(cvs_table_json)
+
     if out_path:
         with open(out_path, "w") as fh:
             json.dump(cvs_table_json, fh, **json_dump_settings)
