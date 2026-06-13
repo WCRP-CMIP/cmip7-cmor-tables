@@ -25,7 +25,7 @@ See https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/112
 
 
 def cut_to_length(
-    input: str, length: int = CMOR_MAX_STRING_LENGTH, parts_delimiter: str | None = ". "
+    text: str, length: int = CMOR_MAX_STRING_LENGTH, parts_delimiter: str | None = ". "
 ) -> str:
     """
     Cut a given string to a specific length
@@ -35,25 +35,34 @@ def cut_to_length(
     If not supplied, we simply cut the string to the given length,
     irrespective of whether that cuts sentences in half (for example).
     """
-    if len(input) < length:
+    if len(text) <= length:
         # Already short enough, do nothing
-        return input
+        return text
 
     if parts_delimiter is None:
-        return input[:length]
+        return text[:length]
 
     parts_l = []
     suffix = parts_delimiter.strip()
-    total_length = len(suffix)
-    for part in input.split(parts_delimiter):
-        total_length += len(part)
-        if total_length > length:
+    total_length = 0
+    for part in text.split(parts_delimiter):
+        to_add = len(part)
+        if parts_l:
+            # Include the delimiter which will get inserted too
+            to_add += len(parts_delimiter)
+
+        if total_length + to_add + len(suffix) > length:
             break
 
         parts_l.append(part)
+        total_length += to_add
+
+    if not parts_l:
+        msg = f"Could not cut the input to {length=} with {parts_delimiter=}. Input={text!r}"
+        raise ValueError(msg)
 
     res = parts_delimiter.join(parts_l)
-    res = f"{res}{parts_delimiter.strip()}"
+    res = f"{res}{suffix}"
 
     return res
 
