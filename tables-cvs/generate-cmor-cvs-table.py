@@ -14,7 +14,7 @@ from typing import Annotated, Any, TypeAlias
 
 import esgvoc.api as ev_api
 import typer
-from pydantic import BaseModel, ConfigDict, Field, HttpUrl
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
 
 CMOR_MAX_STRING_LENGTH = 1023
 """
@@ -22,6 +22,36 @@ Maximum string length supported by CMOR
 
 See https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/112
 """
+
+
+def check_within_cmor_max_string_length(obj: Any, loc: str = "") -> None:
+    """
+    Recursively check that every string in `obj` is within `CMOR_MAX_STRING_LENGTH`
+
+    This covers plain strings, dictionary keys and list/tuple entries.
+    """
+    if isinstance(obj, str):
+        if len(obj) > CMOR_MAX_STRING_LENGTH:
+            msg = (
+                f"String at {loc or '<root>'} has length {len(obj)}, "
+                f"which exceeds {CMOR_MAX_STRING_LENGTH=}. Value: {obj!r}"
+            )
+            raise ValueError(msg)
+
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            if isinstance(k, str) and len(k) > CMOR_MAX_STRING_LENGTH:
+                msg = (
+                    f"Dictionary key at {loc or '<root>'} has length {len(k)}, "
+                    f"which exceeds {CMOR_MAX_STRING_LENGTH=}. Key: {k!r}"
+                )
+                raise ValueError(msg)
+
+            check_within_cmor_max_string_length(v, f"{loc}.{k}" if loc else str(k))
+
+    elif isinstance(obj, (list, tuple)):
+        for i, v in enumerate(obj):
+            check_within_cmor_max_string_length(v, f"{loc}[{i}]")
 
 
 def cut_to_length(
@@ -130,14 +160,12 @@ class CMORExperimentDefinition(BaseModel):
     # Additional model components that can be included when running this experiment
     # """
 
-    # TOOD: check whether this check needs to be applied over all strings used by CMOR
-    # (e.g. dict keys too)
-    description: str = Field(max_length=CMOR_MAX_STRING_LENGTH)
+    description: str
     """
     Experiment description
     """
 
-    experiment: str = Field(max_length=CMOR_MAX_STRING_LENGTH)
+    experiment: str
     """
     Experiment description (same as description)
     """
@@ -479,6 +507,19 @@ class CMORCVsTable(BaseModel):
     """
     Allowed values of `vertical_label`
     """
+
+    @model_validator(mode="after")
+    def validate_string_lengths(self) -> "CMORCVsTable":
+        """
+        Validate that every string used `CMOR_MAX_STRING_LENGTH`
+
+        This walks the full (serialised) table, so it covers all strings,
+        all `AllowedDict` keys and all `RegularExpressionValidators` entries,
+        including those in nested sub-objects.
+        """
+        check_within_cmor_max_string_length(self.model_dump(mode="json"))
+
+        return self
 
     def to_cvs_json(
         self, top_level_key: str = "CV"
