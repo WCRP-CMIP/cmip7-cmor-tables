@@ -23,6 +23,41 @@ Maximum string length supported by CMOR
 See https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/112
 """
 
+
+def cut_to_length(
+    input: str, length: int = CMOR_MAX_STRING_LENGTH, parts_delimiter: str | None = ". "
+) -> str:
+    """
+    Cut a given string to a specific length
+
+    The `parts_delimiter` ensures that the string is only cut at specific boundaries.
+    The default tries to keep full sentences together.
+    If not supplied, we simply cut the string to the given length,
+    irrespective of whether that cuts sentences in half (for example).
+    """
+    if len(input) < length:
+        # Already short enough, do nothing
+        return input
+
+    if parts_delimiter is None:
+        return input[:length]
+
+    parts_l = []
+    suffix = parts_delimiter.strip()
+    total_length = len(suffix)
+    for part in input.split(parts_delimiter):
+        total_length += len(part)
+        if total_length > length:
+            break
+
+        parts_l.append(part)
+
+    res = parts_delimiter.join(parts_l)
+    res = f"{res}{parts_delimiter.strip()}"
+
+    return res
+
+
 AllowedDict: TypeAlias = dict[str, Any]
 """
 Dictionary (key-value pairs). The keys define the allowed values for the given attribute
@@ -708,12 +743,14 @@ def get_cmor_experiment_id_definitions(
             )
             raise TypeError(msg)
 
+        description_cut = cut_to_length(v.description)
+
         res[v.drs_name] = CMORExperimentDefinition(
             activity_id=[get_term(v.activity).drs_name],
             # required_model_components=[vv.drs_name for vv in v.required_model_components],
             # additional_allowed_model_components=[vv.drs_name for vv in v.additional_allowed_model_components],
-            description=v.description,
-            experiment=v.description,
+            description=description_cut,
+            experiment=description_cut,
             start_year=start_year,
             end_year=end_year,
             min_number_yrs_per_sim=v.min_number_yrs_per_sim,
