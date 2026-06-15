@@ -14,7 +14,88 @@ from typing import Annotated, Any, TypeAlias
 
 import esgvoc.api as ev_api
 import typer
-from pydantic import BaseModel, ConfigDict, Field, HttpUrl
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
+
+CMOR_MAX_STRING_LENGTH = 1023
+"""
+Maximum string length supported by CMOR
+
+See https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/112
+"""
+
+
+def check_within_cmor_max_string_length(obj: Any, loc: str = "") -> None:
+    """
+    Recursively check that every string in `obj` is within `CMOR_MAX_STRING_LENGTH`
+
+    This covers plain strings, dictionary keys and list/tuple entries.
+    """
+    if isinstance(obj, str):
+        if len(obj) > CMOR_MAX_STRING_LENGTH:
+            msg = (
+                f"String at {loc or '<root>'} has length {len(obj)}, "
+                f"which exceeds {CMOR_MAX_STRING_LENGTH=}. Value: {obj!r}"
+            )
+            raise ValueError(msg)
+
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            if isinstance(k, str) and len(k) > CMOR_MAX_STRING_LENGTH:
+                msg = (
+                    f"Dictionary key at {loc or '<root>'} has length {len(k)}, "
+                    f"which exceeds {CMOR_MAX_STRING_LENGTH=}. Key: {k!r}"
+                )
+                raise ValueError(msg)
+
+            check_within_cmor_max_string_length(v, f"{loc}.{k}" if loc else str(k))
+
+    elif isinstance(obj, (list, tuple)):
+        for i, v in enumerate(obj):
+            check_within_cmor_max_string_length(v, f"{loc}[{i}]")
+
+
+def cut_to_length(
+    text: str, length: int = CMOR_MAX_STRING_LENGTH, parts_delimiter: str | None = ". "
+) -> str:
+    """
+    Cut a given string to a specific length
+
+    The `parts_delimiter` ensures that the string is only cut at specific boundaries.
+    The default tries to keep full sentences together.
+    If not supplied, we simply cut the string to the given length,
+    irrespective of whether that cuts sentences in half (for example).
+    """
+    if len(text) <= length:
+        # Already short enough, do nothing
+        return text
+
+    if parts_delimiter is None:
+        return text[:length]
+
+    parts_l = []
+    suffix = parts_delimiter.strip()
+    total_length = 0
+    for part in text.split(parts_delimiter):
+        to_add = len(part)
+        if parts_l:
+            # Include the delimiter which will get inserted too
+            to_add += len(parts_delimiter)
+
+        if total_length + to_add + len(suffix) > length:
+            break
+
+        parts_l.append(part)
+        total_length += to_add
+
+    if not parts_l:
+        msg = f"Could not cut the input to {length=} with {parts_delimiter=}. Input={text!r}"
+        raise ValueError(msg)
+
+    res = parts_delimiter.join(parts_l)
+    res = f"{res}{suffix}"
+
+    return res
+
 
 AllowedDict: TypeAlias = dict[str, Any]
 """
@@ -427,6 +508,19 @@ class CMORCVsTable(BaseModel):
     Allowed values of `vertical_label`
     """
 
+    @model_validator(mode="after")
+    def validate_string_lengths(self) -> "CMORCVsTable":
+        """
+        Validate that every string used `CMOR_MAX_STRING_LENGTH`
+
+        This walks the full (serialised) table, so it covers all strings,
+        all `AllowedDict` keys and all `RegularExpressionValidators` entries,
+        including those in nested sub-objects.
+        """
+        check_within_cmor_max_string_length(self.model_dump(mode="json"))
+
+        return self
+
     def to_cvs_json(
         self, top_level_key: str = "CV"
     ) -> dict[str, dict[str, str, AllowedDict, RegularExpressionValidators]]:
@@ -699,12 +793,14 @@ def get_cmor_experiment_id_definitions(
             )
             raise TypeError(msg)
 
+        description_cut = cut_to_length(v.description)
+
         res[v.drs_name] = CMORExperimentDefinition(
             activity_id=[get_term(v.activity).drs_name],
             # required_model_components=[vv.drs_name for vv in v.required_model_components],
             # additional_allowed_model_components=[vv.drs_name for vv in v.additional_allowed_model_components],
-            description=v.description,
-            experiment=v.description,
+            description=description_cut,
+            experiment=description_cut,
             start_year=start_year,
             end_year=end_year,
             min_number_yrs_per_sim=v.min_number_yrs_per_sim,
@@ -1306,6 +1402,7 @@ def cmor_export_cvs_table(
 
     # Sort before writing to disk or displaying to ensure stability of ordering
     _list_sort(cvs_table_json)
+
     if out_path:
         with open(out_path, "w") as fh:
             json.dump(cvs_table_json, fh, **json_dump_settings)
