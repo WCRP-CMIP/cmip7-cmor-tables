@@ -852,7 +852,11 @@ def get_cmor_source_id_definitions(
     for term in terms:
         source_l = []
         for mc in term.model_components:
-            source_l.append(f"{mc.component}: {mc.name}")
+            try:
+                source_l.append(f"{mc.component}: {mc.name}")
+            except AttributeError:
+                # Workaround while EMD models are broken
+                source_l.append(f"{mc['component']}: {mc['name']}")
 
         source_suffix = "; ".join(source_l)
         source = f"{term.drs_name}: {source_suffix}"
