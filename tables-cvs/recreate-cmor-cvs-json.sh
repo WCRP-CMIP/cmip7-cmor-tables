@@ -25,7 +25,7 @@ set -euo pipefail
 # Environment variables that this file uses.
 # If they're not set, the default values are used.
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.1}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=4.1.2}"
 ### Non-versioned esgvoc config
 # # Use when we are using a branches of CVs
 # esgvoc_versioned=0
