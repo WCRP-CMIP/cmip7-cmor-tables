@@ -62,6 +62,8 @@ jobs:
         run: |
           TIMESTAMP=$(date +%Y-%m-%dT%H-%M-%S)
           BRANCH_NAME="${TIMESTAMP}_cmor-cvs-json-update"
+          # Store the branch name so it can be used in the next step
+          echo "BRANCH_NAME=${BRANCH_NAME}" >> "${GITHUB_ENV}"
 
           git checkout -b "${BRANCH_NAME}"
           git push --set-upstream origin "${BRANCH_NAME}"
@@ -74,4 +76,4 @@ jobs:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh pr merge ${{ github.event.pull_request.number }} --squash --delete-branch
+          gh pr merge "${BRANCH_NAME}" --squash --delete-branch
