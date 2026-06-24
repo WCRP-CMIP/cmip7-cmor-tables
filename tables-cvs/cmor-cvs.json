@@ -1503,6 +1503,22 @@
             "g167": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 0.9424 degree resolution.",
             "g168": "Horizontal grid cell with a tripolar grid type.",
             "g169": "Horizontal grid cell with a tripolar grid type.",
+            "g170": "Horizontal grid cell with a tripolar grid type and 0.25 x 0.16 degree resolution.",
+            "g171": "Horizontal grid cell with a tripolar grid type and 0.25 x 0.16 degree resolution.",
+            "g172": "Horizontal grid cell with a tripolar grid type and 0.25 x 0.16 degree resolution.",
+            "g173": "Horizontal grid cell with a cubed sphere grid type and 0.9375 x 0.9375 degree resolution.",
+            "g174": "Horizontal grid cell with a cubed sphere grid type and 0.9375 x 0.9375 degree resolution.",
+            "g175": "Horizontal grid cell with a cubed sphere grid type and 0.9375 x 0.9375 degree resolution.",
+            "g176": "Horizontal grid cell with a spectral reduced gaussian grid type.",
+            "g177": "Horizontal grid cell with a spectral reduced gaussian grid type.",
+            "g178": "Horizontal grid cell with a spectral reduced gaussian grid type.",
+            "g179": "Horizontal grid cell with a regular latitude longitude grid type and 3.75 x 2.5 degree resolution.",
+            "g180": "Horizontal grid cell with a regular gaussian grid type and 3.75 x 2.25 degree resolution.",
+            "g181": "Horizontal grid cell with a tripolar grid type and 1 x 0.9 degree resolution.",
+            "g182": "Horizontal grid cell with a tripolar grid type and 0.25 x 0.25 degree resolution.",
+            "g183": "Horizontal grid cell with a regular gaussian grid type and 3.75 x 2.25 degree resolution.",
+            "g184": "Horizontal grid cell with a cubed sphere grid type and 1.00 x 1.00 degree resolution.",
+            "g185": "Horizontal grid cell with a plane projection grid type and 5 x 5 km resolution.",
             "g999": ""
         },
         "horizontal_label": {
@@ -1530,6 +1546,7 @@
             "EC-Earth-Consortium": "EC-Earth-Consortium",
             "FMI": "Finnish Meteorological Institute",
             "IPSL": "Institut Pierre-Simon Laplace",
+            "KIOST": "A consortium of Korean research institutions contributing to CMIP7 through Earth system modeling. Led by the Korea Institute of Ocean Science and Technology (KIOST) in collaboration with Hanyang University (HYU).",
             "KNMI": "Royal Netherlands Meteorological Institute",
             "METNo": "Norwegian Meteorological Institute",
             "MOHC": "Met Office Hadley Centre",
@@ -1648,6 +1665,10 @@
                 "source": "CanESM5-1: ",
                 "source_id": "CanESM5-1"
             },
+            "CanESM6-0-MR": {
+                "source": "CanESM6-0-MR: ",
+                "source_id": "CanESM6-0-MR"
+            },
             "DUMMY-MODEL": {
                 "source": "DUMMY-MODEL: aerosol: Dummy Aerosol; atmosphere: Dummy Atmosphere; atmospheric_chemistry: Dummy Atmospheric Chemistry; land_surface: Dummy Land Surface; ocean: Dummy Ocean; ocean_biogeochemistry: Dummy Ocean Biogeochemistry; sea_ice: Dummy Sea Ice",
                 "source_id": "DUMMY-MODEL"
@@ -1693,6 +1714,7 @@
             "al": "Data is reported on the model's atmospheric model levels.",
             "alh": "Data is reported on the model's atmospheric model half-levels (i.e. at the interfaces between model vertical layers).",
             "d0m": "Data is reported at the surface.",
+            "d1000m": "Data is reported at a vertical depth of 1000m.",
             "d100cm": "Data is reported at a vertical depth of 1m (100cm).",
             "d100m": "Data is reported at a vertical depth of 100m.",
             "d10cm": "Data is reported at a vertical depth of 0.1m (10cm).",
@@ -1707,6 +1729,7 @@
             "ol": "Data is reported on the model's ocean model levels.",
             "olh": "Data is reported on the model's ocean model half-levels (i.e. at the interfaces between model vertical layers).",
             "ols": "Data is reported for the surface level of the model's ocean model.",
+            "op20bar": "Data is reported at a hydrostatic pressure depth of 20.2bar (a pressure level which is close to 200m in a standard ocean profile)",
             "op4": "Data is reported at 4 ocean pressure layers.",
             "p19": "Data is reported at 19 pressure levels.",
             "p27": "Data is reported at 27 pressure levels.",

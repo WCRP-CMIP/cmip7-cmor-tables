@@ -15,6 +15,10 @@
         "source": "CanESM5-1: ",
         "source_id": "CanESM5-1"
     },
+    "CanESM6-0-MR": {
+        "source": "CanESM6-0-MR: ",
+        "source_id": "CanESM6-0-MR"
+    },
     "DUMMY-MODEL": {
         "source": "DUMMY-MODEL: aerosol: Dummy Aerosol; atmosphere: Dummy Atmosphere; atmospheric_chemistry: Dummy Atmospheric Chemistry; land_surface: Dummy Land Surface; ocean: Dummy Ocean; ocean_biogeochemistry: Dummy Ocean Biogeochemistry; sea_ice: Dummy Sea Ice",
         "source_id": "DUMMY-MODEL"
