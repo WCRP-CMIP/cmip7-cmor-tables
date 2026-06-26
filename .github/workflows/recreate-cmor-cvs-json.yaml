@@ -5,11 +5,12 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # This means once a day at 11am,
-    # see https://crontab.guru/#0_11_*_*_*.
-    # We are trying to make this at 4pm CEST,
+    # see https://crontab.guru.
+    # We are trying to make this at 7am, 12pm and 4pm UK time,
     # but it's a bit hard to predict because it depends on the local time
-    # of the machine on which it runs (we think).
-    - cron:  '0 11 * * *'
+    # of the machine on which it runs (we think)
+    # and that timezone isn't 100% clear.
+    - cron: '0 4,9,13 * * *'
 
 jobs:
   recreate-cmor-cvs-json-file:
