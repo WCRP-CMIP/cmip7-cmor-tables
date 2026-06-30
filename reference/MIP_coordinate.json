@@ -750,7 +750,7 @@
             "axis": "Z",
             "bounds_values": "",
             "climatology": "",
-            "formula": "p = p0*a*(ps/p0)**b",
+            "formula": "p = p0*lev*(ps/p0)**b",
             "generic_level_name": "alevel",
             "long_name": "hybrid sigma log-pressure coordinate",
             "must_have_bounds": "yes",
@@ -766,14 +766,14 @@
             "valid_max": "1.0",
             "valid_min": "0.0",
             "value": "",
-            "z_bounds_factors": "p0: p0 a: a_bnds b: b_bnds ps: ps",
-            "z_factors": "p0: p0 a: a b: b ps: ps"
+            "z_bounds_factors": "p0: p0 b: b_bnds ps: ps",
+            "z_factors": "p0: p0 b: b ps: ps"
         },
         "hybrid_sigma_ln_pressure_half": {
             "axis": "Z",
             "bounds_values": "",
             "climatology": "",
-            "formula": "p = p0*a*(ps/p0)**b",
+            "formula": "p = p0*lev*(ps/p0)**b",
             "generic_level_name": "alevhalf",
             "long_name": "hybrid sigma log-pressure coordinate",
             "must_have_bounds": "no",
@@ -790,7 +790,7 @@
             "valid_min": "0.0",
             "value": "",
             "z_bounds_factors": "",
-            "z_factors": "p0: p0 a: a b: b ps: ps"
+            "z_factors": "p0: p0 b: b ps: ps"
         },
         "iceband": {
             "axis": "",
