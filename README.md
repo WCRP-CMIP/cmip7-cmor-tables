@@ -1,10 +1,10 @@
- cmip7-cmor-tables
+# cmip7-cmor-tables
 
 [![Recreate CMOR CVs JSON file](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml/badge.svg)](https://github.com/WCRP-CMIP/cmip7-cmor-tables/actions/workflows/recreate-cmor-cvs-json.yaml)
 
-CMOR MIP tables for use with CMOR v3.14.2 and newer versions in preparation for CMIP7.
+CMOR MIP tables for use with CMOR v3.15 and newer versions in preparation for CMIP7.
 
-Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.14.2 is required to correctly output all global attributes. 
+Note that versions of CMOR after v3.10 will be able to use these MIP tables, but minimum version 3.14.2 is required to correctly output all global attributes, with some variables requiring v3.15.1.
 CMOR v3.14.1 removed some legacy global attributes from output files (see [release notes](https://github.com/PCMDI/cmor/releases/tag/3.14.1) for details.
 CMOR v3.14.2 prevents parent attributes from being required for experiments with no parents (see [release notes](https://github.com/PCMDI/cmor/releases/tag/3.14.2) for details.
 

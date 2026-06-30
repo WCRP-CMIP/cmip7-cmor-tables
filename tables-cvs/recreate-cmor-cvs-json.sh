@@ -24,25 +24,24 @@ set -euo pipefail
 
 # Environment variables that this file uses.
 # If they're not set, the default values are used.
-### Non-versioned esgvoc config
-# Use when we are using a branches of CVs
-esgvoc_versioned=0
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
-UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
-UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=update-experiment-definitions}"
-# UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
-# UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
-CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-CMIP7_CVS_REF="${CMIP7_CVS_REF:=update-experiment-definitions}"
+ESGVOC_REVISION="${ESGVOC_REVISION:=4.1.2}"
+### Non-versioned esgvoc config
+# # Use when we are using a branches of CVs
+# esgvoc_versioned=0
+# # UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
+# # UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
+# UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=znichollscr}"
+# UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=add-dcpp-entries}"
+# CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
 # CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
+# # CMIP7_CVS_REF="${CMIP7_CVS_REF:=latest-fixes}"
 
-### Versioned esgvoc config
+# Versioned esgvoc config
 # Use when we are using a versioned esgvoc release
-# esgvoc_versioned=1
-# ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
-# ESGVOC_REVISION="${ESGVOC_REVISION:=4.0.0}"
-# ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
+esgvoc_versioned=1
+ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
+# ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=dev-latest}"
 
 verbose=0
 install_env=0
@@ -79,11 +78,14 @@ if [[ $install_env -eq 1 ]]; then
 
     log "requirements_file=$requirements_file"
 
-    sed -i -E -e 's#(.*)/github.com/.*/(.*)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    sed -i -E -e 's#(.*)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
-    # # Mac equivalent of the above
-    # sed -i -E -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
-    # sed -i -E -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
+    if [[ "$(uname)" == "Darwin" ]]; then
+        sed_platform_specific_args=(-i '')
+    else
+        sed_platform_specific_args=(-i)
+    fi
+
+    sed "${sed_platform_specific_args[@]}" -e 's#\(.*\)/github.com/.*/\(.*\)#\1/github.com/'"${ESGVOC_FORK}"'/\2#' "${requirements_file}"
+    sed "${sed_platform_specific_args[@]}" -e 's#\(.*\)/esgf-vocab.git@.*#\1/esgf-vocab.git@'"${ESGVOC_REVISION}"'#' "${requirements_file}"
 
     pip install -r "${requirements_file}"
 

@@ -49,7 +49,7 @@ TABLE_TEMPLATE = {
     "Header": {
         "Conventions": "CF-1.12",
         "checksum": "to be calculated",
-        "cmor_version": "3.13",
+        "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
         "missing_value": "1e20",
