@@ -314,6 +314,8 @@ def construct_coordinates(dr_coords, reference_coordinate_file):
         'hybrid_height_half',
         'hybrid_sigma_ln_pressure',
         'hybrid_sigma_ln_pressure_half',
+        'modified_sleve_model_level',
+        'modified_sleve_half_level',
         'ocean_sigma',
         'ocean_sigma_half',
         'ocean_sigma_z',
