@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: bcfd8e7ffabfb9e734ef1f2283a33c85",
+        "checksum": "md5: e9376163184879e412e7f562b5afb13b",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-06-22 17:37:39",
+        "table_date": "2026-07-01 12:00:41",
         "table_id": "grids",
         "type": "real",
         "valid_max": "",
