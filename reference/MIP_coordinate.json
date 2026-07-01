@@ -873,7 +873,7 @@
             "formula": "",
             "generic_level_name": "alevel",
             "long_name": "Atmosphere Modified SLEVE Model Full-Levels (index; associated with 3D time-independent zfull and time-dependent pfull)",
-            "must_have_bounds": "no",
+            "must_have_bounds": "yes",
             "out_name": "lev",
             "positive": "down",
             "requested": "",
