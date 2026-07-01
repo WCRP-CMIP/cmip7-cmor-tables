@@ -312,6 +312,8 @@ def construct_coordinates(dr_coords, reference_coordinate_file):
         'depth_coord_half',
         'hybrid_height',
         'hybrid_height_half',
+        'hybrid_sigma_ln_pressure',
+        'hybrid_sigma_ln_pressure_half',
         'ocean_sigma',
         'ocean_sigma_half',
         'ocean_sigma_z',
