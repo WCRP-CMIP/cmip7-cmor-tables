@@ -8,6 +8,7 @@ import datetime as dt
 import itertools
 import json
 import re
+import warnings
 from functools import partial
 from pathlib import Path
 from typing import Annotated, Any, TypeAlias
@@ -843,6 +844,96 @@ def get_cmor_nominal_resolution_defintions(
     return sorted(res)
 
 
+EMD_MODEL_BASE_URL = (
+    "https://raw.githubusercontent.com/WCRP-CMIP/"
+    "Essential-Model-Documentation/src-data/model"
+)
+"""
+Base URL for the model files in the Essential Model Documentation (EMD)
+
+See https://github.com/WCRP-CMIP/Essential-Model-Documentation/tree/src-data/model
+"""
+
+
+def get_source_suffix_from_emd(drs_name: str) -> str:
+    """
+    Get the ``source`` suffix for a given source ID from the Essential Model Documentation
+
+    We read the relevant model file directly from the EMD
+    (see [`EMD_MODEL_BASE_URL`][]).
+    This is used as a fallback for the cases where esgvoc doesn't
+    (yet) expose the model components for the source.
+
+    The EMD file name is the lower-cased source ID (`drs_name`).
+    We read the model components from that file,
+    then parse each component into a "<realm>: <model name>" pair
+    before joining all the resulting pairs with "; ".
+
+    Each component is of the form "<realm>_<model name>_<h*>_<v*>",
+    where the realm can itself contain underscores (e.g. "land_surface").
+    We therefore strip off the last two ("<h*>" and "<v*>") parts,
+    then treat the last of the remaining parts as the model name
+    and re-join the rest to recover the realm.
+    Any "_" in the realm is then replaced with "-" for the output.
+
+    As a robustness check, we check that each hyphenated realm
+    is in the file's "dynamic_components".
+    A warning (rather than an error) is raised if a realm can't be found there.
+    """
+    try:
+        import requests
+    except ImportError as exc:
+        msg = "Missing optional dependency `requests`, please install"
+        raise ImportError(msg) from exc
+
+    # The EMD file names are the lower-cased source ID
+    url = f"{EMD_MODEL_BASE_URL}/{drs_name.lower()}.json"
+    response = requests.get(url, timeout=30)
+    response.raise_for_status()
+    model_info = response.json()
+
+    # The key holding the model components has been called both
+    # "model_components" and "component_configs" across EMD files,
+    # so support both.
+    for key in ("model_components", "component_configs"):
+        if key in model_info:
+            model_components = model_info[key]
+            break
+    else:
+        msg = (
+            f"Could not find model components for {drs_name!r} at {url}. "
+            f"Available keys: {sorted(model_info)}"
+        )
+        raise KeyError(msg)
+
+    # Used to sanity check the parsed realms
+    dynamic_components = model_info.get("dynamic_components", [])
+
+    source_l = []
+    for component in model_components:
+        # Strip off the trailing "<h*>" and "<v*>" parts
+        realm_and_name = component.rsplit("_", 2)[0]
+        # The last remaining part is the model name,
+        # the rest (re-joined) is the realm, which can itself contain underscores.
+        realm, _, model_name = realm_and_name.rpartition("_")
+
+        # Sanity check: the realm (with "_" replaced by "-")
+        # should be one of the file's `dynamic_components`.
+        realm_hyphenated = realm.replace("_", "-")
+        if realm_hyphenated not in dynamic_components:
+            warnings.warn(
+                f"Realm {realm_hyphenated!r} (parsed from component {component!r} "
+                f"for source {drs_name!r}) is not in the model's "
+                f"dynamic_components {dynamic_components!r}"
+            )
+
+        source_l.append(f"{realm_hyphenated}: {model_name}")
+
+    source_suffix = "; ".join(source_l)
+
+    return source_suffix
+
+
 def get_cmor_source_id_definitions(
     source_collection: str, ev_project: ev_api.project_specs.ProjectSpecs
 ) -> dict[str, CMORSourceDefinition]:
@@ -858,7 +949,14 @@ def get_cmor_source_id_definitions(
                 # Workaround while EMD models are broken
                 source_l.append(f"{mc['component']}: {mc['name']}")
 
-        source_suffix = "; ".join(source_l)
+        # Prefer the information from esgvoc,
+        # but fall back to reading the model components directly from the EMD
+        # if esgvoc doesn't (yet) expose them.
+        if source_l:
+            source_suffix = "; ".join(source_l)
+        else:
+            source_suffix = get_source_suffix_from_emd(term.drs_name)
+
         source = f"{term.drs_name}: {source_suffix}"
 
         res[term.drs_name] = CMORSourceDefinition(
@@ -943,7 +1041,7 @@ def get_cmor_drs_definition(
     directory_path_template_l = []
     directory_path_example_l = []
     for part in ev_project.drs_specs["directory"].parts:
-        print(f"Processing {part=}")
+        # print(f"Processing {part=}")
         if not part.is_required:
             raise NotImplementedError
 
@@ -1008,7 +1106,7 @@ def get_cmor_drs_definition(
             msg = f"Examples should be hard-coded: {part=}"
             raise AssertionError(msg)
 
-        print(f"Finished {part=}")
+        # print(f"Finished {part=}")
 
     # CMOR hard-codes "/" as a separator
     # and doesn't want the separator in the template.
