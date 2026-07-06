@@ -1551,6 +1551,8 @@
             "METNo": "Norwegian Meteorological Institute",
             "MOHC": "Met Office Hadley Centre",
             "MPI-M": "Max Planck Institute for Meteorology",
+            "MRI": "MRI (Meteorological Research Institute) conducts research for the improvement of information issued by JMA (Japan Meteorological Agency) on weather, earthquakes, volcanic activity, climatic conditions and other phenomena.",
+            "NCAR": "The National Science Foundation National Center for Atmospheric Research (NSF NCAR) manages the development and maintenance of the Community Earth System Model (CESM).",
             "NCAS": "Uks",
             "NERC": "Natural Environment Research Council",
             "NOAA-GFDL": "US National Oceanic and Atmospheric Administration's Geophysical Fluid Dynamics Laboratory.",
@@ -1650,11 +1652,11 @@
         ],
         "source_id": {
             "ACCESS-ESM1-6": {
-                "source": "ACCESS-ESM1-6: aerosol: classic; atmosphere: um7.3; land-surface: cable3; ocean-biogeochemistry: wombatlite; ocean: mom5; sea-ice: cice5",
+                "source": "ACCESS-ESM1-6: aerosol: classic; atmosphere: um7-3; land-surface: cable3; ocean-biogeochemistry: wombatlite; ocean: mom5; sea-ice: cice5",
                 "source_id": "ACCESS-ESM1-6"
             },
             "AWI-ESM3-4-2-veg-HR": {
-                "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; ocean: fesom-2.7; land-surface: lpj-guess-4.1; sea-ice: fesim-2-7",
+                "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; ocean: fesom-2-7; land-surface: lpj-guess-4-1; sea-ice: fesim-2-7",
                 "source_id": "AWI-ESM3-4-2-veg-HR"
             },
             "CNRM-ESM2-1e": {
@@ -1662,16 +1664,12 @@
                 "source_id": "CNRM-ESM2-1e"
             },
             "CanESM5-1": {
-                "source": "CanESM5-1: atmosphere: canam5-1; aerosol: canam5-1-aerosol; land-surface: class-ctem-v3.6.2; ocean: cannemo5-1; ocean-biogeochemistry: cmoc; sea-ice: lim2",
+                "source": "CanESM5-1: atmosphere: canam5-1; aerosol: canam5-1-aerosol; land-surface: class-ctem-v3-6-2; ocean: cannemo5-1; ocean-biogeochemistry: cmoc; sea-ice: lim2",
                 "source_id": "CanESM5-1"
             },
             "CanESM6-0-MR": {
-                "source": "CanESM6-0-MR: atmosphere: canam6; aerosol: canam6-aerosol; land-surface: classicv1.5; ocean: cannemo6-0; ocean-biogeochemistry: cmoc; sea-ice: si3-cannemo",
+                "source": "CanESM6-0-MR: atmosphere: canam6; aerosol: canam6-aerosol; land-surface: classicv1-5; ocean: cannemo6-0; ocean-biogeochemistry: cmoc; sea-ice: si3-cannemo",
                 "source_id": "CanESM6-0-MR"
-            },
-            "DUMMY-MODEL": {
-                "source": "DUMMY-MODEL: aerosol: Dummy Aerosol; atmosphere: Dummy Atmosphere; atmospheric_chemistry: Dummy Atmospheric Chemistry; land_surface: Dummy Land Surface; ocean: Dummy Ocean; ocean_biogeochemistry: Dummy Ocean Biogeochemistry; sea_ice: Dummy Sea Ice",
-                "source_id": "DUMMY-MODEL"
             },
             "UKCM2-0-LL": {
                 "source": "UKCM2-0-LL: aerosol: glomap-mode; sea-ice: si3-gosi9; ocean: nemo-gosi9; atmosphere: metum-ga9; land-surface: jules-gl9",
