@@ -1551,6 +1551,8 @@
             "METNo": "Norwegian Meteorological Institute",
             "MOHC": "Met Office Hadley Centre",
             "MPI-M": "Max Planck Institute for Meteorology",
+            "MRI": "MRI (Meteorological Research Institute) conducts research for the improvement of information issued by JMA (Japan Meteorological Agency) on weather, earthquakes, volcanic activity, climatic conditions and other phenomena.",
+            "NCAR": "The National Science Foundation National Center for Atmospheric Research (NSF NCAR) manages the development and maintenance of the Community Earth System Model (CESM).",
             "NCAS": "Uks",
             "NERC": "Natural Environment Research Council",
             "NOAA-GFDL": "US National Oceanic and Atmospheric Administration's Geophysical Fluid Dynamics Laboratory.",
@@ -1668,10 +1670,6 @@
             "CanESM6-0-MR": {
                 "source": "CanESM6-0-MR: atmosphere: canam6; aerosol: canam6-aerosol; land-surface: classicv1-5; ocean: cannemo6-0; ocean-biogeochemistry: cmoc; sea-ice: si3-cannemo",
                 "source_id": "CanESM6-0-MR"
-            },
-            "DUMMY-MODEL": {
-                "source": "DUMMY-MODEL: aerosol: Dummy Aerosol; atmosphere: Dummy Atmosphere; atmospheric_chemistry: Dummy Atmospheric Chemistry; land_surface: Dummy Land Surface; ocean: Dummy Ocean; ocean_biogeochemistry: Dummy Ocean Biogeochemistry; sea_ice: Dummy Sea Ice",
-                "source_id": "DUMMY-MODEL"
             },
             "UKCM2-0-LL": {
                 "source": "UKCM2-0-LL: aerosol: glomap-mode; sea-ice: si3-gosi9; ocean: nemo-gosi9; atmosphere: metum-ga9; land-surface: jules-gl9",
