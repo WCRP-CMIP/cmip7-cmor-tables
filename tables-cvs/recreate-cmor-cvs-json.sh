@@ -40,8 +40,8 @@ ESGVOC_REVISION="${ESGVOC_REVISION:=4.1.2}"
 # Versioned esgvoc config
 # Use when we are using a versioned esgvoc release
 esgvoc_versioned=1
-# ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
-ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=dev-latest}"
+ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
+# ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=dev-latest}"
 
 verbose=0
 install_env=0
