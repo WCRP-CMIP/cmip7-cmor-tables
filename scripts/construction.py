@@ -263,14 +263,20 @@ def dr_coord_to_cmor_dict(coord):
     else:
         cmor_coord['climatology'] = ""
 
+    # handle integer requested values as well as float
+    if cmor_coord['type'] == 'integer':
+        reqfmt = int
+    else:
+        reqfmt = float
+        
     # deal with lists
     if cmor_coord['requested']:
         try:
-            cmor_coord['requested'] = [str(float(i)) for i in cmor_coord['requested'].split()]
+            cmor_coord['requested'] = [str(reqfmt(i)) for i in cmor_coord['requested'].split()]
         except ValueError:
             cmor_coord['requested'] = [str(i) for i in cmor_coord['requested'].split()]
     if cmor_coord['requested_bounds']:
-        cmor_coord['requested_bounds'] = [str(float(i)) for i in cmor_coord['requested_bounds'].split()]
+        cmor_coord['requested_bounds'] = [str(reqfmt(i)) for i in cmor_coord['requested_bounds'].split()]
 
     # convert numbers to strings (even if they are zero)
     for i in ['tolerance', 'valid_max', 'valid_min']:
