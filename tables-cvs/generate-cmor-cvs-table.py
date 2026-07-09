@@ -886,6 +886,16 @@ def get_emd_session() -> requests.Session:
     return session
 
 
+def is_emd_grid_part(part: str) -> bool:
+    """
+    Is `part` a grid part of an EMD model component?
+
+    A grid part is a horizontal ("h") or vertical ("v") token
+    followed by one or more digits, e.g. "h125" or "v40".
+    """
+    return len(part) > 1 and part[0] in ("h", "v") and part[1:].isdigit()
+
+
 def get_source_suffix_from_emd(drs_name: str) -> str:
     """
     Get the ``source`` suffix for a given source ID from the Essential Model Documentation
@@ -900,9 +910,12 @@ def get_source_suffix_from_emd(drs_name: str) -> str:
     then parse each component into a "<realm>: <model name>" pair
     before joining all the resulting pairs with "; ".
 
-    Each component is of the form "<realm>_<model name>_<h*>_<v*>",
+    Each component is of the form "<realm>_<model name>_<grid parts>",
     where the realm can itself contain underscores (e.g. "land_surface").
-    We therefore strip off the last two ("<h*>" and "<v*>") parts,
+    The grid parts are a horizontal ("h*") and/or vertical ("v*") token,
+    e.g. "h125" or "v40"; there may be more than one or, for some components,
+    only one (e.g. "sea-ice_mricom-5-4-sea-ice_h125" has only a horizontal part).
+    We therefore strip off any trailing grid parts,
     then treat the last of the remaining parts as the model name
     and re-join the rest to recover the realm.
     Any "_" in the realm is then replaced with "-" for the output.
@@ -938,11 +951,18 @@ def get_source_suffix_from_emd(drs_name: str) -> str:
 
     source_l = []
     for component in model_components:
-        # Strip off the trailing "<h*>" and "<v*>" parts
-        realm_and_name = component.rsplit("_", 2)[0]
+        parts = component.split("_")
+
+        # Strip off any trailing grid parts (e.g. "h125", "v40").
+        # There may be one or more of these, so we can't assume a fixed number.
+        # We always keep at least two parts (the realm and the model name).
+        while len(parts) > 2 and is_emd_grid_part(parts[-1]):
+            parts.pop()
+
         # The last remaining part is the model name,
         # the rest (re-joined) is the realm, which can itself contain underscores.
-        realm, _, model_name = realm_and_name.rpartition("_")
+        model_name = parts[-1]
+        realm = "_".join(parts[:-1])
 
         # Sanity check: the realm (with "_" replaced by "-")
         # should be one of the file's `dynamic_components`.
