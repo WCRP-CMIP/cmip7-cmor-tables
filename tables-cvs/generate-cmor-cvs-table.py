@@ -9,13 +9,16 @@ import itertools
 import json
 import re
 import warnings
-from functools import partial
+from functools import cache, partial
 from pathlib import Path
 from typing import Annotated, Any, TypeAlias
 
 import esgvoc.api as ev_api
+import requests
 import typer
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 CMOR_MAX_STRING_LENGTH = 1023
 """
@@ -855,6 +858,34 @@ See https://github.com/WCRP-CMIP/Essential-Model-Documentation/tree/src-data/mod
 """
 
 
+@cache
+def get_emd_session() -> requests.Session:
+    """
+    Get a [`requests.Session`][] configured to retry EMD requests
+
+    We hit the EMD (see [`EMD_MODEL_BASE_URL`][]) once per source ID,
+    which can trip GitHub's rate limits and return HTTP 429 (too many requests).
+    The session retries on 429 and 5xx responses using an exponential backoff,
+    and respects the `Retry-After` header when the server provides one.
+
+    The session is cached so connections are reused across calls.
+    """
+    retry = Retry(
+        total=5,
+        backoff_factor=1.0,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=("GET",),
+        respect_retry_after_header=True,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+
+    session = requests.Session()
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
+    return session
+
+
 def get_source_suffix_from_emd(drs_name: str) -> str:
     """
     Get the ``source`` suffix for a given source ID from the Essential Model Documentation
@@ -880,15 +911,11 @@ def get_source_suffix_from_emd(drs_name: str) -> str:
     is in the file's "dynamic_components".
     A warning (rather than an error) is raised if a realm can't be found there.
     """
-    try:
-        import requests
-    except ImportError as exc:
-        msg = "Missing optional dependency `requests`, please install"
-        raise ImportError(msg) from exc
+    session = get_emd_session()
 
     # The EMD file names are the lower-cased source ID
     url = f"{EMD_MODEL_BASE_URL}/{drs_name.lower()}.json"
-    response = requests.get(url, timeout=30)
+    response = session.get(url, timeout=30)
     response.raise_for_status()
     model_info = response.json()
 
