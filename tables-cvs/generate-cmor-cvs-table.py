@@ -917,10 +917,13 @@ def get_source_suffix_from_emd(drs_name: str) -> str:
     before joining all the resulting pairs with "; ".
 
     Each component is of the form "<realm>_<model name>_<grid parts>",
-    where the realm can itself contain underscores (e.g. "land_surface").
-    The grid parts are a horizontal ("h*") and/or vertical ("v*") token,
-    e.g. "h125" or "v40"; there may be more than one or, for some components,
-    only one (e.g. "sea-ice_mricom-5-4-sea-ice_h125" has only a horizontal part).
+    where the realm can itself contain underscores or hyphens
+    (e.g. "land_surface" or "land-surface").
+    The grid parts are a horizontal and/or vertical token
+    (see [`is_emd_grid_part`][]), e.g. "h125", "v40", "no-horizontal" or
+    "no-vertical". There may be more than one or, for some components, only one
+    (e.g. "sea-ice_fesim-2-7_h114_no-vertical" has a horizontal part
+    and an explicit "no-vertical").
     We therefore strip off any trailing grid parts,
     then treat the last of the remaining parts as the model name
     and re-join the rest to recover the realm.
