@@ -74,9 +74,9 @@
         },
         "x_deg": {
             "axis": "X",
-            "long_name": "x coordinate of projection",
+            "long_name": "x angular coordinate of projection",
             "out_name": "x",
-            "standard_name": "projection_x_coordinate",
+            "standard_name": "projection_x_angular_coordinate",
             "type": "double",
             "units": "degrees"
         },
@@ -90,9 +90,9 @@
         },
         "y_deg": {
             "axis": "Y",
-            "long_name": "y coordinate of projection",
+            "long_name": "y angular coordinate of projection",
             "out_name": "y",
-            "standard_name": "projection_y_coordinate",
+            "standard_name": "projection_y_angular_coordinate",
             "type": "double",
             "units": "degrees"
         }
