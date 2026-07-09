@@ -9,13 +9,16 @@ import itertools
 import json
 import re
 import warnings
-from functools import partial
+from functools import cache, partial
 from pathlib import Path
 from typing import Annotated, Any, TypeAlias
 
 import esgvoc.api as ev_api
+import requests
 import typer
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 CMOR_MAX_STRING_LENGTH = 1023
 """
@@ -855,6 +858,50 @@ See https://github.com/WCRP-CMIP/Essential-Model-Documentation/tree/src-data/mod
 """
 
 
+@cache
+def get_emd_session() -> requests.Session:
+    """
+    Get a [`requests.Session`][] configured to retry EMD requests
+
+    We hit the EMD (see [`EMD_MODEL_BASE_URL`][]) once per source ID,
+    which can trip GitHub's rate limits and return HTTP 429 (too many requests).
+    The session retries on 429 and 5xx responses using an exponential backoff,
+    and respects the `Retry-After` header when the server provides one.
+
+    The session is cached so connections are reused across calls.
+    """
+    retry = Retry(
+        total=5,
+        backoff_factor=1.0,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=("GET",),
+        respect_retry_after_header=True,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+
+    session = requests.Session()
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
+    return session
+
+
+def is_emd_grid_part(part: str) -> bool:
+    """
+    Is `part` a grid part of an EMD model component?
+
+    A grid part is one of:
+
+    - a horizontal ("h") or vertical ("v") token followed by one or more digits,
+      e.g. "h125" or "v40"
+    - "no-horizontal" or "no-vertical", used when a component has no such grid
+    """
+    if part in ("no-horizontal", "no-vertical"):
+        return True
+
+    return len(part) > 1 and part[0] in ("h", "v") and part[1:].isdigit()
+
+
 def get_source_suffix_from_emd(drs_name: str) -> str:
     """
     Get the ``source`` suffix for a given source ID from the Essential Model Documentation
@@ -869,9 +916,15 @@ def get_source_suffix_from_emd(drs_name: str) -> str:
     then parse each component into a "<realm>: <model name>" pair
     before joining all the resulting pairs with "; ".
 
-    Each component is of the form "<realm>_<model name>_<h*>_<v*>",
-    where the realm can itself contain underscores (e.g. "land_surface").
-    We therefore strip off the last two ("<h*>" and "<v*>") parts,
+    Each component is of the form "<realm>_<model name>_<grid parts>",
+    where the realm can itself contain underscores or hyphens
+    (e.g. "land_surface" or "land-surface").
+    The grid parts are a horizontal and/or vertical token
+    (see [`is_emd_grid_part`][]), e.g. "h125", "v40", "no-horizontal" or
+    "no-vertical". There may be more than one or, for some components, only one
+    (e.g. "sea-ice_fesim-2-7_h114_no-vertical" has a horizontal part
+    and an explicit "no-vertical").
+    We therefore strip off any trailing grid parts,
     then treat the last of the remaining parts as the model name
     and re-join the rest to recover the realm.
     Any "_" in the realm is then replaced with "-" for the output.
@@ -880,15 +933,11 @@ def get_source_suffix_from_emd(drs_name: str) -> str:
     is in the file's "dynamic_components".
     A warning (rather than an error) is raised if a realm can't be found there.
     """
-    try:
-        import requests
-    except ImportError as exc:
-        msg = "Missing optional dependency `requests`, please install"
-        raise ImportError(msg) from exc
+    session = get_emd_session()
 
     # The EMD file names are the lower-cased source ID
     url = f"{EMD_MODEL_BASE_URL}/{drs_name.lower()}.json"
-    response = requests.get(url, timeout=30)
+    response = session.get(url, timeout=30)
     response.raise_for_status()
     model_info = response.json()
 
@@ -911,11 +960,18 @@ def get_source_suffix_from_emd(drs_name: str) -> str:
 
     source_l = []
     for component in model_components:
-        # Strip off the trailing "<h*>" and "<v*>" parts
-        realm_and_name = component.rsplit("_", 2)[0]
+        parts = component.split("_")
+
+        # Strip off any trailing grid parts (e.g. "h125", "v40").
+        # There may be one or more of these, so we can't assume a fixed number.
+        # We always keep at least two parts (the realm and the model name).
+        while len(parts) > 2 and is_emd_grid_part(parts[-1]):
+            parts.pop()
+
         # The last remaining part is the model name,
         # the rest (re-joined) is the realm, which can itself contain underscores.
-        realm, _, model_name = realm_and_name.rpartition("_")
+        model_name = parts[-1]
+        realm = "_".join(parts[:-1])
 
         # Sanity check: the realm (with "_" replaced by "-")
         # should be one of the file's `dynamic_components`.

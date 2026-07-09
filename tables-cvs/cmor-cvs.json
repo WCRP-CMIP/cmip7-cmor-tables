@@ -1689,7 +1689,7 @@
                 "source_id": "EC-Earth3-ESM-1-1"
             },
             "MRI-ESM3-4": {
-                "source": "MRI-ESM3-4: atmosphere: mri-agcm4-4; aerosol: masingar-mk-3r2; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean: mricom-5-4; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; : sea-ice",
+                "source": "MRI-ESM3-4: atmosphere: mri-agcm4-4; aerosol: masingar-mk-3r2; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean: mricom-5-4; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; sea-ice: mricom-5-4-sea-ice",
                 "source_id": "MRI-ESM3-4"
             },
             "UKCM2-0-LL": {
