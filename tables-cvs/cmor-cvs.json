@@ -1519,6 +1519,19 @@
             "g183": "Horizontal grid cell with a regular gaussian grid type and 3.75 x 2.25 degree resolution.",
             "g184": "Horizontal grid cell with a cubed sphere grid type and 1.00 x 1.00 degree resolution.",
             "g185": "Horizontal grid cell with a plane projection grid type and 5 x 5 km resolution.",
+            "g186": "Horizontal grid cell with a tripolar grid type.",
+            "g187": "Horizontal grid cell with a icosahedral geodesic dual grid type and 20 x 20 km resolution.",
+            "g188": "Horizontal grid cell with a icosahedral geodesic dual grid type and 80 x 80 km resolution.",
+            "g189": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 1.25 degree resolution.",
+            "g190": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 180 degree resolution.",
+            "g191": "Horizontal grid cell with a plane projection grid type and 8 x 8 km resolution.",
+            "g192": "Horizontal grid cell with a plane projection grid type and 8 x 8 km resolution.",
+            "g193": "Horizontal grid cell with a plane projection grid type and 4 x 4 km resolution.",
+            "g194": "Horizontal grid cell with a plane projection grid type and 4 x 4 km resolution.",
+            "g195": "Horizontal grid cell with a displaced pole grid type and 0.5 x 0.25 degree resolution.",
+            "g196": "Horizontal grid cell with a cubed sphere grid type and 1 x 1 degree resolution.",
+            "g197": "Horizontal grid cell with a cubed sphere grid type and 1 x 1 degree resolution.",
+            "g198": "Horizontal grid cell with a regular latitude longitude grid type and 3.75 x 2.5 degree resolution.",
             "g999": ""
         },
         "horizontal_label": {
@@ -1671,9 +1684,21 @@
                 "source": "CanESM6-0-MR: atmosphere: canam6; aerosol: canam6-aerosol; land-surface: classicv1-5; ocean: cannemo6-0; ocean-biogeochemistry: cmoc; sea-ice: si3-cannemo",
                 "source_id": "CanESM6-0-MR"
             },
+            "EC-Earth3-ESM-1-1": {
+                "source": "EC-Earth3-ESM-1-1: atmosphere: ifs-cy36r4-l91; ocean: nemo-v3-6; land-surface: lpj-guess-4-1; land-ice: pism-v1-2-line; atmospheric-chemistry: co2box-v1-0",
+                "source_id": "EC-Earth3-ESM-1-1"
+            },
+            "MRI-ESM3-4": {
+                "source": "MRI-ESM3-4: atmosphere: mri-agcm4-4; aerosol: masingar-mk-3r2; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean: mricom-5-4; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; : sea-ice",
+                "source_id": "MRI-ESM3-4"
+            },
             "UKCM2-0-LL": {
                 "source": "UKCM2-0-LL: aerosol: glomap-mode; sea-ice: si3-gosi9; ocean: nemo-gosi9; atmosphere: metum-ga9; land-surface: jules-gl9",
                 "source_id": "UKCM2-0-LL"
+            },
+            "UKCM2a-0-HH": {
+                "source": "UKCM2a-0-HH: atmosphere: metum-ga9a; aerosol: glomap-mode; land-surface: jules-gl9; ocean: nemo-gosi9; sea-ice: si3-gosi9",
+                "source_id": "UKCM2a-0-HH"
             }
         },
         "temporal_label": {
