@@ -1665,11 +1665,11 @@
         ],
         "source_id": {
             "ACCESS-ESM1-6": {
-                "source": "ACCESS-ESM1-6: aerosol: classic; atmosphere: um7-3; land-surface: cable3; ocean-biogeochemistry: wombatlite; ocean: mom5; sea-ice: cice5",
+                "source": "ACCESS-ESM1-6: aerosol: classic; atmosphere: um7-3; land-surface: cable3; ocean-biogeochemistry: wombatlite; ocean: mom5; sea-ice-cice5-h109: no-vertical",
                 "source_id": "ACCESS-ESM1-6"
             },
             "AWI-ESM3-4-2-veg-HR": {
-                "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; ocean: fesom-2-7; land-surface: lpj-guess-4-1; sea-ice: fesim-2-7",
+                "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; ocean: fesom-2-7; land-surface: lpj-guess-4-1; sea-ice-fesim-2-7-h114: no-vertical",
                 "source_id": "AWI-ESM3-4-2-veg-HR"
             },
             "CNRM-ESM2-1e": {
@@ -1685,11 +1685,11 @@
                 "source_id": "CanESM6-0-MR"
             },
             "EC-Earth3-ESM-1-1": {
-                "source": "EC-Earth3-ESM-1-1: atmosphere: ifs-cy36r4-l91; ocean: nemo-v3-6; land-surface: lpj-guess-4-1; land-ice: pism-v1-2-line; atmospheric-chemistry: co2box-v1-0",
+                "source": "EC-Earth3-ESM-1-1: atmosphere: ifs-cy36r4-l91; ocean: nemo-v3-6; land-surface: lpj-guess-4-1; land-ice: pism-v1-2-line; atmospheric-chemistry-co2box-v1-0-no-horizontal: no-vertical",
                 "source_id": "EC-Earth3-ESM-1-1"
             },
             "MRI-ESM3-4": {
-                "source": "MRI-ESM3-4: atmosphere: mri-agcm4-4; aerosol: masingar-mk-3r2; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean: mricom-5-4; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; : sea-ice",
+                "source": "MRI-ESM3-4: atmosphere: mri-agcm4-4; aerosol: masingar-mk-3r2; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean: mricom-5-4; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; sea-ice: mricom-5-4-sea-ice",
                 "source_id": "MRI-ESM3-4"
             },
             "UKCM2-0-LL": {
