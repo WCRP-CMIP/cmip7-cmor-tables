@@ -890,9 +890,15 @@ def is_emd_grid_part(part: str) -> bool:
     """
     Is `part` a grid part of an EMD model component?
 
-    A grid part is a horizontal ("h") or vertical ("v") token
-    followed by one or more digits, e.g. "h125" or "v40".
+    A grid part is one of:
+
+    - a horizontal ("h") or vertical ("v") token followed by one or more digits,
+      e.g. "h125" or "v40"
+    - "no-horizontal" or "no-vertical", used when a component has no such grid
     """
+    if part in ("no-horizontal", "no-vertical"):
+        return True
+
     return len(part) > 1 and part[0] in ("h", "v") and part[1:].isdigit()
 
 
