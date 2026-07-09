@@ -85,5 +85,18 @@
     "g183": "Horizontal grid cell with a regular gaussian grid type and 3.75 x 2.25 degree resolution.",
     "g184": "Horizontal grid cell with a cubed sphere grid type and 1.00 x 1.00 degree resolution.",
     "g185": "Horizontal grid cell with a plane projection grid type and 5 x 5 km resolution.",
+    "g186": "Horizontal grid cell with a tripolar grid type.",
+    "g187": "Horizontal grid cell with a icosahedral geodesic dual grid type and 20 x 20 km resolution.",
+    "g188": "Horizontal grid cell with a icosahedral geodesic dual grid type and 80 x 80 km resolution.",
+    "g189": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 1.25 degree resolution.",
+    "g190": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 180 degree resolution.",
+    "g191": "Horizontal grid cell with a plane projection grid type and 8 x 8 km resolution.",
+    "g192": "Horizontal grid cell with a plane projection grid type and 8 x 8 km resolution.",
+    "g193": "Horizontal grid cell with a plane projection grid type and 4 x 4 km resolution.",
+    "g194": "Horizontal grid cell with a plane projection grid type and 4 x 4 km resolution.",
+    "g195": "Horizontal grid cell with a displaced pole grid type and 0.5 x 0.25 degree resolution.",
+    "g196": "Horizontal grid cell with a cubed sphere grid type and 1 x 1 degree resolution.",
+    "g197": "Horizontal grid cell with a cubed sphere grid type and 1 x 1 degree resolution.",
+    "g198": "Horizontal grid cell with a regular latitude longitude grid type and 3.75 x 2.5 degree resolution.",
     "g999": ""
 }
