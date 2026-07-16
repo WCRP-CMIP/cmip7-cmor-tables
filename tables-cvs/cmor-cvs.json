@@ -1532,6 +1532,17 @@
             "g196": "Horizontal grid cell with a cubed sphere grid type and 1 x 1 degree resolution.",
             "g197": "Horizontal grid cell with a cubed sphere grid type and 1 x 1 degree resolution.",
             "g198": "Horizontal grid cell with a regular latitude longitude grid type and 3.75 x 2.5 degree resolution.",
+            "g200": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 1.25 degree resolution.",
+            "g201": "Horizontal grid cell with a regular latitude longitude grid type and 2.0 x 1.5 degree resolution.",
+            "g202": "Horizontal grid cell with a tripolar grid type.",
+            "g203": "Horizontal grid cell with a tripolar grid type.",
+            "g204": "Horizontal grid cell with a tripolar grid type.",
+            "g205": "Horizontal grid cell with a tripolar grid type.",
+            "g206": "Horizontal grid cell with a tripolar grid type.",
+            "g207": "Horizontal grid cell with a regular latitude longitude grid type and 1.0 x 0.92 degree resolution.",
+            "g208": "Horizontal grid cell with a regular gaussian grid type and 1.125 x 1.12 degree resolution.",
+            "g209": "Horizontal grid cell with a regular gaussian grid type and 1.875 x 1.86 degree resolution.",
+            "g210": "Horizontal grid cell with a regular gaussian grid type and 2.8125 x 2.79 degree resolution.",
             "g999": ""
         },
         "horizontal_label": {
@@ -1573,7 +1584,8 @@
             "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China.",
             "UAF": "University of Alaska Fairbanks",
             "UKNCSP": "UKNCSP is a strategic partnership between the Met Office and six NERC-funded research centres in the UK. This partnership is consist of British Antarctic Survey(BAS), British Geological Survey(BGS), Met Office, National Centre for Atmospheric Science (NCAS), National Centre for Earth Observation(NCEO), National Oceanography Centre (NOC), UK Centre for Ecology & Hydrology (UKCEH) with a mission to unite and harness UK climate science capability, advance international partnerships, and drive solutions for a resilient, net-zero world.",
-            "UNSW": "UNSW"
+            "UNSW": "UNSW",
+            "dlr": "The German Aerospace Center DLR is the Federal Republic of Germany\u2019s research centre for aviation, space, energy, transport, and security. The DLR Institute of Atmospheric Physics conducts research into the physics and chemistry of the global atmosphere, from the ground up to the upper edge of the middle atmosphere at an altitude of approximately 120 km."
         },
         "license": {
             "license_id": {
@@ -1687,6 +1699,10 @@
             "EC-Earth3-ESM-1-1": {
                 "source": "EC-Earth3-ESM-1-1: atmosphere: ifs-cy36r4-l91; ocean: nemo-v3-6; land-surface: lpj-guess-4-1; land-ice: pism-v1-2-line; atmospheric-chemistry: co2box-v1-0",
                 "source_id": "EC-Earth3-ESM-1-1"
+            },
+            "ICON-XPP-1-1-ED": {
+                "source": "ICON-XPP-1-1-ED: atmosphere: icon-a-1-1; ocean-biogeochemistry: hamocc; ocean: icon-o-1-1; hd-hydrological-discharge: h134; icon-land-1-1: h134; fesim2: h129",
+                "source_id": "ICON-XPP-1-1-ED"
             },
             "MRI-ESM3-4": {
                 "source": "MRI-ESM3-4: atmosphere: mri-agcm4-4; aerosol: masingar-mk-3r2; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean: mricom-5-4; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; sea-ice: mricom-5-4-sea-ice",
