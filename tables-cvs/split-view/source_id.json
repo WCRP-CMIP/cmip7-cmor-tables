@@ -23,6 +23,10 @@
         "source": "EC-Earth3-ESM-1-1: atmosphere: ifs-cy36r4-l91; ocean: nemo-v3-6; land-surface: lpj-guess-4-1; land-ice: pism-v1-2-line; atmospheric-chemistry: co2box-v1-0",
         "source_id": "EC-Earth3-ESM-1-1"
     },
+    "ICON-XPP-1-1-ED": {
+        "source": "ICON-XPP-1-1-ED: atmosphere: icon-a-1-1; ocean-biogeochemistry: hamocc; ocean: icon-o-1-1; hd-hydrological-discharge: h134; icon-land-1-1: h134; fesim2: h129",
+        "source_id": "ICON-XPP-1-1-ED"
+    },
     "MRI-ESM3-4": {
         "source": "MRI-ESM3-4: atmosphere: mri-agcm4-4; aerosol: masingar-mk-3r2; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean: mricom-5-4; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; sea-ice: mricom-5-4-sea-ice",
         "source_id": "MRI-ESM3-4"
