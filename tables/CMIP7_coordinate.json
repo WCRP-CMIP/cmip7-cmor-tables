@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: f1288b48aef2b19c9e851f889d1f5539",
+        "checksum": "md5: 5f0fa38ad030211f2f087bba56002c06",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-07-16 16:16:55",
+        "table_date": "2026-07-17 12:40:03",
         "table_id": "coordinates",
         "type": "real",
         "valid_max": "",
@@ -385,7 +385,7 @@
             "climatology": "",
             "formula": "",
             "generic_level_name": "",
-            "long_name": "sigma_t criterion that determines  layer thickness. \n\nThe method to calculate the mixed layer depth (mlotst) is documented in Griffies et al. 2016 ( https://doi.org/10.5194/gmd-9-3231-2016 ). It is the depth at which density is larger than the density of the first model level+ a threshold of 0.03 kg.m-3 (appendix H24). For CMIP7 we propose to make the reference depth 10 m instead of the first model level (note than some modelling groups already did it that way for CMIP6). A recent study based on OMIP (Treguier et al. 2023 https://doi.org/10.5194/gmd-16-3849-2023 )discusses the fact that using the first model level as a reference makes mlotst less comparable with obs (obs-based datasets reference the MLD to 10m because the diurnal cycle is not well-sampled by observations). Furthermore the difference of the depth of the first model level between different models makes a significant difference in the computed MLDs in some seasons/regions (Treguier et al. 2023).",
+            "long_name": "sigma_t criterion that determines layer thickness",
             "must_have_bounds": "no",
             "out_name": "deltasigt",
             "positive": "",
