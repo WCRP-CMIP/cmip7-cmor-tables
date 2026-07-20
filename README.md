@@ -9,7 +9,10 @@ CMOR v3.14.1 removed some legacy global attributes from output files (see [relea
 CMOR v3.14.2 prevents parent attributes from being required for experiments with no parents (see [release notes](https://github.com/PCMDI/cmor/releases/tag/3.14.2) for details.
 
 
-To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed, and CMOR v3.14.2 is used in the examples here.
+To support overriding of long names, in the very small number of cases where this is required to match the Data Request v1.2.2.3, CMOR v3.13.2 is needed, and CMOR v3.15.1 is used in the examples here.
+
+Updates are generally only made to the tables corresponding to the most recent Data Request release. 
+If you require updates to tables relating to earlier data request releases, e.g. to ensure that new vertical coordinates can be used with older variable definitions, please raise an issue.
 
 ## CVs JSON file
 
