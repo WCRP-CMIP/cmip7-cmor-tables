@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 943ef7f5e8ce9e8c8354eb9daac180f5",
+        "checksum": "md5: 6a34b7508a226617565103db2189f3cf",
         "cmor_version": "3.15",
         "generic_levels": "olevel olevhalf",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "seaIce",
-        "table_date": "2026-07-17 12:40:03",
+        "table_date": "2026-07-20 09:05:28",
         "table_id": "seaIce",
         "type": "real",
         "valid_max": "",

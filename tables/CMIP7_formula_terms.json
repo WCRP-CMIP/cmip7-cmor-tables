@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: f9f4508cb0b7c45ac24e10f793d33646",
+        "checksum": "md5: 230a15c3ab2dd7ac9ecd1583cb778fee",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-07-17 12:40:03",
+        "table_date": "2026-07-20 09:05:28",
         "table_id": "forumula_terms",
         "type": "real",
         "valid_max": "",
@@ -122,22 +122,6 @@
             "type": "real",
             "units": "m"
         },
-        "k_c": {
-            "dimensions": "",
-            "long_name": "vertical coordinate formula term: k_c",
-            "out_name": "k_c",
-            "standard_name": "",
-            "type": "integer",
-            "units": ""
-        },
-        "nsigma": {
-            "dimensions": "",
-            "long_name": "vertical coordinate formula term: nsigma",
-            "out_name": "nsigma",
-            "standard_name": "",
-            "type": "integer",
-            "units": ""
-        },
         "orog": {
             "dimensions": "longitude latitude",
             "long_name": "Surface Altitude",
@@ -201,6 +185,22 @@
             "standard_name": "air_pressure_at_top_of_atmosphere",
             "type": "double",
             "units": "Pa"
+        },
+        "sigma": {
+            "dimensions": "olevel",
+            "long_name": "vertical coordinate formula term: sigma(k)",
+            "out_name": "sigma",
+            "standard_name": "ocean_sigma_coordinate",
+            "type": "double",
+            "units": "1"
+        },
+        "sigma_bnds": {
+            "dimensions": "olevel bnds",
+            "long_name": "vertical coordinate formula term: sigma(k+1/2)",
+            "out_name": "sigma_bnds",
+            "standard_name": "ocean_sigma_coordinate",
+            "type": "double",
+            "units": "1"
         },
         "zlev": {
             "dimensions": "olevel",
