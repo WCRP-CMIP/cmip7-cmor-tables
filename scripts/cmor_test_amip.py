@@ -25,7 +25,7 @@ DATASET_INFO = {
     "outpath": ".",
     "physics_index": "p1",
     "realization_index": "r9",
-    "source_id": "DUMMY-MODEL",
+    "source_id": "CanESM6-0-MR",
     "tracking_prefix": "hdl:21.14107",
     "frequency": "mon",
     "region": "glb",

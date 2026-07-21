@@ -177,7 +177,7 @@
             "units": "1"
         },
         "sigma_bnds": {
-            "dimensions": "olevel bnds",
+            "dimensions": "olevel",
             "long_name": "vertical coordinate formula term: sigma(k+1/2)",
             "out_name": "sigma_bnds",
             "standard_name": "ocean_sigma_coordinate",

@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 230a15c3ab2dd7ac9ecd1583cb778fee",
+        "checksum": "md5: a01390ee659aca51fb0a6a6881acbdd9",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-07-20 09:05:28",
+        "table_date": "2026-07-21 13:16:24",
         "table_id": "forumula_terms",
         "type": "real",
         "valid_max": "",
@@ -195,7 +195,7 @@
             "units": "1"
         },
         "sigma_bnds": {
-            "dimensions": "olevel bnds",
+            "dimensions": "olevel",
             "long_name": "vertical coordinate formula term: sigma(k+1/2)",
             "out_name": "sigma_bnds",
             "standard_name": "ocean_sigma_coordinate",
