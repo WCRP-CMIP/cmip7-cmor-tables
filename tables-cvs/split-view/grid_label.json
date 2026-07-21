@@ -109,5 +109,11 @@
     "g208": "Horizontal grid cell with a regular gaussian grid type and 1.125 x 1.12 degree resolution.",
     "g209": "Horizontal grid cell with a regular gaussian grid type and 1.875 x 1.86 degree resolution.",
     "g210": "Horizontal grid cell with a regular gaussian grid type and 2.8125 x 2.79 degree resolution.",
+    "g211": "Horizontal grid cell with a displaced pole grid type and 1.0 x 0.5 degree resolution.",
+    "g212": "Horizontal grid cell with a displaced pole grid type and 1.0 x 0.5 degree resolution.",
+    "g213": "Horizontal grid cell with a tripolar grid type.",
+    "g214": "Horizontal grid cell with a regular latitude longitude grid type and 1.875 x 2.25 degree resolution.",
+    "g215": "Horizontal grid cell with a regular latitude longitude grid type and 1.875 x 2.25 degree resolution.",
+    "g216": "Horizontal grid cell with a tripolar grid type.",
     "g999": ""
 }

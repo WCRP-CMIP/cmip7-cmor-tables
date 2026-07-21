@@ -1543,6 +1543,12 @@
             "g208": "Horizontal grid cell with a regular gaussian grid type and 1.125 x 1.12 degree resolution.",
             "g209": "Horizontal grid cell with a regular gaussian grid type and 1.875 x 1.86 degree resolution.",
             "g210": "Horizontal grid cell with a regular gaussian grid type and 2.8125 x 2.79 degree resolution.",
+            "g211": "Horizontal grid cell with a displaced pole grid type and 1.0 x 0.5 degree resolution.",
+            "g212": "Horizontal grid cell with a displaced pole grid type and 1.0 x 0.5 degree resolution.",
+            "g213": "Horizontal grid cell with a tripolar grid type.",
+            "g214": "Horizontal grid cell with a regular latitude longitude grid type and 1.875 x 2.25 degree resolution.",
+            "g215": "Horizontal grid cell with a regular latitude longitude grid type and 1.875 x 2.25 degree resolution.",
+            "g216": "Horizontal grid cell with a tripolar grid type.",
             "g999": ""
         },
         "horizontal_label": {
@@ -1558,6 +1564,7 @@
             "^i[[:digit:]]\\{4\\}[[:digit:]]\\{2\\}[abcde]\\{0,\\}$"
         ],
         "institution_id": {
+            "ACCESS-Consortium": "The ACCESS Consortium brings together Australian institutions contributing to the Australian Community Climate and Earth System Simulator (ACCESS) and its submissions to the Coupled Model Intercomparison Project (CMIP). Participating organisations contribute to different ACCESS models and scientific activities, supported through a combination of institutional investment and Australian Government research infrastructure and research programs, together with international collaborations.",
             "AWI": "Alfred Wegener Institute for Polar and Marine Research",
             "BAS": "British Antarctic Survey",
             "BNU": "Beaconhouse National University",
@@ -1638,7 +1645,7 @@
         },
         "region": {
             "30S-90S": "The geographical region of the Earth\u2019s surface between 30 and 90 degrees south.",
-            "ata": "Antarcica.",
+            "ata": "Antarctica.",
             "glb": "The geographical region of the whole of the Earth\u2019s surface, as defined by the CF conventions.",
             "grl": "The geographical region of Greenland, as defined by the CF conventions.",
             "nh": "The Northern Hemisphere.",
