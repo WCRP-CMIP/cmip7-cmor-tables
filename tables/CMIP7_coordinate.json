@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 2a8358f0a5e083aa3d31284fb2c57a95",
+        "checksum": "md5: 7f46bc37ae5036afc88f7c635057ff5a",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-07-20 09:05:28",
+        "table_date": "2026-07-21 13:16:24",
         "table_id": "coordinates",
         "type": "real",
         "valid_max": "",
