@@ -3,6 +3,14 @@
         "source": "ACCESS-ESM1-6: aerosol: classic; atmosphere: um7-3; land-surface: cable3; ocean-biogeochemistry: wombatlite; ocean: mom5; sea-ice: cice5",
         "source_id": "ACCESS-ESM1-6"
     },
+    "ARTS-ESM-L": {
+        "source": "ARTS-ESM-L: aerosol: inmaer2; atmosphere: inmam6l; land-surface: inmlnd2-1; ocean: inmom6l; sea-ice: inmice2l",
+        "source_id": "ARTS-ESM-L"
+    },
+    "ARTS-ESM-M": {
+        "source": "ARTS-ESM-M: aerosol: inmaer2; atmosphere: inmam6m; land-surface: inmlnd2-2; ocean: inmom6m; sea-ice: inmice2m",
+        "source_id": "ARTS-ESM-M"
+    },
     "AWI-ESM3-4-2-veg-HR": {
         "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; land-surface: lpj-guess-4-1; ocean: fesom-2-7; sea-ice: fesim-2-7",
         "source_id": "AWI-ESM3-4-2-veg-HR"
@@ -11,9 +19,9 @@
         "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",
         "source_id": "CAS-ESM2-1-CSM"
     },
-    "CNRM-ESM2-1e": {
-        "source": "CNRM-ESM2-1e: aerosol: TACTIC_v2; atmosphere: Arpege-Climat Version 6.3; atmospheric_chemistry: REPROBUS-C (v2.0); land_surface: SURFEX v8 modeling platform; ocean: NEMO : Nucleus for European Modelling of the Ocean version 3.6 (OPA); ocean_biogeochemistry: Pelagic Interaction Scheme for Carbon and Ecosystem Studies model volume 2 version trace gases (PISCESv2-gas); sea_ice: GELATO",
-        "source_id": "CNRM-ESM2-1e"
+    "CNRM-ESM2-1E": {
+        "source": "CNRM-ESM2-1E: aerosol: tactic; atmosphere: arpege-climat-version-6-3; atmospheric-chemistry: reprobus-c-v2-0; land-surface: surfex-v8-modeling-platform; ocean-biogeochemistry: piscesv2-gas; ocean: nemo-v3-6; sea-ice: gelato",
+        "source_id": "CNRM-ESM2-1E"
     },
     "CanESM5-1": {
         "source": "CanESM5-1: aerosol: canam5-1-aerosol; atmosphere: canam5-1; land-surface: class-ctem-v3-6-2; ocean-biogeochemistry: cmoc; ocean: cannemo5-1; sea-ice: lim2",

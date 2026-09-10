@@ -6,9 +6,9 @@
             "CF-1.13"
         ],
         "DRS": {
-            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CNRM-CERFACS/CNRM-ESM2-1e/1pctCO2/r1i1p1f1/glb/mon/rsus/tavg-h2m-hxy-u/g101/20251104",
+            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CNRM-CERFACS/CNRM-ESM2-1E/1pctCO2/r1i1p1f1/glb/mon/rsus/tavg-h2m-hxy-u/g101/20251104",
             "directory_path_template": "<drs_specs><mip_era><activity_id><institution_id><source_id><experiment_id><variant_label><region><frequency><variable_id><branding_suffix><grid_label><version>",
-            "filename_example": "rsus_tavg-h2m-hxy-u_mon_glb_g101_CNRM-ESM2-1e_1pctCO2_r1i1p1f1_185001-202112.nc",
+            "filename_example": "rsus_tavg-h2m-hxy-u_mon_glb_g101_CNRM-ESM2-1E_1pctCO2_r1i1p1f1_185001-202112.nc",
             "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>"
         },
         "activity_id": {
@@ -1433,6 +1433,11 @@
             }
         },
         "grid_label": {
+            "g010": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 180 degree resolution.",
+            "g011": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 90 degree resolution.",
+            "g012": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 90 degree resolution.",
+            "g013": "Horizontal grid with multiple sites at point locations.",
+            "g014": "Horizontal grid with multiple ocean passage representations.",
             "g100": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 0.9 degree resolution.",
             "g101": "Horizontal grid cell with a linear spectral gaussian grid type and 1.4 x 1.4 degree resolution.",
             "g102": "Ocean tripolar grid with 105704 cells.",
@@ -1567,7 +1572,17 @@
             "g235": "Horizontal grid cell with a reduced gaussian grid type and 100 x 100 km resolution.",
             "g236": "Horizontal grid cell with a unstructured triangular grid type.",
             "g237": "Horizontal grid cell with a tripolar grid type and 0.25 x 0.25 degree resolution.",
-            "g238": "Horizontal grid cell with a unstructured triangular grid type."
+            "g238": "Horizontal grid cell with a unstructured triangular grid type.",
+            "g239": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 1 degree resolution.",
+            "g240": "Horizontal grid cell with a tripolar grid type.",
+            "g241": "Horizontal grid cell with a tripolar grid type.",
+            "g242": "Horizontal grid cell with a regular latitude longitude grid type and 2.5 x 1.3 degree resolution.",
+            "g243": "Horizontal grid cell with a icosahedral geodesic grid type and 147 x 147 km resolution.",
+            "g244": "Horizontal grid cell with a regular latitude longitude grid type and 2.5 x 1.3 degree resolution.",
+            "g245": "Horizontal grid cell with a regular latitude longitude grid type and 1.333 x 1.333 degree resolution.",
+            "g246": "Horizontal grid cell with a icosahedral geodesic grid type and 147 x 147 km resolution.",
+            "g247": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
+            "g248": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution."
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
@@ -1596,6 +1611,7 @@
             "DWD": "German Meteorological Service (Deutscher Wetterdienst)",
             "EC-Earth-Consortium": "EC-Earth-Consortium",
             "FMI": "Finnish Meteorological Institute",
+            "INPE": "The National Institute for Space Research (INPE) is Brazil's leading agency for space science and earth observation, operating across several key fields: space science and atmospheric research, satellite development and aerospace engineering, remote sensing and Earth observation, numerical weather forecasting, and Earth system science, which includes extensive deforestation monitoring in the Amazon.",
             "IPSL": "Institut Pierre-Simon Laplace",
             "KIOST": "A consortium of Korean research institutions contributing to CMIP7 through Earth system modeling. Led by the Korea Institute of Ocean Science and Technology (KIOST) in collaboration with Hanyang University (HYU).",
             "KNMI": "Royal Netherlands Meteorological Institute",
@@ -1708,6 +1724,14 @@
                 "source": "ACCESS-ESM1-6: aerosol: classic; atmosphere: um7-3; land-surface: cable3; ocean-biogeochemistry: wombatlite; ocean: mom5; sea-ice: cice5",
                 "source_id": "ACCESS-ESM1-6"
             },
+            "ARTS-ESM-L": {
+                "source": "ARTS-ESM-L: aerosol: inmaer2; atmosphere: inmam6l; land-surface: inmlnd2-1; ocean: inmom6l; sea-ice: inmice2l",
+                "source_id": "ARTS-ESM-L"
+            },
+            "ARTS-ESM-M": {
+                "source": "ARTS-ESM-M: aerosol: inmaer2; atmosphere: inmam6m; land-surface: inmlnd2-2; ocean: inmom6m; sea-ice: inmice2m",
+                "source_id": "ARTS-ESM-M"
+            },
             "AWI-ESM3-4-2-veg-HR": {
                 "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; land-surface: lpj-guess-4-1; ocean: fesom-2-7; sea-ice: fesim-2-7",
                 "source_id": "AWI-ESM3-4-2-veg-HR"
@@ -1716,9 +1740,9 @@
                 "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",
                 "source_id": "CAS-ESM2-1-CSM"
             },
-            "CNRM-ESM2-1e": {
-                "source": "CNRM-ESM2-1e: aerosol: TACTIC_v2; atmosphere: Arpege-Climat Version 6.3; atmospheric_chemistry: REPROBUS-C (v2.0); land_surface: SURFEX v8 modeling platform; ocean: NEMO : Nucleus for European Modelling of the Ocean version 3.6 (OPA); ocean_biogeochemistry: Pelagic Interaction Scheme for Carbon and Ecosystem Studies model volume 2 version trace gases (PISCESv2-gas); sea_ice: GELATO",
-                "source_id": "CNRM-ESM2-1e"
+            "CNRM-ESM2-1E": {
+                "source": "CNRM-ESM2-1E: aerosol: tactic; atmosphere: arpege-climat-version-6-3; atmospheric-chemistry: reprobus-c-v2-0; land-surface: surfex-v8-modeling-platform; ocean-biogeochemistry: piscesv2-gas; ocean: nemo-v3-6; sea-ice: gelato",
+                "source_id": "CNRM-ESM2-1E"
             },
             "CanESM5-1": {
                 "source": "CanESM5-1: aerosol: canam5-1-aerosol; atmosphere: canam5-1; land-surface: class-ctem-v3-6-2; ocean-biogeochemistry: cmoc; ocean: cannemo5-1; sea-ice: lim2",
