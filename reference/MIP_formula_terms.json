@@ -132,7 +132,7 @@
             "dimensions": "longitude latitude time",
             "long_name": "Surface Air Pressure",
             "out_name": "ps",
-            "standard_name": "air_pressure",
+            "standard_name": "surface_air_pressure",
             "type": "real",
             "units": "Pa"
         },
@@ -140,7 +140,7 @@
             "dimensions": "longitude latitude time1",
             "long_name": "Surface Air Pressure",
             "out_name": "ps",
-            "standard_name": "air_pressure",
+            "standard_name": "surface_air_pressure",
             "type": "real",
             "units": "Pa"
         },
@@ -148,7 +148,7 @@
             "dimensions": "longitude latitude time2",
             "long_name": "Surface Air Pressure",
             "out_name": "ps",
-            "standard_name": "air_pressure",
+            "standard_name": "surface_air_pressure",
             "type": "real",
             "units": "Pa"
         },
@@ -156,7 +156,7 @@
             "dimensions": "latitude time1",
             "long_name": "Surface Air Pressure",
             "out_name": "ps",
-            "standard_name": "air_pressure",
+            "standard_name": "surface_air_pressure",
             "type": "real",
             "units": "Pa"
         },
