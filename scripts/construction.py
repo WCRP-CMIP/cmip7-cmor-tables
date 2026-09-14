@@ -129,6 +129,7 @@ class CMORvar:
     long_name: str
     flag_values: str
     flag_meanings: str
+    type: str
 
     def table_name(self):
         """
@@ -225,7 +226,11 @@ def write_table(tables, destination):
         # construct variable_entry section
         template["variable_entry"] = {}
         for bvname, cmorvar in tables[realm].items():
-            template['variable_entry'][bvname] = cmorvar.json_for_table()
+            # remove type if not an exception to that described in header
+            variable_json = cmorvar.json_for_table()
+            if template['Header']['type'] == variable_json['type']:
+                del variable_json['type']
+            template['variable_entry'][bvname]  = variable_json
         
         # checksum
         set_checksum(template)
