@@ -72,7 +72,7 @@ class DataRequestVariable:
     Container Class for a data request variable
     """
     branded_variable_name: str
-    branding_label: str
+    branding_suffix: str
     cell_measures: str
     cell_methods: str
     cmip6_compound_name: str
