@@ -555,8 +555,8 @@
                 "90.0"
             ],
             "standard_name": "effective_radius_of_convective_cloud_ice_particles",
-            "stored_direction": "",
-            "tolerance": "",
+            "stored_direction": "increasing",
+            "tolerance": "1",
             "type": "double",
             "units": "micron",
             "valid_max": "",
@@ -598,8 +598,8 @@
                 "30.0"
             ],
             "standard_name": "effective_radius_of_cloud_liquid_water_particles",
-            "stored_direction": "",
-            "tolerance": "",
+            "stored_direction": "increasing",
+            "tolerance": "1",
             "type": "double",
             "units": "micron",
             "valid_max": "",
