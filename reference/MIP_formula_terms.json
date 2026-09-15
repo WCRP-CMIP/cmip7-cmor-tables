@@ -116,7 +116,7 @@
             "dimensions": "latitude",
             "long_name": "Surface Altitude",
             "out_name": "orog",
-            "standard_name": "",
+            "standard_name": "surface_altitude",
             "type": "real",
             "units": "m"
         },
