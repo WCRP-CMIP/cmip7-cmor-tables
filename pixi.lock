@@ -236,9 +236,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/websocket-client-1.9.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-3.23.0-pyhd8ed1ab_0.conda
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/2a/2d/d4bf65e47cea8ff2c794a600c4fd1273a7902f268757c531e0ee9f18aa58/pooch-1.9.0-py3-none-any.whl
+      - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/4d/7f/0946f506569eec4d589d2576389a93fe4957d6b3d7f6e0a676c810c0f838/cmip7_data_request_api-1.5-py3-none-any.whl
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl
-      - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
       osx-64:
       - conda: https://conda.anaconda.org/conda-forge/noarch/_python_abi3_support-1.0-hd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/anyio-4.11.0-pyhcf101f3_0.conda
@@ -459,9 +459,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstandard-0.25.0-py313hcb05632_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-64/zstd-1.5.7-h8210216_2.conda
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/2a/2d/d4bf65e47cea8ff2c794a600c4fd1273a7902f268757c531e0ee9f18aa58/pooch-1.9.0-py3-none-any.whl
+      - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/4d/7f/0946f506569eec4d589d2576389a93fe4957d6b3d7f6e0a676c810c0f838/cmip7_data_request_api-1.5-py3-none-any.whl
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl
-      - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
       osx-arm64:
       - conda: https://conda.anaconda.org/conda-forge/noarch/_python_abi3_support-1.0-hd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/anyio-4.11.0-pyhcf101f3_0.conda
@@ -683,9 +683,9 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstandard-0.25.0-py313h9734d34_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-h6491c7d_2.conda
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/2a/2d/d4bf65e47cea8ff2c794a600c4fd1273a7902f268757c531e0ee9f18aa58/pooch-1.9.0-py3-none-any.whl
+      - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/4d/7f/0946f506569eec4d589d2576389a93fe4957d6b3d7f6e0a676c810c0f838/cmip7_data_request_api-1.5-py3-none-any.whl
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl
       - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl
-      - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
   sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
@@ -6573,6 +6573,17 @@ packages:
   - pytest-httpserver ; extra == 'test'
   - pytest-localftpserver ; extra == 'test'
   requires_python: '>=3.9'
+- pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/4d/7f/0946f506569eec4d589d2576389a93fe4957d6b3d7f6e0a676c810c0f838/cmip7_data_request_api-1.5-py3-none-any.whl
+  name: cmip7-data-request-api
+  version: '1.5'
+  sha256: 3e6200bb0122c578759b13ec156cd9c06a4a3d70b0a171d2d5fcb94f5786d71d
+  requires_dist:
+  - pooch
+  - openpyxl
+  - requests
+  - beautifulsoup4
+  - pyyaml
+  requires_python: '>=3.8'
 - pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl
   name: openpyxl
   version: 3.1.5
@@ -6584,15 +6595,4 @@ packages:
   name: et-xmlfile
   version: 2.0.0
   sha256: 7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa
-  requires_python: '>=3.8'
-- pypi: https://metoffice.jfrog.io/metoffice/api/pypi/pypi/packages/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
-  name: cmip7-data-request-api
-  version: '1.4'
-  sha256: f7f0510a2b1c4dfbb97a93d806188b4ab534a0fb8ee464fc3f53bb6e01c73fbb
-  requires_dist:
-  - pooch
-  - openpyxl
-  - requests
-  - beautifulsoup4
-  - pyyaml
   requires_python: '>=3.8'
