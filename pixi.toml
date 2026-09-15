@@ -17,4 +17,4 @@ jupyterlab = ">=4.5.0,<5"
 iris = ">=3.14.1,<4"
 
 [pypi-dependencies]
-CMIP7-data-request-api = "==1.4"
+CMIP7-data-request-api = "==1.5"
