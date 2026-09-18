@@ -6,9 +6,9 @@
             "CF-1.13"
         ],
         "DRS": {
-            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CNRM-CERFACS/CNRM-ESM2-1E/1pctCO2/r1i1p1f1/glb/mon/rsus/tavg-h2m-hxy-u/g101/20251104",
+            "directory_path_example": "MIP-DRS7/CMIP7/CMIP/CNRM-CERFACS/CNRM-ESM2-1e/1pctCO2/r1i1p1f1/glb/mon/rsus/tavg-h2m-hxy-u/g101/20251104",
             "directory_path_template": "<drs_specs><mip_era><activity_id><institution_id><source_id><experiment_id><variant_label><region><frequency><variable_id><branding_suffix><grid_label><version>",
-            "filename_example": "rsus_tavg-h2m-hxy-u_mon_glb_g101_CNRM-ESM2-1E_1pctCO2_r1i1p1f1_185001-202112.nc",
+            "filename_example": "rsus_tavg-h2m-hxy-u_mon_glb_g101_CNRM-ESM2-1e_1pctCO2_r1i1p1f1_185001-202112.nc",
             "filename_template": "<variable_id><branding_suffix><frequency><region><grid_label><source_id><experiment_id><variant_label>"
         },
         "activity_id": {
@@ -985,6 +985,24 @@
                 "start_year": "",
                 "tier": 1
             },
+            "piClim-ghg": {
+                "activity_id": [
+                    "RFMIP"
+                ],
+                "description": "An atmosphere only experiment following piClim-control but using present day (2021) well-mixed (non-ozone) greenhouse gas concentrations. All other forcings should be set to pre-industrial (1850) conditions as in piClim-control.  Sea Surface Temperatures and Sea Ice Concentrations should be prescribed with the same climatology used in piClim-control.",
+                "end_year": "",
+                "experiment": "An atmosphere only experiment following piClim-control but using present day (2021) well-mixed (non-ozone) greenhouse gas concentrations. All other forcings should be set to pre-industrial (1850) conditions as in piClim-control.  Sea Surface Temperatures and Sea Ice Concentrations should be prescribed with the same climatology used in piClim-control.",
+                "experiment_id": "piClim-ghg",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "RFMIP"
+                ],
+                "parent_experiment_id": [
+                    "piClim-control"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "piClim-histaer": {
                 "activity_id": [
                     "RFMIP"
@@ -1582,7 +1600,9 @@
             "g245": "Horizontal grid cell with a regular latitude longitude grid type and 1.333 x 1.333 degree resolution.",
             "g246": "Horizontal grid cell with a icosahedral geodesic grid type and 147 x 147 km resolution.",
             "g247": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
-            "g248": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution."
+            "g248": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
+            "g249": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 67 x 70 km resolution.",
+            "g250": "Horizontal grid cell with a tripolar grid type and 100 x 90 km resolution."
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
@@ -1740,9 +1760,17 @@
                 "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",
                 "source_id": "CAS-ESM2-1-CSM"
             },
-            "CNRM-ESM2-1E": {
-                "source": "CNRM-ESM2-1E: aerosol: tactic; atmosphere: arpege-climat-version-6-3; atmospheric-chemistry: reprobus-c-v2-0; land-surface: surfex-v8-modeling-platform; ocean-biogeochemistry: piscesv2-gas; ocean: nemo-v3-6; sea-ice: gelato",
-                "source_id": "CNRM-ESM2-1E"
+            "CAS-ESM2-1-ESM": {
+                "source": "CAS-ESM2-1-ESM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean-biogeochemistry: iap-obgcmv2-0; ocean: licom-v2-0; sea-ice: cice4-0",
+                "source_id": "CAS-ESM2-1-ESM"
+            },
+            "CAS-ESM3-0-CSM-HR": {
+                "source": "CAS-ESM3-0-CSM-HR: atmosphere: iap-agcm5-0; land-surface: colm2024; ocean: licom-v3-5; sea-ice: m-sim",
+                "source_id": "CAS-ESM3-0-CSM-HR"
+            },
+            "CNRM-ESM2-1e": {
+                "source": "CNRM-ESM2-1e: aerosol: tactic; atmosphere: arpege-climat-version-6-3; atmospheric-chemistry: reprobus-c-v2-0; land-surface: surfex-v8-modeling-platform; ocean-biogeochemistry: piscesv2-gas; ocean: nemo-v3-6; sea-ice: gelato",
+                "source_id": "CNRM-ESM2-1e"
             },
             "CanESM5-1": {
                 "source": "CanESM5-1: aerosol: canam5-1-aerosol; atmosphere: canam5-1; land-surface: class-ctem-v3-6-2; ocean-biogeochemistry: cmoc; ocean: cannemo5-1; sea-ice: lim2",
