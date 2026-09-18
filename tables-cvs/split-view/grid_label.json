@@ -148,5 +148,7 @@
     "g245": "Horizontal grid cell with a regular latitude longitude grid type and 1.333 x 1.333 degree resolution.",
     "g246": "Horizontal grid cell with a icosahedral geodesic grid type and 147 x 147 km resolution.",
     "g247": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
-    "g248": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution."
+    "g248": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
+    "g249": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 67 x 70 km resolution.",
+    "g250": "Horizontal grid cell with a tripolar grid type and 100 x 90 km resolution."
 }

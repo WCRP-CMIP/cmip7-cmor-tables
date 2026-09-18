@@ -19,9 +19,17 @@
         "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",
         "source_id": "CAS-ESM2-1-CSM"
     },
-    "CNRM-ESM2-1E": {
-        "source": "CNRM-ESM2-1E: aerosol: tactic; atmosphere: arpege-climat-version-6-3; atmospheric-chemistry: reprobus-c-v2-0; land-surface: surfex-v8-modeling-platform; ocean-biogeochemistry: piscesv2-gas; ocean: nemo-v3-6; sea-ice: gelato",
-        "source_id": "CNRM-ESM2-1E"
+    "CAS-ESM2-1-ESM": {
+        "source": "CAS-ESM2-1-ESM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean-biogeochemistry: iap-obgcmv2-0; ocean: licom-v2-0; sea-ice: cice4-0",
+        "source_id": "CAS-ESM2-1-ESM"
+    },
+    "CAS-ESM3-0-CSM-HR": {
+        "source": "CAS-ESM3-0-CSM-HR: atmosphere: iap-agcm5-0; land-surface: colm2024; ocean: licom-v3-5; sea-ice: m-sim",
+        "source_id": "CAS-ESM3-0-CSM-HR"
+    },
+    "CNRM-ESM2-1e": {
+        "source": "CNRM-ESM2-1e: aerosol: tactic; atmosphere: arpege-climat-version-6-3; atmospheric-chemistry: reprobus-c-v2-0; land-surface: surfex-v8-modeling-platform; ocean-biogeochemistry: piscesv2-gas; ocean: nemo-v3-6; sea-ice: gelato",
+        "source_id": "CNRM-ESM2-1e"
     },
     "CanESM5-1": {
         "source": "CanESM5-1: aerosol: canam5-1-aerosol; atmosphere: canam5-1; land-surface: class-ctem-v3-6-2; ocean-biogeochemistry: cmoc; ocean: cannemo5-1; sea-ice: lim2",
