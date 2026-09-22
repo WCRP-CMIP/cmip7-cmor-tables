@@ -21,6 +21,7 @@
             "GeoMIP": "Geoengineering model intercomparison project: exploration of the climate response to solar radiation manipulation.",
             "LMIP": "Land (offline) Model Intercomparison Project: advancing understanding of the impacts of land-use and land-cover change (LULCC) on climate",
             "PMIP": "Palaeoclimate modelling intercomparison project: assessment of paleoclimate i.e. climate thousands of years or more in the past.",
+            "PolMIP": "Policy-Aligned Model Intercomparison Project (PolMIP). PolMIP is designed as a complementary effort to existing MIPs. While ScenarioMIP explores the breadth of future forcing levels under idealized assumptions, PolMIP focuses on the depth of policy-driven pathways, offering higher fidelity for regions where specific mitigation strategies and timelines are defined. By providing a coordinated infrastructure for policy-driven scenario simulations, PolMIP aims to deliver actionable science for national climate assessments, enhance the policy relevance of CMIP, and foster closer collaboration between the climate modeling community and policymakers. Ultimately, PolMIP seeks to ensure that the next generation of climate projections is not only scientifically robust but also deeply rooted in the real-world decisions shaping our collective future.",
             "RFMIP": "Radiative Forcing Model Intercomparison Project: characterisation of radiative forcing within models.",
             "ScenarioMIP": "Future scenario experiments. Exploration of the future climate under a (selected) range of possible boundary conditions. In CMIP7, the priority tier for experiments is conditional on whether you are doing emissions- or concentration-driven simulations. There is no way to express this in the CVs (nor time to implement something to handle this conditionality). This means that, for your particular situation, some experiments may be at a lower tier than is listed in the CVs. For example, the `vl` scenario is tier 1 for concentration-driven models and tier 2 for emissions-driven models. However, in the CVs, we have used the highest priority tier (across all the possible conditionalities). Hence `vl` is listed as tier 1 in the CVs (even though it is actually tier 2 for emissions-driven models).For details, please see the full description in the ScenarioMIP description papers."
         },
@@ -700,6 +701,42 @@
                 ],
                 "start_year": 2101,
                 "tier": 1
+            },
+            "esm-vl-cf": {
+                "activity_id": [
+                    "PolMIP"
+                ],
+                "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "end_year": 2100,
+                "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "experiment_id": "esm-vl-cf",
+                "min_number_yrs_per_sim": 85,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2016,
+                "tier": 1
+            },
+            "esm-vl-cf-ext": {
+                "activity_id": [
+                    "PolMIP"
+                ],
+                "description": "Extension of `esm-vl-cf` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `esm-vl-cf` beyond 2100.",
+                "experiment_id": "esm-vl-cf-ext",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [
+                    "PolMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-vl-cf"
+                ],
+                "start_year": 2101,
+                "tier": 2
             },
             "hist-GHG": {
                 "activity_id": [
@@ -1394,6 +1431,42 @@
                 ],
                 "start_year": 2101,
                 "tier": 1
+            },
+            "vl-cf": {
+                "activity_id": [
+                    "PolMIP"
+                ],
+                "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "end_year": 2100,
+                "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "experiment_id": "vl-cf",
+                "min_number_yrs_per_sim": 85,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2016,
+                "tier": 2
+            },
+            "vl-cf-ext": {
+                "activity_id": [
+                    "PolMIP"
+                ],
+                "description": "Extension of `vl-cf` beyond 2100.",
+                "end_year": 2500,
+                "experiment": "Extension of `vl-cf` beyond 2100.",
+                "experiment_id": "vl-cf-ext",
+                "min_number_yrs_per_sim": 100,
+                "parent_activity_id": [
+                    "PolMIP"
+                ],
+                "parent_experiment_id": [
+                    "vl-cf"
+                ],
+                "start_year": 2101,
+                "tier": 2
             }
         },
         "forcing_index": [
@@ -1602,7 +1675,9 @@
             "g247": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
             "g248": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
             "g249": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 67 x 70 km resolution.",
-            "g250": "Horizontal grid cell with a tripolar grid type and 100 x 90 km resolution."
+            "g250": "Horizontal grid cell with a tripolar grid type and 100 x 90 km resolution.",
+            "g251": "Horizontal grid cell with a stretched grid type.",
+            "g252": "Horizontal grid cell with a stretched grid type."
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
@@ -1807,6 +1882,10 @@
             "MRI-ESM3-4": {
                 "source": "MRI-ESM3-4: aerosol: masingar-mk-3r2; atmosphere: mri-agcm4-4; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; ocean: mricom-5-4; sea-ice: mricom-5-4-sea-ice",
                 "source_id": "MRI-ESM3-4"
+            },
+            "NorESM3-LM": {
+                "source": "NorESM3-LM: aerosol: oslo-aero-v3; atmosphere: cam7-nor; atmospheric-chemistry: oslo-tropstrat-v3; land-ice: cism3-nor; land-surface: clm6-fates-nor; ocean-biogeochemistry: ihamocc2; ocean: blom2; sea-ice: cice6-6-3-nor",
+                "source_id": "NorESM3-LM"
             },
             "UKCM2-0-LL": {
                 "source": "UKCM2-0-LL: aerosol: glomap-mode; atmosphere: metum-ga9; land-surface: jules-gl9; ocean: nemo-gosi9; sea-ice: si3-gosi9",

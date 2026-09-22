@@ -150,5 +150,7 @@
     "g247": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
     "g248": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
     "g249": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 67 x 70 km resolution.",
-    "g250": "Horizontal grid cell with a tripolar grid type and 100 x 90 km resolution."
+    "g250": "Horizontal grid cell with a tripolar grid type and 100 x 90 km resolution.",
+    "g251": "Horizontal grid cell with a stretched grid type.",
+    "g252": "Horizontal grid cell with a stretched grid type."
 }

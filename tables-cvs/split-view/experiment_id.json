@@ -641,6 +641,42 @@
         "start_year": 2101,
         "tier": 1
     },
+    "esm-vl-cf": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+        "end_year": 2100,
+        "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+        "experiment_id": "esm-vl-cf",
+        "min_number_yrs_per_sim": 85,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-hist"
+        ],
+        "start_year": 2016,
+        "tier": 1
+    },
+    "esm-vl-cf-ext": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Extension of `esm-vl-cf` beyond 2100.",
+        "end_year": 2500,
+        "experiment": "Extension of `esm-vl-cf` beyond 2100.",
+        "experiment_id": "esm-vl-cf-ext",
+        "min_number_yrs_per_sim": 100,
+        "parent_activity_id": [
+            "PolMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-vl-cf"
+        ],
+        "start_year": 2101,
+        "tier": 2
+    },
     "hist-GHG": {
         "activity_id": [
             "DAMIP"
@@ -1334,5 +1370,41 @@
         ],
         "start_year": 2101,
         "tier": 1
+    },
+    "vl-cf": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+        "end_year": 2100,
+        "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+        "experiment_id": "vl-cf",
+        "min_number_yrs_per_sim": 85,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "historical"
+        ],
+        "start_year": 2016,
+        "tier": 2
+    },
+    "vl-cf-ext": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Extension of `vl-cf` beyond 2100.",
+        "end_year": 2500,
+        "experiment": "Extension of `vl-cf` beyond 2100.",
+        "experiment_id": "vl-cf-ext",
+        "min_number_yrs_per_sim": 100,
+        "parent_activity_id": [
+            "PolMIP"
+        ],
+        "parent_experiment_id": [
+            "vl-cf"
+        ],
+        "start_year": 2101,
+        "tier": 2
     }
 }
