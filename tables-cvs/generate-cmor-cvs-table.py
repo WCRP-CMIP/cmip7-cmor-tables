@@ -1361,6 +1361,7 @@ def generate_cvs_table_esgvoc(project: str) -> CMORCVsTable:
             value = get_allowed_dict_for_attribute(
                 attr_property.attr_field_name, ev_project
             )
+            value = {k: cut_to_length(v) for k, v in value.items()}
 
         elif attr_property.attr_field_name == "Conventions":
             # As requested in: https://github.com/WCRP-CMIP/cmip7-cmor-tables/issues/78

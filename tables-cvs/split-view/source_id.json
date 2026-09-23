@@ -67,6 +67,10 @@
         "source": "MRI-ESM3-4: aerosol: masingar-mk-3r2; atmosphere: mri-agcm4-4; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; ocean: mricom-5-4; sea-ice: mricom-5-4-sea-ice",
         "source_id": "MRI-ESM3-4"
     },
+    "NorESM3-LM": {
+        "source": "NorESM3-LM: aerosol: oslo-aero-v3; atmosphere: cam7-nor; atmospheric-chemistry: oslo-tropstrat-v3; land-ice: cism3-nor; land-surface: clm6-fates-nor; ocean-biogeochemistry: ihamocc2; ocean: blom2; sea-ice: cice6-6-3-nor",
+        "source_id": "NorESM3-LM"
+    },
     "UKCM2-0-LL": {
         "source": "UKCM2-0-LL: aerosol: glomap-mode; atmosphere: metum-ga9; land-surface: jules-gl9; ocean: nemo-gosi9; sea-ice: si3-gosi9",
         "source_id": "UKCM2-0-LL"
