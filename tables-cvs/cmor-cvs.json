@@ -706,9 +706,9 @@
                 "activity_id": [
                     "PolMIP"
                 ],
-                "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `vl-cf`).",
                 "end_year": 2100,
-                "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `vl-cf`).",
                 "experiment_id": "esm-vl-cf",
                 "min_number_yrs_per_sim": 85,
                 "parent_activity_id": [
@@ -736,7 +736,7 @@
                     "esm-vl-cf"
                 ],
                 "start_year": 2101,
-                "tier": 2
+                "tier": 1
             },
             "hist-GHG": {
                 "activity_id": [
@@ -1436,9 +1436,9 @@
                 "activity_id": [
                     "PolMIP"
                 ],
-                "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "description": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-vl-cf`).",
                 "end_year": 2100,
-                "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline.",
+                "experiment": "Counterfactual emissions pathway that is as physically consistent as possible, while aiming for global surface air temperature to peak at 1.5C and stabilise or slowly decline. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-vl-cf`).",
                 "experiment_id": "vl-cf",
                 "min_number_yrs_per_sim": 85,
                 "parent_activity_id": [
