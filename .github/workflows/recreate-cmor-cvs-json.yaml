@@ -14,11 +14,12 @@ on:
 jobs:
   recreate-cmor-cvs-json-file:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
 
       - uses: actions/setup-python@v5
         with:
@@ -43,8 +44,8 @@ jobs:
         if: steps.verify-changed-files.outputs.files_changed == 'true'
         run: |
           git add tables-cvs/cmor-cvs.json tables-cvs/requirements-cmor-cvs-table.txt tables-cvs/split-view
-          git config --local user.email "ci-runner@cmip7-cmor-tables.invalid"
-          git config --local user.name "$GITHUB_ACTOR"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git commit -m "Update CMOR CVs JSON via GitHub action"
 
       # If triggered from branch other than main, push directly to the branch
@@ -57,7 +58,7 @@ jobs:
       - name: Create new pull request
         if: ${{ steps.verify-changed-files.outputs.files_changed == 'true' && github.ref_name == 'main' }}
         env:
-          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
           TIMESTAMP=$(date +%Y-%m-%dT%H-%M-%S)
@@ -73,7 +74,7 @@ jobs:
       - name: Merge the pull request
         if: ${{ steps.verify-changed-files.outputs.files_changed == 'true' && github.ref_name == 'main' }}
         env:
-          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
           gh pr merge "${BRANCH_NAME}" --squash --delete-branch
