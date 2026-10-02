@@ -157,14 +157,56 @@
         "start_year": 1979,
         "tier": 1
     },
+    "amip-m4K": {
+        "activity_id": [
+            "CFMIP"
+        ],
+        "description": "Same as the `amip` simulation, except sea surface temperatures are decreased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
+        "end_year": 2021,
+        "experiment": "Same as the `amip` simulation, except sea surface temperatures are decreased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
+        "experiment_id": "amip-m4K",
+        "min_number_yrs_per_sim": 43,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": 1979,
+        "tier": 1
+    },
     "amip-p4K": {
         "activity_id": [
             "CFMIP"
         ],
-        "description": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
+        "description": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
         "end_year": 2021,
-        "experiment": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
+        "experiment": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
         "experiment_id": "amip-p4K",
+        "min_number_yrs_per_sim": 43,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": 1979,
+        "tier": 1
+    },
+    "amip-p4K-SST-rad": {
+        "activity_id": [
+            "CFMIP"
+        ],
+        "description": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the upward longwave radiation from the sea surface using the Planck function (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+        "end_year": 2021,
+        "experiment": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the upward longwave radiation from the sea surface using the Planck function (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+        "experiment_id": "amip-p4K-SST-rad",
+        "min_number_yrs_per_sim": 43,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": 1979,
+        "tier": 1
+    },
+    "amip-p4K-SST-turb": {
+        "activity_id": [
+            "CFMIP"
+        ],
+        "description": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the turbulent transport of the latent and sensible heat fluxes at the air-sea interface using bulk aerodynamic formulae (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+        "end_year": 2021,
+        "experiment": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the turbulent transport of the latent and sensible heat fluxes at the air-sea interface using bulk aerodynamic formulae (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+        "experiment_id": "amip-p4K-SST-turb",
         "min_number_yrs_per_sim": 43,
         "parent_activity_id": [],
         "parent_experiment_id": [],
