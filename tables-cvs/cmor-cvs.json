@@ -218,14 +218,56 @@
                 "start_year": 1979,
                 "tier": 1
             },
+            "amip-m4K": {
+                "activity_id": [
+                    "CFMIP"
+                ],
+                "description": "Same as the `amip` simulation, except sea surface temperatures are decreased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
+                "end_year": 2021,
+                "experiment": "Same as the `amip` simulation, except sea surface temperatures are decreased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
+                "experiment_id": "amip-m4K",
+                "min_number_yrs_per_sim": 43,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1979,
+                "tier": 1
+            },
             "amip-p4K": {
                 "activity_id": [
                     "CFMIP"
                 ],
-                "description": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
+                "description": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
                 "end_year": 2021,
-                "experiment": "Same as `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions.",
+                "experiment": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment).",
                 "experiment_id": "amip-p4K",
+                "min_number_yrs_per_sim": 43,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1979,
+                "tier": 1
+            },
+            "amip-p4K-SST-rad": {
+                "activity_id": [
+                    "CFMIP"
+                ],
+                "description": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the upward longwave radiation from the sea surface using the Planck function (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+                "end_year": 2021,
+                "experiment": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the upward longwave radiation from the sea surface using the Planck function (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+                "experiment_id": "amip-p4K-SST-rad",
+                "min_number_yrs_per_sim": 43,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": 1979,
+                "tier": 1
+            },
+            "amip-p4K-SST-turb": {
+                "activity_id": [
+                    "CFMIP"
+                ],
+                "description": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the turbulent transport of the latent and sensible heat fluxes at the air-sea interface using bulk aerodynamic formulae (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+                "end_year": 2021,
+                "experiment": "Same as the `amip` simulation, except sea surface temperatures are increased by 4K in ice-free regions (sea ice and SSTs in grid boxes containing sea ice remain the same as in the `amip` experiment) when calculating the turbulent transport of the latent and sensible heat fluxes at the air-sea interface using bulk aerodynamic formulae (see Ogura et al., 2023, https://doi.org/10.1029/2023GL104786).",
+                "experiment_id": "amip-p4K-SST-turb",
                 "min_number_yrs_per_sim": 43,
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
@@ -1711,6 +1753,7 @@
             "KIOST": "A consortium of Korean research institutions contributing to CMIP7 through Earth system modeling. Led by the Korea Institute of Ocean Science and Technology (KIOST) in collaboration with Hanyang University (HYU).",
             "KNMI": "Royal Netherlands Meteorological Institute",
             "METNo": "Norwegian Meteorological Institute",
+            "MIROC": "MIROC is a collaborative climate modeling consortium in Japan that develops and applies the MIROC climate model for climate research and international model intercomparison projects.",
             "MOHC": "Met Office Hadley Centre",
             "MPI-M": "Max Planck Institute for Meteorology",
             "MRI": "MRI (Meteorological Research Institute) conducts research for the improvement of information issued by JMA (Japan Meteorological Agency) on weather, earthquakes, volcanic activity, climatic conditions and other phenomena.",
@@ -1886,6 +1929,10 @@
             "NorESM3-LM": {
                 "source": "NorESM3-LM: aerosol: oslo-aero-v3; atmosphere: cam7-nor; atmospheric-chemistry: oslo-tropstrat-v3; land-ice: cism3-nor; land-surface: clm6-fates-nor; ocean-biogeochemistry: ihamocc2; ocean: blom2; sea-ice: cice6-6-3-nor",
                 "source_id": "NorESM3-LM"
+            },
+            "NorESM3-MM": {
+                "source": "NorESM3-MM: aerosol: oslo-aero-v3; atmosphere: cam7-nor; atmospheric-chemistry: oslo-tropstrat-v3; land-ice: cism3-nor; land-surface: clm6-fates-nor; ocean-biogeochemistry: ihamocc2; ocean: blom2; sea-ice: cice6-6-3-nor",
+                "source_id": "NorESM3-MM"
             },
             "UKCM2-0-LL": {
                 "source": "UKCM2-0-LL: aerosol: glomap-mode; atmosphere: metum-ga9; land-surface: jules-gl9; ocean: nemo-gosi9; sea-ice: si3-gosi9",
