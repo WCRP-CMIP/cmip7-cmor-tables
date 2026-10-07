@@ -7,8 +7,8 @@
     "g100": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 0.9 degree resolution.",
     "g101": "Horizontal grid cell with a linear spectral gaussian grid type and 1.4 x 1.4 degree resolution.",
     "g102": "Ocean tripolar grid with 105704 cells.",
-    "g103": "U-grid cells on ocean tripolar configuration (eORCA1) for x-velocity.",
-    "g104": "V-grid cells on ocean tripolar configuration (eORCA1) for y-velocity.",
+    "g103": "Horizontal grid cell with a tripolar grid type.",
+    "g104": "Horizontal grid cell with a tripolar grid type.",
     "g105": "Regular latitude-longitude output grid for atmosphere (based on TL127 spectral grid), 1.4 x 1.4 degree resolution.",
     "g106": "Horizontal grid cell with a regular latitude longitude grid type and 1 x 1 degree resolution.",
     "g107": "Horizontal grid cell with a tripolar grid type.",
@@ -134,6 +134,7 @@
     "g230": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 1.0 degree resolution.",
     "g231": "Horizontal grid cell with a cubed sphere grid type and 110 x 110 km resolution.",
     "g232": "Horizontal grid cell with a stretched grid type and 1.25 x 1 degree resolution.",
+    "g233": "Horizontal grid cell with a tripolar grid type and 0.66 x 0.66 degree resolution.",
     "g234": "Horizontal grid cell with a cubed sphere grid type and 208 x 208 km resolution.",
     "g235": "Horizontal grid cell with a reduced gaussian grid type and 100 x 100 km resolution.",
     "g236": "Horizontal grid cell with a unstructured triangular grid type.",
@@ -152,5 +153,11 @@
     "g249": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 67 x 70 km resolution.",
     "g250": "Horizontal grid cell with a tripolar grid type and 100 x 90 km resolution.",
     "g251": "Horizontal grid cell with a stretched grid type.",
-    "g252": "Horizontal grid cell with a stretched grid type."
+    "g252": "Horizontal grid cell with a stretched grid type.",
+    "g253": "Horizontal grid cell with a regular latitude longitude grid type and 2 x 2 degree resolution.",
+    "g254": "Horizontal grid cell with a cubed sphere grid type.",
+    "g255": "Horizontal grid cell with a cubed sphere grid type.",
+    "g256": "Horizontal grid cell with a tripolar grid type.",
+    "g257": "Horizontal grid cell with a stretched grid type.",
+    "g258": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 145 x 140 km resolution."
 }

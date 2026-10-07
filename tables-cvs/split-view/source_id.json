@@ -43,9 +43,21 @@
         "source": "EC-Earth3-ESM-1-1: atmosphere: ifs-cy36r4-l91; atmospheric-chemistry: co2box-v1-0; land-ice: pism-v1-2-line; land-surface: lpj-guess-4-1; ocean: nemo-v3-6",
         "source_id": "EC-Earth3-ESM-1-1"
     },
+    "FGOALS-f3-L": {
+        "source": "FGOALS-f3-L: atmosphere: um7.3; land-surface: surfex-v8-modeling-platform; ocean: nemo-v3-6; sea-ice: gelato",
+        "source_id": "FGOALS-f3-L"
+    },
     "GFDL-ESM4p5": {
         "source": "GFDL-ESM4p5: aerosol: gfdl-am4p5-aerosol; atmosphere: gfdl-am4p5; land-surface: gfdl-lm4p5; ocean-biogeochemistry: cobaltv3p1; ocean: gfdl-om4p5; sea-ice: sis2",
         "source_id": "GFDL-ESM4p5"
+    },
+    "GISS-E3-1": {
+        "source": "GISS-E3-1: aerosol: matrix; atmosphere: giss-atmospheric-model-v3-1; ocean: giss-ocean-model",
+        "source_id": "GISS-E3-1"
+    },
+    "GISS-E3-1-CC": {
+        "source": "GISS-E3-1-CC: aerosol: matrix; atmosphere: giss-atmospheric-model-v3-1; ocean-biogeochemistry: nobmg; ocean: giss-ocean-model",
+        "source_id": "GISS-E3-1-CC"
     },
     "HadCM3B-ESM": {
         "source": "HadCM3B-ESM: aerosol: hadcm3-aerosol; atmosphere: hadam3; land-surface: moses2-1; ocean-biogeochemistry: hadocc; ocean: hadom3; sea-ice: hadcm3-sea-ice",
