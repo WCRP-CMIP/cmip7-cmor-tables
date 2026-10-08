@@ -71,6 +71,24 @@
         "start_year": 2035,
         "tier": 1
     },
+    "SSP2-com-CMIP7": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-SSP2-com-CMIP7`).",
+        "end_year": 2100,
+        "experiment": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-SSP2-com-CMIP7`).",
+        "experiment_id": "SSP2-com-CMIP7",
+        "min_number_yrs_per_sim": 79,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "historical"
+        ],
+        "start_year": 2022,
+        "tier": 1
+    },
     "abrupt-0p5xCO2": {
         "activity_id": [
             "CFMIP"
@@ -255,6 +273,24 @@
         "start_year": "",
         "tier": 2
     },
+    "esm-SSP2-com-CMIP7": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `SSP2-com-CMIP7`).",
+        "end_year": 2100,
+        "experiment": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `SSP2-com-CMIP7`).",
+        "experiment_id": "esm-SSP2-com-CMIP7",
+        "min_number_yrs_per_sim": 79,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-hist"
+        ],
+        "start_year": 2022,
+        "tier": 1
+    },
     "esm-flat10": {
         "activity_id": [
             "C4MIP"
@@ -327,6 +363,38 @@
         "start_year": 1850,
         "tier": 1
     },
+    "esm-hist-nofire": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "Historical coupled simulations with fires set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. We encourage modeling groups to perform `piControl-nofire` to generate the initial state. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `hist-nofire`).",
+        "end_year": 2021,
+        "experiment": "Historical coupled simulations with fires set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. We encourage modeling groups to perform `piControl-nofire` to generate the initial state. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `hist-nofire`).",
+        "experiment_id": "esm-hist-nofire",
+        "min_number_yrs_per_sim": 172,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": 1850,
+        "tier": 1
+    },
+    "esm-hist-nofireaer": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "Historical coupled simulations with fire aerosol emissions set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), prescribed fire aerosol emissions in the forcing dataset should be set to zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `hist-nofireaer`).",
+        "end_year": 2021,
+        "experiment": "Historical coupled simulations with fire aerosol emissions set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), prescribed fire aerosol emissions in the forcing dataset should be set to zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `hist-nofireaer`).",
+        "experiment_id": "esm-hist-nofireaer",
+        "min_number_yrs_per_sim": "",
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-hist"
+        ],
+        "start_year": "",
+        "tier": 2
+    },
     "esm-piControl": {
         "activity_id": [
             "CMIP"
@@ -344,6 +412,24 @@
         ],
         "start_year": "",
         "tier": 1
+    },
+    "esm-piControl-nofire": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `piControl-nofire`).",
+        "end_year": "",
+        "experiment": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `piControl-nofire`).",
+        "experiment_id": "esm-piControl-nofire",
+        "min_number_yrs_per_sim": "",
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-piControl-spinup"
+        ],
+        "start_year": "",
+        "tier": 2
     },
     "esm-piControl-spinup": {
         "activity_id": [
@@ -412,6 +498,42 @@
         ],
         "start_year": 2022,
         "tier": 1
+    },
+    "esm-scen7-h-ca2010fire": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "The same as `scen7-h`, but with burned area and fire emissions fixed at their 2001-2020 averages. Burned area should be prescribed as an input field, using each model's own 2001-2020 average derived from its historical simulations. For models without interactive fire emission modules, all fire emissions (known as open biomass burning emissions in the forcings) should be replaced with the corresponding 2001-2020 average. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fire`).",
+        "end_year": 2060,
+        "experiment": "The same as `scen7-h`, but with burned area and fire emissions fixed at their 2001-2020 averages. Burned area should be prescribed as an input field, using each model's own 2001-2020 average derived from its historical simulations. For models without interactive fire emission modules, all fire emissions (known as open biomass burning emissions in the forcings) should be replaced with the corresponding 2001-2020 average. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fire`).",
+        "experiment_id": "esm-scen7-h-ca2010fire",
+        "min_number_yrs_per_sim": 39,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-hist"
+        ],
+        "start_year": 2022,
+        "tier": 2
+    },
+    "esm-scen7-h-ca2010fireaer": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fireaer`).",
+        "end_year": 2060,
+        "experiment": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fireaer`).",
+        "experiment_id": "esm-scen7-h-ca2010fireaer",
+        "min_number_yrs_per_sim": 39,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-hist"
+        ],
+        "start_year": 2022,
+        "tier": 2
     },
     "esm-scen7-h-ext": {
         "activity_id": [
@@ -772,6 +894,38 @@
         ],
         "start_year": 1850,
         "tier": 1
+    },
+    "hist-nofire": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "Historical coupled simulations with fires set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. We encourage modeling groups to perform `piControl-nofire` to generate the initial state.",
+        "end_year": 2021,
+        "experiment": "Historical coupled simulations with fires set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. We encourage modeling groups to perform `piControl-nofire` to generate the initial state.",
+        "experiment_id": "hist-nofire",
+        "min_number_yrs_per_sim": 172,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": 1850,
+        "tier": 1
+    },
+    "hist-nofireaer": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "Historical coupled simulations with fire aerosol emissions set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), prescribed fire aerosol emissions in the forcing dataset should be set to zero.",
+        "end_year": 2021,
+        "experiment": "Historical coupled simulations with fire aerosol emissions set to zero. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), prescribed fire aerosol emissions in the forcing dataset should be set to zero.",
+        "experiment_id": "hist-nofireaer",
+        "min_number_yrs_per_sim": "",
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "historical"
+        ],
+        "start_year": "",
+        "tier": 2
     },
     "hist-piAQ": {
         "activity_id": [
@@ -1255,6 +1409,24 @@
         "start_year": "",
         "tier": 1
     },
+    "piControl-nofire": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero.",
+        "end_year": "",
+        "experiment": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero.",
+        "experiment_id": "piControl-nofire",
+        "min_number_yrs_per_sim": "",
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "piControl-spinup"
+        ],
+        "start_year": "",
+        "tier": 2
+    },
     "piControl-spinup": {
         "activity_id": [
             "CMIP"
@@ -1322,6 +1494,42 @@
         ],
         "start_year": 2022,
         "tier": 1
+    },
+    "scen7-h-ca2010fire": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "The same as `scen7-h`, but with burned area and fire emissions fixed at their 2001-2020 averages. Burned area should be prescribed as an input field, using each model's own 2001-2020 average derived from its historical simulations. For models without interactive fire emission modules, all fire emissions (known as open biomass burning emissions in the forcings) should be replaced with the corresponding 2001-2020 average.",
+        "end_year": 2060,
+        "experiment": "The same as `scen7-h`, but with burned area and fire emissions fixed at their 2001-2020 averages. Burned area should be prescribed as an input field, using each model's own 2001-2020 average derived from its historical simulations. For models without interactive fire emission modules, all fire emissions (known as open biomass burning emissions in the forcings) should be replaced with the corresponding 2001-2020 average.",
+        "experiment_id": "scen7-h-ca2010fire",
+        "min_number_yrs_per_sim": 39,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "historical"
+        ],
+        "start_year": 2022,
+        "tier": 2
+    },
+    "scen7-h-ca2010fireaer": {
+        "activity_id": [
+            "FireMIP"
+        ],
+        "description": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions.",
+        "end_year": 2060,
+        "experiment": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions.",
+        "experiment_id": "scen7-h-ca2010fireaer",
+        "min_number_yrs_per_sim": 39,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "historical"
+        ],
+        "start_year": 2022,
+        "tier": 2
     },
     "scen7-h-ext": {
         "activity_id": [
