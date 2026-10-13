@@ -521,9 +521,9 @@
         "activity_id": [
             "FireMIP"
         ],
-        "description": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fireaer`).",
+        "description": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001-2020 averages. This does not apply to models that have interactive fire-emissions. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fireaer`).",
         "end_year": 2060,
-        "experiment": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fireaer`).",
+        "experiment": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001-2020 averages. This does not apply to models that have interactive fire-emissions. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `scen7-h-ca2010fireaer`).",
         "experiment_id": "esm-scen7-h-ca2010fireaer",
         "min_number_yrs_per_sim": 39,
         "parent_activity_id": [
@@ -1517,9 +1517,9 @@
         "activity_id": [
             "FireMIP"
         ],
-        "description": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions.",
+        "description": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001-2020 averages. This does not apply to models that have interactive fire-emissions.",
         "end_year": 2060,
-        "experiment": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001\u20132020 averages. This does not apply to models that have interactive fire-emissions.",
+        "experiment": "The same as `scen7-h`, but with fire aerosol emissions fixed at their 2001-2020 averages. This does not apply to models that have interactive fire-emissions.",
         "experiment_id": "scen7-h-ca2010fireaer",
         "min_number_yrs_per_sim": 39,
         "parent_activity_id": [
