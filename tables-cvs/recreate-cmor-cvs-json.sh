@@ -26,21 +26,21 @@ set -euo pipefail
 # If they're not set, the default values are used.
 ESGVOC_FORK="${ESGVOC_FORK:=ESGF}"
 ESGVOC_REVISION="${ESGVOC_REVISION:=7.0.0}"
-### Non-versioned esgvoc config
-# Use when we are using a branches of CVs
-esgvoc_versioned=0
-UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
-# UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
-UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=catch-unicode}"
-CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
-# CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
-CMIP7_CVS_REF="${CMIP7_CVS_REF:=catch-unicode}"
+# ### Non-versioned esgvoc config
+# # Use when we are using a branches of CVs
+# esgvoc_versioned=0
+# UNIVERSE_CVS_FORK="${UNIVERSE_CVS_FORK:=WCRP-CMIP}"
+# # UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=esgvoc_dev}"
+# UNIVERSE_CVS_REF="${UNIVERSE_CVS_REF:=catch-unicode}"
+# CMIP7_CVS_FORK="${CMIP7_CVS_FORK:=WCRP-CMIP}"
+# # CMIP7_CVS_REF="${CMIP7_CVS_REF:=esgvoc_dev}"
+# CMIP7_CVS_REF="${CMIP7_CVS_REF:=catch-unicode}"
 
-# # Versioned esgvoc config
-# # Use when we are using a versioned esgvoc release
-# esgvoc_versioned=1
-# ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
-# # ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=dev-latest}"
+# Versioned esgvoc config
+# Use when we are using a versioned esgvoc release
+esgvoc_versioned=1
+ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=latest}"
+# ESGVOC_CMIP7_DB_VERSION="${ESGVOC_CMIP7_DB_VERSION:=dev-latest}"
 
 verbose=0
 install_env=0
