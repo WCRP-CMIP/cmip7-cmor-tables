@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: ece9afabec6f7a91b826dd38967f1d8d",
+        "checksum": "md5: fbce08dea095f5b8b8e94a7a3b8641c6",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -1985,7 +1985,7 @@
             "dimensions": [
                 "longitude",
                 "latitude",
-                "vegtype",
+                "modelvegtype",
                 "time"
             ],
             "long_name": "Percentage of Area by Vegetation or Land-Cover Category",
