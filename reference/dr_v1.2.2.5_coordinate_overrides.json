@@ -5,6 +5,15 @@
     "effectRadLi": {
         "stored_direction": "increasing"
     },
+    "height100m": {
+        "stored_direction": ""
+    },
+    "height10m": {
+        "stored_direction": ""
+    },
+    "height2m": {
+        "stored_direction": ""
+    },
     "modelvegtype": {
         "axis": "",
         "bounds_values": "",
@@ -27,6 +36,9 @@
         "value": "",
         "z_bounds_factors": "",
         "z_factors": ""
+    },
+    "op20bar": {
+        "stored_direction": ""
     },
     "time4": {
         "long_name": "Monthly Mean Daily Statistics"
