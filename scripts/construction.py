@@ -98,6 +98,15 @@ class DataRequestVariable:
     flag_values: Optional[str] = None
     flag_meanings: Optional[str] = None
 
+    @classmethod
+    def from_metadata(cls, metadata):
+        """Support both names used by data-request API releases."""
+        metadata = metadata.copy()
+        branding_label = metadata.pop('branding_label', None)
+        if branding_label is not None:
+            metadata.setdefault('branding_suffix', branding_label)
+        return cls(**metadata)
+
     def to_cmorvar(self):
         """
         Construct a CMOR variable from the data request info
@@ -291,7 +300,9 @@ def dr_coord_to_cmor_dict(coord):
     return name, cmor_coord    
 
 
-def construct_coordinates(dr_coords, reference_coordinate_file):
+def construct_coordinates(
+    dr_coords, reference_coordinate_file, coordinate_overrides=None
+):
     """
     Construct coordinate file for CMOR based on data request coordinate info
     and a reference coordinate file
@@ -338,6 +349,25 @@ def construct_coordinates(dr_coords, reference_coordinate_file):
 
     for k in keys_to_import:
         coordinates['axis_entry'][k] = reference['axis_entry'][k]
+
+    if coordinate_overrides:
+        valid_fields = set(DR_TO_CMOR_COORDINATE_KEY_MAPPING)
+        for name, override in coordinate_overrides.items():
+            unknown_fields = set(override) - valid_fields
+            if unknown_fields:
+                raise ValueError(
+                    f'Unknown fields in coordinate override {name!r}: '
+                    f'{sorted(unknown_fields)}'
+                )
+            if name not in coordinates['axis_entry']:
+                missing_fields = valid_fields - set(override)
+                if missing_fields:
+                    raise ValueError(
+                        f'New coordinate override {name!r} is missing fields: '
+                        f'{sorted(missing_fields)}'
+                    )
+                coordinates['axis_entry'][name] = {}
+            coordinates['axis_entry'][name].update(override)
 
     return coordinates
 
@@ -388,12 +418,15 @@ def collect_cell_measures(output_dir, all_var_info):
         'cell_measures')
 
 
-def construct_all_ancil_files(output_dir, reference_dir, coords):
+def construct_all_ancil_files(output_dir, reference_dir, coords, dr_version):
     """
     Construct the ancillary files (coordinates, formula_terms, grids)
     """
     coordinate_file = os.path.join(reference_dir,'MIP_coordinate.json')
-    coordinates = construct_coordinates(coords, coordinate_file)
+    coordinate_overrides = load_overrides(
+        reference_dir, dr_version, 'coordinate_overrides')
+    coordinates = construct_coordinates(
+        coords, coordinate_file, coordinate_overrides)
     coordinates_file = os.path.join(output_dir, 'CMIP7_coordinate.json')
 
     write_ancil(coordinates, coordinates_file,'coordinates')
@@ -469,7 +502,7 @@ def main():
     all_var_info = dq.get_variables_metadata(content, dr_version)
     # convert to dataclass
     for k, v in all_var_info.items():
-        drv = DataRequestVariable(**v)
+        drv = DataRequestVariable.from_metadata(v)
         all_var_info[k] = drv
 
     #collect cell measures information and write to CMIP7_cell_measures.json keyed by CMIP7 compound_name
@@ -491,6 +524,7 @@ def main():
     # dictionaries to hold  overrides
     long_name_overrides = load_overrides(reference_dir, dr_version, 'long_name_overrides')
     realm_overrides = load_overrides(reference_dir, dr_version, 'realm_overrides')
+    variable_overrides = load_overrides(reference_dir, dr_version, 'variable_overrides')
     
     for variable in all_var_info.values():
         # apply overrides to data request info
@@ -498,6 +532,15 @@ def main():
             variable.long_name = long_name_overrides[variable.cmip7_compound_name]
         if variable.cmip7_compound_name in realm_overrides:
             variable.modeling_realm = realm_overrides[variable.cmip7_compound_name]
+        for field, value in variable_overrides.get(
+            variable.cmip7_compound_name, {}
+        ).items():
+            if not hasattr(variable, field):
+                raise ValueError(
+                    f'Unknown field in variable override '
+                    f'{variable.cmip7_compound_name!r}: {field!r}'
+                )
+            setattr(variable, field, value)
 
         # convert to info in CMOR variable
         cmorvar = variable.to_cmorvar()
@@ -519,7 +562,11 @@ def main():
     write_table(tables, output_dir)
 
     # write out ancillary files
-    construct_all_ancil_files(output_dir, reference_dir, content['Data Request']['Coordinates and Dimensions'])
+    construct_all_ancil_files(
+        output_dir,
+        reference_dir,
+        content['Data Request']['Coordinates and Dimensions'],
+        dr_version)
 
 
 if __name__ == '__main__':

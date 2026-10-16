@@ -1,0 +1,34 @@
+{
+    "effectRadIc": {
+        "stored_direction": "increasing"
+    },
+    "effectRadLi": {
+        "stored_direction": "increasing"
+    },
+    "modelvegtype": {
+        "axis": "",
+        "bounds_values": "",
+        "climatology": "",
+        "formula": "",
+        "generic_level_name": "",
+        "long_name": "Vegetation or Land Cover Type",
+        "must_have_bounds": "no",
+        "out_name": "type",
+        "positive": "",
+        "requested": "",
+        "requested_bounds": "",
+        "standard_name": "area_type",
+        "stored_direction": "",
+        "tolerance": "",
+        "type": "character",
+        "units": "",
+        "valid_max": "",
+        "valid_min": "",
+        "value": "",
+        "z_bounds_factors": "",
+        "z_factors": ""
+    },
+    "time4": {
+        "long_name": "Monthly Mean Daily Statistics"
+    }
+}
