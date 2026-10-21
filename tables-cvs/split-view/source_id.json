@@ -15,6 +15,10 @@
         "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; land-surface: lpj-guess-4-1; ocean: fesom-2-7; sea-ice: fesim-2-7",
         "source_id": "AWI-ESM3-4-2-veg-HR"
     },
+    "BCC-CSM3-MR": {
+        "source": "BCC-CSM3-MR: atmosphere: bcc-agcm4-mr; land-surface: bcc-avim3; ocean: mom5-p25; sea-ice: cam-ice1",
+        "source_id": "BCC-CSM3-MR"
+    },
     "CAS-ESM2-1-CSM": {
         "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",
         "source_id": "CAS-ESM2-1-CSM"
@@ -70,6 +74,10 @@
     "ICON-XPP-1-1-ED": {
         "source": "ICON-XPP-1-1-ED: atmosphere: icon-a-1-1; land-surface: icon-land-1-1; ocean-biogeochemistry: ihamocc2; ocean: icon-o-1-1; sea-ice: fesim2",
         "source_id": "ICON-XPP-1-1-ED"
+    },
+    "IPSL-CM6-ESMCO2": {
+        "source": "IPSL-CM6-ESMCO2: atmosphere: lmdz6-5; land-surface: orchidee-v2; ocean-biogeochemistry: pisces-v2; ocean: nemo-v3-6; sea-ice: lim3",
+        "source_id": "IPSL-CM6-ESMCO2"
     },
     "KACE-2-0-G": {
         "source": "KACE-2-0-G: aerosol: glomap-mode; atmosphere: metum-ga7-1; atmospheric-chemistry: ukca; land-surface: jules-v5-3; ocean-biogeochemistry: topaz2; ocean: nemo3-6; sea-ice: cice5",

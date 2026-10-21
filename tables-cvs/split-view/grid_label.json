@@ -159,5 +159,15 @@
     "g255": "Horizontal grid cell with a cubed sphere grid type.",
     "g256": "Horizontal grid cell with a tripolar grid type.",
     "g257": "Horizontal grid cell with a stretched grid type.",
-    "g258": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 145 x 140 km resolution."
+    "g258": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 145 x 140 km resolution.",
+    "g259": "Horizontal grid cell with a regular latitude longitude grid type and 2 x 2 degree resolution.",
+    "g260": "Horizontal grid cell with a tripolar grid type.",
+    "g261": "Horizontal grid cell with a stretched grid type and 1.0 x 0.5 degree resolution.",
+    "g262": "Horizontal grid cell with a basin by latitude grid type.",
+    "g263": "Horizontal grid cell with a cubed sphere grid type.",
+    "g264": "Horizontal grid cell with a tripolar grid type.",
+    "g265": "Horizontal grid cell with a tripolar grid type.",
+    "g266": "Horizontal grid cell with a regular gaussian grid type.",
+    "g267": "Horizontal grid cell with a regular latitude longitude grid type and 2 x 2 degree resolution.",
+    "g268": "Horizontal grid cell with a quadratic spectral gaussian grid type and 1.875 x 1.875 degree resolution."
 }
