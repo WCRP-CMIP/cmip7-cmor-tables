@@ -1,0 +1,46 @@
+{
+    "effectRadIc": {
+        "stored_direction": "increasing"
+    },
+    "effectRadLi": {
+        "stored_direction": "increasing"
+    },
+    "height100m": {
+        "stored_direction": ""
+    },
+    "height10m": {
+        "stored_direction": ""
+    },
+    "height2m": {
+        "stored_direction": ""
+    },
+    "modelvegtype": {
+        "axis": "",
+        "bounds_values": "",
+        "climatology": "",
+        "formula": "",
+        "generic_level_name": "",
+        "long_name": "Vegetation or Land Cover Type",
+        "must_have_bounds": "no",
+        "out_name": "type",
+        "positive": "",
+        "requested": "",
+        "requested_bounds": "",
+        "standard_name": "area_type",
+        "stored_direction": "",
+        "tolerance": "",
+        "type": "character",
+        "units": "",
+        "valid_max": "",
+        "valid_min": "",
+        "value": "",
+        "z_bounds_factors": "",
+        "z_factors": ""
+    },
+    "op20bar": {
+        "stored_direction": ""
+    },
+    "time4": {
+        "long_name": "Monthly Mean Daily Statistics"
+    }
+}
