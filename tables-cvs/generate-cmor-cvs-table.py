@@ -835,12 +835,15 @@ def get_cmor_nominal_resolution_defintions(
     terms = ev_api.get_all_terms_in_collection(ev_project.project_id, source_collection)
     res = []
     for t in terms:
-        value_f = float(t.value)
-        size_km = ur.Quantity(value_f, t.unit).to("km").m
-        if int(size_km) == size_km:
-            allowed = f"{size_km:.0f} km"
+        if t.value is None:
+            allowed = "None"
         else:
-            allowed = f"{size_km:.1f} km"
+            value_f = float(t.value)
+            size_km = ur.Quantity(value_f, t.unit).to("km").m
+            if int(size_km) == size_km:
+                allowed = f"{size_km:.0f} km"
+            else:
+                allowed = f"{size_km:.1f} km"
 
         res.append(allowed)
 
