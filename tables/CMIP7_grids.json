@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 12e6f80c2fc3df7d7d2b84f3c0f5499f",
+        "checksum": "md5: 7e4cc8c2ddf4ae90853887976398ec9b",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -141,7 +141,7 @@
             "type": "double",
             "units": "degrees_east",
             "valid_max": "360.0",
-            "valid_min": "0.0"
+            "valid_min": "-180.0"
         },
         "vertices_latitude": {
             "dimensions": "vertices longitude latitude",
@@ -161,7 +161,7 @@
             "type": "double",
             "units": "degrees_east",
             "valid_max": "360.0",
-            "valid_min": "0.0"
+            "valid_min": "-180.0"
         }
     }
 }

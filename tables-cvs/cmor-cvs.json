@@ -2115,7 +2115,17 @@
             "g255": "Horizontal grid cell with a cubed sphere grid type.",
             "g256": "Horizontal grid cell with a tripolar grid type.",
             "g257": "Horizontal grid cell with a stretched grid type.",
-            "g258": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 145 x 140 km resolution."
+            "g258": "Horizontal grid cell with a cubic octahedral spectral reduced gaussian grid type and 145 x 140 km resolution.",
+            "g259": "Horizontal grid cell with a regular latitude longitude grid type and 2 x 2 degree resolution.",
+            "g260": "Horizontal grid cell with a tripolar grid type.",
+            "g261": "Horizontal grid cell with a stretched grid type and 1.0 x 0.5 degree resolution.",
+            "g262": "Horizontal grid cell with a basin by latitude grid type.",
+            "g263": "Horizontal grid cell with a cubed sphere grid type.",
+            "g264": "Horizontal grid cell with a tripolar grid type.",
+            "g265": "Horizontal grid cell with a tripolar grid type.",
+            "g266": "Horizontal grid cell with a regular gaussian grid type.",
+            "g267": "Horizontal grid cell with a regular latitude longitude grid type and 2 x 2 degree resolution.",
+            "g268": "Horizontal grid cell with a quadratic spectral gaussian grid type and 1.875 x 1.875 degree resolution."
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
@@ -2162,6 +2172,7 @@
             "SMHI": "Swedish Meteorological and Hydrological Institute",
             "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China.",
             "UAF": "University of Alaska Fairbanks",
+            "UArizona": "The UA-Climate group at the University of Arizona develops and applies coupled atmosphere-ocean general circulation models for climate research. The group focuses on simulating large-scale climate processes, evaluating model performance, and contributing to international climate model intercomparison efforts with a focus on the Southern Ocean's role in climate. UA-Climate participates in CMIP activities by producing and analyzing AOGCM simulations for assessment and research.",
             "UKNCSP": "UKNCSP is a strategic partnership between the Met Office and six NERC-funded research centres in the UK. This partnership consists of the British Antarctic Survey (BAS), British Geological Survey (BGS), Met Office, National Centre for Atmospheric Science (NCAS), National Centre for Earth Observation (NCEO), National Oceanography Centre (NOC) and UK Centre for Ecology & Hydrology (UKCEH), with a mission to unite and harness UK climate science capability, advance international partnerships, and drive solutions for a resilient, net-zero world.",
             "UNSW": "University of New South Wales"
         },
@@ -2193,7 +2204,8 @@
             "5 km",
             "50 km",
             "500 km",
-            "5000 km"
+            "5000 km",
+            "None"
         ],
         "physics_index": [
             "^p[[:digit:]]\\{1,\\}$"
@@ -2270,6 +2282,10 @@
                 "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; land-surface: lpj-guess-4-1; ocean: fesom-2-7; sea-ice: fesim-2-7",
                 "source_id": "AWI-ESM3-4-2-veg-HR"
             },
+            "BCC-CSM3-MR": {
+                "source": "BCC-CSM3-MR: atmosphere: bcc-agcm4-mr; land-surface: bcc-avim3; ocean: mom5-p25; sea-ice: cam-ice1",
+                "source_id": "BCC-CSM3-MR"
+            },
             "CAS-ESM2-1-CSM": {
                 "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",
                 "source_id": "CAS-ESM2-1-CSM"
@@ -2325,6 +2341,10 @@
             "ICON-XPP-1-1-ED": {
                 "source": "ICON-XPP-1-1-ED: atmosphere: icon-a-1-1; land-surface: icon-land-1-1; ocean-biogeochemistry: ihamocc2; ocean: icon-o-1-1; sea-ice: fesim2",
                 "source_id": "ICON-XPP-1-1-ED"
+            },
+            "IPSL-CM6-ESMCO2": {
+                "source": "IPSL-CM6-ESMCO2: atmosphere: lmdz6-5; land-surface: orchidee-v2; ocean-biogeochemistry: pisces-v2; ocean: nemo-v3-6; sea-ice: lim3",
+                "source_id": "IPSL-CM6-ESMCO2"
             },
             "KACE-2-0-G": {
                 "source": "KACE-2-0-G: aerosol: glomap-mode; atmosphere: metum-ga7-1; atmospheric-chemistry: ukca; land-surface: jules-v5-3; ocean-biogeochemistry: topaz2; ocean: nemo3-6; sea-ice: cice5",
