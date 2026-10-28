@@ -3,9 +3,11 @@
     "AS-RCEC": "The Research Center for Environmental Changes, Academia Sinica (AS-RCEC) is responsible for the development and maintenance of the Taiwan Earth System Model (TaiESM) in Taiwan.",
     "AWI": "Alfred Wegener Institute for Polar and Marine Research",
     "BAS": "British Antarctic Survey",
+    "BCC": "Beijing Climate Center",
     "BNU": "Beaconhouse National University",
     "CAS": "Chinese Academy of Sciences",
     "CCCma": "Environment and Climate Change Canada",
+    "CMA": "China Meteorological Administration",
     "CNRM": "Centre National de Recherches Meteorologiques",
     "CNRM-CERFACS": "CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
     "DLR": "The German Aerospace Center DLR is the Federal Republic of Germany's research centre for aviation, space, energy, transport, and security. The DLR Institute of Atmospheric Physics conducts research into the physics and chemistry of the global atmosphere, from the ground up to the upper edge of the middle atmosphere at an altitude of approximately 120 km.",
@@ -32,6 +34,7 @@
     "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China.",
     "UAF": "University of Alaska Fairbanks",
     "UArizona": "The UA-Climate group at the University of Arizona develops and applies coupled atmosphere-ocean general circulation models for climate research. The group focuses on simulating large-scale climate processes, evaluating model performance, and contributing to international climate model intercomparison efforts with a focus on the Southern Ocean's role in climate. UA-Climate participates in CMIP activities by producing and analyzing AOGCM simulations for assessment and research.",
+    "UBristol": "BRIDGE modelling group, School of Geographical Sciences, University of Bristol, UK",
     "UKNCSP": "UKNCSP is a strategic partnership between the Met Office and six NERC-funded research centres in the UK. This partnership consists of the British Antarctic Survey (BAS), British Geological Survey (BGS), Met Office, National Centre for Atmospheric Science (NCAS), National Centre for Earth Observation (NCEO), National Oceanography Centre (NOC) and UK Centre for Ecology & Hydrology (UKCEH), with a mission to unite and harness UK climate science capability, advance international partnerships, and drive solutions for a resilient, net-zero world.",
     "UNSW": "University of New South Wales"
 }
