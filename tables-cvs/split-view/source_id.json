@@ -15,6 +15,10 @@
         "source": "AWI-ESM3-4-2-veg-HR: atmosphere: openifs-48r1; land-surface: lpj-guess-4-1; ocean: fesom-2-7; sea-ice: fesim-2-7",
         "source_id": "AWI-ESM3-4-2-veg-HR"
     },
+    "AWI-ESM3-5-2-cc-LR": {
+        "source": "AWI-ESM3-5-2-cc-LR: atmosphere: openifs-48r1; land-surface: lpj-guess-4-1; ocean-biogeochemistry: recom-3-1; ocean: fesom-2-8; sea-ice: fesim-2-8",
+        "source_id": "AWI-ESM3-5-2-cc-LR"
+    },
     "BCC-CSM3-MR": {
         "source": "BCC-CSM3-MR: atmosphere: bcc-agcm4-mr; land-surface: bcc-avim3; ocean: mom5-p25; sea-ice: cam-ice1",
         "source_id": "BCC-CSM3-MR"
@@ -74,6 +78,14 @@
     "ICON-XPP-1-1-ED": {
         "source": "ICON-XPP-1-1-ED: atmosphere: icon-a-1-1; land-surface: icon-land-1-1; ocean-biogeochemistry: ihamocc2; ocean: icon-o-1-1; sea-ice: fesim2",
         "source_id": "ICON-XPP-1-1-ED"
+    },
+    "IITM-ESMv3-HR": {
+        "source": "IITM-ESMv3-HR: atmosphere: gfs; land-surface: noah-lsm; ocean-biogeochemistry: topaz1; ocean: mom4p1; sea-ice: sis1",
+        "source_id": "IITM-ESMv3-HR"
+    },
+    "IITM-ESMv3-LR": {
+        "source": "IITM-ESMv3-LR: atmosphere: gfs; land-surface: noah-lsm; ocean-biogeochemistry: topaz1; ocean: mom4p1; sea-ice: sis1",
+        "source_id": "IITM-ESMv3-LR"
     },
     "IPSL-CM6-ESMCO2": {
         "source": "IPSL-CM6-ESMCO2: atmosphere: lmdz6-5; land-surface: orchidee-v2; ocean-biogeochemistry: pisces-v2; ocean: nemo-v3-6; sea-ice: lim3",

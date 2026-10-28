@@ -89,6 +89,24 @@
         "start_year": 2022,
         "tier": 1
     },
+    "SSP2-com-CMIP7-ext": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Extension of `SSP2-com-CMIP7` beyond 2100.",
+        "end_year": 2500,
+        "experiment": "Extension of `SSP2-com-CMIP7` beyond 2100.",
+        "experiment_id": "SSP2-com-CMIP7-ext",
+        "min_number_yrs_per_sim": 100,
+        "parent_activity_id": [
+            "PolMIP"
+        ],
+        "parent_experiment_id": [
+            "SSP2-com-CMIP7"
+        ],
+        "start_year": 2101,
+        "tier": 1
+    },
     "abrupt-0p5xCO2": {
         "activity_id": [
             "CFMIP"
@@ -291,6 +309,24 @@
         "start_year": 2022,
         "tier": 1
     },
+    "esm-SSP2-com-CMIP7-ext": {
+        "activity_id": [
+            "PolMIP"
+        ],
+        "description": "Extension of `esm-SSP2-com-CMIP7` beyond 2100.",
+        "end_year": 2500,
+        "experiment": "Extension of `esm-SSP2-com-CMIP7` beyond 2100.",
+        "experiment_id": "esm-SSP2-com-CMIP7-ext",
+        "min_number_yrs_per_sim": 100,
+        "parent_activity_id": [
+            "PolMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-SSP2-com-CMIP7"
+        ],
+        "start_year": 2101,
+        "tier": 1
+    },
     "esm-flat10": {
         "activity_id": [
             "C4MIP"
@@ -417,9 +453,9 @@
         "activity_id": [
             "FireMIP"
         ],
-        "description": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `piControl-nofire`).",
+        "description": "Pre-industrial control simulation with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `piControl-nofire`).",
         "end_year": "",
-        "experiment": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `piControl-nofire`).",
+        "experiment": "Pre-industrial control simulation with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero. Here run with prescribed carbon dioxide emissions, rather than prescribed carbon dioxide concentrations (for the equivalent prescribed carbon dioxide concentrations experiment, see `piControl-nofire`).",
         "experiment_id": "esm-piControl-nofire",
         "min_number_yrs_per_sim": "",
         "parent_activity_id": [
@@ -1413,9 +1449,9 @@
         "activity_id": [
             "FireMIP"
         ],
-        "description": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero.",
+        "description": "Pre-industrial control simulation with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero.",
         "end_year": "",
-        "experiment": "Pre-industrial control simulatio with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero.",
+        "experiment": "Pre-industrial control simulation with no fire emissions. In models that use prescribed fire emissions (known as open biomass burning emissions in the forcings), both burned area in the model code and prescribed fire aerosol emissions in the forcing dataset should be set to zero. In models with interactive fire modules, set burned area to zero so that fire emissions are therefore diagnosed as zero.",
         "experiment_id": "piControl-nofire",
         "min_number_yrs_per_sim": "",
         "parent_activity_id": [
