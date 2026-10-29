@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 917b22adf0fdb0a1ab4933b22e527fa4",
+        "checksum": "md5: 615b89db2121f042a38fe1a0ca8ddf38",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-10-29 17:57:28",
+        "table_date": "2026-10-29 19:13:13",
         "table_id": "coordinates",
         "type": "real",
         "valid_max": "",
@@ -1376,7 +1376,7 @@
             "z_factors": ""
         },
         "osurf": {
-            "axis": "Z",
+            "axis": "",
             "bounds_values": "",
             "climatology": "",
             "formula": "",

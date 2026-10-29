@@ -40,6 +40,9 @@
     "op20bar": {
         "stored_direction": ""
     },
+    "osurf": {
+        "axis": ""
+    },
     "time4": {
         "long_name": "Monthly Mean Daily Statistics"
     }
