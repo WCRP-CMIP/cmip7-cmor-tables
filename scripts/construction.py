@@ -262,8 +262,12 @@ def dr_coord_to_cmor_dict(coord):
             value = ''
         else:
             value = getattr(coord, dr_key, '')
-        if isinstance(value, str):
-            value = value.replace(',', '')
+        if isinstance(value, str) and cmor_key in {
+            'bounds_values',
+            'requested',
+            'requested_bounds',
+        }:
+            value = ' '.join(value.replace(',', ' ').split())
         cmor_coord[cmor_key] = value
     
     # deal with yes/no fields
