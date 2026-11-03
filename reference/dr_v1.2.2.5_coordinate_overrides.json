@@ -43,7 +43,26 @@
     "osurf": {
         "axis": ""
     },
+    "siline": {
+        "requested": [
+            "fram_strait",
+            "canadian_archipelago",
+            "barents_opening",
+            "bering_strait"
+        ]
+    },
     "time4": {
         "long_name": "Monthly Mean Daily Statistics"
+    },
+    "vegtype": {
+        "requested": [
+            "broadleaf_deciduous_trees",
+            "broadleaf_evergreen_trees",
+            "needleleaf_deciduous_trees",
+            "needleleaf_evergreen_trees",
+            "natural_grasses",
+            "crops",
+            "shrubs"
+        ]
     }
 }

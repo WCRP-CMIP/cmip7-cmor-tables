@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 615b89db2121f042a38fe1a0ca8ddf38",
+        "checksum": "md5: e750cfdf384c7b3f747de4dbf356e497",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-10-29 19:13:13",
+        "table_date": "2026-11-03 09:01:37",
         "table_id": "coordinates",
         "type": "real",
         "valid_max": "",
@@ -2274,7 +2274,7 @@
             "positive": "",
             "requested": [
                 "fram_strait",
-                "canadian_archipelego",
+                "canadian_archipelago",
                 "barents_opening",
                 "bering_strait"
             ],
@@ -3564,7 +3564,7 @@
                 "broadleaf_deciduous_trees",
                 "broadleaf_evergreen_trees",
                 "needleleaf_deciduous_trees",
-                "needleleaf_evergreen_tree",
+                "needleleaf_evergreen_trees",
                 "natural_grasses",
                 "crops",
                 "shrubs"
