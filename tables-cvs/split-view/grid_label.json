@@ -172,5 +172,11 @@
     "g268": "Horizontal grid cell with a quadratic spectral gaussian grid type and 1.875 x 1.875 degree resolution.",
     "g269": "Horizontal grid cell with a tripolar grid type.",
     "g270": "Horizontal grid cell with a tripolar grid type.",
-    "g271": "Horizontal grid cell with a regular latitude longitude grid type and 0.9 x 0.9375 degree resolution."
+    "g271": "Horizontal grid cell with a regular latitude longitude grid type and 0.9 x 0.9375 degree resolution.",
+    "g272": "Horizontal grid cell with a regular gaussian grid type and 67 x 70 km resolution.",
+    "g273": "Horizontal grid cell with a regular gaussian grid type and 145 x 140 km resolution.",
+    "g274": "Horizontal grid cell with a tripolar grid type.",
+    "g275": "Horizontal grid cell with a tripolar grid type.",
+    "g276": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333334 x 0.55555725 degree resolution.",
+    "g277": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333333 x 0.55555725 degree resolution."
 }
