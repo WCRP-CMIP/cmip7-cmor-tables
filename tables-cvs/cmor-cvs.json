@@ -2164,7 +2164,13 @@
             "g268": "Horizontal grid cell with a quadratic spectral gaussian grid type and 1.875 x 1.875 degree resolution.",
             "g269": "Horizontal grid cell with a tripolar grid type.",
             "g270": "Horizontal grid cell with a tripolar grid type.",
-            "g271": "Horizontal grid cell with a regular latitude longitude grid type and 0.9 x 0.9375 degree resolution."
+            "g271": "Horizontal grid cell with a regular latitude longitude grid type and 0.9 x 0.9375 degree resolution.",
+            "g272": "Horizontal grid cell with a regular gaussian grid type and 67 x 70 km resolution.",
+            "g273": "Horizontal grid cell with a regular gaussian grid type and 145 x 140 km resolution.",
+            "g274": "Horizontal grid cell with a tripolar grid type.",
+            "g275": "Horizontal grid cell with a tripolar grid type.",
+            "g276": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333334 x 0.55555725 degree resolution.",
+            "g277": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333333 x 0.55555725 degree resolution."
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
@@ -2186,6 +2192,7 @@
             "BCC": "Beijing Climate Center",
             "BNU": "Beaconhouse National University",
             "CAS": "Chinese Academy of Sciences",
+            "CCCR-IITM": "Indian Institute of Tropical Meteorology",
             "CCCma": "Environment and Climate Change Canada",
             "CMA": "China Meteorological Administration",
             "CNRM": "Centre National de Recherches Meteorologiques",
@@ -2195,6 +2202,7 @@
             "DWD": "German Meteorological Service (Deutscher Wetterdienst)",
             "EC-Earth-Consortium": "EC-Earth-Consortium",
             "FMI": "Finnish Meteorological Institute",
+            "INM": "Marchuk Institute of Numerical Mathematics of the Russian Academy of Sciences",
             "INPE": "The National Institute for Space Research (INPE) is Brazil's leading agency for space science and earth observation, operating across several key fields: space science and atmospheric research, satellite development and aerospace engineering, remote sensing and Earth observation, numerical weather forecasting, and Earth system science, which includes extensive deforestation monitoring in the Amazon.",
             "IPSL": "Institut Pierre-Simon Laplace",
             "KIOST": "A consortium of Korean research institutions contributing to CMIP7 through Earth system modeling. Led by the Korea Institute of Ocean Science and Technology (KIOST) in collaboration with Hanyang University (HYU).",
@@ -2331,6 +2339,10 @@
             "BCC-CSM3-MR": {
                 "source": "BCC-CSM3-MR: atmosphere: bcc-agcm4-mr; land-surface: bcc-avim3; ocean: mom5-p25; sea-ice: cam-ice1",
                 "source_id": "BCC-CSM3-MR"
+            },
+            "BCC-ESM2": {
+                "source": "BCC-ESM2: atmosphere: bcc-agcm4-mr; atmospheric-chemistry: bcc-agcm4-chem; land-surface: bcc-avim3; ocean-biogeochemistry: hamocc6; ocean: mom5-p25; sea-ice: cam-ice1",
+                "source_id": "BCC-ESM2"
             },
             "CAS-ESM2-1-CSM": {
                 "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",

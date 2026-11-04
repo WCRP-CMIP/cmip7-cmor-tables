@@ -23,6 +23,10 @@
         "source": "BCC-CSM3-MR: atmosphere: bcc-agcm4-mr; land-surface: bcc-avim3; ocean: mom5-p25; sea-ice: cam-ice1",
         "source_id": "BCC-CSM3-MR"
     },
+    "BCC-ESM2": {
+        "source": "BCC-ESM2: atmosphere: bcc-agcm4-mr; atmospheric-chemistry: bcc-agcm4-chem; land-surface: bcc-avim3; ocean-biogeochemistry: hamocc6; ocean: mom5-p25; sea-ice: cam-ice1",
+        "source_id": "BCC-ESM2"
+    },
     "CAS-ESM2-1-CSM": {
         "source": "CAS-ESM2-1-CSM: aerosol: cam5-mam3; atmosphere: iap-agcm5-0; atmospheric-chemistry: cam5-trop-mam3; land-surface: colm2014; ocean: licom-v2-0; sea-ice: cice4-0",
         "source_id": "CAS-ESM2-1-CSM"
