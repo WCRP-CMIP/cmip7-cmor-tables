@@ -59,6 +59,10 @@
         "source": "FGOALS-f3-L: atmosphere: um7.3; land-surface: surfex-v8-modeling-platform; ocean: nemo-v3-6; sea-ice: gelato",
         "source_id": "FGOALS-f3-L"
     },
+    "FGOALS-g3-5": {
+        "source": "FGOALS-g3-5: atmosphere: gamil3; land-surface: cas-lsm; ocean: licom-v3-0; sea-ice: cice4-0",
+        "source_id": "FGOALS-g3-5"
+    },
     "GFDL-ESM4p5": {
         "source": "GFDL-ESM4p5: aerosol: gfdl-am4p5-aerosol; atmosphere: gfdl-am4p5; land-surface: gfdl-lm4p5; ocean-biogeochemistry: cobaltv3p1; ocean: gfdl-om4p5; sea-ice: sis2",
         "source_id": "GFDL-ESM4p5"
