@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: e750cfdf384c7b3f747de4dbf356e497",
+        "checksum": "md5: 384f383ad3eba54cf5d69114aa1249ab",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -551,7 +551,7 @@
             ],
             "standard_name": "",
             "stored_direction": "increasing",
-            "tolerance": "",
+            "tolerance": "1",
             "type": "double",
             "units": "micron",
             "valid_max": "",
@@ -594,7 +594,7 @@
             ],
             "standard_name": "",
             "stored_direction": "increasing",
-            "tolerance": "",
+            "tolerance": "1",
             "type": "double",
             "units": "micron",
             "valid_max": "",
@@ -1647,7 +1647,7 @@
             "units": "Pa",
             "valid_max": "",
             "valid_min": "",
-            "value": "20000.",
+            "value": "92500.",
             "z_bounds_factors": "",
             "z_factors": ""
         },

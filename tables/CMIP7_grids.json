@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 7e4cc8c2ddf4ae90853887976398ec9b",
+        "checksum": "md5: c6e07490b8fab6f3ac3a1dda3d6bfc01",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -36,7 +36,7 @@
         },
         "i_index": {
             "axis": "",
-            "long_name": "first spatial index for variables stored on an unstructured grid",
+            "long_name": "cell index along first dimension",
             "out_name": "i",
             "standard_name": "",
             "type": "integer",
@@ -44,7 +44,7 @@
         },
         "j_index": {
             "axis": "",
-            "long_name": "second spatial index for variables stored on an unstructured grid",
+            "long_name": "cell index along second dimension",
             "out_name": "j",
             "standard_name": "",
             "type": "integer",
@@ -52,7 +52,7 @@
         },
         "k_index": {
             "axis": "",
-            "long_name": "third spatial index for variables stored on an unstructured grid",
+            "long_name": "cell index along third dimension",
             "out_name": "k",
             "standard_name": "",
             "type": "integer",
@@ -60,7 +60,7 @@
         },
         "l_index": {
             "axis": "",
-            "long_name": "fourth spatial index for variables stored on an unstructured grid",
+            "long_name": "cell index along fourth dimension",
             "out_name": "l",
             "standard_name": "",
             "type": "integer",
@@ -68,7 +68,7 @@
         },
         "m_index": {
             "axis": "",
-            "long_name": "fifth spatial index for variables stored on an unstructured grid",
+            "long_name": "cell index along fifth dimension",
             "out_name": "m",
             "standard_name": "",
             "type": "integer",

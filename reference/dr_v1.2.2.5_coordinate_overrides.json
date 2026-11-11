@@ -1,9 +1,11 @@
 {
     "effectRadIc": {
-        "stored_direction": "increasing"
+        "stored_direction": "increasing",
+        "tolerance": "1"
     },
     "effectRadLi": {
-        "stored_direction": "increasing"
+        "stored_direction": "increasing",
+        "tolerance": "1"
     },
     "height100m": {
         "stored_direction": ""
@@ -42,6 +44,9 @@
     },
     "osurf": {
         "axis": ""
+    },
+    "p925": {
+        "value": "92500."
     },
     "siline": {
         "requested": [
