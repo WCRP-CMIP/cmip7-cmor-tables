@@ -184,6 +184,22 @@
             "type": "double",
             "units": "1"
         },
+        "sigma_half": {
+            "dimensions": "olevhalf",
+            "long_name": "vertical coordinate formula term: sigma(k)",
+            "out_name": "sigma",
+            "standard_name": "ocean_sigma_coordinate",
+            "type": "double",
+            "units": "1"
+        },
+        "sigma_half_bnds": {
+            "dimensions": "olevhalf",
+            "long_name": "vertical coordinate formula term: sigma(k+1/2)",
+            "out_name": "sigma_bnds",
+            "standard_name": "ocean_sigma_coordinate",
+            "type": "double",
+            "units": "1"
+        },
         "zlev": {
             "dimensions": "olevel",
             "long_name": "vertical coordinate formula term: zlev(k)",
@@ -194,6 +210,22 @@
         },
         "zlev_bnds": {
             "dimensions": "olevel",
+            "long_name": "vertical coordinate formula term: zlev(k+1/2)",
+            "out_name": "zlev_bnds",
+            "standard_name": "",
+            "type": "double",
+            "units": "m"
+        },
+        "zlev_half": {
+            "dimensions": "olevhalf",
+            "long_name": "vertical coordinate formula term: zlev(k)",
+            "out_name": "zlev",
+            "standard_name": "",
+            "type": "double",
+            "units": "m"
+        },
+        "zlev_half_bnds": {
+            "dimensions": "olevhalf",
             "long_name": "vertical coordinate formula term: zlev(k+1/2)",
             "out_name": "zlev_bnds",
             "standard_name": "",

@@ -1,0 +1,5 @@
+{
+    "land.landCoverFrac.tavg-u-hxy-u.mon.glb": {
+        "dimensions": "longitude latitude modelvegtype time"
+    }
+}

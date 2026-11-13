@@ -1,0 +1,73 @@
+{
+    "effectRadIc": {
+        "stored_direction": "increasing",
+        "tolerance": "1"
+    },
+    "effectRadLi": {
+        "stored_direction": "increasing",
+        "tolerance": "1"
+    },
+    "height100m": {
+        "stored_direction": ""
+    },
+    "height10m": {
+        "stored_direction": ""
+    },
+    "height2m": {
+        "stored_direction": ""
+    },
+    "modelvegtype": {
+        "axis": "",
+        "bounds_values": "",
+        "climatology": "",
+        "formula": "",
+        "generic_level_name": "",
+        "long_name": "Vegetation or Land Cover Type",
+        "must_have_bounds": "no",
+        "out_name": "type",
+        "positive": "",
+        "requested": "",
+        "requested_bounds": "",
+        "standard_name": "area_type",
+        "stored_direction": "",
+        "tolerance": "",
+        "type": "character",
+        "units": "",
+        "valid_max": "",
+        "valid_min": "",
+        "value": "",
+        "z_bounds_factors": "",
+        "z_factors": ""
+    },
+    "op20bar": {
+        "stored_direction": ""
+    },
+    "osurf": {
+        "axis": ""
+    },
+    "p925": {
+        "value": "92500."
+    },
+    "siline": {
+        "requested": [
+            "fram_strait",
+            "canadian_archipelago",
+            "barents_opening",
+            "bering_strait"
+        ]
+    },
+    "time4": {
+        "long_name": "Monthly Mean Daily Statistics"
+    },
+    "vegtype": {
+        "requested": [
+            "broadleaf_deciduous_trees",
+            "broadleaf_evergreen_trees",
+            "needleleaf_deciduous_trees",
+            "needleleaf_evergreen_trees",
+            "natural_grasses",
+            "crops",
+            "shrubs"
+        ]
+    }
+}
