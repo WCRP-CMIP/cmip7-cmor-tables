@@ -137,9 +137,9 @@
                 "activity_id": [
                     "PolMIP"
                 ],
-                "description": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-SSP2-com-CMIP7`).",
+                "description": "SSP2-com-CMIP7 is a global emissions pathway developed within the SSP2 socioeconomic framework, building on the original CGEM-based SSP2-com scenario. The CMIP7 update harmonises emissions with the historical inventories used for CMIP7. National and regional emissions trajectories are constructed to align with 2030 and 2035 NDC targets and longer-term net-zero commitments, while maintaining consistency with global NDC benchmarks and global net-zero emissions objectives. Sectoral emissions are provided for 17 CGEM regions. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-SSP2-com-CMIP7`).",
                 "end_year": 2100,
-                "experiment": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-SSP2-com-CMIP7`).",
+                "experiment": "SSP2-com-CMIP7 is a global emissions pathway developed within the SSP2 socioeconomic framework, building on the original CGEM-based SSP2-com scenario. The CMIP7 update harmonises emissions with the historical inventories used for CMIP7. National and regional emissions trajectories are constructed to align with 2030 and 2035 NDC targets and longer-term net-zero commitments, while maintaining consistency with global NDC benchmarks and global net-zero emissions objectives. Sectoral emissions are provided for 17 CGEM regions. Run with prescribed carbon dioxide concentrations (for prescribed carbon dioxide emissions, see `esm-SSP2-com-CMIP7`).",
                 "experiment_id": "SSP2-com-CMIP7",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -357,9 +357,9 @@
                 "activity_id": [
                     "PolMIP"
                 ],
-                "description": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `SSP2-com-CMIP7`).",
+                "description": "SSP2-com-CMIP7 is a global emissions pathway developed within the SSP2 socioeconomic framework, building on the original CGEM-based SSP2-com scenario. The CMIP7 update harmonises emissions with the historical inventories used for CMIP7. National and regional emissions trajectories are constructed to align with 2030 and 2035 NDC targets and longer-term net-zero commitments, while maintaining consistency with global NDC benchmarks and global net-zero emissions objectives. Sectoral emissions are provided for 17 CGEM regions. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `SSP2-com-CMIP7`).",
                 "end_year": 2100,
-                "experiment": "Policy-driven pathway aligned with China's carbon neutrality pledge, peaking carbon emissions before 2030 and achieving carbon neutrality before 2060. It is developed within the SSP2 socioeconomic framework and consistent with global Nationally Determined Contributions (NDCs) data. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `SSP2-com-CMIP7`).",
+                "experiment": "SSP2-com-CMIP7 is a global emissions pathway developed within the SSP2 socioeconomic framework, building on the original CGEM-based SSP2-com scenario. The CMIP7 update harmonises emissions with the historical inventories used for CMIP7. National and regional emissions trajectories are constructed to align with 2030 and 2035 NDC targets and longer-term net-zero commitments, while maintaining consistency with global NDC benchmarks and global net-zero emissions objectives. Sectoral emissions are provided for 17 CGEM regions. Run with prescribed carbon dioxide emissions (for prescribed carbon dioxide concentrations, see `SSP2-com-CMIP7`).",
                 "experiment_id": "esm-SSP2-com-CMIP7",
                 "min_number_yrs_per_sim": 79,
                 "parent_activity_id": [
@@ -1083,14 +1083,14 @@
                 "activity_id": [
                     "LMIP"
                 ],
-                "description": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models.",
+                "description": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models. The land model setup should be the same as that used in the equivalent coupled model historical experiment (`historical` or `esm-hist`), other than minor parameter tunings to adjust to the differences in coupled model runs versus prescribed climate runs.",
                 "end_year": 2021,
-                "experiment": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models.",
+                "experiment": "Land-only version of `historical` with prescribed climate and weather inputs required to drive land models. The land model setup should be the same as that used in the equivalent coupled model historical experiment (`historical` or `esm-hist`), other than minor parameter tunings to adjust to the differences in coupled model runs versus prescribed climate runs.",
                 "experiment_id": "land-hist",
-                "min_number_yrs_per_sim": 121,
+                "min_number_yrs_per_sim": 172,
                 "parent_activity_id": [],
                 "parent_experiment_id": [],
-                "start_year": 1901,
+                "start_year": 1850,
                 "tier": 1
             },
             "piClim-0p5xCO2": {
@@ -1996,6 +1996,9 @@
             "g012": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 90 degree resolution.",
             "g013": "Horizontal grid with multiple sites at point locations.",
             "g014": "Horizontal grid with multiple ocean passage representations.",
+            "g015": "Horizontal grid with a single cell for 30S-90S.",
+            "g016": "Horizontal grid cell with a single cell for Greenland.",
+            "g017": "Horizontal grid with a single cell for Antarctica.",
             "g100": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 0.9 degree resolution.",
             "g101": "Horizontal grid cell with a linear spectral gaussian grid type and 1.4 x 1.4 degree resolution.",
             "g102": "Ocean tripolar grid with 105704 cells.",
@@ -2170,7 +2173,14 @@
             "g274": "Horizontal grid cell with a tripolar grid type.",
             "g275": "Horizontal grid cell with a tripolar grid type.",
             "g276": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333334 x 0.55555725 degree resolution.",
-            "g277": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333333 x 0.55555725 degree resolution."
+            "g277": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333333 x 0.55555725 degree resolution.",
+            "g278": "Horizontal grid cell with a tripolar grid type.",
+            "g279": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333334 x 0.55555725 degree resolution.",
+            "g280": "Horizontal grid cell with a tripolar grid type and 0.5 x 0.5 degree resolution.",
+            "g281": "Horizontal grid cell with a tripolar grid type and 0.5 x 0.5 degree resolution.",
+            "g282": "Horizontal grid cell with a tripolar grid type and 0.5 x 0.5 degree resolution.",
+            "g283": "Horizontal grid cell with a quadratic spectral gaussian grid type and 0.9375 x 0.935 degree resolution.",
+            "g284": "Horizontal grid cell with a tripolar grid type."
         },
         "horizontal_label": {
             "hm": "Data reported as a mean over some horizontal area.",
@@ -2218,6 +2228,7 @@
             "NERC": "Natural Environment Research Council",
             "NIMS-KMA": "The National Institute of Meteorological Sciences (NIMS) is the research institute of the Korea Meteorological Administration (KMA).",
             "NOAA-GFDL": "US National Oceanic and Atmospheric Administration's Geophysical Fluid Dynamics Laboratory.",
+            "NUIST": "Nanjing University of Information Science and Technology, Nanjing, 210044, China",
             "SMHI": "Swedish Meteorological and Hydrological Institute",
             "SYSU": "Sun Yat-sen University, a public university in Guangzhou, China.",
             "UAF": "University of Alaska Fairbanks",
@@ -2419,6 +2430,10 @@
             "KACE-2-0-G": {
                 "source": "KACE-2-0-G: aerosol: glomap-mode; atmosphere: metum-ga7-1; atmospheric-chemistry: ukca; land-surface: jules-v5-3; ocean-biogeochemistry: topaz2; ocean: nemo3-6; sea-ice: cice5",
                 "source_id": "KACE-2-0-G"
+            },
+            "KIOST-ESM2": {
+                "source": "KIOST-ESM2: aerosol: am4-2-aerosol; atmosphere: am4-2; atmospheric-chemistry: am4-2-chemistry; land-surface: lm4-2; ocean-biogeochemistry: cobaltv3; ocean: mom6-kiost-esm2; sea-ice: sis2-kiost-esm2",
+                "source_id": "KIOST-ESM2"
             },
             "MRI-ESM3-4": {
                 "source": "MRI-ESM3-4: aerosol: masingar-mk-3r2; atmosphere: mri-agcm4-4; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; ocean: mricom-5-4; sea-ice: mricom-5-4-sea-ice",
