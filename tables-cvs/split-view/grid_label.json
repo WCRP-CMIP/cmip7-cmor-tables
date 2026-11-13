@@ -4,6 +4,9 @@
     "g012": "Horizontal grid cell with a regular latitude longitude grid type and 360 x 90 degree resolution.",
     "g013": "Horizontal grid with multiple sites at point locations.",
     "g014": "Horizontal grid with multiple ocean passage representations.",
+    "g015": "Horizontal grid with a single cell for 30S-90S.",
+    "g016": "Horizontal grid cell with a single cell for Greenland.",
+    "g017": "Horizontal grid with a single cell for Antarctica.",
     "g100": "Horizontal grid cell with a regular latitude longitude grid type and 1.25 x 0.9 degree resolution.",
     "g101": "Horizontal grid cell with a linear spectral gaussian grid type and 1.4 x 1.4 degree resolution.",
     "g102": "Ocean tripolar grid with 105704 cells.",
@@ -178,5 +181,12 @@
     "g274": "Horizontal grid cell with a tripolar grid type.",
     "g275": "Horizontal grid cell with a tripolar grid type.",
     "g276": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333334 x 0.55555725 degree resolution.",
-    "g277": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333333 x 0.55555725 degree resolution."
+    "g277": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333333 x 0.55555725 degree resolution.",
+    "g278": "Horizontal grid cell with a tripolar grid type.",
+    "g279": "Horizontal grid cell with a regular latitude longitude grid type and 0.8333334 x 0.55555725 degree resolution.",
+    "g280": "Horizontal grid cell with a tripolar grid type and 0.5 x 0.5 degree resolution.",
+    "g281": "Horizontal grid cell with a tripolar grid type and 0.5 x 0.5 degree resolution.",
+    "g282": "Horizontal grid cell with a tripolar grid type and 0.5 x 0.5 degree resolution.",
+    "g283": "Horizontal grid cell with a quadratic spectral gaussian grid type and 0.9375 x 0.935 degree resolution.",
+    "g284": "Horizontal grid cell with a tripolar grid type."
 }

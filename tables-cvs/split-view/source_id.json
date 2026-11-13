@@ -103,6 +103,10 @@
         "source": "KACE-2-0-G: aerosol: glomap-mode; atmosphere: metum-ga7-1; atmospheric-chemistry: ukca; land-surface: jules-v5-3; ocean-biogeochemistry: topaz2; ocean: nemo3-6; sea-ice: cice5",
         "source_id": "KACE-2-0-G"
     },
+    "KIOST-ESM2": {
+        "source": "KIOST-ESM2: aerosol: am4-2-aerosol; atmosphere: am4-2; atmospheric-chemistry: am4-2-chemistry; land-surface: lm4-2; ocean-biogeochemistry: cobaltv3; ocean: mom6-kiost-esm2; sea-ice: sis2-kiost-esm2",
+        "source_id": "KIOST-ESM2"
+    },
     "MRI-ESM3-4": {
         "source": "MRI-ESM3-4: aerosol: masingar-mk-3r2; atmosphere: mri-agcm4-4; atmospheric-chemistry: mri-ccm3-2; land-surface: mri-agcm4-4-land-surface; ocean-biogeochemistry: mricom-5-4-ocean-biogeochemistry; ocean: mricom-5-4; sea-ice: mricom-5-4-sea-ice",
         "source_id": "MRI-ESM3-4"
