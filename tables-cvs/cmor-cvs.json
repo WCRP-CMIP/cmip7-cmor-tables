@@ -461,6 +461,24 @@
                 "start_year": 1850,
                 "tier": 1
             },
+            "esm-hist-Dust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-hist`, quantifies the climate response to historical changes in desert dust. Same as `esm-hist`, except dust follows the historical dust emission dataset of Leung et al. (2025), which captures the observed increase in dust since pre-industrial times.",
+                "end_year": 2021,
+                "experiment": "In combination with `esm-hist`, quantifies the climate response to historical changes in desert dust. Same as `esm-hist`, except dust follows the historical dust emission dataset of Leung et al. (2025), which captures the observed increase in dust since pre-industrial times.",
+                "experiment_id": "esm-hist-Dust",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
             "esm-hist-nofire": {
                 "activity_id": [
                     "FireMIP"
@@ -596,6 +614,114 @@
                 ],
                 "start_year": 2022,
                 "tier": 1
+            },
+            "esm-scen7-h-SST": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Reference for the `esm-scen7-h-SST-*` experiments and atmosphere-only counterpart of `esm-scen7-h`. All forcings evolve as in `esm-scen7-h`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `esm-scen7-h` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation.",
+                "end_year": 2100,
+                "experiment": "Reference for the `esm-scen7-h-SST-*` experiments and atmosphere-only counterpart of `esm-scen7-h`. All forcings evolve as in `esm-scen7-h`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `esm-scen7-h` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation.",
+                "experiment_id": "esm-scen7-h-SST",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-h-SST-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic non-CH4 short-lived climate forcer emissions. Same as `esm-scen7-h-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `esm-scen7-h-AQ`.",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic non-CH4 short-lived climate forcer emissions. Same as `esm-scen7-h-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `esm-scen7-h-AQ`.",
+                "experiment_id": "esm-scen7-h-SST-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-h-SST-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic aerosols. Same as `esm-scen7-h-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `esm-scen7-h-Aer`.",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic aerosols. Same as `esm-scen7-h-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `esm-scen7-h-Aer`.",
+                "experiment_id": "esm-scen7-h-SST-Aer",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-h-SST-pdLU": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `esm-scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `esm-scen7-h-SST-vlLU`. Compare with `esm-scen7-h-SST-vlLU` for the surface-albedo effect of A/R, and with `esm-scen7-h-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `esm-scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `esm-scen7-h-SST-vlLU`. Compare with `esm-scen7-h-SST-vlLU` for the surface-albedo effect of A/R, and with `esm-scen7-h-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "experiment_id": "esm-scen7-h-SST-pdLU",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 3
+            },
+            "esm-scen7-h-SST-pdLU-BFD": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `esm-scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `esm-scen7-h-SST-vlLU` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `esm-scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `esm-scen7-h-SST-vlLU` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "experiment_id": "esm-scen7-h-SST-pdLU-BFD",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 3
+            },
+            "esm-scen7-h-SST-vlLU": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `esm-scen7-h-SST`, except land use follows `esm-scen7-vl` (which includes A/R). BVOC, fire and dust emissions are interactive where the model allows.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `esm-scen7-h-SST`, except land use follows `esm-scen7-vl` (which includes A/R). BVOC, fire and dust emissions are interactive where the model allows.",
+                "experiment_id": "esm-scen7-h-SST-vlLU",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 3
             },
             "esm-scen7-h-ca2010fire": {
                 "activity_id": [
@@ -885,6 +1011,168 @@
                 "start_year": 2022,
                 "tier": 1
             },
+            "esm-scen7-vl-Dust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-vl`, quantifies the climate and air quality response to a hypothetical continued increase in desert dust. Same as `esm-scen7-vl`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Future continuation of `esm-hist-Dust`.",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-vl`, quantifies the climate and air quality response to a hypothetical continued increase in desert dust. Same as `esm-scen7-vl`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Future continuation of `esm-hist-Dust`.",
+                "experiment_id": "esm-scen7-vl-Dust",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "AerChemMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist-Dust"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "esm-scen7-vl-SST": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Reference for the `esm-scen7-vl-SST-*` experiments and atmosphere-only counterpart of `esm-scen7-vl`. All forcings evolve as in `esm-scen7-vl`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `esm-scen7-vl` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation. Also the reference for the afforestation/reforestation experiments, so BVOC, fire and dust emissions should be interactive where the model allows.",
+                "end_year": 2100,
+                "experiment": "Reference for the `esm-scen7-vl-SST-*` experiments and atmosphere-only counterpart of `esm-scen7-vl`. All forcings evolve as in `esm-scen7-vl`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `esm-scen7-vl` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation. Also the reference for the afforestation/reforestation experiments, so BVOC, fire and dust emissions should be interactive where the model allows.",
+                "experiment_id": "esm-scen7-vl-SST",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-vl-SST-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of air pollution mitigation. Same as `esm-scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `esm-scen7-h` instead of `esm-scen7-vl`. Atmosphere-only counterpart of `esm-scen7-vl-AQ`.",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of air pollution mitigation. Same as `esm-scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `esm-scen7-h` instead of `esm-scen7-vl`. Atmosphere-only counterpart of `esm-scen7-vl-AQ`.",
+                "experiment_id": "esm-scen7-vl-SST-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-vl-SST-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of aerosol mitigation. Same as `esm-scen7-vl-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `esm-scen7-h` instead of `esm-scen7-vl`. Atmosphere-only counterpart of `esm-scen7-vl-Aer`.",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of aerosol mitigation. Same as `esm-scen7-vl-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `esm-scen7-h` instead of `esm-scen7-vl`. Atmosphere-only counterpart of `esm-scen7-vl-Aer`.",
+                "experiment_id": "esm-scen7-vl-SST-Aer",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "esm-scen7-vl-SST-CH4": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of methane mitigation. Same as `esm-scen7-vl-SST`, except methane concentrations or emissions (as appropriate for the model) follow `esm-scen7-h` instead of `esm-scen7-vl`.",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of methane mitigation. Same as `esm-scen7-vl-SST`, except methane concentrations or emissions (as appropriate for the model) follow `esm-scen7-h` instead of `esm-scen7-vl`.",
+                "experiment_id": "esm-scen7-vl-SST-CH4",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "esm-scen7-vl-SST-Dust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a hypothetical continued increase in desert dust. Same as `esm-scen7-vl-SST`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Atmosphere-only counterpart of `esm-scen7-vl-Dust`.",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a hypothetical continued increase in desert dust. Same as `esm-scen7-vl-SST`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Atmosphere-only counterpart of `esm-scen7-vl-Dust`.",
+                "experiment_id": "esm-scen7-vl-SST-Dust",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "esm-scen7-vl-SST-O3": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of ozone precursor mitigation. Same as `esm-scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions follow `esm-scen7-h`, and methane follows `esm-scen7-h` in the chemistry scheme only (it follows `esm-scen7-vl` in the radiation scheme).",
+                "end_year": 2100,
+                "experiment": "In combination with `esm-scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of ozone precursor mitigation. Same as `esm-scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions follow `esm-scen7-h`, and methane follows `esm-scen7-h` in the chemistry scheme only (it follows `esm-scen7-vl` in the radiation scheme).",
+                "experiment_id": "esm-scen7-vl-SST-O3",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 3
+            },
+            "esm-scen7-vl-SST-pdLU": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment. Same as `esm-scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `esm-scen7-vl-SST`. Compare with `esm-scen7-vl-SST` for the surface-albedo effect of A/R, and with `esm-scen7-vl-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment. Same as `esm-scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `esm-scen7-vl-SST`. Compare with `esm-scen7-vl-SST` for the surface-albedo effect of A/R, and with `esm-scen7-vl-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "experiment_id": "esm-scen7-vl-SST-pdLU",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "esm-scen7-vl-SST-pdLU-BFD": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment. Same as `esm-scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `esm-scen7-vl-SST` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment. Same as `esm-scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `esm-scen7-vl-SST` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "experiment_id": "esm-scen7-vl-SST-pdLU-BFD",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "esm-hist"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
             "esm-scen7-vl-ext": {
                 "activity_id": [
                     "ScenarioMIP"
@@ -938,6 +1226,24 @@
                 ],
                 "start_year": 2101,
                 "tier": 1
+            },
+            "hist-Dust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `historical`, quantifies the climate response to historical changes in desert dust. Same as `historical`, except dust follows the historical dust emission dataset of Leung et al. (2025), which captures the observed increase in dust since pre-industrial times.",
+                "end_year": 2021,
+                "experiment": "In combination with `historical`, quantifies the climate response to historical changes in desert dust. Same as `historical`, except dust follows the historical dust emission dataset of Leung et al. (2025), which captures the observed increase in dust since pre-industrial times.",
+                "experiment_id": "hist-Dust",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
             },
             "hist-GHG": {
                 "activity_id": [
@@ -1061,6 +1367,204 @@
                 "start_year": 1850,
                 "tier": 1
             },
+            "hist-piCH4": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `historical`, quantifies the net effect of methane changes on atmospheric composition and climate. Same as `historical`, except methane concentrations or emissions (as appropriate for the model) are held at 1850 values.",
+                "end_year": 2021,
+                "experiment": "In combination with `historical`, quantifies the net effect of methane changes on atmospheric composition and climate. Same as `historical`, except methane concentrations or emissions (as appropriate for the model) are held at 1850 values.",
+                "experiment_id": "hist-piCH4",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
+            "hist-piFire": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `historical`, quantifies the climate and air quality response to fire emissions. Same as `historical`, except short-lived climate forcer emissions from fires are held at 1850 values. Models with interactive fire should prescribe monthly fire emissions from multiple decades of `piControl` (not a repeating climatology).",
+                "end_year": 2021,
+                "experiment": "In combination with `historical`, quantifies the climate and air quality response to fire emissions. Same as `historical`, except short-lived climate forcer emissions from fires are held at 1850 values. Models with interactive fire should prescribe monthly fire emissions from multiple decades of `piControl` (not a repeating climatology).",
+                "experiment_id": "hist-piFire",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
+            "hist-piO3": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `historical`, quantifies the climate response to tropospheric ozone changes from all precursors (CH4, NMVOCs, CO, NOx). Same as `historical`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions are held at 1850 values, and methane is held at 1850 values in the chemistry scheme only (it evolves as in `historical` in the radiation scheme).",
+                "end_year": 2021,
+                "experiment": "In combination with `historical`, quantifies the climate response to tropospheric ozone changes from all precursors (CH4, NMVOCs, CO, NOx). Same as `historical`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions are held at 1850 values, and methane is held at 1850 values in the chemistry scheme only (it evolves as in `historical` in the radiation scheme).",
+                "experiment_id": "hist-piO3",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
+            "histSST": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Reference for the `histSST-*` experiments. Atmosphere-only historical simulation with all forcings as in `historical`, and time-varying sea-surface temperatures and sea ice prescribed from the model's own `historical` simulation.",
+                "end_year": 2021,
+                "experiment": "Reference for the `histSST-*` experiments. Atmosphere-only historical simulation with all forcings as in `historical`, and time-varying sea-surface temperatures and sea ice prescribed from the model's own `historical` simulation.",
+                "experiment_id": "histSST",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 1
+            },
+            "histSST-Dust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF) from historical changes in desert dust over the historical period. Same as `histSST`, except dust follows the historical dust emission dataset of Leung et al. (2025), which captures the observed increase in dust since pre-industrial times. Atmosphere-only counterpart of `hist-Dust`.",
+                "end_year": 2021,
+                "experiment": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF) from historical changes in desert dust over the historical period. Same as `histSST`, except dust follows the historical dust emission dataset of Leung et al. (2025), which captures the observed increase in dust since pre-industrial times. Atmosphere-only counterpart of `hist-Dust`.",
+                "experiment_id": "histSST-Dust",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
+            "histSST-piAQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF), composition and air quality changes from anthropogenic non-CH4 short-lived climate forcer emissions over the historical period. Same as `histSST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at 1850 values. Atmosphere-only counterpart of `hist-piAQ`.",
+                "end_year": 2021,
+                "experiment": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF), composition and air quality changes from anthropogenic non-CH4 short-lived climate forcer emissions over the historical period. Same as `histSST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at 1850 values. Atmosphere-only counterpart of `hist-piAQ`.",
+                "experiment_id": "histSST-piAQ",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 1
+            },
+            "histSST-piAer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `histSST`, quantifies the transient aerosol effective radiative forcing (ERF) over the historical period. Same as `histSST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at 1850 values. Atmosphere-only counterpart of `hist-piAer`.",
+                "end_year": 2021,
+                "experiment": "In combination with `histSST`, quantifies the transient aerosol effective radiative forcing (ERF) over the historical period. Same as `histSST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at 1850 values. Atmosphere-only counterpart of `hist-piAer`.",
+                "experiment_id": "histSST-piAer",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 1
+            },
+            "histSST-piCH4": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `histSST`, quantifies the transient methane effective radiative forcing (ERF) and composition changes over the historical period. Same as `histSST`, except methane concentrations or emissions (as appropriate for the model) are held at 1850 values. Atmosphere-only counterpart of `hist-piCH4`.",
+                "end_year": 2021,
+                "experiment": "In combination with `histSST`, quantifies the transient methane effective radiative forcing (ERF) and composition changes over the historical period. Same as `histSST`, except methane concentrations or emissions (as appropriate for the model) are held at 1850 values. Atmosphere-only counterpart of `hist-piCH4`.",
+                "experiment_id": "histSST-piCH4",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
+            "histSST-piFire": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF), composition and air quality changes from fire emissions over the historical period. Same as `histSST`, except short-lived climate forcer emissions from fires are held at 1850 values. Models with interactive fire should prescribe monthly fire emissions from multiple decades of `piControl` (not a repeating climatology). Atmosphere-only counterpart of `hist-piFire`.",
+                "end_year": 2021,
+                "experiment": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF), composition and air quality changes from fire emissions over the historical period. Same as `histSST`, except short-lived climate forcer emissions from fires are held at 1850 values. Models with interactive fire should prescribe monthly fire emissions from multiple decades of `piControl` (not a repeating climatology). Atmosphere-only counterpart of `hist-piFire`.",
+                "experiment_id": "histSST-piFire",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
+            "histSST-piNOx": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF) and composition changes from anthropogenic NOx over the historical period. Same as `histSST`, except anthropogenic NOx emissions are held at 1850 values.",
+                "end_year": 2021,
+                "experiment": "In combination with `histSST`, quantifies the transient effective radiative forcing (ERF) and composition changes from anthropogenic NOx over the historical period. Same as `histSST`, except anthropogenic NOx emissions are held at 1850 values.",
+                "experiment_id": "histSST-piNOx",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 3
+            },
+            "histSST-piO3": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `histSST`, quantifies the transient tropospheric ozone effective radiative forcing (ERF) over the historical period. Same as `histSST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions are held at 1850 values, and methane is held at 1850 values in the chemistry scheme only (it evolves as in `histSST` in the radiation scheme). Atmosphere-only counterpart of `hist-piO3`.",
+                "end_year": 2021,
+                "experiment": "In combination with `histSST`, quantifies the transient tropospheric ozone effective radiative forcing (ERF) over the historical period. Same as `histSST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions are held at 1850 values, and methane is held at 1850 values in the chemistry scheme only (it evolves as in `histSST` in the radiation scheme). Atmosphere-only counterpart of `hist-piO3`.",
+                "experiment_id": "histSST-piO3",
+                "min_number_yrs_per_sim": 172,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": 1850,
+                "tier": 2
+            },
             "historical": {
                 "activity_id": [
                     "CMIP"
@@ -1093,6 +1597,202 @@
                 "start_year": 1850,
                 "tier": 1
             },
+            "pdClim-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies non-CH4 tropospheric ozone and aerosol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies non-CH4 tropospheric ozone and aerosol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-AQ",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-BC": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies black carbon (BC) aerosol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic BC emissions use pre-industrial (1850) values. All other emissions remain at 2021 values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies black carbon (BC) aerosol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic BC emissions use pre-industrial (1850) values. All other emissions remain at 2021 values.",
+                "experiment_id": "pdClim-BC",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-C2H4": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic ethene (C2H4) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic ethene (C2H4) emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic ethene (C2H4) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic ethene (C2H4) emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-C2H4",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-C2H6": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic ethane (C2H6) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic ethane (C2H6) emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic ethane (C2H6) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic ethane (C2H6) emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-C2H6",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-C3H6": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic propene (C3H6) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic propene (C3H6) emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic propene (C3H6) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic propene (C3H6) emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-C3H6",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-C3H8": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic propane (C3H8) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic propane (C3H8) emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic propane (C3H8) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic propane (C3H8) emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-C3H8",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-C4H10": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic butane (C4H10) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic butane (C4H10) emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic butane (C4H10) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic butane (C4H10) emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-C4H10",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-CO": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic carbon monoxide (CO) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic CO emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic carbon monoxide (CO) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic CO emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-CO",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 2
+            },
+            "pdClim-H2": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies hydrogen (H2) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except the effects of H2 on CH4 and O3 chemistry use pre-industrial (1850) values. Requires models that include H2 emissions; the setup should be coordinated with the AerChemMIP2 co-chairs.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies hydrogen (H2) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except the effects of H2 on CH4 and O3 chemistry use pre-industrial (1850) values. Requires models that include H2 emissions; the setup should be coordinated with the AerChemMIP2 co-chairs.",
+                "experiment_id": "pdClim-H2",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-NMVOC": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic non-methane volatile organic compound (NMVOC) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic NMVOC emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic non-methane volatile organic compound (NMVOC) effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic NMVOC emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-NMVOC",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 2
+            },
+            "pdClim-O3": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies tropospheric ozone effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions use pre-industrial (1850) values. Methane uses 1850 values in the chemistry scheme only and remains at 2021 values in the radiation scheme.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies tropospheric ozone effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions use pre-industrial (1850) values. Methane uses 1850 values in the chemistry scheme only and remains at 2021 values in the radiation scheme.",
+                "experiment_id": "pdClim-O3",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies aerosol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies aerosol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-aer",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-alcohol": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `pdClim-control`, quantifies anthropogenic alcohol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic alcohol emissions use pre-industrial (1850) values.",
+                "end_year": "",
+                "experiment": "In combination with `pdClim-control`, quantifies anthropogenic alcohol effective radiative forcing (ERF) relative to a present-day base state. Same as `pdClim-control`, except anthropogenic alcohol emissions use pre-industrial (1850) values.",
+                "experiment_id": "pdClim-alcohol",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 3
+            },
+            "pdClim-control": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Baseline for effective radiative forcing (ERF) calculations relative to a present-day base state. Atmosphere-only experiment with all forcings at present-day (2021) values, and sea-surface temperatures and sea-ice concentrations prescribed from a climatology of the last 30 years (1992-2021) of the model's own `historical` (or `esm-hist`) simulation.",
+                "end_year": "",
+                "experiment": "Baseline for effective radiative forcing (ERF) calculations relative to a present-day base state. Atmosphere-only experiment with all forcings at present-day (2021) values, and sea-surface temperatures and sea-ice concentrations prescribed from a climatology of the last 30 years (1992-2021) of the model's own `historical` (or `esm-hist`) simulation.",
+                "experiment_id": "pdClim-control",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [],
+                "parent_experiment_id": [],
+                "start_year": "",
+                "tier": 2
+            },
             "piClim-0p5xCO2": {
                 "activity_id": [
                     "RFMIP"
@@ -1111,6 +1811,24 @@
                 "start_year": "",
                 "tier": 3
             },
+            "piClim-2xBVOC": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies the radiative effect of natural biogenic volatile organic compound (BVOC) emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except BVOC emissions are doubled.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies the radiative effect of natural biogenic volatile organic compound (BVOC) emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except BVOC emissions are doubled.",
+                "experiment_id": "piClim-2xBVOC",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "piClim-2xCO2": {
                 "activity_id": [
                     "RFMIP"
@@ -1128,6 +1846,114 @@
                 ],
                 "start_year": "",
                 "tier": 3
+            },
+            "piClim-2xPOApDMS": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies the radiative effect of natural primary marine organic aerosol (POA) and dimethyl sulphide (DMS) emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except emissions of primary marine organic compounds and of DMS are both doubled.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies the radiative effect of natural primary marine organic aerosol (POA) and dimethyl sulphide (DMS) emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except emissions of primary marine organic compounds and of DMS are both doubled.",
+                "experiment_id": "piClim-2xPOApDMS",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-2xWet": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies the radiative effect of natural wetland methane (CH4) emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except wetland CH4 emissions are doubled.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies the radiative effect of natural wetland methane (CH4) emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except wetland CH4 emissions are doubled.",
+                "experiment_id": "piClim-2xWet",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-2xdust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies the radiative effect of natural mineral dust emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except mineral dust emissions are doubled.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies the radiative effect of natural mineral dust emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except mineral dust emissions are doubled.",
+                "experiment_id": "piClim-2xdust",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-2xfire": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies the radiative effect of natural fire emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except fire emissions of all species (e.g. NOx, BC, OC, CO, VOCs) are doubled.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies the radiative effect of natural fire emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except fire emissions of all species (e.g. NOx, BC, OC, CO, VOCs) are doubled.",
+                "experiment_id": "piClim-2xfire",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-2xflash": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies the radiative effect of natural lightning emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except the lightning flash rate is doubled. Unlike CMIP6 `piClim-2xNOx`, which doubled NOx produced per flash, this also affects natural fire ignitions in models with interactive fire.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies the radiative effect of natural lightning emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except the lightning flash rate is doubled. Unlike CMIP6 `piClim-2xNOx`, which doubled NOx produced per flash, this also affects natural fire ignitions in models with interactive fire.",
+                "experiment_id": "piClim-2xflash",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-2xss": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies the radiative effect of natural sea salt emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except sea salt emissions are doubled.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies the radiative effect of natural sea salt emissions, to estimate the strength of the associated climate feedback. Same as `piClim-control`, except sea salt emissions are doubled.",
+                "experiment_id": "piClim-2xss",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
             },
             "piClim-4xCO2": {
                 "activity_id": [
@@ -1183,6 +2009,42 @@
                 "start_year": "",
                 "tier": 3
             },
+            "piClim-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies present-day non-CH4 tropospheric ozone and aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions use present-day values (2021 values for CMIP7).",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies present-day non-CH4 tropospheric ozone and aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions use present-day values (2021 values for CMIP7).",
+                "experiment_id": "piClim-AQ",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-BC": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies present-day black carbon (BC) aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic BC emissions use present-day values (2021 values for CMIP7). All other aerosol precursor emissions remain at 1850 values.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies present-day black carbon (BC) aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic BC emissions use present-day values (2021 values for CMIP7). All other aerosol precursor emissions remain at 1850 values.",
+                "experiment_id": "piClim-BC",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "piClim-CH4": {
                 "activity_id": [
                     "AerChemMIP"
@@ -1219,6 +2081,24 @@
                 "start_year": "",
                 "tier": 1
             },
+            "piClim-NH3": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies present-day ammonia (NH3) effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic NH3 emissions use present-day values (2021 values for CMIP7). All other aerosol precursor emissions remain at 1850 values.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies present-day ammonia (NH3) effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic NH3 emissions use present-day values (2021 values for CMIP7). All other aerosol precursor emissions remain at 1850 values.",
+                "experiment_id": "piClim-NH3",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
             "piClim-NOx": {
                 "activity_id": [
                     "AerChemMIP"
@@ -1227,6 +2107,42 @@
                 "end_year": "",
                 "experiment": "In combination with `piClim-control`, quantifies present-day nitrous oxide (NOx) effective radiative forcing (ERF). Same as `piClim-control`, except nitrous oxide (NOx) emissions use present-day values (2021 values for CMIP7).",
                 "experiment_id": "piClim-NOx",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-O3": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies present-day tropospheric ozone effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions use present-day values (2021 values for CMIP7). Methane uses present-day values in the chemistry scheme only (to capture CH4-driven O3 production) and remains at 1850 values in the radiation scheme.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies present-day tropospheric ozone effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions use present-day values (2021 values for CMIP7). Methane uses present-day values in the chemistry scheme only (to capture CH4-driven O3 production) and remains at 1850 values in the radiation scheme.",
+                "experiment_id": "piClim-O3",
+                "min_number_yrs_per_sim": 30,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "piControl"
+                ],
+                "start_year": "",
+                "tier": 1
+            },
+            "piClim-OC": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `piClim-control`, quantifies present-day organic carbon (OC) aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic OC emissions use present-day values (2021 values for CMIP7). All other aerosol precursor emissions remain at 1850 values.",
+                "end_year": "",
+                "experiment": "In combination with `piClim-control`, quantifies present-day organic carbon (OC) aerosol effective radiative forcing (ERF). Same as `piClim-control`, except anthropogenic OC emissions use present-day values (2021 values for CMIP7). All other aerosol precursor emissions remain at 1850 values.",
+                "experiment_id": "piClim-OC",
                 "min_number_yrs_per_sim": 30,
                 "parent_activity_id": [
                     "CMIP"
@@ -1593,6 +2509,114 @@
                 "start_year": 2022,
                 "tier": 1
             },
+            "scen7-h-SST": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Reference for the `scen7-h-SST-*` experiments and atmosphere-only counterpart of `scen7-h`. All forcings evolve as in `scen7-h`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `scen7-h` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation.",
+                "end_year": 2100,
+                "experiment": "Reference for the `scen7-h-SST-*` experiments and atmosphere-only counterpart of `scen7-h`. All forcings evolve as in `scen7-h`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `scen7-h` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation.",
+                "experiment_id": "scen7-h-SST",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-h-SST-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic non-CH4 short-lived climate forcer emissions. Same as `scen7-h-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `scen7-h-AQ`.",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic non-CH4 short-lived climate forcer emissions. Same as `scen7-h-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `scen7-h-AQ`.",
+                "experiment_id": "scen7-h-SST-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-h-SST-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic aerosols. Same as `scen7-h-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `scen7-h-Aer`.",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-h-SST`, quantifies the effective radiative forcing (ERF) of future changes in anthropogenic aerosols. Same as `scen7-h-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions are held at present-day (2021) values. Atmosphere-only counterpart of `scen7-h-Aer`.",
+                "experiment_id": "scen7-h-SST-Aer",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-h-SST-pdLU": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `scen7-h-SST-vlLU`. Compare with `scen7-h-SST-vlLU` for the surface-albedo effect of A/R, and with `scen7-h-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `scen7-h-SST-vlLU`. Compare with `scen7-h-SST-vlLU` for the surface-albedo effect of A/R, and with `scen7-h-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "experiment_id": "scen7-h-SST-pdLU",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 3
+            },
+            "scen7-h-SST-pdLU-BFD": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `scen7-h-SST-vlLU` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `scen7-h-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `scen7-h-SST-vlLU` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "experiment_id": "scen7-h-SST-pdLU-BFD",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 3
+            },
+            "scen7-h-SST-vlLU": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `scen7-h-SST`, except land use follows `scen7-vl` (which includes A/R). BVOC, fire and dust emissions are interactive where the model allows.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment in a warmer world. Same as `scen7-h-SST`, except land use follows `scen7-vl` (which includes A/R). BVOC, fire and dust emissions are interactive where the model allows.",
+                "experiment_id": "scen7-h-SST-vlLU",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 3
+            },
             "scen7-h-ca2010fire": {
                 "activity_id": [
                     "FireMIP"
@@ -1880,6 +2904,168 @@
                 ],
                 "start_year": 2022,
                 "tier": 1
+            },
+            "scen7-vl-Dust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-vl`, quantifies the climate and air quality response to a hypothetical continued increase in desert dust. Same as `scen7-vl`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Future continuation of `hist-Dust`.",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-vl`, quantifies the climate and air quality response to a hypothetical continued increase in desert dust. Same as `scen7-vl`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Future continuation of `hist-Dust`.",
+                "experiment_id": "scen7-vl-Dust",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "AerChemMIP"
+                ],
+                "parent_experiment_id": [
+                    "hist-Dust"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "scen7-vl-SST": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Reference for the `scen7-vl-SST-*` experiments and atmosphere-only counterpart of `scen7-vl`. All forcings evolve as in `scen7-vl`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `scen7-vl` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation. Also the reference for the afforestation/reforestation experiments, so BVOC, fire and dust emissions should be interactive where the model allows.",
+                "end_year": 2100,
+                "experiment": "Reference for the `scen7-vl-SST-*` experiments and atmosphere-only counterpart of `scen7-vl`. All forcings evolve as in `scen7-vl`, with time-evolving monthly sea-surface temperatures and sea ice prescribed from the model's own `scen7-vl` simulation. Models with emissions that depend on the sea-surface state (e.g. DMS) should also prescribe these from the same simulation. Also the reference for the afforestation/reforestation experiments, so BVOC, fire and dust emissions should be interactive where the model allows.",
+                "experiment_id": "scen7-vl-SST",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-vl-SST-AQ": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of air pollution mitigation. Same as `scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `scen7-h` instead of `scen7-vl`. Atmosphere-only counterpart of `scen7-vl-AQ`.",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of air pollution mitigation. Same as `scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) and aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `scen7-h` instead of `scen7-vl`. Atmosphere-only counterpart of `scen7-vl-AQ`.",
+                "experiment_id": "scen7-vl-SST-AQ",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-vl-SST-Aer": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of aerosol mitigation. Same as `scen7-vl-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `scen7-h` instead of `scen7-vl`. Atmosphere-only counterpart of `scen7-vl-Aer`.",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of aerosol mitigation. Same as `scen7-vl-SST`, except anthropogenic aerosol and aerosol precursor (BC, OC, NH3, SO2) emissions follow `scen7-h` instead of `scen7-vl`. Atmosphere-only counterpart of `scen7-vl-Aer`.",
+                "experiment_id": "scen7-vl-SST-Aer",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 1
+            },
+            "scen7-vl-SST-CH4": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of methane mitigation. Same as `scen7-vl-SST`, except methane concentrations or emissions (as appropriate for the model) follow `scen7-h` instead of `scen7-vl`.",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of methane mitigation. Same as `scen7-vl-SST`, except methane concentrations or emissions (as appropriate for the model) follow `scen7-h` instead of `scen7-vl`.",
+                "experiment_id": "scen7-vl-SST-CH4",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "scen7-vl-SST-Dust": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a hypothetical continued increase in desert dust. Same as `scen7-vl-SST`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Atmosphere-only counterpart of `scen7-vl-Dust`.",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a hypothetical continued increase in desert dust. Same as `scen7-vl-SST`, except dust emissions follow the future extension of the Leung et al. (2025) dataset (a linear increase on the present-day pattern of sources). Atmosphere-only counterpart of `scen7-vl-Dust`.",
+                "experiment_id": "scen7-vl-SST-Dust",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "scen7-vl-SST-O3": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of ozone precursor mitigation. Same as `scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions follow `scen7-h`, and methane follows `scen7-h` in the chemistry scheme only (it follows `scen7-vl` in the radiation scheme).",
+                "end_year": 2100,
+                "experiment": "In combination with `scen7-vl-SST`, quantifies the effective radiative forcing (ERF) of a failure of ozone precursor mitigation. Same as `scen7-vl-SST`, except anthropogenic non-CH4 tropospheric O3 precursor (NMVOCs, CO, NOx) emissions follow `scen7-h`, and methane follows `scen7-h` in the chemistry scheme only (it follows `scen7-vl` in the radiation scheme).",
+                "experiment_id": "scen7-vl-SST-O3",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 3
+            },
+            "scen7-vl-SST-pdLU": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment. Same as `scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `scen7-vl-SST`. Compare with `scen7-vl-SST` for the surface-albedo effect of A/R, and with `scen7-vl-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment. Same as `scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology, and BVOC, fire and dust emissions are prescribed from `scen7-vl-SST`. Compare with `scen7-vl-SST` for the surface-albedo effect of A/R, and with `scen7-vl-SST-pdLU-BFD` for the effect via BVOC, fire and dust emissions.",
+                "experiment_id": "scen7-vl-SST-pdLU",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 2
+            },
+            "scen7-vl-SST-pdLU-BFD": {
+                "activity_id": [
+                    "AerChemMIP"
+                ],
+                "description": "Afforestation/reforestation (A/R) experiment. Same as `scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `scen7-vl-SST` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "end_year": 2100,
+                "experiment": "Afforestation/reforestation (A/R) experiment. Same as `scen7-vl-SST`, except land use is fixed at a present-day (2021) monthly climatology. BVOC, fire and dust emissions are interactive, so they respond to climate but not to land-use change. Compare with `scen7-vl-SST` for the total radiative effect of A/R. Requires interactive BVOC, fire and dust emissions.",
+                "experiment_id": "scen7-vl-SST-pdLU-BFD",
+                "min_number_yrs_per_sim": 79,
+                "parent_activity_id": [
+                    "CMIP"
+                ],
+                "parent_experiment_id": [
+                    "historical"
+                ],
+                "start_year": 2022,
+                "tier": 2
             },
             "scen7-vl-ext": {
                 "activity_id": [
@@ -2205,6 +3391,7 @@
             "CCCR-IITM": "Indian Institute of Tropical Meteorology",
             "CCCma": "Environment and Climate Change Canada",
             "CMA": "China Meteorological Administration",
+            "CMCC": "Euro-Mediterranean Center for Climate Change",
             "CNRM": "Centre National de Recherches Meteorologiques",
             "CNRM-CERFACS": "CNRM (Centre National de Recherches Meteorologiques, Toulouse 31057, France), CERFACS (Centre Europeen de Recherche et de Formation Avancee en Calcul Scientifique, Toulouse 31057, France)",
             "DLR": "The German Aerospace Center DLR is the Federal Republic of Germany's research centre for aviation, space, energy, transport, and security. The DLR Institute of Atmospheric Physics conducts research into the physics and chemistry of the global atmosphere, from the ground up to the upper edge of the middle atmosphere at an altitude of approximately 120 km.",
