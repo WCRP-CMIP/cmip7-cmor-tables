@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: f07f5c80d61958cc867b6ccd1a44df78",
+        "checksum": "md5: e634cbd47d9c795bc5f923c1a195e376",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-11-18 16:37:15",
+        "table_date": "2026-11-18 16:54:56",
         "table_id": "coordinates",
         "type": "real",
         "valid_max": "",
@@ -791,7 +791,7 @@
             "axis": "Z",
             "bounds_values": "",
             "climatology": "",
-            "formula": "p = p0*lev*(ps/p0)**b",
+            "formula": "p = p0*eta*(ps/p0)**b",
             "generic_level_name": "alevel",
             "long_name": "hybrid sigma log-pressure coordinate",
             "must_have_bounds": "yes",
@@ -807,14 +807,14 @@
             "valid_max": "1.0",
             "valid_min": "0.0",
             "value": "",
-            "z_bounds_factors": "p0: p0 b: b_bnds ps: ps",
-            "z_factors": "p0: p0 b: b ps: ps"
+            "z_bounds_factors": "eta: lev_bnds b: b_bnds ps: ps p0: p0",
+            "z_factors": "eta: lev b: b ps: ps p0: p0"
         },
         "hybrid_sigma_ln_pressure_half": {
             "axis": "Z",
             "bounds_values": "",
             "climatology": "",
-            "formula": "p = p0*lev*(ps/p0)**b",
+            "formula": "p = p0*eta*(ps/p0)**b",
             "generic_level_name": "alevhalf",
             "long_name": "hybrid sigma log-pressure coordinate",
             "must_have_bounds": "no",
@@ -831,7 +831,7 @@
             "valid_min": "0.0",
             "value": "",
             "z_bounds_factors": "",
-            "z_factors": "p0: p0 b: b ps: ps"
+            "z_factors": "eta: lev b: b ps: ps p0: p0"
         },
         "iceband": {
             "axis": "",
