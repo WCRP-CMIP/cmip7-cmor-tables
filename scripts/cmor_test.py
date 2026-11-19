@@ -19,7 +19,7 @@ DATASET_INFO = {
     "data_specs_version": "MIP-DS7.1.0.0",
     "experiment_id": "1pctCO2",
     "forcing_index": "f3",
-    "grid_label": "g999",
+    "grid_label": "g100",
     "initialization_index": "i1",
     "institution_id": "CCCma",
     "license_id": "CC-BY-4.0",

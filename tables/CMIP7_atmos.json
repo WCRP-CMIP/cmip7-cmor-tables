@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 29fa65f81205ccfc56a12986e8168d8b",
+        "checksum": "md5: b1f470009ec231727f8e6485a977a373",
         "cmor_version": "3.15",
         "generic_levels": "alevel alevhalf",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "atmos",
-        "table_date": "2026-09-15 12:08:04",
+        "table_date": "2026-11-19 11:22:16",
         "table_id": "atmos",
         "type": "real",
         "valid_max": "",
@@ -2598,6 +2598,23 @@
             "dimensions": [
                 "alevhalf",
                 "site",
+                "time1"
+            ],
+            "long_name": "Pressure on Model Half-Levels",
+            "modeling_realm": "atmos",
+            "out_name": "phalf",
+            "positive": "",
+            "standard_name": "air_pressure",
+            "units": "Pa"
+        },
+        "phalf_tpt-alh-hxy-u": {
+            "cell_measures": "",
+            "cell_methods": "area: mean time: point",
+            "comment": "",
+            "dimensions": [
+                "longitude",
+                "latitude",
+                "alevhalf",
                 "time1"
             ],
             "long_name": "Pressure on Model Half-Levels",
