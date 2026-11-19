@@ -3601,7 +3601,7 @@
                 "source_id": "ARTS-ESM-L"
             },
             "ARTS-ESM-M": {
-                "source": "ARTS-ESM-M: aerosol: inmaer2; atmosphere: inmam6m; land-surface: inmlnd2-2; ocean: inmom6m; sea-ice: inmice2m",
+                "source": "ARTS-ESM-M: aerosol: inmaer2; atmosphere: inmam6m; land-surface: inmlnd2-2; ocean-biogeochemistry: inmocm1-0; ocean: inmom6m; sea-ice: inmice2m",
                 "source_id": "ARTS-ESM-M"
             },
             "AWI-ESM3-4-2-veg-HR": {
