@@ -107,6 +107,34 @@
         "start_year": 2101,
         "tier": 1
     },
+    "a4SSTice": {
+        "activity_id": [
+            "CFMIP"
+        ],
+        "description": "`a4SSTice` uses monthly time-varying SST and sea-ice from years 111-140 of each model's own `abrupt-4xCO2` run, while keeping atmospheric constituents to pre-industrial levels. To set up the experiment, it is recommended to start from a `piSST-pxK` configuration, then to change the SSTs and sea-ice. `a4SSTice` is part of a set of AGCM timeslice experiments (also including `piSST-pxK` and `a4SSTice-4xCO2`) designed to examine regional climate responses to CO2 forcing. `a4SSTice` minus `piSST-pxK` provides the response to the (zero-mean) pattern of SST change combined with the change in sea-ice. The CMIP5/CMIP6 versions of these experiments are described in [Chadwick et al. (2017)](https://doi.org/10.1007/s00382-016-3488-6) and [Webb et al. (2017)](https://doi.org/10.5194/gmd-10-359-2017) but there have been significant changes made to the experimental protocol for CMIP7, see [Ceppi et al. (2026)](https://doi.org/10.5194/gmd-19-8693-2026).",
+        "end_year": "",
+        "experiment": "`a4SSTice` uses monthly time-varying SST and sea-ice from years 111-140 of each model's own `abrupt-4xCO2` run, while keeping atmospheric constituents to pre-industrial levels. To set up the experiment, it is recommended to start from a `piSST-pxK` configuration, then to change the SSTs and sea-ice. `a4SSTice` is part of a set of AGCM timeslice experiments (also including `piSST-pxK` and `a4SSTice-4xCO2`) designed to examine regional climate responses to CO2 forcing. `a4SSTice` minus `piSST-pxK` provides the response to the (zero-mean) pattern of SST change combined with the change in sea-ice. The CMIP5/CMIP6 versions of these experiments are described in [Chadwick et al. (2017)](https://doi.org/10.1007/s00382-016-3488-6) and [Webb et al. (2017)](https://doi.org/10.5194/gmd-10-359-2017) but there have been significant changes made to the experimental protocol for CMIP7, see [Ceppi et al. (2026)](https://doi.org/10.5194/gmd-19-8693-2026).",
+        "experiment_id": "a4SSTice",
+        "min_number_yrs_per_sim": 30,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": "",
+        "tier": 1
+    },
+    "a4SSTice-4xCO2": {
+        "activity_id": [
+            "CFMIP"
+        ],
+        "description": "`a4SSTice-4xCO2` uses monthly time-varying SST, sea-ice and atmospheric constituents from years 111-140 of each model's own `abrupt-4xCO2` run. To set up the experiment, it is recommended to start from an `a4SSTice` configuration, then to change the CO2 concentrations. `a4SSTice-4xCO2` is part of a set of AGCM timeslice experiments (also including `piSST-pxK` and `a4SSTice`) designed to examine regional climate responses to CO2 forcing. `a4SSTice-4xCO2` can be compared with years 111-140 of `abrupt-4xCO2` to determine whether an atmosphere-only framework can adequately replicate regional climates from a coupled GCM. `a4SSTice-4xCO2` minus `a4SSTice` isolates the direct CO2 effect, including the plant physiological response. The CMIP5/CMIP6 versions of these experiments are described in [Chadwick et al. (2017)](https://doi.org/10.1007/s00382-016-3488-6) and [Webb et al.",
+        "end_year": "",
+        "experiment": "`a4SSTice-4xCO2` uses monthly time-varying SST, sea-ice and atmospheric constituents from years 111-140 of each model's own `abrupt-4xCO2` run. To set up the experiment, it is recommended to start from an `a4SSTice` configuration, then to change the CO2 concentrations. `a4SSTice-4xCO2` is part of a set of AGCM timeslice experiments (also including `piSST-pxK` and `a4SSTice`) designed to examine regional climate responses to CO2 forcing. `a4SSTice-4xCO2` can be compared with years 111-140 of `abrupt-4xCO2` to determine whether an atmosphere-only framework can adequately replicate regional climates from a coupled GCM. `a4SSTice-4xCO2` minus `a4SSTice` isolates the direct CO2 effect, including the plant physiological response. The CMIP5/CMIP6 versions of these experiments are described in [Chadwick et al. (2017)](https://doi.org/10.1007/s00382-016-3488-6) and [Webb et al.",
+        "experiment_id": "a4SSTice-4xCO2",
+        "min_number_yrs_per_sim": 30,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": "",
+        "tier": 1
+    },
     "abrupt-0p5xCO2": {
         "activity_id": [
             "CFMIP"
@@ -1163,6 +1191,42 @@
             "esm-vl-cf"
         ],
         "start_year": 2101,
+        "tier": 1
+    },
+    "flat10-bgc": {
+        "activity_id": [
+            "C4MIP"
+        ],
+        "description": "Biogeochemically coupled (BGC) version of `esm-flat10`. Driven by prescribed CO2 concentration taken from the `esm-flat10` simulation of the ESM. All other conditions are kept the same as `piControl`. This provides the opportunity to diagnose climate-carbon cycle feedbacks from the `esm-flat10` simulations because it uses identical CO2 concentration. Complements `flat10-rad`.",
+        "end_year": "",
+        "experiment": "Biogeochemically coupled (BGC) version of `esm-flat10`. Driven by prescribed CO2 concentration taken from the `esm-flat10` simulation of the ESM. All other conditions are kept the same as `piControl`. This provides the opportunity to diagnose climate-carbon cycle feedbacks from the `esm-flat10` simulations because it uses identical CO2 concentration. Complements `flat10-rad`.",
+        "experiment_id": "flat10-bgc",
+        "min_number_yrs_per_sim": 150,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-piControl"
+        ],
+        "start_year": "",
+        "tier": 1
+    },
+    "flat10-rad": {
+        "activity_id": [
+            "C4MIP"
+        ],
+        "description": "Radiatively coupled (RAD) version of `esm-flat10`. Driven by prescribed CO2 concentration taken from the `esm-flat10` simulation of the ESM. All other conditions are kept the same as `piControl`. This provides the opportunity to diagnose climate-carbon cycle feedbacks from the `esm-flat10` simulations because it uses identical CO2 concentration. Complements `flat10-bgc`.",
+        "end_year": "",
+        "experiment": "Radiatively coupled (RAD) version of `esm-flat10`. Driven by prescribed CO2 concentration taken from the `esm-flat10` simulation of the ESM. All other conditions are kept the same as `piControl`. This provides the opportunity to diagnose climate-carbon cycle feedbacks from the `esm-flat10` simulations because it uses identical CO2 concentration. Complements `flat10-bgc`.",
+        "experiment_id": "flat10-rad",
+        "min_number_yrs_per_sim": 150,
+        "parent_activity_id": [
+            "CMIP"
+        ],
+        "parent_experiment_id": [
+            "esm-piControl"
+        ],
+        "start_year": "",
         "tier": 1
     },
     "hist-Dust": {
@@ -2392,6 +2456,20 @@
         "parent_experiment_id": [],
         "start_year": "",
         "tier": 3
+    },
+    "piSST-pxK": {
+        "activity_id": [
+            "CFMIP"
+        ],
+        "description": "`piSST-pxK` is an AGCM experiment using monthly time-varying sea-ice and atmospheric constituents from 30 years of each model's own `piControl` run. The 30 years of the `piControl` run should be chosen to be parallel to years 111-140 of the `abrupt-4xCO2` run. SSTs are also taken from `piControl` in the same way as sea-ice, but are uniformly increased by x K in ice-free regions, where x is the global, climatological annual-mean ice-free SST change between years 111-140 of `abrupt-4xCO2` and the parallel section of `piControl`. Note that x should be both spatially and temporally constant. In `piSST-pxK`, sea ice and SSTs in grid boxes containing sea ice should remain the same as in `piControl`. To set up the experiment, it is recommended to start from a `piClim-control` configuration, then alter the SST and sea-ice boundary conditions (including making them time-varying rather than climatological).",
+        "end_year": "",
+        "experiment": "`piSST-pxK` is an AGCM experiment using monthly time-varying sea-ice and atmospheric constituents from 30 years of each model's own `piControl` run. The 30 years of the `piControl` run should be chosen to be parallel to years 111-140 of the `abrupt-4xCO2` run. SSTs are also taken from `piControl` in the same way as sea-ice, but are uniformly increased by x K in ice-free regions, where x is the global, climatological annual-mean ice-free SST change between years 111-140 of `abrupt-4xCO2` and the parallel section of `piControl`. Note that x should be both spatially and temporally constant. In `piSST-pxK`, sea ice and SSTs in grid boxes containing sea ice should remain the same as in `piControl`. To set up the experiment, it is recommended to start from a `piClim-control` configuration, then alter the SST and sea-ice boundary conditions (including making them time-varying rather than climatological).",
+        "experiment_id": "piSST-pxK",
+        "min_number_yrs_per_sim": 30,
+        "parent_activity_id": [],
+        "parent_experiment_id": [],
+        "start_year": "",
+        "tier": 1
     },
     "scen7-h": {
         "activity_id": [
