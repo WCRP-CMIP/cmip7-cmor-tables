@@ -1,7 +1,7 @@
 {
     "Header": {
         "Conventions": "CF-1.12",
-        "checksum": "md5: 6186e7b95577caacecbeb5619e90d128",
+        "checksum": "md5: df3831564381722165828e5992b01ebf",
         "cmor_version": "3.15",
         "generic_levels": "",
         "int_missing_value": "-999",
@@ -11,7 +11,7 @@
         "positive": "",
         "product": "model-output",
         "realm": "",
-        "table_date": "2026-09-15 12:08:04",
+        "table_date": "2026-11-19 11:22:16",
         "table_id": "cell_measures",
         "type": "real",
         "valid_max": "",
@@ -469,6 +469,7 @@
         "atmos.phalf.tavg-alh-hxy-u.mon.glb": "area: areacella",
         "atmos.phalf.tclm-alh-hxy-u.mon.glb": "area: areacella",
         "atmos.phalf.tpt-alh-hs-u.subhr.glb": "",
+        "atmos.phalf.tpt-alh-hxy-u.3hr.glb": "area: areacella",
         "atmos.pr.tavg-u-hxy-crp.day.glb": "area: areacella",
         "atmos.pr.tavg-u-hxy-u.1hr.glb": "area: areacella",
         "atmos.pr.tavg-u-hxy-u.3hr.glb": "area: areacella",
