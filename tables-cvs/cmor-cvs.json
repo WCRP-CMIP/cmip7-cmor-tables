@@ -3597,7 +3597,7 @@
                 "source_id": "ACCESS-ESM1-6"
             },
             "ARTS-ESM-L": {
-                "source": "ARTS-ESM-L: aerosol: inmaer2; atmosphere: inmam6l; land-surface: inmlnd2-1; ocean: inmom6l; sea-ice: inmice2l",
+                "source": "ARTS-ESM-L: aerosol: inmaer2; atmosphere: inmam6l; land-surface: inmlnd2-1; ocean-biogeochemistry: inmocm1-0; ocean: inmom6l; sea-ice: inmice2l",
                 "source_id": "ARTS-ESM-L"
             },
             "ARTS-ESM-M": {
